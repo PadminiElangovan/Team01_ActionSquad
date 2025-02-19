@@ -25,5 +25,9 @@ public class ConfigReader {
 	 	return properties.getProperty(key);
 	 }
 
-
+	 public String getApplicationURL() {
+			String url = properties.getProperty("URL");
+			return url;
+		}
+	 
 }

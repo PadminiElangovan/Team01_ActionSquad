@@ -1,14 +1,15 @@
 package common;
 
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import java.io.File;
-import java.io.IOException;
-import org.apache.commons.io.FileUtils;
-import driverFactory.DriverConfig;
+import appHook.DriverConfig;
 import io.cucumber.java.Scenario;
 
 
@@ -16,7 +17,7 @@ import io.cucumber.java.Scenario;
 		public class Screenshot {
         
 	    public static void takeScreenshot(Scenario scenario) {
-	        WebDriver driver = DriverConfig.getDriverInstance();
+	        WebDriver driver = DriverConfig.getDriver();
 	        if (driver == null) {
 	            LoggerLoad.warn("WebDriver instance is null. Cannot take screenshot.");
 	            return;
@@ -39,7 +40,7 @@ import io.cucumber.java.Scenario;
 	            LoggerLoad.warn("Driver is not supporting to take the Screenshot");
 	        }
 
-	        byte[] screenshot = ((TakesScreenshot) DriverConfig.getDriverInstance()).getScreenshotAs(OutputType.BYTES);
+	        byte[] screenshot = ((TakesScreenshot) DriverConfig.getDriver()).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", scenario.getName());
 			
 	    }
