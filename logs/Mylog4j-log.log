@@ -1,0 +1,44 @@
+[ERROR] 2025-02-19 00:54:08.671 [main] LoggerLoad - FileNotFoundException src\test\resources\utilities\config.properties (The system cannot find the path specified)
+[INFO ] 2025-02-19 00:54:08.692 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.717 [main] LoggerLoad - URL  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.720 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.731 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.744 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.758 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.760 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.774 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.775 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.783 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.791 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.803 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.805 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.808 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.809 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.812 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.813 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.817 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.819 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.821 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.824 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.826 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.828 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.831 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.831 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.834 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.835 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.838 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.839 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.840 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.842 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.846 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.847 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.850 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.851 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.852 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.853 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.857 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.859 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.862 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.863 [main] LoggerLoad - Closing the WebDriver instance
+[INFO ] 2025-02-19 00:54:08.867 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 00:54:08.869 [main] LoggerLoad - Closing the WebDriver instance
