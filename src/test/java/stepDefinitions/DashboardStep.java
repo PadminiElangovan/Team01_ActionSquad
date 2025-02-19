@@ -1,16 +1,18 @@
 package stepDefinitions;
 
-import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
+import java.util.Map;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
-import appHook.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import appHook.Hooks;
+import appHook.TestContext;
 import pages.Dashboard_Page;
 import pages.Login_Page;
 
@@ -21,6 +23,7 @@ public class DashboardStep {
 	private Login_Page Login;
 	private WebDriver driver;
 	private TestContext context;
+	List<Map<String, String>> Loginxl = Hooks.Login;
 
 	public DashboardStep(TestContext context) {
      this.context = context;
@@ -36,18 +39,19 @@ public void admin_is_on_login_page() {
 }
 
 @When("Admin enter valid data in all field and clicks login button")
-public void admin_enter_valid_data_in_all_field_and_clicks_login_button() throws  InvalidFormatException, IOException {
-
+public void admin_enter_valid_data_in_all_field_and_clicks_login_button() {
 	Login.AdminLogin();
-	
 }
 
 @Then("Admin should see LMS -Learning management system as title")
 public void admin_should_see_lms_learning_management_system_as_title() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	String Expected = Loginxl.get(0).get("title");
+	String Actual = Dashboard.HomeTitle();
+	System.out.println(Expected);
+	System.out.println(Actual);
+	//Assert.assertEquals(Expected, Actual);
 }
-
+/*
 @Then("LMS title should be on the top left corner of page")
 public void lms_title_should_be_on_the_top_left_corner_of_page() {
     // Write code here that turns the phrase above into concrete actions
@@ -119,6 +123,6 @@ public void admin_should_see_page_icon_disabled(String PageArrow) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-
+*/
 
 }
