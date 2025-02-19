@@ -1,22 +1,45 @@
 package stepDefinitions;
 
+import java.io.IOException;
+import java.time.Duration;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import appHook.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.Dashboard_Page;
+import pages.Login_Page;
 
 public class DashboardStep {
 	
+	private WebDriverWait wait;
+	private Dashboard_Page Dashboard;
+	private Login_Page Login;
+	private WebDriver driver;
+	private TestContext context;
+
+	public DashboardStep(TestContext context) {
+     this.context = context;
+     this.driver = context.getDriver();
+     this.wait = new WebDriverWait(driver, Duration.ofSeconds(30)); 
+     this.Login = new Login_Page(driver, context);
+     this.Dashboard = new Dashboard_Page(driver, context); 
+ }
 
 @Given("Admin is on login Page")
 public void admin_is_on_login_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	context.getApplicationURL(); 
 }
 
 @When("Admin enter valid data in all field and clicks login button")
-public void admin_enter_valid_data_in_all_field_and_clicks_login_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+public void admin_enter_valid_data_in_all_field_and_clicks_login_button() throws  InvalidFormatException, IOException {
+
+	Login.AdminLogin();
+	
 }
 
 @Then("Admin should see LMS -Learning management system as title")
