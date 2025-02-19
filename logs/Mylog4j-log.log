@@ -42,3 +42,129 @@
 [INFO ] 2025-02-19 00:54:08.863 [main] LoggerLoad - Closing the WebDriver instance
 [INFO ] 2025-02-19 00:54:08.867 [main] LoggerLoad - Browser  Data fetched from the Config.property file
 [INFO ] 2025-02-19 00:54:08.869 [main] LoggerLoad - Closing the WebDriver instance
+[ERROR] 2025-02-19 14:57:02.403 [main] LoggerLoad - FileNotFoundException src\test\resources\utilities\config.properties (The system cannot find the path specified)
+[INFO ] 2025-02-19 14:57:02.420 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.421 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.448 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.449 [main] LoggerLoad - Screenshot captured for failed scenario: Verify LMS title
+[INFO ] 2025-02-19 14:57:02.449 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.469 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.469 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.472 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.472 [main] LoggerLoad - Screenshot captured for failed scenario: Verify LMS title alignment
+[INFO ] 2025-02-19 14:57:02.473 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.496 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.496 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.499 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.499 [main] LoggerLoad - Screenshot captured for failed scenario: Validate navigation bar text
+[INFO ] 2025-02-19 14:57:02.499 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.510 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.510 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.513 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.513 [main] LoggerLoad - Screenshot captured for failed scenario: Validate LMS title has correct spelling and space
+[INFO ] 2025-02-19 14:57:02.513 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.521 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.521 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.529 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.529 [main] LoggerLoad - Screenshot captured for failed scenario: Validate alignment for navigation bar
+[INFO ] 2025-02-19 14:57:02.529 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.540 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.540 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.544 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.544 [main] LoggerLoad - Screenshot captured for failed scenario: Validate navigation bar order
+[INFO ] 2025-02-19 14:57:02.544 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.550 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.551 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.553 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.553 [main] LoggerLoad - Screenshot captured for failed scenario: Validate navigation bar order
+[INFO ] 2025-02-19 14:57:02.555 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.565 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.565 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.568 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.568 [main] LoggerLoad - Screenshot captured for failed scenario: Validate navigation bar order
+[INFO ] 2025-02-19 14:57:02.568 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.572 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.572 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.574 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.575 [main] LoggerLoad - Screenshot captured for failed scenario: Validate navigation bar order
+[INFO ] 2025-02-19 14:57:02.575 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.580 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.580 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.581 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.581 [main] LoggerLoad - Screenshot captured for failed scenario: Validate navigation bar order
+[INFO ] 2025-02-19 14:57:02.581 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.584 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.585 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.589 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.589 [main] LoggerLoad - Screenshot captured for failed scenario: verify pie-chart presence
+[INFO ] 2025-02-19 14:57:02.589 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.592 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.592 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.596 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.596 [main] LoggerLoad - Screenshot captured for failed scenario: Verify user details
+[INFO ] 2025-02-19 14:57:02.597 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.601 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.602 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.604 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.605 [main] LoggerLoad - Screenshot captured for failed scenario: Verify bar chart
+[INFO ] 2025-02-19 14:57:02.605 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.614 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.614 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.616 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.616 [main] LoggerLoad - Screenshot captured for failed scenario: Verify section count
+[INFO ] 2025-02-19 14:57:02.617 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.621 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.621 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.623 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.623 [main] LoggerLoad - Screenshot captured for failed scenario: Verify section count
+[INFO ] 2025-02-19 14:57:02.623 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.630 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.632 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.633 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.633 [main] LoggerLoad - Screenshot captured for failed scenario: Verify section count
+[INFO ] 2025-02-19 14:57:02.633 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.636 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.636 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.637 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.638 [main] LoggerLoad - Screenshot captured for failed scenario: Verify section count
+[INFO ] 2025-02-19 14:57:02.638 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.640 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.641 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.643 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.644 [main] LoggerLoad - Screenshot captured for failed scenario: Verify staff table pagination
+[INFO ] 2025-02-19 14:57:02.644 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.648 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.648 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.650 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.650 [main] LoggerLoad - Screenshot captured for failed scenario: Verify staff data page split
+[INFO ] 2025-02-19 14:57:02.650 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.653 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.654 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.655 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.655 [main] LoggerLoad - Screenshot captured for failed scenario: verify page icon disable
+[INFO ] 2025-02-19 14:57:02.655 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:57:02.658 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:57:02.658 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 14:57:02.659 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 14:57:02.659 [main] LoggerLoad - Screenshot captured for failed scenario: verify page icon disable
+[INFO ] 2025-02-19 14:57:02.659 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 14:59:51.005 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 14:59:51.008 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 14:59:59.191 [main] LoggerLoad - FireFox Browser is opened
+[INFO ] 2025-02-19 15:00:09.139 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 15:00:09.154 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 15:00:09.154 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 15:00:14.274 [main] LoggerLoad - FireFox Browser is opened
+[INFO ] 2025-02-19 15:00:18.619 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 15:00:18.626 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 15:00:18.626 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 15:00:23.580 [main] LoggerLoad - FireFox Browser is opened
+[INFO ] 2025-02-19 15:00:27.932 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 15:00:27.938 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 15:00:27.939 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[WARN ] 2025-02-19 15:00:32.226 [main] LoggerLoad - WebDriver instance is null. Cannot take screenshot.
+[INFO ] 2025-02-19 15:00:32.227 [main] LoggerLoad - Screenshot captured for failed scenario: Validate LMS title has correct spelling and space
+[INFO ] 2025-02-19 15:00:32.227 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-19 15:00:32.230 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-19 15:00:32.230 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-19 15:00:35.846 [main] LoggerLoad - FireFox Browser is opened
