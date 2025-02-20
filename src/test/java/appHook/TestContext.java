@@ -1,5 +1,6 @@
 	package appHook;
 
+
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -19,6 +20,7 @@ public class TestContext {
 	private WebDriverWait wait;
 	private ConfigReader configReader;
 	private Actions actions;
+
 	private ExcelReader excelReader;
 	private Login_Page Login;
 	private Dashboard_Page Dashboard;
@@ -35,6 +37,7 @@ public class TestContext {
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		this.actions = new Actions(driver);
 		this.excelReader= new ExcelReader();
+		this.actions = new Actions(driver); // Initialize Actions here
 		this.Login = new Login_Page(driver, this);
 		this.Dashboard = new Dashboard_Page(driver, this);
 		}
@@ -66,6 +69,7 @@ public class TestContext {
 	
 	public Login_Page getLogin() {
 		return Login;
+
 	}
 	
 	public Dashboard_Page getDashboard() {
@@ -75,6 +79,8 @@ public class TestContext {
 	public ExcelReader getExcelReader() {
 	    return excelReader;
 	}
+	
+	 
 
 	
 }

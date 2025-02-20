@@ -149,3 +149,5 @@ Feature: Batch Page Navigation
     Given Admin is on the batch page
     When Admin clicks on the logout button
     Then Admin should see the Login screen Page
+
+    
