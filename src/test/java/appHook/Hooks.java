@@ -1,43 +1,60 @@
 package appHook;
 
+import java.util.List;
+import java.util.Map;
+import org.openqa.selenium.WebDriver;
+
+import common.ConfigReader;
+import common.ExcelReader;
+import common.Screenshot;
+import common.LoggerLoad;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
-import common.ConfigReader;
-import common.LoggerLoad;
-import common.Screenshot;
-import driverFactory.DriverConfig;
+public class Hooks {
+	
+    private TestContext testContext;
+    private ConfigReader configReader;
+    public static List<Map<String, String>> Login;
+    
+    public Hooks(TestContext Context) {
+    	this.testContext = Context;
+    	this.configReader = new ConfigReader();
+    }
+
+    @Before(order = 1)
+    public void setUp() {
+    	LoggerLoad.info("Initializing WebDriver");
+        String browser = ConfigReader.getProperty("Browser");
+        WebDriver driver =  testContext.getDriverConfig().initialiseBrowser(browser);
+        testContext.setDriver(driver);
+        LoggerLoad.info(browser + " Browser is opened");
+        testContext.getDriver().get(configReader.getApplicationURL());
+    }
+    
+    @Before(order = 2)
+    public void setUpExcel() {
+        try {
+            ExcelReader excelreader= new ExcelReader();
+            Login = excelreader.getData("Login");
+          } catch (Exception e) {
+           e.printStackTrace();
+           LoggerLoad.error("Error initializing Excel data: " + e.getMessage());
+           throw new RuntimeException("Error initializing Excel data: " + e.getMessage());
+       }
+    }
 
 
-	public class Hooks {
-			  
-		    @Before(order = 1)
-		    public  void setUpDriver() {
-		    	
-		    		String browser = ConfigReader.getProperty("Browser");
-		            DriverConfig.getdriver(browser);
-		            LoggerLoad.info(browser + " Browser is opened" );		        
-		    }
-		    	
-		 	    
-		    @After(order=2)		   
-		    public void screenshot(Scenario scenario) {
-		    	
-				if(scenario.isFailed()) 
-				{	
-				Screenshot.takeScreenshot(scenario);	
-				LoggerLoad.info("ScreenShot is captured for Failure Scenarios");
-				}
-		    }
-		    
-		    
-		   @After(order=1)
-		  public static void tearDown() {
-			   
-			   LoggerLoad.info("Closing the WebDriver instance");
-		       DriverConfig.quitdriver();
-		       
-		     }
+    @After(order = 1)
+    public void tearDown(Scenario scenario) {
+        if (scenario.isFailed()) {
+        	Screenshot.takeScreenshot(testContext.getDriver(),scenario);
+            LoggerLoad.info("Screenshot captured for failed scenario: " + scenario.getName());
+        }
+        testContext.quitDriver();
+        LoggerLoad.info("Browser is closed");
+    }
 
-		}
+    }
