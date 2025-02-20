@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="0" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-20T03:15:50 CST" name="Default suite" finished-at="2025-02-20T03:16:03 CST" duration-ms="13022">
+  <suite started-at="2025-02-20T14:32:21 CST" name="Default suite" finished-at="2025-02-20T14:33:13 CST" duration-ms="52138">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@5cdec700]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-02-20T03:15:50 CST" name="Default test" finished-at="2025-02-20T03:16:03 CST" duration-ms="13022">
+    <test started-at="2025-02-20T14:32:21 CST" name="Default test" finished-at="2025-02-20T14:33:13 CST" duration-ms="52138">
       <class name="testRunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-20T03:15:50 CST" name="setUpClass" finished-at="2025-02-20T03:15:51 CST" duration-ms="1191" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-20T14:32:21 CST" name="setUpClass" finished-at="2025-02-20T14:32:24 CST" duration-ms="3036" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@30ed4034]]>
+                <![CDATA[org.testng.TestRunner@f287a4e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-20T03:15:51 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-20T03:16:02 CST" duration-ms="11244" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-20T14:32:24 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-20T14:32:43 CST" duration-ms="19017" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify Home Link"]]>
+                <![CDATA["Verify page navigation with icon"]]>
               </value>
             </param>
             <param index="1">
@@ -34,10 +34,126 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Manage User] but found [Dashboard]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+at ✽.Admin should be in "User" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-20T03:16:02 CST" name="tearDownClass" finished-at="2025-02-20T03:16:03 CST" duration-ms="546" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-20T14:32:43 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-20T14:32:53 CST" duration-ms="9815" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify page navigation with icon"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Additional Dashboard Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Manage User] but found [Dashboard]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:163)
+at ✽.Admin should be in "Staff" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-20T14:32:53 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-20T14:33:02 CST" duration-ms="9214" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify page navigation with icon"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Additional Dashboard Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Manage Batch] but found [Dashboard]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:169)
+at ✽.Admin should be in "Batches" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-20T14:33:02 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-20T14:33:12 CST" duration-ms="9751" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify page navigation with icon"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Additional Dashboard Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Manage Batch] but found [Dashboard]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:175)
+at ✽.Admin should be in "Programs" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-20T14:33:12 CST" name="tearDownClass" finished-at="2025-02-20T14:33:13 CST" duration-ms="1119" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

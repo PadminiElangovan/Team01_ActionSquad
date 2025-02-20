@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\madhu\AppData\Local\Temp\testng-eclipse-599418918\testng-customsuite.xml</span>
+                    <span>C:\Users\madhu\AppData\Local\Temp\testng-eclipse--780791475\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods, 4 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Home Link&quot;, &quot;Additional Dashboard Functionality&quot;)">runScenario("Verify Home Link", "Additional Dashboard Functionality")</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify page navigation with icon&quot;, &quot;Additional Dashboard Functionality&quot;)">runScenario("Verify page navigation with icon", "Additional Dashboard Functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify page navigation with icon&quot;, &quot;Additional Dashboard Functionality&quot;)">runScenario("Verify page navigation with icon", "Additional Dashboard Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify page navigation with icon&quot;, &quot;Additional Dashboard Functionality&quot;)">runScenario("Verify page navigation with icon", "Additional Dashboard Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify page navigation with icon&quot;, &quot;Additional Dashboard Functionality&quot;)">runScenario("Verify page navigation with icon", "Additional Dashboard Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,28 +133,102 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testRunner.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify Home Link&quot;, &quot;Additional Dashboard Functionality&quot;)">
-                  </a> <!-- runScenario("Verify Home Link", "Additional Dashboard Functionality") -->
+                  <a name="runScenario(&quot;Verify page navigation with icon&quot;, &quot;Additional Dashboard Functionality&quot;)">
+                  </a> <!-- runScenario("Verify page navigation with icon", "Additional Dashboard Functionality") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify Home Link","Additional Dashboard Functionality")</span>
+                  <span class="parameters">("Verify page navigation with icon","Additional Dashboard Functionality")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+	at ✽.Admin should be in &quot;User&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify page navigation with icon&quot;, &quot;Additional Dashboard Functionality&quot;)">
+                  </a> <!-- runScenario("Verify page navigation with icon", "Additional Dashboard Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify page navigation with icon","Additional Dashboard Functionality")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:175)
+	at ✽.Admin should be in &quot;Programs&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify page navigation with icon&quot;, &quot;Additional Dashboard Functionality&quot;)">
+                  </a> <!-- runScenario("Verify page navigation with icon", "Additional Dashboard Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify page navigation with icon","Additional Dashboard Functionality")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:169)
+	at ✽.Admin should be in &quot;Batches&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify page navigation with icon&quot;, &quot;Additional Dashboard Functionality&quot;)">
+                  </a> <!-- runScenario("Verify page navigation with icon", "Additional Dashboard Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify page navigation with icon","Additional Dashboard Functionality")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:163)
+	at ✽.Admin should be in &quot;Staff&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\madhu\AppData\Local\Temp\testng-eclipse-599418918\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\madhu\AppData\Local\Temp\testng-eclipse--780791475\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,16 +285,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'testRunner.TestRunner')
-data.setCell(0, 3, 11244);
+data.setCell(0, 3, 19017);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'testRunner.TestRunner')
+data.setCell(1, 3, 9815);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'testRunner.TestRunner')
+data.setCell(2, 3, 9751);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'testRunner.TestRunner')
+data.setCell(3, 3, 9214);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 47 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -233,16 +334,36 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testRunner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@30ed4034)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@f287a4e)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Verify Home Link", "Additional Dashboard Functionality")</span>
-                <span class="method-start">1203 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify page navigation with icon", "Additional Dashboard Functionality")</span>
+                <span class="method-start">3148 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify page navigation with icon", "Additional Dashboard Functionality")</span>
+                <span class="method-start">22168 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify page navigation with icon", "Additional Dashboard Functionality")</span>
+                <span class="method-start">31985 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify page navigation with icon", "Additional Dashboard Functionality")</span>
+                <span class="method-start">41200 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">12453 ms</span>
+                <span class="method-start">50958 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

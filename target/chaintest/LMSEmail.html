@@ -30,8 +30,8 @@
                 <table style="padding: 20px;">
                   <tr>
                     <td>
-                      <span class="bg-passed" style="margin-right:10px;padding:0px 5px;">PASSED</span>
-                      <span style="">Feb 20, 2025, 3:15:50 AM &middot; 12s</span>
+                      <span class="bg-failed" style="margin-right:10px;padding:0px 5px;">FAILED</span>
+                      <span style="">Feb 20, 2025, 2:32:21 PM &middot; 50s</span>
                     </td>
                   </tr>
                 </table>
@@ -56,11 +56,11 @@
 	              </td>
                 <td width="100" style="padding:30px 40px 20px;">
 	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#79B530">Passed</p>
-	                <h1 style="font-size:34px;">1</h1>
+	                <h1 style="font-size:34px;">0</h1>
 	              </td>
                 <td width="100" style="padding:30px 40px 20px;">
 	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#e64b5d">Failed</p>
-	                <h1 style="font-size:34px;">0</h1>
+	                <h1 style="font-size:34px;">1</h1>
 	              </td>
                 <td width="100" style="padding:30px 40px 20px;">
 	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#e6e04c">Skipped</p>
@@ -95,21 +95,21 @@
                   </tr>
                   <tr style="height:10px;"></tr>
                   <tr>
-                    <td width="350">@Home2Home</td>
+                    <td width="350">@LMS</td>
                       <td width="23"></td>
-                      <td style="" width="60">1</td>
-                      <td class="padding" width="10"></td>
                       <td style="" width="60">0</td>
+                      <td class="padding" width="10"></td>
+                      <td style="" width="60">4</td>
                       <td class="padding" width="10"></td>
                       <td style="" width="60">0</td>
                   </tr>
                   <tr style="height:10px;"></tr>
                   <tr>
-                    <td width="350">@LMS</td>
+                    <td width="350">@PgNavi</td>
                       <td width="23"></td>
-                      <td style="" width="60">1</td>
-                      <td class="padding" width="10"></td>
                       <td style="" width="60">0</td>
+                      <td class="padding" width="10"></td>
+                      <td style="" width="60">4</td>
                       <td class="padding" width="10"></td>
                       <td style="" width="60">0</td>
                   </tr>
@@ -117,9 +117,9 @@
                   <tr>
                     <td width="350">@DashboardExtra</td>
                       <td width="23"></td>
-                      <td style="" width="60">1</td>
-                      <td class="padding" width="10"></td>
                       <td style="" width="60">0</td>
+                      <td class="padding" width="10"></td>
+                      <td style="" width="60">4</td>
                       <td class="padding" width="10"></td>
                       <td style="" width="60">0</td>
                   </tr>
@@ -135,6 +135,179 @@
     <table width="100%">
       <tr>
         <td align="center">
+          <table width="650">
+            <tr>
+              <td bgcolor="#FFF" style="padding:10px 20px;">
+                <table>
+                  <tr>
+                    <td width="650px" style="padding:10px;">
+                      <p class="text-failed" style="font-size:14px;font-weight:500;margin:0;margin-bottom:5px;">
+                        Feature: Additional Dashboard Functionality
+                      <p style="font-size:12px;margin:0;">
+                        <span>Feb 20, 2025, 2:33:12 PM / 81ms</span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 10px;">
+                      <p style="font-size:13px;margin:0;">
+                        Scenario Outline: Verify page navigation with icon
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Given Admin is on home page after Login
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin clicks "User" icon
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Then Admin should be in "User" page
+<pre>java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+	at ✽.Admin should be in "User" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px"></td></tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 10px;">
+                      <p style="font-size:13px;margin:0;">
+                        Scenario Outline: Verify page navigation with icon
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Given Admin is on home page after Login
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin clicks "Staff" icon
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Then Admin should be in "Staff" page
+<pre>java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:163)
+	at ✽.Admin should be in "Staff" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px"></td></tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 10px;">
+                      <p style="font-size:13px;margin:0;">
+                        Scenario Outline: Verify page navigation with icon
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Given Admin is on home page after Login
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin clicks "Batches" icon
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Then Admin should be in "Batches" page
+<pre>java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:169)
+	at ✽.Admin should be in "Batches" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px"></td></tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 10px;">
+                      <p style="font-size:13px;margin:0;">
+                        Scenario Outline: Verify page navigation with icon
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Given Admin is on home page after Login
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin clicks "Programs" icon
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Then Admin should be in "Programs" page
+<pre>java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:175)
+	at ✽.Admin should be in "Programs" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px"></td></tr>
+                </table>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </table>

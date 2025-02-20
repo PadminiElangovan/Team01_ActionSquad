@@ -40,6 +40,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Feb 20, 2025 03:15:50 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Feb 20, 2025 02:32:21 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -64,7 +65,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,9 +77,9 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@LMS</a></li>
+					<li><a href='#'>@PgNavi</a></li>
 					<li><a href='#'>@DashboardExtra</a></li>
-					<li><a href='#'>@Home2Home</a></li>
+					<li><a href='#'>@LMS</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -120,12 +121,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -138,12 +139,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>1</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
+                    <span class='strong'>0</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    4</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -158,12 +159,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>3</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='75%'>
+                    <span class='strong'>12</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
+                    4</span> steps failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -186,11 +187,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Additional Dashboard Functionality</span>
-						<span class='test-time'>Feb 20, 2025 03:15:51 AM</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-time'>Feb 20, 2025 02:32:24 PM</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -200,35 +201,184 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario outline node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 11.081</span>
+	<span class='duration right label'>00 00 47.440</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify Home Link</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Verify page navigation with icon</div>
 	</div>
 	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>module</td></tr><tr><td>User</td></tr><tr><td>Staff</td></tr><tr><td>Batches</td></tr><tr><td>Programs</td></tr></table></div>
 	
-		<div class='category-list'>
-				<span class='category label'>@LMS</span>
-				<span class='category label'>@Home2Home</span>
-				<span class='category label'>@DashboardExtra</span>
-		</div>
 	
 	<ul class='steps'>
-		<li test-id='5' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.DashboardAddonStep.admin_is_on_home_page_after_login())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on home page after Login</div>
+		<li test-id='3' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Verify page navigation with icon</div>
 
+				<div class='category-list'>
+						<span class='category label'>@LMS</span>
+						<span class='category label'>@PgNavi</span>
+						<span class='category label'>@DashboardExtra</span>
+				</div>
 
+			<ul class='gc steps'>
+				<li test-id='6' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_is_on_home_page_after_login()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on home page after Login</h6>
+
+				</li>
+				<li test-id='7' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_clicks_icon(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks "User" icon</h6>
+
+				</li>
+				<li test-id='8' class='gc then Fail' status='Fail'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_should_be_in_page(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Admin should be in "User" page</h6>
+
+							<textarea disabled class="code-block">java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+	at ✽.Admin should be in "User" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</textarea>
+				</li>
+				<li test-id='9' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>appHook.Hooks.tearDown(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Verify page navigation with icon</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../../Screenshots/embedded1.png' src='../../Screenshots/embedded1.png'>
+							</div>
+				</li>
+			</ul>
 		</li>
-		<li test-id='6' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.DashboardAddonStep.admin_clicks_home_menu())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks Home menu</div>
+		<li test-id='10' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Verify page navigation with icon</div>
 
+				<div class='category-list'>
+						<span class='category label'>@LMS</span>
+						<span class='category label'>@PgNavi</span>
+						<span class='category label'>@DashboardExtra</span>
+				</div>
 
+			<ul class='gc steps'>
+				<li test-id='13' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_is_on_home_page_after_login()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on home page after Login</h6>
+
+				</li>
+				<li test-id='14' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_clicks_icon(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks "Staff" icon</h6>
+
+				</li>
+				<li test-id='15' class='gc then Fail' status='Fail'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_should_be_in_page(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Admin should be in "Staff" page</h6>
+
+							<textarea disabled class="code-block">java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:163)
+	at ✽.Admin should be in "Staff" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</textarea>
+				</li>
+				<li test-id='16' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>appHook.Hooks.tearDown(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Verify page navigation with icon</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../../Screenshots/embedded2.png' src='../../Screenshots/embedded2.png'>
+							</div>
+				</li>
+			</ul>
 		</li>
-		<li test-id='7' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.DashboardAddonStep.admin_should_remain_in_the_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should remain in the home page</div>
+		<li test-id='17' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Verify page navigation with icon</div>
 
+				<div class='category-list'>
+						<span class='category label'>@LMS</span>
+						<span class='category label'>@PgNavi</span>
+						<span class='category label'>@DashboardExtra</span>
+				</div>
 
+			<ul class='gc steps'>
+				<li test-id='20' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_is_on_home_page_after_login()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on home page after Login</h6>
+
+				</li>
+				<li test-id='21' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_clicks_icon(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks "Batches" icon</h6>
+
+				</li>
+				<li test-id='22' class='gc then Fail' status='Fail'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_should_be_in_page(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Admin should be in "Batches" page</h6>
+
+							<textarea disabled class="code-block">java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:169)
+	at ✽.Admin should be in "Batches" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</textarea>
+				</li>
+				<li test-id='23' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>appHook.Hooks.tearDown(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Verify page navigation with icon</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../../Screenshots/embedded3.png' src='../../Screenshots/embedded3.png'>
+							</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='24' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Verify page navigation with icon</div>
+
+				<div class='category-list'>
+						<span class='category label'>@LMS</span>
+						<span class='category label'>@PgNavi</span>
+						<span class='category label'>@DashboardExtra</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='27' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_is_on_home_page_after_login()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on home page after Login</h6>
+
+				</li>
+				<li test-id='28' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_clicks_icon(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks "Programs" icon</h6>
+
+				</li>
+				<li test-id='29' class='gc then Fail' status='Fail'>
+					<h6 class="step-name" title="stepDefinitions.DashboardStepAddon.admin_should_be_in_page(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Admin should be in "Programs" page</h6>
+
+							<textarea disabled class="code-block">java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:175)
+	at ✽.Admin should be in "Programs" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</textarea>
+				</li>
+				<li test-id='30' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>appHook.Hooks.tearDown(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Verify page navigation with icon</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../../Screenshots/embedded4.png' src='../../Screenshots/embedded4.png'>
+							</div>
+				</li>
+			</ul>
 		</li>
 	</ul>
 </div>
@@ -276,15 +426,15 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@LMS</span>
+						<span class='category-name'>@PgNavi</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label fail'>4</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 4</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -298,9 +448,24 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 20, 2025 03:15:51 AM</td>
-										<td class='linked' test-id='2'>Verify Home Link</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Feb 20, 2025 02:32:24 PM</td>
+										<td class='linked' test-id='3'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:32:43 PM</td>
+										<td class='linked' test-id='10'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:32:53 PM</td>
+										<td class='linked' test-id='17'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:33:02 PM</td>
+										<td class='linked' test-id='24'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -311,13 +476,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@DashboardExtra</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label fail'>4</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 4</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -331,9 +496,24 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 20, 2025 03:15:51 AM</td>
-										<td class='linked' test-id='2'>Verify Home Link</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Feb 20, 2025 02:32:24 PM</td>
+										<td class='linked' test-id='3'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:32:43 PM</td>
+										<td class='linked' test-id='10'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:32:53 PM</td>
+										<td class='linked' test-id='17'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:33:02 PM</td>
+										<td class='linked' test-id='24'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -342,15 +522,15 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Home2Home</span>
+						<span class='category-name'>@LMS</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label fail'>4</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 4</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -364,9 +544,24 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 20, 2025 03:15:51 AM</td>
-										<td class='linked' test-id='2'>Verify Home Link</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Feb 20, 2025 02:32:24 PM</td>
+										<td class='linked' test-id='3'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:32:43 PM</td>
+										<td class='linked' test-id='10'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:32:53 PM</td>
+										<td class='linked' test-id='17'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:33:02 PM</td>
+										<td class='linked' test-id='24'>Verify page navigation with icon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -382,7 +577,119 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>4</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 20, 2025 02:32:42 PM</td>
+										<td class='linked' test-id='8'>Then Admin should be in "User" page</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+	at ✽.Admin should be in "User" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:32:52 PM</td>
+										<td class='linked' test-id='15'>Then Admin should be in "Staff" page</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+	at ✽.Admin should be in "User" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:33:01 PM</td>
+										<td class='linked' test-id='22'>Then Admin should be in "Batches" page</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+	at ✽.Admin should be in "User" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Feb 20, 2025 02:33:10 PM</td>
+										<td class='linked' test-id='29'>Then Admin should be in "Programs" page</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+	at ✽.Admin should be in "User" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -396,31 +703,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>16</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 20, 2025 03:15:50 AM</div>
+					<div class='panel-lead'>Feb 20, 2025 02:32:21 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 20, 2025 03:16:02 AM</div>
+			 		<div class='panel-lead'>Feb 20, 2025 02:33:12 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 12.606</div>
+					<div class='panel-lead'>00 00 51.507</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -464,30 +771,30 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@LMS</td>
-							<td>1</td>
+							<td>@PgNavi</td>
 							<td>0</td>
+							<td>4</td>
 							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
 							<td>@DashboardExtra</td>
-							<td>1</td>
 							<td>0</td>
+							<td>4</td>
 							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
-							<td>@Home2Home</td>
-							<td>1</td>
+							<td>@LMS</td>
 							<td>0</td>
+							<td>4</td>
 							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -502,23 +809,23 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 1,
-				passChild: 1,
-				failChild: 0,
+				childCount: 4,
+				passChild: 0,
+				failChild: 4,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 3,
-				passGrandChild: 3,
-				failGrandChild: 0,
+				grandChildCount: 16,
+				passGrandChild: 12,
+				failGrandChild: 4,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
@@ -529,7 +836,7 @@
 		
 		<script>
 			var timeline = {
-			        "Additional Dashboard Functionality":11.083
+			        "Additional Dashboard Functionality":47.443
 			};
 		</script>
 		

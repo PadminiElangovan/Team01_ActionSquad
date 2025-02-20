@@ -35,8 +35,8 @@ Feature: Additional Dashboard Functionality
       |  section |
       | User     |
       | Staff    |
-      | Batch    |
-      | Program  |
+      | Batches  |
+      | Programs |
 
   @TableHeader
   Scenario: Verify Staff data table header
@@ -44,7 +44,7 @@ Feature: Additional Dashboard Functionality
     When Admin enter valid data in all field and clicks login button
     Then Admin should see Staff Data header
 
- @ColumnHeader
+  @ColumnHeader
   Scenario Outline: Verify Staff data table column
     Given Admin is on login Page
     When Admin enter valid data in all field and clicks login button
@@ -56,23 +56,22 @@ Feature: Additional Dashboard Functionality
       | First Name |
       | Last Name  |
       | Phone      |
-
-
+      
   @Home2Home
   Scenario: Verify Home Link
     Given Admin is on home page after Login
     When Admin clicks Home menu
     Then Admin should remain in the home page
 
- @ColumnHeader
+  @PgNavi
   Scenario Outline: Verify page navigation with icon
     Given Admin is on home page after Login
-    When Admin clicks Home menu
+    When Admin clicks "<module>" icon
     Then Admin should be in "<module>" page
 
     Examples: 
-      |  module  |
+      |  module |
       | User     |
       | Staff    |
-      | Batch    |
-      | Program  |
+      | Batches  |
+      | Programs |
