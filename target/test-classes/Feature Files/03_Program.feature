@@ -8,9 +8,13 @@ Feature: Manage Page Validation
   When Admin clicks on Program 
   Then Admin should see all fields and headers on Manage Program page
   
- Scenario: Validating the text and pagination icon in the programpage
+   Scenario: Validating the text and pagination icon in the programpage
  When Admin clicks on Program 
  Then Admin should see footer and enabled pagination controls under the data table
+  
+ Scenario: Verify checkbox default state beside Program Name column header
+ When Admin clicks on Program 
+ Then Admin should see the checkbox default state
 
   Scenario: Validate the sort icon of all the field in datatable
   When Admin clicks on Program 

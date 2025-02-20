@@ -46,8 +46,8 @@ public class ProgramStep {
 			throw new RuntimeException("Error initializing Excel data: " + e.getMessage());
 		}
 		System.out.println(expectedHeaders);
-		List<String> actualHeaders = program.getTableHeaders();
-
+		//List<String> actualHeaders = program.getTableHeaders();
+		List<String> actualHeaders = program.getProgramTableHeaders();
 		System.out.println(actualHeaders);
 		Assert.assertTrue(actualHeaders.containsAll(expectedHeaders));
 
@@ -61,6 +61,10 @@ public class ProgramStep {
 		LoggerLoad.info("Pagination is displayed");
 	}
 
+	@Then("Admin should see the checkbox default state")
+	public void admin_should_see_the_checkbox_default_state() {
+		program.checkboxWithProgramName();
+	}
 	@Then("Admin should see the Sort icon of all the field in the datatable.")
 	public void admin_should_see_sort_icons() {
 		status = program.validateSortingBtn();

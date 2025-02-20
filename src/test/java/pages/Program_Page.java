@@ -2,9 +2,9 @@ package pages;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import appHook.TestContext;
 
-public class Program_Page {
+public class Program_Page extends BasePage {
 
 	private WebDriver driver;
 	private WebDriverWait wait;
@@ -50,6 +50,10 @@ public class Program_Page {
 	private WebElement programStatus;
 	@FindBy(xpath = "//th[text()=' Edit / Delete ']")
 	private WebElement editDeleteHeader;
+	List<WebElement> programHeaders = Arrays.asList(appHeader, homeHeader, programBtn, batchHeader, classHeader, logoutHeader,
+	manageProgramHeader, programNameHeader, programDescriptionHeader, programStatus,addNewPgm, editDeleteHeader);
+	@FindBy(className="p-checkbox")
+	private WebElement checkboxProgramName;
 	@FindBy(css = ".p-paginator-current.ng-star-inserted")
 	private WebElement showingEnteries;
 	@FindBy(className = "p-sortable-column-icon")
@@ -73,28 +77,20 @@ public class Program_Page {
 	public void clickProgram() {
 		programBtn.click();
 	}
+	
+	public List<String> getProgramTableHeaders() {
+        return getTableHeaders(programHeaders);
+    }
 
-	public List<String> getTableHeaders() {
-		List<String> headers = new ArrayList<>();
-
-		headers.add(appHeader.getText().trim());
-		headers.add(homeHeader.getText().trim());
-		headers.add(programBtn.getText().trim());
-		headers.add(batchHeader.getText().trim());
-		headers.add(classHeader.getText().trim());
-		headers.add(logoutHeader.getText().trim());
-		headers.add(manageProgramHeader.getText().trim());
-		headers.add(programNameHeader.getText().trim());
-		headers.add(programDescriptionHeader.getText().trim());
-		headers.add(programStatus.getText().trim());
-		headers.add(addNewPgm.getText().trim());
-		headers.add(editDeleteHeader.getText().trim());
-
-		return headers;
-	}
-
+	
 	public boolean validateShowingEnteries() {
 		return showingEnteries.isDisplayed();
+
+	}
+	
+	public void checkboxWithProgramName() {
+		boolean isDisplayed = checkboxProgramName.isDisplayed();
+		System.out.println("Element is displayed: " + isDisplayed);
 
 	}
 
@@ -105,7 +101,6 @@ public class Program_Page {
 	public boolean testMultipleDeleteIsDisabled() {
 		boolean isEnabled = deleteBtnMC.isEnabled();
 		System.out.println("Is Delete button enabled? " + isEnabled);
-
 		return !isEnabled;
 	}
 
@@ -128,20 +123,6 @@ public class Program_Page {
 		return true;
 	}
 
-	public boolean isSortingbuttonDisplayed(List<WebElement> elements) {
-		boolean flag = true;
-		if (elements.size() > 1) {
-			for (int i = 1; i < elements.size(); i++) {
-				WebElement element = elements.get(i);
-				if (!element.isDisplayed()) {
-					flag = false;
-					break;
-				}
-			}
-		} else {
-			flag = false;
-		}
-		return flag;
-	}
+	
 
 }
