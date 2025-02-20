@@ -19,6 +19,7 @@ public class Dashboard_Page {
 	WebDriver driver;
 	
 	@FindBy(xpath = "//span[contains(text(),'Learning')]") public WebElement HomeTitle;
+	@FindBy(xpath = "//mat-card-title/div") public WebElement DashboardSection;
 	@FindBy(xpath = "//app-admindata/div/div[2]") public WebElement WelcomeTxt;
 	@FindBy(xpath = "//app-admindata/div/div[3]") public WebElement role;
 	@FindBy(xpath = "//mat-toolbar//div") public WebElement MenuBar;
@@ -62,7 +63,16 @@ public class Dashboard_Page {
 		  return role.getText();
 	}
 	 public int DataRow() {
-		// ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", DataRow);
+		
 		 return DataRow.size();
 	 }
+	 public String PageTitle() {
+			return driver.getTitle();	
+	 }
+	public void HomeLink() {
+		HomeMenu.click();
+	}
+	public void ProgramLink() {
+		ProgramMenu.click();
+	}
 }

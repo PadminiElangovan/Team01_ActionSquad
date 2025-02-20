@@ -1,7 +1,7 @@
 @Dashboard @LMS 
 Feature: Dashboard Functionality
 
-  @PgTitle
+  @Title
   Scenario: Verify LMS title
     Given Admin is on login Page
     When Admin enter valid data in all field and clicks login button

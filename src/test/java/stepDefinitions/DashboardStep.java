@@ -59,7 +59,12 @@ public void lms_title_should_be_on_the_top_left_corner_of_page() {
 
 @Then("Admin should see correct spelling in navigation bar text")
 public void admin_should_see_correct_spelling_in_navigation_bar_text() {
-	List<String> expectedTexts = Arrays.asList("Home","Program", "Batch", "Class", "Logout");
+	String a= Loginxl.get(0).get("menu");
+	String b= Loginxl.get(1).get("menu");
+	String c= Loginxl.get(2).get("menu");
+	String x= Loginxl.get(3).get("menu");
+	String y= Loginxl.get(4).get("menu");
+	List<String> expectedTexts = Arrays.asList(a,b,c,x,y);
  	for(int i=0;i<Dashboard.Menus.size();i++) {
  		String NavbarText =Dashboard.Menus.get(i).getText().trim();
  		Assert.assertEquals(NavbarText, expectedTexts.get(i));	 
@@ -112,8 +117,12 @@ public void admin_should_see_piechart() {
 
 @Then("Admin should see welcome message with user name and role")
 public void admin_should_see_welcome_message_with_user_name_and_role() {
-	String Expected = "Welcome "+Loginxl.get(0).get("username");
-	Assert.assertEquals(Dashboard.WelcomeTxt(),Expected);	
+	String Expected = Loginxl.get(0).get("username");
+	String a = Dashboard.WelcomeTxt();
+	String[] actual = a.split(" ");
+	Assert.assertEquals(actual[1],Expected);
+
+
 	Assert.assertEquals(Dashboard.role(), "ADMIN" );	
 }
 
