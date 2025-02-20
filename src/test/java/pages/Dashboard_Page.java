@@ -1,7 +1,9 @@
 package pages;
 
 import java.time.Duration;
+import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,13 +21,15 @@ public class Dashboard_Page {
 	@FindBy(xpath = "//span[contains(text(),'Learning')]") public WebElement HomeTitle;
 	@FindBy(xpath = "//app-admindata/div/div[2]") public WebElement WelcomeTxt;
 	@FindBy(xpath = "//app-admindata/div/div[3]") public WebElement role;
+	@FindBy(xpath = "//mat-toolbar//div") public WebElement MenuBar;
+	@FindBy(xpath = "//div[@class='ng-star-inserted']//span[normalize-space()]") public List<WebElement> Menus;
 	@FindBy(xpath = "//div[@routerlink='/user']/div[1]") public WebElement UsrCount;
 	@FindBy(xpath = "//div[@class='widget yellow']//div[@class='top']") public WebElement StaffCount;
 	@FindBy(xpath = "//div[@routerlink='/batch']/div[1]") public WebElement BatchCount;
 	@FindBy(xpath = "//div[@routerlink='/program']/div[1]") public WebElement ProgramCount;
 	@FindBy(xpath = "//app-staffdata/mat-table") public WebElement StaffTable;
 	@FindBy(xpath = "//app-staffdata/mat-paginator") public WebElement TablePagination;
-	@FindBy(xpath = "//div[@class='mat-paginator-range-label']") public WebElement DataSplit;
+	@FindBy(xpath = "//mat-table/mat-row") public List<WebElement> DataRow;
 	@FindBy(xpath = "//button[@aria-label='First page']") public WebElement FirstPg;
 	@FindBy(xpath = "//button[@aria-label='Previous page']") public WebElement PreviousPg;
 	@FindBy(xpath = "//button[@aria-label='Next page']") public WebElement NextPg;
@@ -36,8 +40,8 @@ public class Dashboard_Page {
 	@FindBy(xpath = "//span[text()='Class']") public WebElement ClassMenu;
 	@FindBy(xpath = "//button[@id ='logout']") public WebElement LogoutMenu;
 	
-	@FindBy(xpath = "//div[@class='grid-container']/div[1]//div[@class='chartjs-size-monitor']") public WebElement BarChart;
-	@FindBy(xpath = "//div[@class='grid-container']/div[3]//div[@class ='chartjs-size-monitor']") public WebElement PieChart;	
+	@FindBy(xpath = "//mat-card-content//mat-grid-tile[2]") public WebElement BarChart;
+	@FindBy(xpath = "//app-doughnutchart") public WebElement PieChart;
 	
 	
 	 public Dashboard_Page(WebDriver driver,TestContext context){
@@ -51,13 +55,14 @@ public class Dashboard_Page {
 		 return HomeTitle.getText();
 	 }
 	 
-	 public String WelcomeName() {
-		 return WelcomeTxt.getText(); 
-     }
-	 
-	 public String UsrRole() {
-		 return role.getText(); 
-     }
-	 
-	 
+	 public String WelcomeTxt() {
+		 return WelcomeTxt.getText();
+	 }
+	  public String role() {
+		  return role.getText();
+	}
+	 public int DataRow() {
+		// ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", DataRow);
+		 return DataRow.size();
+	 }
 }
