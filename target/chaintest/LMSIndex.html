@@ -19,9 +19,9 @@
         <span class="ms-3 fs-6">LMS_ActionSquad</span>
       </div>
       <div>
-        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 12s</span>
-        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Started 2025-02-20 03:15:50 AM</span>
-        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Ended 2025-02-20 03:16:02 AM</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 50s</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Started 2025-02-20 02:32:21 PM</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Ended 2025-02-20 02:33:12 PM</span>
       </div>
       <div>
           <button role="button" id="sys-info" class="btn btn-outline-primary smaller" title="View System Info">
@@ -48,8 +48,8 @@
                 </div>
               </div>
               <div class="card-footer small">
-                <span id="sp1">1</span> Passed,
-                <span id="sf1">0</span> Failed,
+                <span id="sp1">0</span> Passed,
+                <span id="sf1">1</span> Failed,
                 <span id="ss1">0</span> Skipped
               </div>
             </div>
@@ -65,8 +65,8 @@
                 </div>
               </div>
               <div class="card-footer small">
-                <span id="sp2">1</span> Passed,
-                <span id="sf2">0</span> Failed,
+                <span id="sp2">0</span> Passed,
+                <span id="sf2">4</span> Failed,
                 <span id="ss2">0</span> Skipped
               </div>
             </div>
@@ -82,8 +82,8 @@
                   </div>
                 </div>
                 <div class="card-footer small">
-                  <span id="sp3">3</span> Passed,
-                  <span id="sf3">0</span> Failed,
+                  <span id="sp3">8</span> Passed,
+                  <span id="sf3">4</span> Failed,
                   <span id="ss3">0</span> Skipped
                 </div>
               </div>
@@ -112,25 +112,25 @@
               </thead>
               <tbody>
                   <tr>
-                    <td><a href="#" class="secondary tag">@Home2Home</a></td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td><a href="#" class="secondary tag">@LMS</a></td>
+                    <td>4</td>
                     <td>0</td>
-                    <td>2ms</td>
+                    <td>4</td>
+                    <td>42ms</td>
                   </tr>
                   <tr>
-                    <td><a href="#" class="secondary tag">@LMS</a></td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td><a href="#" class="secondary tag">@PgNavi</a></td>
+                    <td>4</td>
                     <td>0</td>
-                    <td>2ms</td>
+                    <td>4</td>
+                    <td>42ms</td>
                   </tr>
                   <tr>
                     <td><a href="#" class="secondary tag">@DashboardExtra</a></td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>4</td>
                     <td>0</td>
-                    <td>2ms</td>
+                    <td>4</td>
+                    <td>42ms</td>
                   </tr>
               </tbody>
             </table>
@@ -156,38 +156,87 @@
         </div>
       </div>
     </div>
-      <div class="test-container passed">
+      <div class="test-container failed">
         <div class="container">
           <div class="row">
             <div class="col-4">
-              <h6 class="mb-3 testname passed">Feature: Additional Dashboard Functionality</h6>
+              <h6 class="mb-3 testname failed">Feature: Additional Dashboard Functionality</h6>
               <div class="small">
-                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 6ms</span>
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 81ms</span>
                 <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
-                  2025-02-20 03:16:02 AM</span>
+                  2025-02-20 02:33:12 PM</span>
                 <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
-                  2025-02-20 03:16:02 AM</span>
+                  2025-02-20 02:33:12 PM</span>
               </div>
                 <div class="my-2">
                     <span class="badge rounded-pill text-bg-secondary">@DashboardExtra</span>
                     <span class="badge rounded-pill text-bg-secondary">@LMS</span>
-                    <span class="badge rounded-pill text-bg-secondary">@Home2Home</span>
+                    <span class="badge rounded-pill text-bg-secondary">@PgNavi</span>
                 </div>
               
             </div>
             <div class="col-8">
-                <div class="card mb-1 result passed">
+                <div class="card mb-1 result failed">
                   <div class="card-body">
                     <div class="d-flex justify-content-between">
                       <div>
-                          <i class="bi bi-check-circle-fill text-success"></i>
-                        <span class="ms-2">Scenario: Verify Home Link</span>
+                            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+                        <span class="ms-2">Scenario Outline: Verify page navigation with icon</span>
                       </div>
                       <div>
                           <span class="tag-list">
                               <span class="badge rounded-pill text-bg-secondary">@DashboardExtra</span>
                               <span class="badge rounded-pill text-bg-secondary">@LMS</span>
-                              <span class="badge rounded-pill text-bg-secondary">@Home2Home</span>
+                              <span class="badge rounded-pill text-bg-secondary">@PgNavi</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">38ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-2">
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on home page after Login</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin clicks "User" icon</span>
+        </div>
+        <div class="mt-1 leaf">
+              <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="ms-2">Then Admin should be in "User" page</span>
+            <pre class="py-2 mt-2">java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+	at ✽.Admin should be in "User" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre>
+        </div>
+  </div>
+                      <div class="row mt-3">
+                          <div class="embed col-2 mb-1">
+                            <img src="resources/c70f819f-1d4b-4daf-974c-619a0e66f367.png" />
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="card mb-1 result failed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+                        <span class="ms-2">Scenario Outline: Verify page navigation with icon</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@DashboardExtra</span>
+                              <span class="badge rounded-pill text-bg-secondary">@LMS</span>
+                              <span class="badge rounded-pill text-bg-secondary">@PgNavi</span>
                           </span>
                           <span class="mx-1">&middot;</span>
                         <span class="badge text-dark bg-light">2ms</span>
@@ -201,13 +250,126 @@
         </div>
         <div class="mt-1 leaf">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">When Admin clicks Home menu</span>
+          <span class="ms-2">When Admin clicks "Staff" icon</span>
+        </div>
+        <div class="mt-1 leaf">
+              <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="ms-2">Then Admin should be in "Staff" page</span>
+            <pre class="py-2 mt-2">java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:163)
+	at ✽.Admin should be in "Staff" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre>
+        </div>
+  </div>
+                      <div class="row mt-3">
+                          <div class="embed col-2 mb-1">
+                            <img src="resources/9d9ca4e3-6f8e-4f07-9113-f2d2bb84fd2e.png" />
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="card mb-1 result failed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+                        <span class="ms-2">Scenario Outline: Verify page navigation with icon</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@DashboardExtra</span>
+                              <span class="badge rounded-pill text-bg-secondary">@LMS</span>
+                              <span class="badge rounded-pill text-bg-secondary">@PgNavi</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">2ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-2">
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on home page after Login</span>
         </div>
         <div class="mt-1 leaf">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Then Admin should remain in the home page</span>
+          <span class="ms-2">When Admin clicks "Batches" icon</span>
+        </div>
+        <div class="mt-1 leaf">
+              <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="ms-2">Then Admin should be in "Batches" page</span>
+            <pre class="py-2 mt-2">java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:169)
+	at ✽.Admin should be in "Batches" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre>
         </div>
   </div>
+                      <div class="row mt-3">
+                          <div class="embed col-2 mb-1">
+                            <img src="resources/931ea6e3-657a-48c5-8ee9-eba0aa7f69d5.png" />
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="card mb-1 result failed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+                        <span class="ms-2">Scenario Outline: Verify page navigation with icon</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@DashboardExtra</span>
+                              <span class="badge rounded-pill text-bg-secondary">@LMS</span>
+                              <span class="badge rounded-pill text-bg-secondary">@PgNavi</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">0ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-2">
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on home page after Login</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin clicks "Programs" icon</span>
+        </div>
+        <div class="mt-1 leaf">
+              <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="ms-2">Then Admin should be in "Programs" page</span>
+            <pre class="py-2 mt-2">java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:175)
+	at ✽.Admin should be in "Programs" page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre>
+        </div>
+  </div>
+                      <div class="row mt-3">
+                          <div class="embed col-2 mb-1">
+                            <img src="resources/4addffe7-2b2a-40e9-8870-17bcaf671b20.png" />
+                          </div>
+                      </div>
                   </div>
                 </div>
             </div>
@@ -218,22 +380,22 @@
   </div>
 
   <script>
-    const stats1Annotation = {'total': 1, 'passed': 1};
+    const stats1Annotation = {'total': 1, 'passed': 0};
     const stats1 = [
-      { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
-      { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
+      { result: 'Passed', count: 0, bg: 'rgb(140, 197, 83)' },
+      { result: 'Failed', count: 1, bg: 'rgb(233,80,113)' },
       { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
     ];
-      const stats2Annotation = {'total': 1, 'passed': 1};
+      const stats2Annotation = {'total': 4, 'passed': 0};
       const stats2 = [
-        { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
-        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
+        { result: 'Passed', count: 0, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 4, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
       ];
-      const stats3Annotation = {'total': 3, 'passed': 3};
+      const stats3Annotation = {'total': 12, 'passed': 8};
       const stats3 = [
-        { result: 'Passed', count: 3, bg: 'rgb(140, 197, 83)' },
-        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
+        { result: 'Passed', count: 8, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 4, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
       ];
      
@@ -306,24 +468,24 @@
           <table class="table">
             <tbody>
                 <tr>
-                  <td>esc</td>
-                  <td>Reset all filters</td>
-                </tr>
-                <tr>
-                  <td>L</td>
-                  <td>Toggle theme (light/dark)</td>
-                </tr>
-                <tr>
-                  <td>s</td>
-                  <td>Toggle skipped tests</td>
+                  <td>f</td>
+                  <td>Toggle failed tests</td>
                 </tr>
                 <tr>
                   <td>p</td>
                   <td>Toggle passed tests</td>
                 </tr>
                 <tr>
-                  <td>f</td>
-                  <td>Toggle failed tests</td>
+                  <td>s</td>
+                  <td>Toggle skipped tests</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>Toggle theme (light/dark)</td>
+                </tr>
+                <tr>
+                  <td>esc</td>
+                  <td>Reset all filters</td>
                 </tr>
             </tbody>
           </table>

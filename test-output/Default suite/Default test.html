@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 20 03:15:50 CST 2025</td>
+<td>Started on:</td><td>Thu Feb 20 14:32:21 CST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13022 ms)</td>
+<tr><td>Total time:</td><td>52 seconds (52138 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,9 +76,100 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Home Link", "Additional Dashboard Functionality"</td>
-<td></td>
-<td>11</td>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+	at ✽.Admin should be in &quot;User&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1353454153", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1353454153'><pre>java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:157)
+	at ✽.Admin should be in &quot;User&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div></td>
+<td>19</td>
+<td>testRunner.TestRunner@5cdec700</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:175)
+	at ✽.Admin should be in &quot;Programs&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div><a href='#' onClick='toggleBox("stack-trace123577051", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace123577051'><pre>java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:175)
+	at ✽.Admin should be in &quot;Programs&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div></td>
+<td>9</td>
+<td>testRunner.TestRunner@5cdec700</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:169)
+	at ✽.Admin should be in &quot;Batches&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div><a href='#' onClick='toggleBox("stack-trace385929353", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace385929353'><pre>java.lang.AssertionError: expected [Manage Batch] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:169)
+	at ✽.Admin should be in &quot;Batches&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div></td>
+<td>9</td>
+<td>testRunner.TestRunner@5cdec700</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:163)
+	at ✽.Admin should be in &quot;Staff&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1808149433", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1808149433'><pre>java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:163)
+	at ✽.Admin should be in &quot;Staff&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div></td>
+<td>9</td>
 <td>testRunner.TestRunner@5cdec700</td></tr>
 </table><p>
 </body>
