@@ -3,16 +3,21 @@ package pages;
 import java.time.Duration;
 import java.util.NoSuchElementException;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class BasePage {
 	
 	static WebDriver driver;
+	 WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 	
    	public static String getPageTitle(WebDriver driver) {
 		return driver.getTitle();
@@ -55,5 +60,39 @@ public class BasePage {
 			return false;
 		}
 	}
+	
+	public  boolean IsAlertPresent() {
+    	try {
+    		wait.until(ExpectedConditions.alertIsPresent());
+    	return true;
+    }catch (NoAlertPresentException e) {
+    	return false;}
+    }
+	
+    public String AlertText() {
+    	if(IsAlertPresent()) {	
+    		wait.until(ExpectedConditions.alertIsPresent());
+    		Alert alert = driver.switchTo().alert();
+    		return alert.getText();
+    	}else {
+    		System.out.println("Alert is not present");
+    	}
+		return null;
+    }
+    
+    public void AcceptAlert() {
+ 	   Alert alert = driver.switchTo().alert();
+     try {
+     	wait.until(ExpectedConditions.alertIsPresent());
+         alert.accept();
+         System.out.println("Alert accepted successfully.");
+     } catch (NoAlertPresentException e) {
+     	alert.accept();
+         System.out.println("No alert present. Exception: " + e.getMessage());
+     } catch (UnhandledAlertException  e) {
+     	alert.accept();
+         System.out.println("An unexpected exception occurred: " + e.getMessage());
+     }
+ }
 
 }
