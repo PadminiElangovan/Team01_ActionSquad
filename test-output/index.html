@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\madhu\AppData\Local\Temp\testng-eclipse-1142508182\testng-customsuite.xml</span>
+                    <span>C:\Users\madhu\AppData\Local\Temp\testng-eclipse-1508846849\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate batch count&quot;, &quot;Additional Dashboard Functionality&quot;)">runScenario("Validate batch count", "Additional Dashboard Functionality")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Forgot Password Link&quot;, &quot;Additional Login Functionality&quot;)">runScenario("Verify Forgot Password Link", "Additional Login Functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,19 +126,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Validate batch count&quot;, &quot;Additional Dashboard Functionality&quot;)">
-                  </a> <!-- runScenario("Validate batch count", "Additional Dashboard Functionality") -->
+                  <a name="runScenario(&quot;Verify Forgot Password Link&quot;, &quot;Additional Login Functionality&quot;)">
+                  </a> <!-- runScenario("Verify Forgot Password Link", "Additional Login Functionality") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Validate batch count","Additional Dashboard Functionality")</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [42] but found [70]
+                  <span class="parameters">("Verify Forgot Password Link","Additional Login Functionality")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_batch(DashboardStepAddon.java:171)
-	at ✽.Admin should see exact total count of active and inactive batch(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:83)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_should_see_forgot_password_link(LoginStepAddon.java:98)
+	at ✽.Admin should see Forgot Password Link(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:42)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -150,7 +148,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\madhu\AppData\Local\Temp\testng-eclipse-1142508182\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\madhu\AppData\Local\Temp\testng-eclipse-1508846849\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -211,12 +209,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'testRunner.TestRunner')
-data.setCell(0, 3, 9205);
+data.setCell(0, 3, 25200);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -244,18 +242,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testRunner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@21ce2e4d)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@33e4068)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Validate batch count", "Additional Dashboard Functionality")</span>
-                <span class="method-start">1521 ms</span>
+                <span class="method-name">runScenario("Verify Forgot Password Link", "Additional Login Functionality")</span>
+                <span class="method-start">3174 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">10733 ms</span>
+                <span class="method-start">28386 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

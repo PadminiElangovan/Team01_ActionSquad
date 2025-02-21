@@ -36,7 +36,7 @@ public class DriverConfig {
 	                    throw new IllegalArgumentException("Browser not supported: " + browserName);
 	            }
 	            driver.manage().window().maximize();
-	            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+	            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	        }
 	        return driver;
 	    }

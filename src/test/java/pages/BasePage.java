@@ -47,8 +47,13 @@ public class BasePage {
 	}
 	
 	public static boolean isElementPresent(WebElement element) {
-		
-			return element.isDisplayed();
+		try {
+			boolean status = element.isDisplayed();
+			return status;
+		}
+		catch(NoSuchElementException e) {
+			return false;
+		}
 	}
 
 }

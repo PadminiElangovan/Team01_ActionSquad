@@ -50,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Feb 21, 2025 04:02:19 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Feb 21, 2025 12:55:29 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -77,10 +77,9 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@LoginExtra</a></li>
+					<li><a href='#'>@ForgotPswdLink</a></li>
 					<li><a href='#'>@LMS</a></li>
-					<li><a href='#'>@DashboardExtra</a></li>
-					<li><a href='#'>@BatchCount</a></li>
-					<li><a href='#'>@Dash</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -160,11 +159,11 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='75%'>
-                    <span class='strong'>3</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66%'>
+                    <span class='strong'>2</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
                     1</span> steps failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
@@ -190,8 +189,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Additional Dashboard Functionality</span>
-						<span class='test-time'>Feb 21, 2025 04:02:21 AM</span>
+						<span class='test-name'>Additional Login Functionality</span>
+						<span class='test-time'>Feb 21, 2025 12:55:32 PM</span>
 						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -204,50 +203,42 @@
 
 <div class='scenario node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 08.995</span>
+	<span class='duration right label'>00 00 24.895</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validate batch count</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verify Forgot Password Link</div>
 	</div>
 	
 	
 		<div class='category-list'>
+				<span class='category label'>@ForgotPswdLink</span>
 				<span class='category label'>@LMS</span>
-				<span class='category label'>@BatchCount</span>
-				<span class='category label'>@Dash</span>
-				<span class='category label'>@DashboardExtra</span>
+				<span class='category label'>@LoginExtra</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='5' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.DashboardStep.admin_is_on_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on login Page</div>
+		<li test-id='5' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginStepAddon.admin_gives_the_correct_lms_portal_url())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin gives the correct LMS portal URL</div>
 
 
 		</li>
-		<li test-id='6' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.DashboardStep.admin_enter_valid_data_in_all_field_and_clicks_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enter valid data in all field and clicks login button</div>
+		<li test-id='6' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(stepDefinitions.LoginStepAddon.admin_should_see_forgot_password_link())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Admin should see Forgot Password Link</div>
 
 
-		</li>
-		<li test-id='7' class='node then Fail' status='Fail'>
-			<div class="step-name" title="(stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_batch())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Admin should see exact total count of active and inactive batch</div>
-
-
-					<textarea disabled class="code-block">java.lang.AssertionError: expected [42] but found [70]
+					<textarea disabled class="code-block">java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_batch(DashboardStepAddon.java:171)
-	at ✽.Admin should see exact total count of active and inactive batch(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:83)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_should_see_forgot_password_link(LoginStepAddon.java:98)
+	at ✽.Admin should see Forgot Password Link(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:42)
 </textarea>
 		</li>
-		<li test-id='8' class='node * Pass' status='Pass'>
+		<li test-id='7' class='node * Pass' status='Pass'>
 			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>appHook.Hooks.tearDown(io.cucumber.java.Scenario)</div>
 
 
-					<div class="node-step">Validate batch count</div>
+					<div class="node-step">Verify Forgot Password Link</div>
 					<div class='screenshots'>
 						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../../Screenshots/embedded1.png' src='../../Screenshots/embedded1.png'>
 					</div>
@@ -298,6 +289,72 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
+						<span class='category-name'>@LoginExtra</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 21, 2025 12:55:32 PM</td>
+										<td class='linked' test-id='2'>Verify Forgot Password Link</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@ForgotPswdLink</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 21, 2025 12:55:32 PM</td>
+										<td class='linked' test-id='2'>Verify Forgot Password Link</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
 						<span class='category-name'>@LMS</span>
 						<span class='category-status right'>
 						<span class='label fail'>1</span>
@@ -320,107 +377,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 21, 2025 04:02:21 AM</td>
-										<td class='linked' test-id='2'>Validate batch count</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@DashboardExtra</span>
-						<span class='category-status right'>
-						<span class='label fail'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Feb 21, 2025 04:02:21 AM</td>
-										<td class='linked' test-id='2'>Validate batch count</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@BatchCount</span>
-						<span class='category-status right'>
-						<span class='label fail'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Feb 21, 2025 04:02:21 AM</td>
-										<td class='linked' test-id='2'>Validate batch count</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@Dash</span>
-						<span class='category-status right'>
-						<span class='label fail'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Feb 21, 2025 04:02:21 AM</td>
-										<td class='linked' test-id='2'>Validate batch count</td>
+										<td>Feb 21, 2025 12:55:32 PM</td>
+										<td class='linked' test-id='2'>Verify Forgot Password Link</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
@@ -472,18 +430,16 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 21, 2025 04:02:28 AM</td>
-										<td class='linked' test-id='7'>Then Admin should see exact total count of active and inactive batch</td>
+										<td>Feb 21, 2025 12:55:45 PM</td>
+										<td class='linked' test-id='6'>Then Admin should see Forgot Password Link</td>
 										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: expected [42] but found [70]
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_batch(DashboardStepAddon.java:171)
-	at ✽.Admin should see exact total count of active and inactive batch(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:83)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_should_see_forgot_password_link(LoginStepAddon.java:98)
+	at ✽.Admin should see Forgot Password Link(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:42)
 </textarea>
 										</td>
 									</tr>
@@ -521,25 +477,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 21, 2025 04:02:19 AM</div>
+					<div class='panel-lead'>Feb 21, 2025 12:55:29 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 21, 2025 04:02:30 AM</div>
+			 		<div class='panel-lead'>Feb 21, 2025 12:55:58 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 10.855</div>
+					<div class='panel-lead'>00 00 28.740</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -583,34 +539,25 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
+							<td>@LoginExtra</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@ForgotPswdLink</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
 							<td>@LMS</td>
-							<td>0</td>
-							<td>1</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@DashboardExtra</td>
-							<td>0</td>
-							<td>1</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@BatchCount</td>
-							<td>0</td>
-							<td>1</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@Dash</td>
 							<td>0</td>
 							<td>1</td>
 							<td>0</td>
@@ -644,8 +591,8 @@
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 4,
-				passGrandChild: 3,
+				grandChildCount: 3,
+				passGrandChild: 2,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -657,7 +604,7 @@
 		
 		<script>
 			var timeline = {
-			        "Additional Dashboard Functionality":8.998
+			        "Additional Login Functionality":24.899
 			};
 		</script>
 		
