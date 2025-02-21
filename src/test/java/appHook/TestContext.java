@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import common.ConfigReader;
+import common.ExcelReader;
 import driverFactory.DriverConfig;
 import pages.Dashboard_Page;
 import pages.Login_Page;
@@ -24,7 +25,6 @@ public class TestContext {
 	public TestContext() {
 		this.driverConfig = new DriverConfig(); // initializing the DriverFactory
 		this.configReader = new ConfigReader(); // config reader initilise
-
 	}
 
 	public void setDriver(WebDriver driver) {
@@ -39,7 +39,6 @@ public class TestContext {
 		return driverConfig;
 		}
 
-	// WebDriver instance
 	public WebDriver getDriver() {
 		return driver; 
 		}
@@ -53,7 +52,7 @@ public class TestContext {
 		}
 
 	public String getApplicationURL() {
-		return configReader.getApplicationURL(); // Method to get URL
+		return configReader.getApplicationURL(); 
 		}
 	
 	public Actions getActions() {
@@ -66,7 +65,8 @@ public class TestContext {
 	
 	public Dashboard_Page getDashboard() {
 			return Dashboard;
-		} 
+		}
+ 
 
 	
 }

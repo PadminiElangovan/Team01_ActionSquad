@@ -1,4 +1,4 @@
-@Dashboard @LMS 
+@Dashboard @LMS @Dash
 Feature: Dashboard Functionality
 
   @Title

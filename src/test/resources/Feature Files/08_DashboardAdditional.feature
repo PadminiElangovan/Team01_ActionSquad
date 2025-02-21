@@ -1,7 +1,7 @@
-@DashboardExtra @LMS 
+@DashboardExtra @LMS @Dash
 Feature: Additional Dashboard Functionality
 
-  @LMSTitle
+ @LMSTitle
   Scenario: Verify LMS Dashboard page title
     Given Admin is on login Page
     When Admin enter valid data in all field and clicks login button
@@ -63,15 +63,33 @@ Feature: Additional Dashboard Functionality
     When Admin clicks Home menu
     Then Admin should remain in the home page
 
-  @PgNavi
+  @IconLink
   Scenario Outline: Verify page navigation with icon
     Given Admin is on home page after Login
     When Admin clicks "<module>" icon
     Then Admin should be in "<module>" page
 
     Examples: 
-      |  module |
+      |  module  |
       | User     |
       | Staff    |
       | Batches  |
       | Programs |
+      
+  @BatchCount
+  Scenario: Validate batch count 
+    Given Admin is on login Page
+    When Admin enter valid data in all field and clicks login button
+    Then Admin should see exact total count of active and inactive batch
+  
+  @PrgmCount
+  Scenario: Validate program count
+    Given Admin is on login Page
+    When Admin enter valid data in all field and clicks login button
+    Then Admin should see exact total count of active and inactive program
+    
+   @UsrCount
+  Scenario: Validate user count
+    Given Admin is on login Page
+    When Admin enter valid data in all field and clicks login button
+    Then Admin should see exact total count of active and inactive user
