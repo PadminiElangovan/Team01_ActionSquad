@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import org.testng.Assert;
 import appHook.TestContext;
 import common.ExcelReader;
 import common.LoggerLoad;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.Program_Page;
@@ -46,8 +48,7 @@ public class ProgramStep {
 			throw new RuntimeException("Error initializing Excel data: " + e.getMessage());
 		}
 		System.out.println(expectedHeaders);
-		//List<String> actualHeaders = program.getTableHeaders();
-		List<String> actualHeaders = program.getProgramTableHeaders();
+		List<String> actualHeaders = program.getTableHeaders();
 		System.out.println(actualHeaders);
 		Assert.assertTrue(actualHeaders.containsAll(expectedHeaders));
 
@@ -83,4 +84,65 @@ public class ProgramStep {
 	public void admin_should_see_total_numbers_of_programs() {
 		assertTrue(program.validateFooter());
 	}
+	
+	
+	
+// **************************************Pagination****************************************
+	@Given("Admin is on Program page")
+	public void admin_is_on_program_page() {
+		program.clickProgram();
+		
+	}
+	
+	 @When("^Admin clicks the (Next|Last|Previous|First) link on the data table$")
+	    public void adminClicksPageLink(String pageLink) {
+	    	
+	      	program.navigateToBatch();
+	      	
+	        switch (pageLink.toLowerCase()) {
+	            case "next":
+	            	program.clickNextPage();
+	                break;
+	            case "last":
+	                program.clickLastPage();
+	                break;
+	            case "previous":
+	            	program.clickPreviousPage();
+	                break;
+	            case "first":
+	            	program.clickFirstPage();
+	                break;
+	        }
+	    }
+
+	    // Verify the results based on the <results> description
+	@Then("^Admin should see the (.*) on the data table$")
+	    public void adminShouldSeeResults(String expectedResult) {
+	    	
+
+	    	switch (expectedResult.toLowerCase()) {
+	    	 case "next enabled link":
+	             Assert.assertTrue( program.isNextButtonEnabled());
+	             break;
+	        case "last page link with next disabled":
+	            Assert.assertFalse( program.isNextButtonEnabled());
+	            break;
+	        case "previous page":
+	            Assert.assertTrue( program.isPrevButtonEnabled());
+	            break;
+	        case "very first page":
+	            Assert.assertFalse( program.isPrevButtonEnabled());
+	            break;
+	          default:
+	            Assert.fail("Unexpected result description: " + expectedResult);
+	    }
+	    }
+
 }
+	
+	
+	
+	
+	
+	
+

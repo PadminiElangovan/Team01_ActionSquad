@@ -2,14 +2,15 @@ package pages;
 
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import appHook.TestContext;
@@ -50,9 +51,7 @@ public class Program_Page extends BasePage {
 	private WebElement programStatus;
 	@FindBy(xpath = "//th[text()=' Edit / Delete ']")
 	private WebElement editDeleteHeader;
-	List<WebElement> programHeaders = Arrays.asList(appHeader, homeHeader, programBtn, batchHeader, classHeader, logoutHeader,
-	manageProgramHeader, programNameHeader, programDescriptionHeader, programStatus,addNewPgm, editDeleteHeader);
-	@FindBy(className="p-checkbox")
+		@FindBy(className="p-checkbox")
 	private WebElement checkboxProgramName;
 	@FindBy(css = ".p-paginator-current.ng-star-inserted")
 	private WebElement showingEnteries;
@@ -64,6 +63,26 @@ public class Program_Page extends BasePage {
 	private WebElement footer;
 	@FindBy(xpath = "p-paginator-element")
 	private List<WebElement> pagination;
+	
+	// Pagination 
+	 @FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
+	    private WebElement pagination1;
+	    @FindBy(xpath = "//span[contains(@class, 'p-paginator-current')]")
+	    private WebElement currentEntriesText;
+	    @FindBy(xpath = "//p-table//table/tbody/tr")
+	    private List<WebElement> rows;
+	    @FindBy(xpath = "//button[contains(@class, 'p-paginator-first')]")
+	    private WebElement firstButton;
+	    @FindBy(xpath = "//button[contains(@class, 'p-paginator-prev')]")
+	    private WebElement prevButton;
+	    @FindBy(xpath = "//button[contains(@class, 'p-paginator-next')]")
+	    private WebElement nextButton;
+	    @FindBy(xpath = "//button[contains(@class, 'p-paginator-last')]")
+	    private WebElement lastButton;
+	    @FindBy(xpath = "//button[contains(@class, 'p-paginator-page')]")
+	    private List<WebElement> pageButtons;
+	    
+	
 
 	public Program_Page(WebDriver driver, TestContext context) {
 
@@ -78,9 +97,24 @@ public class Program_Page extends BasePage {
 		programBtn.click();
 	}
 	
-	public List<String> getProgramTableHeaders() {
-        return getTableHeaders(programHeaders);
-    }
+	public List<String> getTableHeaders() {
+		List<String> headers = new ArrayList<>();
+
+		headers.add(appHeader.getText().trim());
+		headers.add(homeHeader.getText().trim());
+		headers.add(programBtn.getText().trim());
+		headers.add(batchHeader.getText().trim());
+		headers.add(classHeader.getText().trim());
+		headers.add(logoutHeader.getText().trim());
+		headers.add(manageProgramHeader.getText().trim());
+		headers.add(programNameHeader.getText().trim());
+		headers.add(programDescriptionHeader.getText().trim());
+		headers.add(programStatus.getText().trim());
+		headers.add(addNewPgm.getText().trim());
+		headers.add(editDeleteHeader.getText().trim());
+
+		return headers;
+	} 
 
 	
 	public boolean validateShowingEnteries() {
@@ -122,7 +156,56 @@ public class Program_Page extends BasePage {
 		}
 		return true;
 	}
-
 	
+	private void doubleClick(WebElement element) {
+        Actions actions = new Actions(driver); // Create an Actions instance
+        actions.moveToElement(element).doubleClick().perform(); // Move to the element and double-click
+    }
+	
+	 public void  navigateToBatch() {
+	    	// waitForOverlayToDisappear(); 
+	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	        wait.until(ExpectedConditions.elementToBeClickable(programBtn)).click();
+	        
+	    }
+	 
+	 public void waitForOverlayToDisappear() {
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("cdk-overlay-backdrop")));
+		}
+	 
+		    
+	    public void clickFirstPage() {	    	
+	          doubleClick(firstButton);
+	    }
 
+		public void clickNextPage() {
+			doubleClick(nextButton)	;		
+		}
+
+		public void clickLastPage() {
+			doubleClick(lastButton);
+			
+		}
+
+		public void clickPreviousPage() {
+			doubleClick(prevButton);
+			
+		}
+
+		public boolean isNextButtonEnabled() {
+		return	nextButton.isEnabled();			
+			
+		}
+
+		public boolean isPrevButtonEnabled() {
+			return prevButton.isDisplayed();
+		}
+
+		public boolean isLastButtonEnabled() {
+			return !lastButton.isEnabled();
+			
+		}
+		
+				
 }

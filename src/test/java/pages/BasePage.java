@@ -1,8 +1,9 @@
 package pages;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -10,16 +11,42 @@ public class BasePage {
 	
 	WebDriver driver;
 	
-	public List<String> getTableHeaders(List<WebElement> headerElements) {
-	    List<String> headers = new ArrayList<>();
+	public static String getPageTitle(WebDriver driver) {
+		return driver.getTitle();
+   		}
+   	
+   	public String elementGetText(WebElement element) {
+		String Readtext = element.getText();
+		return Readtext;
+	 }
+   	
+   	public static void elementClick(WebElement element) {
+		element.click();
+	 }
+   	
+   	public static void elementSendkeys(WebElement element, String data) {
+		element.sendKeys(data);
+	 }
+   	
+   	public static void elementSendkeysEnter(WebElement element, String data) {
+		element.sendKeys(data, Keys.ENTER);
+	 }
+   	
+   	public boolean isElementEnabled(WebElement element) {
+		return element.isEnabled();
+	 }
 
-	    for (WebElement element : headerElements) {
-	        headers.add(element.getText().trim());
-	        }
-	    
-	    return headers;
+	public boolean isElementDisplayed(WebElement element) {
+		return element.isDisplayed();
+	 }
+   	public Point getLocation(WebElement element) {
+		return element.getLocation();
 	}
 	
+	public static boolean isElementPresent(WebElement element) {
+		
+			return element.isDisplayed();
+	}
 	
 	public boolean isSortingbuttonDisplayed(List<WebElement> elements) {
 		boolean flag = true;
@@ -36,5 +63,5 @@ public class BasePage {
 		return flag;
 	}
 	
-
+	
 }
