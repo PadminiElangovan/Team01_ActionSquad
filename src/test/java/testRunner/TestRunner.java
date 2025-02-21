@@ -18,9 +18,8 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.chaintest.plugins.ChainTestCucumberListener:", //ChainTest Report
 				"rerun:target/rerun.txt"}, //Rerun failed Scenario
 		monochrome=false,  //console output color
-
 		tags="@LMS", //tags from feature file
-		features = {"src/test/resources/Feature files/03_Program.feature"}, //location of feature files
+		features = {"src/test/resources/Feature files"}, //location of feature files
 		glue= {"stepDefinitions","appHook"}) //location of step definition files
 
 	public class TestRunner extends AbstractTestNGCucumberTests{

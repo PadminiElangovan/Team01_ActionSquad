@@ -76,4 +76,3 @@ public class Dashboard_Page {
 		ProgramMenu.click();
 	}
 }
-
