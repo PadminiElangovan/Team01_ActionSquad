@@ -3,6 +3,7 @@
 
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,6 +21,7 @@ public class TestContext {
 	private WebDriverWait wait;
 	private ConfigReader configReader;
 	private Actions actions;
+	private JavascriptExecutor js;// (JavascriptExecutor) driver;
 
 	private ExcelReader excelReader;
 	private Login_Page Login;
@@ -40,6 +42,7 @@ public class TestContext {
 		this.actions = new Actions(driver); // Initialize Actions here
 		this.Login = new Login_Page(driver, this);
 		this.Dashboard = new Dashboard_Page(driver, this);
+		this.js =(JavascriptExecutor)driver;
 		}
 
 	public DriverConfig getDriverConfig() {
@@ -71,6 +74,12 @@ public class TestContext {
 		return Login;
 
 	}
+	
+	public JavascriptExecutor getJsExecutor() {
+	    
+	    return js;
+	}
+
 	
 	public Dashboard_Page getDashboard() {
 			return Dashboard;

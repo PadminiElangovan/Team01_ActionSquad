@@ -88,43 +88,49 @@ public class ProgramStep {
 	
 	
 // **************************************Pagination****************************************
-	@Given("Admin is on Program page")
-	public void admin_is_on_program_page() {
-		program.clickProgram();
-		
-	}
+	
+	/*
+	 * @Given("Admin is on Program page") public void admin_is_on_program_page() {
+	 * program.clickProgram();
+	 * 
+	 * }
+	 */
+	
+	
 	
 	 @When("^Admin clicks the (Next|Last|Previous|First) link on the data table$")
 	    public void adminClicksPageLink(String pageLink) {
 	    	
-	      	program.navigateToBatch();
+		 program.navigateToProgram();
 	      	
-	        switch (pageLink.toLowerCase()) {
-	            case "next":
-	            	program.clickNextPage();
-	                break;
-	            case "last":
-	                program.clickLastPage();
-	                break;
-	            case "previous":
-	            	program.clickPreviousPage();
-	                break;
-	            case "first":
-	            	program.clickFirstPage();
-	                break;
-	        }
+			
+			  switch (pageLink.toLowerCase()) 
+			  { 
+			  case "next":
+				  program.clickNextPage();
+			  break; 
+			  case "last":
+				  program.clickLastPage();
+				  break; 
+				  case "previous":
+			  program.clickPreviousPage();
+			  break;
+			  case "first": 
+				  program.clickFirstPage();
+			  break; }
+			 
 	    }
-
+	 
 	    // Verify the results based on the <results> description
 	@Then("^Admin should see the (.*) on the data table$")
 	    public void adminShouldSeeResults(String expectedResult) {
 	    	
 
 	    	switch (expectedResult.toLowerCase()) {
-	    	 case "next enabled link":
-	             Assert.assertTrue( program.isNextButtonEnabled());
+	    	 case "Next enabled link":
+	             Assert.assertTrue(program.isNextButtonEnabled());
 	             break;
-	        case "last page link with next disabled":
+	        case "last page link with Next disabled":
 	            Assert.assertFalse( program.isNextButtonEnabled());
 	            break;
 	        case "previous page":

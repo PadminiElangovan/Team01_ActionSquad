@@ -55,7 +55,7 @@ public class Hooks {
         	Screenshot.takeScreenshot(testContext.getDriver(),scenario);
             LoggerLoad.info("Screenshot captured for failed scenario: " + scenario.getName());
         }
-        testContext.quitDriver();
+       // testContext.quitDriver();
         LoggerLoad.info("Browser is closed");
     }
 

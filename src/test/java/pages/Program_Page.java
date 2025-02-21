@@ -3,8 +3,10 @@ package pages;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -19,8 +21,9 @@ public class Program_Page extends BasePage {
 
 	private WebDriver driver;
 	private WebDriverWait wait;
-	Actions action;
+	Actions actions;
 	TestContext context;
+	JavascriptExecutor js;
 
 	@FindBy(xpath = "//*[@id='program']")
 	private WebElement programBtn;
@@ -51,7 +54,7 @@ public class Program_Page extends BasePage {
 	private WebElement programStatus;
 	@FindBy(xpath = "//th[text()=' Edit / Delete ']")
 	private WebElement editDeleteHeader;
-		@FindBy(className="p-checkbox")
+	@FindBy(className="p-checkbox")
 	private WebElement checkboxProgramName;
 	@FindBy(css = ".p-paginator-current.ng-star-inserted")
 	private WebElement showingEnteries;
@@ -63,26 +66,28 @@ public class Program_Page extends BasePage {
 	private WebElement footer;
 	@FindBy(xpath = "p-paginator-element")
 	private List<WebElement> pagination;
-	
+	@FindBy(xpath="//div[@class='signin-content']")
+	private WebElement backdrop;
+
 	// Pagination 
-	 @FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
-	    private WebElement pagination1;
-	    @FindBy(xpath = "//span[contains(@class, 'p-paginator-current')]")
-	    private WebElement currentEntriesText;
-	    @FindBy(xpath = "//p-table//table/tbody/tr")
-	    private List<WebElement> rows;
-	    @FindBy(xpath = "//button[contains(@class, 'p-paginator-first')]")
-	    private WebElement firstButton;
-	    @FindBy(xpath = "//button[contains(@class, 'p-paginator-prev')]")
-	    private WebElement prevButton;
-	    @FindBy(xpath = "//button[contains(@class, 'p-paginator-next')]")
-	    private WebElement nextButton;
-	    @FindBy(xpath = "//button[contains(@class, 'p-paginator-last')]")
-	    private WebElement lastButton;
-	    @FindBy(xpath = "//button[contains(@class, 'p-paginator-page')]")
-	    private List<WebElement> pageButtons;
-	    
-	
+	@FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
+	private WebElement pagination1;
+	@FindBy(xpath = "//span[contains(@class, 'p-paginator-current')]")
+	private WebElement currentEntriesText;
+	@FindBy(xpath = "//p-table//table/tbody/tr")
+	private List<WebElement> rows;
+	@FindBy(xpath = "//button[contains(@class, 'p-paginator-first')]")
+	private WebElement firstButton;
+	@FindBy(xpath = "//button[contains(@class, 'p-paginator-prev')]")
+	private WebElement prevButton;
+	@FindBy(xpath = "//button[contains(@class, 'p-paginator-next')]")
+	private WebElement nextButton;
+	@FindBy(xpath = "//button[contains(@class, 'p-paginator-last')]")
+	private WebElement lastButton;
+	@FindBy(xpath = "//button[contains(@class, 'p-paginator-page')]")
+	private List<WebElement> pageButtons;
+
+
 
 	public Program_Page(WebDriver driver, TestContext context) {
 
@@ -90,13 +95,14 @@ public class Program_Page extends BasePage {
 		this.context = context;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		PageFactory.initElements(driver, this);
-		this.action = new Actions(driver);
+		this.actions = new Actions(driver);
+		this.js =(JavascriptExecutor)driver;
 	}
 
 	public void clickProgram() {
 		programBtn.click();
 	}
-	
+
 	public List<String> getTableHeaders() {
 		List<String> headers = new ArrayList<>();
 
@@ -116,12 +122,12 @@ public class Program_Page extends BasePage {
 		return headers;
 	} 
 
-	
+
 	public boolean validateShowingEnteries() {
 		return showingEnteries.isDisplayed();
 
 	}
-	
+
 	public void checkboxWithProgramName() {
 		boolean isDisplayed = checkboxProgramName.isDisplayed();
 		System.out.println("Element is displayed: " + isDisplayed);
@@ -156,56 +162,70 @@ public class Program_Page extends BasePage {
 		}
 		return true;
 	}
-	
+
 	private void doubleClick(WebElement element) {
-        Actions actions = new Actions(driver); // Create an Actions instance
-        actions.moveToElement(element).doubleClick().perform(); // Move to the element and double-click
-    }
+		// Create an Actions instance
+		actions.moveToElement(element).doubleClick().perform(); // Move to the element and double-click
+	}
+
+	public void  navigateToProgram() {
+		doubleClick(programBtn);
+
+	}
+
+	public void clickNextPage() {
+		if (nextButton != null && nextButton.isDisplayed()) {
+			js.executeScript("arguments[0].scrollIntoView(true);", nextButton);
+			nextButton.click();
+		} else {
+			throw new NoSuchElementException("Next button not found on the page.");
+		}
+	}
+
+	public void clickLastPage() {
+		if (lastButton != null && lastButton.isDisplayed()) {
+			js.executeScript("arguments[0].scrollIntoView(true);", lastButton);
+			lastButton.click();
+		} else {
+			throw new NoSuchElementException("Last button not found on the page.");
+		}
+
+	}
+
+	public void clickPreviousPage() {
+		if (prevButton != null && prevButton.isDisplayed()) {
+			js.executeScript("arguments[0].scrollIntoView(true);", prevButton);
+			nextButton.click();
+			prevButton.click();
+		} else {
+			throw new NoSuchElementException("Previous button not found on the page.");
+		}
+			}
 	
-	 public void  navigateToBatch() {
-	    	// waitForOverlayToDisappear(); 
-	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-	        wait.until(ExpectedConditions.elementToBeClickable(programBtn)).click();
-	        
-	    }
-	 
-	 public void waitForOverlayToDisappear() {
-		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("cdk-overlay-backdrop")));
+	public void clickFirstPage() {		    	
+		if (firstButton != null && firstButton.isDisplayed()) {
+			js.executeScript("arguments[0].scrollIntoView(true);", firstButton);
+			nextButton.click();
+			firstButton.click();
+		} else {
+			throw new NoSuchElementException("First button not found on the page.");
 		}
-	 
-		    
-	    public void clickFirstPage() {	    	
-	          doubleClick(firstButton);
-	    }
+		 
+	}
 
-		public void clickNextPage() {
-			doubleClick(nextButton)	;		
-		}
-
-		public void clickLastPage() {
-			doubleClick(lastButton);
-			
-		}
-
-		public void clickPreviousPage() {
-			doubleClick(prevButton);
-			
-		}
-
-		public boolean isNextButtonEnabled() {
+	public boolean isNextButtonEnabled() {
 		return	nextButton.isEnabled();			
-			
-		}
 
-		public boolean isPrevButtonEnabled() {
-			return prevButton.isDisplayed();
-		}
+	}
 
-		public boolean isLastButtonEnabled() {
-			return !lastButton.isEnabled();
-			
-		}
-		
-				
+	public boolean isPrevButtonEnabled() {
+		return prevButton.isDisplayed();
+	}
+
+	public boolean isLastButtonEnabled() {
+		return lastButton.isEnabled();
+
+	}
+
+
 }

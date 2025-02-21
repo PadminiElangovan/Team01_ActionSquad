@@ -29,20 +29,21 @@ Feature: Manage Page Validation
   Then Admin should see Total no of programs in below of the data table
   
  #------------------------------------------Add New Program-----------------------------------------------
+ 
+ 
 
 #----------------------------------- Pagination -----------------------------------------------------------
 
   Scenario Outline: Validate pagination links
-  Given Admin is on Program page
-    When Admin clicks the <pageLink> link on the data table
-    Then Admin should see the <pageLink> results on the data table
+   When Admin clicks the <pageLink> link on the data table
+   Then Admin should see the <pageLink> results on the data table
 
   Examples:
-      | pageLink   | results                  |
-      | Next       | Next enabled link        |
-      | Last       | last page link with Next disabled |
-      | Previous   | previous page            |
-      | First      | very first page       |
+     | pageLink   | results         |
+     | Next       |Next enabled link|
+     | Last       |last page link with Next disabled|
+     | Previous   |previous page|
+     | First      |very first page|
      
    
     
