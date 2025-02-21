@@ -3,6 +3,7 @@ package pages;
 import java.time.Duration;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,6 +27,7 @@ public class Login_Page {
 	@FindBy(xpath = "//div[@id='mat-select-value-1']") public WebElement roleDropdwn;
 	@FindBy(xpath = "//span[text()=' Admin ']") public WebElement AdminRole;
 	@FindBy(xpath = "//button[@id='login']") public WebElement LoginBtn;
+	@FindBy(xpath = "//mat-error") public WebElement ErrMsg;
 	
 	
 	
@@ -43,4 +45,5 @@ public class Login_Page {
 		 AdminRole.click();
 		 LoginBtn.click(); 
 	 }
+
 }

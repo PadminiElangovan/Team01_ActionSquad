@@ -18,7 +18,7 @@ public class Hooks {
     private TestContext testContext;
     private ConfigReader configReader;
     public static List<Map<String, String>> Login;
-    
+    public static List<Map<String, String>> Batch;
     public Hooks(TestContext Context) {
     	this.testContext = Context;
     	this.configReader = new ConfigReader();
@@ -39,6 +39,7 @@ public class Hooks {
         try {
             ExcelReader excelreader= new ExcelReader();
             Login = excelreader.getData("Login");
+            Batch = excelreader.getData("Batch");
           } catch (Exception e) {
            e.printStackTrace();
            LoggerLoad.error("Error initializing Excel data: " + e.getMessage());
