@@ -21,6 +21,7 @@ public class BasePage {
 	 WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 	
    	public static String getPageTitle(WebDriver driver) {
+
 		return driver.getTitle();
    		}
    	
@@ -62,6 +63,22 @@ public class BasePage {
 		}
 	}
 	
+	public boolean isSortingbuttonDisplayed(List<WebElement> elements) {
+		boolean flag = true;
+		if (elements.size() > 1) {
+			for (int i = 1; i < elements.size(); i++) {
+				WebElement element = elements.get(i);
+				if (!element.isDisplayed()) {
+					flag = false;
+					break; }
+			}
+		} else {
+			flag = false;
+		}
+		return flag;
+	}
+	
+	
 	public  boolean IsAlertPresent() {
     	try {
     		wait.until(ExpectedConditions.alertIsPresent());
@@ -95,20 +112,6 @@ public class BasePage {
          System.out.println("An unexpected exception occurred: " + e.getMessage());
      }
  }
-    public boolean isSortingbuttonDisplayed(List<WebElement> elements) {
-		boolean flag = true;
-		if (elements.size() > 1) {
-			for (int i = 1; i < elements.size(); i++) {
-				WebElement element = elements.get(i);
-				if (!element.isDisplayed()) {
-					flag = false;
-					break;
-				}
-			}
-		} else {
-			flag = false;
-		}
-		return flag;
-	}
+
 
 }

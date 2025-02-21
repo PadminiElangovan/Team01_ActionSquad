@@ -1,3 +1,7 @@
 /pages/
+/appHook/
+/common/
+/driverFactory/
+/listeners/
 /stepDefinitions/
 /testRunner/
