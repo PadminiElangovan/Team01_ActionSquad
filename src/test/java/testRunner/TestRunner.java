@@ -14,11 +14,11 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		plugin = {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm", //Allure Report
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", //Extent Report
-				"json:target/CucumberReports/DSAlgoJson.json","html:target/CucumberReports/DSAlgoHtml.html", //Cucumber Report
+				"json:target/CucumberReports/DSAlgoJson.json","html:target/CucumberReports/LMS.html", //Cucumber Report
 				"com.aventstack.chaintest.plugins.ChainTestCucumberListener:", //ChainTest Report
 				"rerun:target/rerun.txt"}, //Rerun failed Scenario
 		monochrome=false,  //console output color
-		tags="@BatchCount", //tags from feature file
+		tags="@LMS", //tags from feature file
 		features = {"src/test/resources/Feature files"}, //location of feature files
 		glue= {"stepDefinitions","appHook"}) //location of step definition files
 

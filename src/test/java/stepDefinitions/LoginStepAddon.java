@@ -17,7 +17,6 @@ import pages.Login_Page;
 
 public class LoginStepAddon extends BasePage{
 
-	//private Dashboard_Page Dashboard;
 	private Login_Page Login;
 	private WebDriver driver;
 	private TestContext context;
@@ -27,7 +26,6 @@ public class LoginStepAddon extends BasePage{
      this.context = context;
      this.driver = context.getDriver();
      this.Login = new Login_Page(driver, context);
-    // this.Dashboard = new Dashboard_Page(driver, context); 
  }
 	
 
@@ -38,75 +36,64 @@ public void the_admin_clicks_login_button() {
 
 @Then("Admin receives mandatory fields error message")
 public void admin_receives_mandatory_fields_error_message() {
-//	Assert.assertTrue(Login.ErrMsg.isDisplayed());
-	//Assert.assertTrue(isElementPresent(Login.ErrMsg));
+	
+	Assert.assertFalse(Login.errmsg());
+
 }
-/*
+
 @When("Admin enter valid credentials with role unselected and clicks login")
 public void admin_enter_valid_credentials_with_role_unselected_and_clicks_login() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	Login.UsrPswd();
 }
 
 @Then("Admin should see Please select your Role error message")
 public void admin_should_see_please_select_your_role_error_message() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	Assert.assertFalse(Login.errmsg());
+
 }
 
 @When("Admin enters password in password field")
 public void admin_enters_password_in_password_field() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	Login.InputCred();
+	
 }
 
 @Then("Admin should see masked password")
 public void admin_should_see_masked_password() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	String actual = elementGetText(Login.Password);
+	String Expected = Loginxl.get(0).get("password");
+	Assert.assertEquals(actual, Expected);
+	
 }
 
 @When("Admin enter valid credentials with staff role selection and clicks login")
 public void admin_enter_valid_credentials_with_staff_role_selection_and_clicks_login() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	Login.AdminRoleStaff();
 }
 
-@Then("Admin should see Access Denied error message in login page")
-public void admin_should_see_access_denied_error_message_in_login_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+@Then("Admin should not be navigated to LMS portal")
+public void admin_should_not_be_navigated_to_lms_portal() {
+	Assert.assertTrue(driver.getCurrentUrl().contains("/login"));	
 }
 
 @When("Admin enter valid credentials with student role selection and clicks login")
 public void admin_enter_valid_credentials_with_student_role_selection_and_clicks_login() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	Login.AdminRoleStudent();
 }
 
-@Given("The browser is opened")
-public void the_browser_is_opened() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-@When("Admin enter LMS url in the browser")
-public void admin_enter_lms_url_in_the_browser() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-@Then("Admin should see Forgot Password Link")
-public void admin_should_see_forgot_password_link() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+@When("Admin gives the correct LMS portal URL")
+public void admin_gives_the_correct_lms_portal_url() {
+	context.getApplicationURL();
 }
 
 @Then("Admin should see LMS Login page title")
 public void admin_should_see_lms_login_page_title() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	Assert.assertEquals(getPageTitle(driver), "LMS");
 }
-*/
+
+@Then("Admin should see Forgot Password Link")
+public void admin_should_see_forgot_password_link() {
+	Assert.assertFalse(Login.ForgotPswd.isEmpty());
+}
 
 }

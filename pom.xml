@@ -91,12 +91,14 @@
     <version>2.3.34</version>
 </dependency>
 
+
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
     <version>5.1.2</version>
 </dependency>
+
 
 <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
 <dependency>
@@ -105,17 +107,11 @@
     <version>1.14.0</version>
 </dependency>
 
+
 <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
 <dependency>
     <groupId>io.qameta.allure</groupId>
     <artifactId>allure-cucumber7-jvm</artifactId>
-    <version>2.29.1</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
-<dependency>
-    <groupId>io.qameta.allure</groupId>
-    <artifactId>allure-testng</artifactId>
     <version>2.29.1</version>
 </dependency>
 
@@ -125,6 +121,8 @@
     <artifactId>webdrivermanager</artifactId>
     <version>5.9.2</version>
 </dependency>
+
+
 </dependencies>
 
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->

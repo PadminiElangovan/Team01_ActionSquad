@@ -19,6 +19,7 @@ public class Hooks {
     private ConfigReader configReader;
     public static List<Map<String, String>> Login;
     public static List<Map<String, String>> Batch;
+
     public Hooks(TestContext Context) {
     	this.testContext = Context;
     	this.configReader = new ConfigReader();
@@ -54,7 +55,7 @@ public class Hooks {
         	Screenshot.takeScreenshot(testContext.getDriver(),scenario);
             LoggerLoad.info("Screenshot captured for failed scenario: " + scenario.getName());
         }
-        testContext.quitDriver();
+       testContext.quitDriver();
         LoggerLoad.info("Browser is closed");
     }
 

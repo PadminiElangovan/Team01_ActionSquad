@@ -2,16 +2,12 @@ package pages;
 
 import java.time.Duration;
 import java.util.List;
-
-import javax.xml.xpath.XPath;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -102,5 +98,9 @@ public class Dashboard_Page {
 		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", UsrCount);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@routerlink='/user']")));
 		return Usr.getText();
+	}
+
+	public void elementclickJs(WebElement element) {
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 	}
 }

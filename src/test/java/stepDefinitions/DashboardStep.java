@@ -1,9 +1,11 @@
 package stepDefinitions;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import org.openqa.selenium.Point;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import io.cucumber.java.en.Given;
@@ -22,6 +24,7 @@ public class DashboardStep extends BasePage {
 	private Login_Page Login;
 	private WebDriver driver;
 	private TestContext context;
+	private ExcelReader excelReader;
 	List<Map<String, String>> Loginxl = Hooks.Login;
 
 	public DashboardStep(TestContext context) {
@@ -29,6 +32,7 @@ public class DashboardStep extends BasePage {
      this.driver = context.getDriver();
      this.Login = new Login_Page(driver, context);
      this.Dashboard = new Dashboard_Page(driver, context); 
+     this.excelReader = context.getExcelReader();
  }
 
 @Given("Admin is on login Page")
@@ -58,15 +62,8 @@ public void lms_title_should_be_on_the_top_left_corner_of_page() {
 
 
 @Then("Admin should see correct spelling in navigation bar text")
-public void admin_should_see_correct_spelling_in_navigation_bar_text() {
-	 
-	String a= Loginxl.get(0).get("menu");
-	String b= Loginxl.get(1).get("menu");
-	String c= Loginxl.get(2).get("menu");
-	String x= Loginxl.get(3).get("menu");
-	String y= Loginxl.get(4).get("menu");
-	List<String> expectedTexts = Arrays.asList(a,b,c,x,y);
-	
+public void admin_should_see_correct_spelling_in_navigation_bar_text() throws InvalidFormatException, IOException {
+	 List<String> expectedTexts = excelReader.getColumnData("Login", 4);
  	for(int i=0;i<Dashboard.Menus.size();i++) {
  		String NavbarText =Dashboard.Menus.get(i).getText().trim();
  		Assert.assertEquals(NavbarText, expectedTexts.get(i));	 
