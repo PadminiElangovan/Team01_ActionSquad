@@ -85,6 +85,29 @@ public class ProgramStep {
 		assertTrue(program.validateFooter());
 	}
 	
+// ***********************************************Add New Program*************************************
+	@When("Admin clicks Add New Program under program navigation bar")
+	public void admin_clicks_add_new_class_under_class_navigation_bar() {
+	   program.clickProgramAddNew();
+	}
+
+	
+	
+	@Then("Admin should see the Program Details pop up window {string}")
+	public void admin_should_see_the_class_details_pop_up_window(String string) {
+		switch (string) {
+		case "Name":
+			Assert.assertTrue(program.programNameDisplayed());
+			break;
+		case "Description":
+			Assert.assertTrue(program.programDescDisplayed());
+			break;
+		case "Status":
+			Assert.assertTrue(program.programStatus());
+			break;
+			
+		}
+	}
 	
 	
 // **************************************Pagination****************************************

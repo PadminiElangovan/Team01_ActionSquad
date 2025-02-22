@@ -68,6 +68,14 @@ public class Program_Page extends BasePage {
 	private List<WebElement> pagination;
 	@FindBy(xpath="//div[@class='signin-content']")
 	private WebElement backdrop;
+	
+	//Add new
+	@FindBy(xpath="//label[@for='programName']")
+	private WebElement addProgramName;
+	@FindBy(xpath="//label[@for='programDescription']")
+	private WebElement addProgramDesc;
+	@FindBy(xpath="//lable[@for='online']")
+	private WebElement addProgramStatus;
 
 	// Pagination 
 	@FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
@@ -101,7 +109,14 @@ public class Program_Page extends BasePage {
 
 	//clicking program button
 	public void clickProgram() {
-		programBtn.click();
+		//programBtn.click();
+		elementClick(programBtn);
+	}
+	
+	public void clickProgramAddNew()
+	{
+		elementClick(programBtn);
+		elementClick(addNewPgm);
 	}
 
 	public List<String> getTableHeaders() {
@@ -149,9 +164,26 @@ public class Program_Page extends BasePage {
 		return deleteBtnMC.isDisplayed();
 	}
 
+	
 	public boolean validateFooter() {
 
 		return footer.isDisplayed();
+
+	}
+	
+	public boolean programNameDisplayed() {
+
+		return isElementDisplayed(addProgramName);
+
+	}
+	public boolean programDescDisplayed() {
+
+		return isElementDisplayed(addProgramDesc);
+
+	}
+	public boolean programStatus() {
+
+		return isElementDisplayed(addProgramStatus);
 
 	}
 
