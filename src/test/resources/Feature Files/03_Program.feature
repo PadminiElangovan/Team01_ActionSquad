@@ -30,7 +30,17 @@ Feature: Manage Page Validation
   
  #------------------------------------------Add New Program-----------------------------------------------
  
- 
+  Scenario Outline:  Validate Program Details Popup window
+    
+    When Admin clicks Add New Program under program navigation bar
+    Then Admin should see the Program Details pop up window "<menu>"
+
+    Examples: 
+      | menu   |
+      | Name   |
+      | Description|
+      | Status |
+      
 
 #----------------------------------- Pagination -----------------------------------------------------------
 
@@ -67,10 +77,4 @@ Feature: Manage Page Validation
     
     
     
-    
-    
-    
-    
-    
-    
-    
+   

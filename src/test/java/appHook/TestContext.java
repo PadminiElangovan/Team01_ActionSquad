@@ -13,6 +13,7 @@ import common.ExcelReader;
 import driverFactory.DriverConfig;
 import pages.Dashboard_Page;
 import pages.Login_Page;
+import pages.Program_Page;
 
 public class TestContext {
     
@@ -26,6 +27,7 @@ public class TestContext {
 	private ExcelReader excelReader;
 	private Login_Page Login;
 	private Dashboard_Page Dashboard;
+	private Program_Page program;
 	
 	
 	public TestContext() {
@@ -42,6 +44,7 @@ public class TestContext {
 		this.Login = new Login_Page(driver, this);
 		this.Dashboard = new Dashboard_Page(driver, this);
 		this.js =(JavascriptExecutor)driver;
+		this.program = new Program_Page(driver, this);
 		}
 
 	public DriverConfig getDriverConfig() {
@@ -82,6 +85,10 @@ public class TestContext {
 	public Dashboard_Page getDashboard() {
 			return Dashboard;
 		}
+	
+	public Program_Page getProgram() {
+		return program;
+	}
  
 
 	public ExcelReader getExcelReader() {
