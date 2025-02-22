@@ -13,14 +13,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.BasePage;
+import pages.LMSAddonPage;
 import pages.Dashboard_Page;
 import pages.Login_Page;
 import pages.Program_Page;
 
 public class ProgramStepAddon extends BasePage{
-	private Dashboard_Page Dashboard;
 	private Login_Page Login;
-	private Program_Page Program;
+	private Dashboard_Page Dashboard;
+	private LMSAddonPage common;
 	private WebDriver driver;
 	private TestContext context;
 	private ExcelReader excelReader;
@@ -29,11 +30,16 @@ public class ProgramStepAddon extends BasePage{
 	public ProgramStepAddon(TestContext context) {
      this.context = context;
      this.driver = context.getDriver();
-     this.Login = new Login_Page(driver, context);
-     this.Program = new Program_Page(driver, context);
+     this.common = new LMSAddonPage(driver,context);
+     this.Login = new Login_Page(driver,context);
      this.Dashboard = new Dashboard_Page(driver, context); 
      this.excelReader = context.getExcelReader();
  }
+	
+@Given("Admin is on home page after Login")
+public void admin_is_on_home_page_after_login() {
+	Login.AdminLogin();
+}
 
 @When("Admin clicks Program on the navigation bar")
 public void admin_clicks_program_on_the_navigation_bar() {
@@ -48,19 +54,19 @@ public void admin_should_see_manage_program_page_title() {
 
 @Given("Admin is on Manage Program page")
 public void admin_is_on_manage_program_page() {
-	Program.clickProgram();
+	elementClick(Dashboard.ProgramMenu);
 }
 
 @When("Admin clicks {string} menu")
 public void admin_clicks_menu(String MenuTxt) {
 	switch (MenuTxt) {
-	case "Home": Dashboard.elementclickJs(Program.homeHeader);
+	case "Home": common.elementclickJs(common.homeHeader);
 		break;
-	case "Logout": Dashboard.elementclickJs(Program.logoutHeader);
+	case "Logout": common.elementclickJs(common.logoutHeader);
 		break;
-	case "Batch": Dashboard.elementclickJs(Program.batchHeader);
+	case "Batch": common.elementclickJs(common.batchHeader);
 		break;
-	case "Class": Dashboard.elementclickJs(Program.classHeader);
+	case "Class": common.elementclickJs(common.classHeader);
 		break;
 	}
 }
@@ -81,15 +87,16 @@ public void admin_is_navigated_to_page(String MenuTxt) {
 
 @When("Admin enter valid program search in different case")
 public void admin_enter_valid_program_search_in_different_case() {
-
+	common.SearchDiff();
 }
 
 @Then("Admin should see all program data for the search")
 public void admin_should_see_all_program_data_for_the_search() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	Assert.assertFalse(common.SearchData());
 }
-/*
+
+
+
 @Given("The Admin is in Add New program pop window")
 public void the_admin_is_in_add_new_program_pop_window() {
     // Write code here that turns the phrase above into concrete actions
@@ -150,5 +157,4 @@ public void admin_should_see_program_name_in_the_confirmation_window() {
     throw new io.cucumber.java.PendingException();
 }
 
-*/
 }
