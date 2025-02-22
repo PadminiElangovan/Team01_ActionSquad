@@ -33,6 +33,10 @@ public class BasePage {
    	public static void elementClick(WebElement element) {
 		element.click();
 	 }
+   	
+   	public void waitUntilButtonIsClickable(WebElement button) {
+        wait.until(ExpectedConditions.elementToBeClickable(button));
+    }
 
    	public static void elementSendkeys(WebElement element, String data) {
 		element.sendKeys(data);
