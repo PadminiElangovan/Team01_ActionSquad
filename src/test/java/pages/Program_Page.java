@@ -185,6 +185,8 @@ public class Program_Page extends BasePage {
 	public boolean validateFooter() {
 		return footer.isDisplayed();
 	}
+	
+	// Add new Program
 	public boolean programPopUpTitle() {
 		return isElementDisplayed(popUpTitle);
 	}
