@@ -22,5 +22,9 @@ Feature: Additional Program Functionality
       | Class    |
       | Logout   | 
 
-
+  @SearchDiffCase
+  Scenario: Verify program search text with different case
+    Given Admin is on Manage Program page
+    When Admin enter valid program search in different case
+    Then Admin should see all program data for the search
    
