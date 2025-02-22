@@ -26,6 +26,7 @@ public class ProgramStepAddon extends BasePage{
 	private TestContext context;
 	private ExcelReader excelReader;
 	List<Map<String, String>> Loginxl = Hooks.Login;
+	List<Map<String, String>> msg = Hooks.Msg;
 
 	public ProgramStepAddon(TestContext context) {
      this.context = context;
@@ -36,6 +37,10 @@ public class ProgramStepAddon extends BasePage{
      this.excelReader = context.getExcelReader();
  }
 	
+@Given("Admin is on home page after Logs in")
+public void admin_is_on_home_page_after_logs_in() {
+	Login.AdminLogin();
+}
 
 @When("Admin clicks Program on the navigation bar")
 public void admin_clicks_program_on_the_navigation_bar() {
@@ -50,6 +55,7 @@ public void admin_should_see_manage_program_page_title() {
 
 @Given("Admin is on Manage Program page")
 public void admin_is_on_manage_program_page() {
+
 	elementClick(Dashboard.ProgramMenu);
 }
 
@@ -91,66 +97,135 @@ public void admin_should_see_all_program_data_for_the_search() {
 	Assert.assertFalse(common.SearchData());
 }
 
-
-
 @Given("The Admin is in Add New program pop window")
 public void the_admin_is_in_add_new_program_pop_window() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	elementClick(Dashboard.ProgramMenu);
+	elementClick(common.SubMenu);
 }
 
 @When("Admin leaves {string} empty and clicks save")
-public void admin_leaves_empty_and_clicks_save(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+public void admin_leaves_empty_and_clicks_save(String field) {
+	if(field.equals("Name"))
+		common.AddPrgNameEmpty();
+	else if (field.equals("Description"))
+		common.AddPrgDesEmpty();
+	else if (field.equals("Status"))
+		common.AddPrgStatusEmpty();
 }
 
 @Then("Admin receives {string} mandatory error message")
-public void admin_receives_mandatory_error_message(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+public void admin_receives_mandatory_error_message(String field) {
+	if(field.equals("Name")) {
+		String EmptyNameMsg = msg.get(0).get("errmsg");
+		Assert.assertEquals(elementGetText(common.Errormessage),EmptyNameMsg );
+	}
+	else if (field.equals("Description")) {
+		String EmptyDescMsg = msg.get(1).get("errmsg");
+		Assert.assertEquals(elementGetText(common.Errormessage),EmptyDescMsg );
+		}
+	else if (field.equals("Status")) {
+		String EmptyStatusMsg = msg.get(2).get("errmsg");
+		Assert.assertEquals(elementGetText(common.Errormessage),EmptyStatusMsg );
+	}
+		
 }
 
 @When("Admin enters invalid {string} and clicks save")
-public void admin_enters_invalid_and_clicks_save(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+public void admin_enters_invalid_and_clicks_save(String field) {
+	switch (field) {
+	case "NameSpcChar":
+		common.programNameText.clear();
+		elementSendkeys(common.programNameText,msg.get(3).get("Input") );
+		break;
+	case "NameStarts-SpcChar":
+		common.programNameText.clear();
+		elementSendkeys(common.programNameText,msg.get(4).get("Input") );
+		break;
+	case "NameStarts-No":
+		common.programNameText.clear();
+		elementSendkeys(common.programNameText,msg.get(5).get("Input") );
+		break;
+	case "NamelessChar":
+		common.programNameText.clear();
+		elementSendkeys(common.programNameText,msg.get(6).get("Input") );
+		break;
+	case "DescStarts-No":
+		common.programDescText.clear();
+		elementSendkeys(common.programDescText,msg.get(7).get("Input") );
+		break;
+	case "DesclessChar":
+		common.programDescText.clear();
+		elementSendkeys(common.programDescText,msg.get(8).get("Input") );
+		break;
+	}
 }
 
 @Then("Admin receives {string} invalid error message")
-public void admin_receives_invalid_error_message(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+public void admin_receives_invalid_error_message(String field) {
+	switch (field) {
+	case "NameSpcChar":
+		Assert.assertEquals(elementGetText(common.Errormessage), msg.get(3).get("errmsg"));
+		break;
+	case "NameStarts-SpcChar":
+		Assert.assertEquals(elementGetText(common.Errormessage), msg.get(4).get("errmsg"));
+		break;
+	case "NameStarts-No":
+		Assert.assertEquals(elementGetText(common.Errormessage), msg.get(5).get("errmsg"));
+		break;
+	case "NamelessChar":
+		Assert.assertEquals(elementGetText(common.Errormessage), msg.get(6).get("errmsg"));
+		break;
+	case "DescStarts-No":
+		Assert.assertEquals(elementGetText(common.Errormessage), msg.get(7).get("errmsg"));
+		break;
+	case "DesclessChar":
+		Assert.assertEquals(elementGetText(common.Errormessage), msg.get(8).get("errmsg"));
+		break;
+	}
 }
 
 @Given("The Admin is in Edit program pop window")
 public void the_admin_is_in_edit_program_pop_window() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	elementClick(Dashboard.ProgramMenu);
+	common.elementclickJs(common.EditIcon);
 }
 
+@When("Admin clears {string} and clicks save")
+public void admin_clears_and_clicks_save(String field) {
+	if(field.equals("Name")) {
+		common.programNameText.clear();
+		common.elementclickJs(common.saveProgram);}
+	else {
+		common.programDescText.clear();
+		common.elementclickJs(common.saveProgram);}
+}
+@Then("Admin receives {string} edit mandatory error message")
+public void admin_receives_edit_mandatory_error_message(String string) {
+    Assert.assertFalse(common.errormsg());
+}
 @When("Admin clicks on {string} delete icon")
-public void admin_clicks_on_delete_icon(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+public void admin_clicks_on_delete_icon(String icon) {
+	if (icon.equals("Delete"))
+	common.elementclickJs(common.DeleteR1Icon);
+	else 
+	common.DeleteAllWindow();
 }
 
 @Then("Admin should see warning sign in confirmation window")
 public void admin_should_see_warning_sign_in_confirmation_window() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	Assert.assertTrue(isElementPresent(common.WarningIcon));
 }
 
 @When("Admin clicks on delete icon for selected program entry")
 public void admin_clicks_on_delete_icon_for_selected_program_entry() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	common.elementclickJs(common.DeleteR1Icon);
 }
 
 @Then("Admin should see program name in the confirmation window")
 public void admin_should_see_program_name_in_the_confirmation_window() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	String[] actual = elementGetText(common.PrgDeleteMsg).split(" ");
+	String expected = elementGetText(common.DeleteR1Data);
+	Assert.assertEquals(actual[7],expected+"?" );
 }
 
 }
