@@ -99,6 +99,7 @@ public class Program_Page extends BasePage {
 		this.js =(JavascriptExecutor)driver;
 	}
 
+	//clicking program button
 	public void clickProgram() {
 		programBtn.click();
 	}
