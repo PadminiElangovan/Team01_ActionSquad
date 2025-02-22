@@ -12,6 +12,7 @@ import common.ConfigReader;
 import common.ExcelReader;
 import driverFactory.DriverConfig;
 import pages.Dashboard_Page;
+import pages.LMSAddonPage;
 import pages.Login_Page;
 import pages.Program_Page;
 
@@ -28,6 +29,7 @@ public class TestContext {
 	private Login_Page Login;
 	private Dashboard_Page Dashboard;
 	private Program_Page program;
+	private LMSAddonPage common;
 	
 	
 	public TestContext() {
@@ -43,6 +45,7 @@ public class TestContext {
 		this.actions = new Actions(driver); // Initialize Actions here
 		this.Login = new Login_Page(driver, this);
 		this.Dashboard = new Dashboard_Page(driver, this);
+		this.common = new LMSAddonPage(driver, this);
 		this.js =(JavascriptExecutor)driver;
 		this.program = new Program_Page(driver, this);
 		}
@@ -81,6 +84,9 @@ public class TestContext {
 	    return js;
 	}
 
+	public LMSAddonPage getAddon() {
+		return common;
+	}
 	
 	public Dashboard_Page getDashboard() {
 			return Dashboard;
