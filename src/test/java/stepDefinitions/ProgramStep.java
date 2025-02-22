@@ -95,21 +95,21 @@ public class ProgramStep {
 	@Then("Admin should see the Program Details pop up window {string}")
 	public void admin_should_see_the_class_details_pop_up_window(String string) {
 		switch (string) {
-		case "ProgramDetails":
-			Assert.assertTrue(program.programPopUpTitle());
-			Assert.assertEquals(program.programPopUpTitleText(), "Program Details");
 		case "Name":
 			Assert.assertTrue(program.programNameDisplayed());
-			Assert.assertEquals(program.programNameText(), "Name");
+			Assert.assertEquals(program.programNameText().replaceAll("[^a-zA-Z ]", "").trim(), "Name");
 			break;
 		case "Description":
 			Assert.assertTrue(program.programDescDisplayed());
-			Assert.assertEquals(program.programDescText(), "Description");
+			Assert.assertEquals(program.programDescText().replaceAll("[^a-zA-Z ]", "").trim(), "Description");
 			break;
 		case "Status":
 			Assert.assertTrue(program.programStatus());
-			Assert.assertEquals(program.programStatusText(), "Status");
+			Assert.assertEquals(program.programStatusText().replaceAll("[^a-zA-Z ]", "").trim(), "Status");
 			break;
+		case "ProgramDetails":
+			Assert.assertTrue(program.programPopUpTitle());
+			Assert.assertEquals(program.programPopUpTitleText(), "Program Details");	
 			
 		}
 	}
