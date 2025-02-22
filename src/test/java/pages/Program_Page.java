@@ -72,7 +72,7 @@ public class Program_Page extends BasePage {
 	private WebElement managePage;
 
 	// Add new
-	@FindBy(xpath="//span[@id='pr_id_17-label']")
+	@FindBy(xpath="//span[text()='Program Details']")
 	private WebElement popUpTitle;
 	@FindBy(xpath = "//label[@for='programName']")
 	private WebElement addProgramName;
@@ -102,6 +102,12 @@ public class Program_Page extends BasePage {
 	private WebElement programStatusReq;
 	@FindBy(xpath = "//button[@label='Cancel']")
 	private WebElement cancelBtn;
+	@FindBy(xpath = "//button[@icon='pi pi-pencil']")
+	private WebElement editBtn;
+	@FindBy(xpath = "//div[@class='p-dialog-header ng-tns-c168-7 ng-star-inserted']")
+	private WebElement editPopup;
+	@FindBy(xpath="//div[@class='p-dialog-header-icons ng-tns-c81-21']")
+	private WebElement XBtn;
 
 	// Pagination
 	@FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
@@ -133,7 +139,6 @@ public class Program_Page extends BasePage {
 
 	// clicking program button
 	public void clickProgram() {
-		// programBtn.click();
 		elementClick(programBtn);
 	}
 
@@ -141,7 +146,7 @@ public class Program_Page extends BasePage {
 		elementClick(programBtn);
 		elementClick(addNewPgm);
 	}
-
+	
 	public List<String> getTableHeaders() {
 		List<String> headers = new ArrayList<>();
 
@@ -202,9 +207,11 @@ public class Program_Page extends BasePage {
 		return isElementDisplayed(addProgramName);
 	}
 	public String programNameText() {
+		System.out.println(addProgramName);
 		return elementGetText(addProgramName);
 	}
 	public String programDescText() {
+		System.out.println(addProgramDesc);
 		return elementGetText(addProgramDesc);
 	}
 	public boolean programDescDisplayed() {
@@ -214,6 +221,7 @@ public class Program_Page extends BasePage {
 		return isElementDisplayed(addProgramStatus);
 	}
 	public String programStatusText() {
+		System.out.println(addProgramStatus);
 		return elementGetText(addProgramStatus);
 	}
 	public void clickOnSave() {
@@ -230,6 +238,9 @@ public class Program_Page extends BasePage {
 	}
 	public boolean cancelDisp() {
 		return cancelBtn.isDisplayed();
+	}
+	public void clickXDisp() {
+		elementClick(XBtn);
 	}
 	public boolean onManagePage() {
 		return managePage.isDisplayed();
@@ -249,8 +260,24 @@ public class Program_Page extends BasePage {
 
 		return programCreated.getText();
 	}
-
-	public boolean validatePagination() {
+	
+//*****************************Edit*****************************************************	
+	
+	public void clickOnEdit() {
+				actions.doubleClick(editBtn).perform();
+	}
+	
+	public void editProgramDetails(String editDesc) {
+		programDescText.clear();
+		programDescText.sendKeys(editDesc);
+	}
+	
+	public String saveEditProgram() {
+		saveProgram.click();
+		return programCreated.getText();
+	}
+	
+		public boolean validatePagination() {
 		for (WebElement element : pagination) {
 			if (!element.isDisplayed()) {
 				return false;

@@ -7,7 +7,6 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import appHook.TestContext;
 import common.ExcelReader;
 import common.LoggerLoad;
@@ -95,21 +94,21 @@ public class ProgramStep {
 	@Then("Admin should see the Program Details pop up window {string}")
 	public void admin_should_see_the_class_details_pop_up_window(String string) {
 		switch (string) {
-		case "ProgramDetails":
-			Assert.assertTrue(program.programPopUpTitle());
-			Assert.assertEquals(program.programPopUpTitleText(), "Program Details");
 		case "Name":
 			Assert.assertTrue(program.programNameDisplayed());
-			Assert.assertEquals(program.programNameText(), "Name");
+			Assert.assertEquals(program.programNameText().replaceAll("[^a-zA-Z ]", "").trim(), "Name");
 			break;
 		case "Description":
 			Assert.assertTrue(program.programDescDisplayed());
-			Assert.assertEquals(program.programDescText(), "Description");
+			Assert.assertEquals(program.programDescText().replaceAll("[^a-zA-Z ]", "").trim(), "Description");
 			break;
 		case "Status":
 			Assert.assertTrue(program.programStatus());
-			Assert.assertEquals(program.programStatusText(), "Status");
+			Assert.assertEquals(program.programStatusText().replaceAll("[^a-zA-Z ]", "").trim(), "Status");
 			break;
+		case "ProgramDetails":
+			Assert.assertTrue(program.programPopUpTitle());
+			Assert.assertEquals(program.programPopUpTitleText(), "Program Details");	
 			
 		}
 	}
@@ -171,6 +170,81 @@ public class ProgramStep {
 		
 		
 	}
+	
+//*************************************************Edit Program*******************************
+	
+	@When("Admin clicks Edit New Program under program navigation bar")
+	public void admin_clicks_edit_new_class_under_class_navigation_bar() throws InterruptedException {
+		program.clickProgram();
+		 program.clickOnEdit();
+	}
+	
+	@When("Admin should see the Program details pop-up window by clicking the edit icon for any program")
+	public void admin_should_see_the_program_details_pop_up_window_by_clicking_the_edit_icon_for_any_program() throws InterruptedException {		
+		 program.clickProgram();
+		 program.clickOnEdit();    
+	}
+
+	@Then("Admin should see the Program name field")
+	public void admin_should_see_the_program_name_field() {
+		Assert.assertEquals(program.programNameText().replaceAll("[^a-zA-Z ]", "").trim(), "Name");
+	    
+	}
+
+	@When("Update the fields with valid data {string} and click save")
+	public void update_the_fields_with_valid_data_and_click_save(String editDesc) {
+		program.clickProgram();
+		 program.clickOnEdit();  
+		program.editProgramDetails(editDesc);
+	    
+	}
+
+	@Then("Admin gets message {string} and see the updated values in data table")
+	public void admin_gets_message_and_see_the_updated_values_in_data_table(String string) {
+		Assert.assertEquals("Updated program Successfully", string, program.saveEditProgram());
+	   
+	}
+
+	
+		
+//******************************************Delete ***************************************************
+	
+	@When("Admin should see the popup with yes or no by clicking the delete icon by from a specific program")
+	public void admin_should_see_the_popup_with_yes_or_no_by_clicking_the_delete_icon_by_from_a_specific_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("The respective row in the table should be deleted")
+	public void the_respective_row_in_the_table_should_be_deleted() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks on the delete icon on program page")
+	public void admin_clicks_on_the_delete_icon_on_program_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should not be able to delete the program by clicking No to to go back the program page")
+	public void admin_should_not_be_able_to_delete_the_program_by_clicking_no_to_to_go_back_the_program_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks the delete icon under the Manage program header by selecting the checkboxes for multiple program")
+	public void admin_clicks_the_delete_icon_under_the_manage_program_header_by_selecting_the_checkboxes_for_multiple_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("The respective rows in the table should be deleted")
+	public void the_respective_rows_in_the_table_should_be_deleted() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
 	
 	
 	

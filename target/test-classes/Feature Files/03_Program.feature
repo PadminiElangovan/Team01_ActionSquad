@@ -37,10 +37,10 @@ Feature: Manage Page Validation
 
     Examples: 
       | menu   |
-      |ProgramDetails|
       | Name   |
       | Description|
       | Status |
+      |ProgramDetails|
       
     Scenario Outline: Empty form submission
     When Admin clicks on save button without entering data 
@@ -67,6 +67,62 @@ Feature: Manage Page Validation
     Scenario: Validate Cancel/Close(X) icon on program Details form
     When Admin clicks Cancel Icon on program Details form
     Then Program Details popup window should be closed
+    
+ #------------------------------------Edit Program -----------------------------------------------
+ 
+ Scenario Outline:  Validate Edit Program Details Popup window
+    
+    When Admin clicks Edit New Program under program navigation bar
+    Then Admin should see the Program Details pop up window "<menu>"
+
+    Examples: 
+      | menu   |
+      | Name   |
+      | Description|
+      | Status |
+      |ProgramDetails|
+ 
+ 
+  Scenario: Validate Edit icon feature
+    When Admin should see the Program details pop-up window by clicking the edit icon for any program
+    Then Admin should see the Program name field
+    
+    Scenario Outline: Check if the fields are updated with valid data
+    When Update the fields with valid data "<Description>" and click save
+    Then Admin gets message "Updated program Successfully" and see the updated values in data table
+
+    Examples: 
+      | Description |
+      | Saps |
+      
+    Scenario: Validate Cancel button on Edit popup
+    When Admin clicks Cancel Icon on program Details form
+    Then Program Details popup window should be closed
+    
+     
+  
+    
+    
+ #--------------------------------------------Delete-------------------------------------------------  
+
+  Scenario: Validate single row delete 
+    When Admin should see the popup with yes or no by clicking the delete icon by from a specific program 
+    Then The respective row in the table should be deleted
+    
+    
+     Scenario: Validation of No in Delete
+    When Admin clicks on the delete icon on program page
+    Then Admin should not be able to delete the program by clicking No to to go back the program page
+
+  Scenario: Validate multiple row delete with checkboxes
+    When Admin clicks the delete icon under the Manage program header by selecting the checkboxes for multiple program
+       Then The respective rows in the table should be deleted   
+     
+    
+    
+    
+    
+    
 #----------------------------------- Pagination -----------------------------------------------------------
 
   Scenario Outline: Validate pagination links
@@ -91,11 +147,4 @@ Feature: Manage Page Validation
     
     
     
-    
-    
-    
-    
-    
-    
-    
-   
+  
