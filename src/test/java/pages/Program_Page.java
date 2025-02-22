@@ -68,6 +68,8 @@ public class Program_Page extends BasePage {
 	private List<WebElement> pagination;
 	@FindBy(xpath = "//div[@class='signin-content']")
 	private WebElement backdrop;
+	@FindBy(xpath = "//div[normalize-space()='Manage Program']")
+	private WebElement managePage;
 
 	// Add new
 	@FindBy(xpath="//span[@id='pr_id_17-label']")
@@ -98,6 +100,8 @@ public class Program_Page extends BasePage {
 	private WebElement programDescReq;
 	@FindBy(xpath = "//small[normalize-space()='Status is required.']")
 	private WebElement programStatusReq;
+	@FindBy(xpath = "//button[@label='Cancel']")
+	private WebElement cancelBtn;
 
 	// Pagination
 	@FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
@@ -215,15 +219,22 @@ public class Program_Page extends BasePage {
 	public void clickOnSave() {
 		elementClick(saveProgram);
 	}
-	public void enterProgramNameInSearch() {
-		elementClick(searchbtn);
-		 elementSendkeys(searchbtn, "Playwright&Java");
+	public void enterProgramNameInSearch()  {
+		js.executeScript("arguments[0].click();", searchbtn);
+		//elementClick(searchbtn);
+		 elementSendkeys(searchbtn, "TestLNGL");
 	}
 	public String verifyProgramName() {
 	return	elementGetText(programNameSearch);
 	
 	}
-	
+	public boolean cancelDisp() {
+		return cancelBtn.isDisplayed();
+	}
+	public boolean onManagePage() {
+		return managePage.isDisplayed();
+	}
+
 
 	public String addingMandatoryFields(String Name, String Description, String Status) throws InterruptedException {
 		elementSendkeys(programNameText, Name);
