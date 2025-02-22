@@ -1,5 +1,154 @@
 package stepDefinitions;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import appHook.TestContext;
+import common.ExcelReader;
+import common.LoggerLoad;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.Program_Page;
+
 public class ProgramStep {
 
+	private WebDriverWait wait;
+	private WebDriver driver;
+	private TestContext context;
+	private Program_Page program;
+	private ExcelReader excelReader;
+	boolean status;
+
+	public ProgramStep(TestContext context) {
+		this.context = context;
+		this.driver = context.getDriver();
+		this.program = new Program_Page(driver, context);
+		this.excelReader = context.getExcelReader(); // Use TestContext's ExcelReader instance
+	}
+
+	@When("Admin clicks on Program")
+	public void admin_clicks_on_program() {
+		program.clickProgram();
+	}
+
+	@Then("Admin should see all fields and headers on Manage Program page")
+	public void then_admin_should_see_all_headers_match() {
+		List<String> expectedHeaders;
+		try {
+			expectedHeaders = excelReader.getColumnData("Program", 0);
+		} catch (Exception e) {
+			LoggerLoad.error("Error initializing Excel data: " + e.getMessage());
+			throw new RuntimeException("Error initializing Excel data: " + e.getMessage());
+		}
+		System.out.println(expectedHeaders);
+		List<String> actualHeaders = program.getTableHeaders();
+		System.out.println(actualHeaders);
+		Assert.assertTrue(actualHeaders.containsAll(expectedHeaders));
+
+	}
+
+	@Then("Admin should see footer and enabled pagination controls under the data table")
+	public void admin_should_see_footer_and_pagination() throws InterruptedException {
+		assertTrue(program.validateShowingEnteries());
+		assertTrue(program.validatePagination());
+		LoggerLoad.info("Footer is displayed");
+		LoggerLoad.info("Pagination is displayed");
+	}
+
+	@Then("Admin should see the checkbox default state")
+	public void admin_should_see_the_checkbox_default_state() {
+		program.checkboxWithProgramName();
+	}
+	@Then("Admin should see the Sort icon of all the field in the datatable.")
+	public void admin_should_see_sort_icons() {
+		status = program.validateSortingBtn();
+		assertTrue(status);
+		LoggerLoad.info("Sorting button are visible");
+	}
+
+	@Then("Admin should see the Delete button under the Manage program page header")
+	public void admin_should_see_delete_button() {
+		status = program.deleteBtnDisplayed();
+		assertTrue(status);
+		LoggerLoad.info("Delete button is visible");
+	}
+
+	@Then("Admin should see Total no of programs in below of the data table")
+	public void admin_should_see_total_numbers_of_programs() {
+		assertTrue(program.validateFooter());
+	}
+	
+	
+	
+// **************************************Pagination****************************************
+	
+	/*
+	 * @Given("Admin is on Program page") public void admin_is_on_program_page() {
+	 * program.clickProgram();
+	 * 
+	 * }
+	 */
+	
+	
+	
+	 @When("^Admin clicks the (Next|Last|Previous|First) link on the data table$")
+	    public void adminClicksPageLink(String pageLink) {
+	    	
+		 program.navigateToProgram();
+	      	
+			
+			  switch (pageLink.toLowerCase()) 
+			  { 
+			  case "next":
+				  program.clickNextPage();
+			  break; 
+			  case "last":
+				  program.clickLastPage();
+				  break; 
+				  case "previous":
+			  program.clickPreviousPage();
+			  break;
+			  case "first": 
+				  program.clickFirstPage();
+			  break; }
+			 
+	    }
+	 
+	    // Verify the results based on the <results> description
+	@Then("^Admin should see the (.*) on the data table$")
+	    public void adminShouldSeeResults(String expectedResult) {
+	    	
+
+	    	switch (expectedResult.toLowerCase()) {
+	    	 case "Next enabled link":
+	             Assert.assertTrue(program.isNextButtonEnabled());
+	             break;
+	        case "last page link with Next disabled":
+	            Assert.assertFalse( program.isNextButtonEnabled());
+	            break;
+	        case "previous page":
+	            Assert.assertTrue( program.isPrevButtonEnabled());
+	            break;
+	        case "very first page":
+	            Assert.assertFalse( program.isPrevButtonEnabled());
+	            break;
+	          default:
+	            Assert.fail("Unexpected result description: " + expectedResult);
+	    }
+	    }
+
 }
+	
+	
+	
+	
+	
+	
+
