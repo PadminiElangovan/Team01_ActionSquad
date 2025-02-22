@@ -72,7 +72,7 @@ public class Program_Page extends BasePage {
 	private WebElement managePage;
 
 	// Add new
-	@FindBy(xpath="//span[@id='pr_id_17-label']")
+	@FindBy(xpath="//span[text()='Program Details']")
 	private WebElement popUpTitle;
 	@FindBy(xpath = "//label[@for='programName']")
 	private WebElement addProgramName;
@@ -202,9 +202,11 @@ public class Program_Page extends BasePage {
 		return isElementDisplayed(addProgramName);
 	}
 	public String programNameText() {
+		System.out.println(addProgramName);
 		return elementGetText(addProgramName);
 	}
 	public String programDescText() {
+		System.out.println(addProgramDesc);
 		return elementGetText(addProgramDesc);
 	}
 	public boolean programDescDisplayed() {
@@ -214,6 +216,7 @@ public class Program_Page extends BasePage {
 		return isElementDisplayed(addProgramStatus);
 	}
 	public String programStatusText() {
+		System.out.println(addProgramStatus);
 		return elementGetText(addProgramStatus);
 	}
 	public void clickOnSave() {
