@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -108,6 +107,25 @@ public class ProgramStep {
 			
 		}
 	}
+	
+	
+	@Given("clicks add new class under the class menu bar")
+	public void clicks_add_new_class_under_the_class_menu_bar() {
+	    program.clickProgramAddNew();
+	}
+
+	@When("Admin enters mandatory fields {string} {string} {string} {string} in the form and clicks on save button")
+	public void admin_enters_mandatory_fields_in_the_form_and_clicks_on_save_button(String Name, String Description,String Status,String expectedMsg) throws InterruptedException 
+	{
+		 assertTrue(program.addingMandatoryFields(Name,Description,Status).equals(expectedMsg));
+	}
+	
+
+	@Then("Admin gets message Class added Successfully")
+	public void admin_gets_message_class_added_successfully() {
+		LoggerLoad.info("Program created successfully");
+	}
+
 	
 	
 // **************************************Pagination****************************************
