@@ -37,19 +37,36 @@ Feature: Manage Page Validation
 
     Examples: 
       | menu   |
+      |ProgramDetails|
       | Name   |
       | Description|
       | Status |
       
+    Scenario Outline: Empty form submission
+    When Admin clicks on save button without entering data 
+    Then Admin should see error message below the test field and the field will be highlighed in red color "<ProgramNameIsRequired>" "<DescriptionIsRequired>" "<StatusIsRequired>" 
+     Examples: 
+      | ProgramNameIsRequired       | DescriptionIsRequired  | StatusIsRequired    |
+      | Program name is required | Description is required. | Status is required. |       
+      
     Scenario Outline: Check if program is created 
-    Given clicks add new class under the class menu bar
     When Admin enters mandatory fields "<Name>" "<Description>" "<Status>" "<SuccessMsg>" in the form and clicks on save button
     Then Admin gets message Class added Successfully
 
     Examples: 
-      | Name |  | Description    |  | Status |  | SuccessMsg  |        
-      | vtrd |  | okkkkjh        |  | Active |  | Successful  |          
+      | Name    || Description    || Status || SuccessMsg  |        
+      |TestLNGL || okkkkjh        || Active || Successful  |     
       
+     Scenario Outline: Verify added Program is created 
+    When Admin searches with newly created "<Program Name>" 
+    Then Records of the newly created "<Program name>" is displayed and match the data entered
+    Examples:
+    |Program Name|
+    |TestLNGL|
+    
+    Scenario: Validate Cancel/Close(X) icon on program Details form
+    When Admin clicks Cancel Icon on program Details form
+    Then Program Details popup window should be closed
 #----------------------------------- Pagination -----------------------------------------------------------
 
   Scenario Outline: Validate pagination links
@@ -67,10 +84,6 @@ Feature: Manage Page Validation
     
     
 
-    
-    
-    
-    
     
     
     

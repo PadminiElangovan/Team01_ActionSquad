@@ -68,8 +68,12 @@ public class Program_Page extends BasePage {
 	private List<WebElement> pagination;
 	@FindBy(xpath = "//div[@class='signin-content']")
 	private WebElement backdrop;
+	@FindBy(xpath = "//div[normalize-space()='Manage Program']")
+	private WebElement managePage;
 
 	// Add new
+	@FindBy(xpath="//span[@id='pr_id_17-label']")
+	private WebElement popUpTitle;
 	@FindBy(xpath = "//label[@for='programName']")
 	private WebElement addProgramName;
 	@FindBy(xpath = "//label[@for='programDescription']")
@@ -88,6 +92,16 @@ public class Program_Page extends BasePage {
 	private WebElement programCreated;
 	@FindBy(xpath = "//button[@id='saveProgram']")
 	private WebElement saveProgram;
+	@FindBy(css="td:nth-child(2)")
+	private WebElement programNameSearch;
+	@FindBy(xpath = "//small[normalize-space()='Program name is required.']")
+	private WebElement programNameReq;
+	@FindBy(xpath = "//small[normalize-space()='Description is required.']")
+	private WebElement programDescReq;
+	@FindBy(xpath = "//small[normalize-space()='Status is required.']")
+	private WebElement programStatusReq;
+	@FindBy(xpath = "//button[@label='Cancel']")
+	private WebElement cancelBtn;
 
 	// Pagination
 	@FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
@@ -173,28 +187,54 @@ public class Program_Page extends BasePage {
 	}
 
 	public boolean validateFooter() {
-
 		return footer.isDisplayed();
-
 	}
-
+	
+	// Add new Program
+	public boolean programPopUpTitle() {
+		return isElementDisplayed(popUpTitle);
+	}
+	public String programPopUpTitleText() {
+		return elementGetText(popUpTitle);
+	}
+	
 	public boolean programNameDisplayed() {
-
 		return isElementDisplayed(addProgramName);
-
 	}
-
+	public String programNameText() {
+		return elementGetText(addProgramName);
+	}
+	public String programDescText() {
+		return elementGetText(addProgramDesc);
+	}
 	public boolean programDescDisplayed() {
-
 		return isElementDisplayed(addProgramDesc);
-
 	}
-
 	public boolean programStatus() {
-
 		return isElementDisplayed(addProgramStatus);
-
 	}
+	public String programStatusText() {
+		return elementGetText(addProgramStatus);
+	}
+	public void clickOnSave() {
+		elementClick(saveProgram);
+	}
+	public void enterProgramNameInSearch()  {
+		js.executeScript("arguments[0].click();", searchbtn);
+		//elementClick(searchbtn);
+		 elementSendkeys(searchbtn, "TestLNGL");
+	}
+	public String verifyProgramName() {
+	return	elementGetText(programNameSearch);
+	
+	}
+	public boolean cancelDisp() {
+		return cancelBtn.isDisplayed();
+	}
+	public boolean onManagePage() {
+		return managePage.isDisplayed();
+	}
+
 
 	public String addingMandatoryFields(String Name, String Description, String Status) throws InterruptedException {
 		elementSendkeys(programNameText, Name);
@@ -220,8 +260,8 @@ public class Program_Page extends BasePage {
 	}
 
 	private void doubleClick(WebElement element) {
-		// Create an Actions instance
-		actions.moveToElement(element).doubleClick().perform(); // Move to the element and double-click
+
+		actions.moveToElement(element).doubleClick().perform();
 	}
 
 	public void navigateToProgram() {
@@ -281,6 +321,18 @@ public class Program_Page extends BasePage {
 	public boolean isLastButtonEnabled() {
 		return lastButton.isEnabled();
 
+	}
+
+	public String getProgramNameReqText() {
+		return elementGetText(programNameReq);
+	}
+
+	public String getDescriptionReqText() {
+	return	elementGetText(programDescReq);
+	}
+
+	public String getStatusReqText() {
+		return	elementGetText(programStatusReq);
 	}
 
 }
