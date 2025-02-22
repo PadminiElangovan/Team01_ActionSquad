@@ -144,7 +144,8 @@ public class ProgramStep {
 	}
 
 	@When("Admin searches with newly created {string}")
-	public void admin_searches_with_newly_created_program(String programName) {
+	public void admin_searches_with_newly_created_program(String programName)  {
+		
 		program.clickProgram();
 		program.enterProgramNameInSearch();
 	}
@@ -154,15 +155,26 @@ public class ProgramStep {
 		Assert.assertEquals(program.verifyProgramName(), pName);
 		
 	}
+	
+	@When("Admin clicks Cancel Icon on program Details form")
+	public void admin_clicks_cancel_Icon()  {
+		program.clickProgramAddNew();
+		program.cancelDisp();
+		
+	}
+	
+	@Then("Program Details popup window should be closed")
+	public void program_details_should_closed() {
+		status=program.onManagePage();
+		assertTrue(status);
+		LoggerLoad.info("Admin is on manage program page");
+		
+		
+	}
+	
+	
+	
 // **************************************Pagination****************************************
-	
-	/*
-	 * @Given("Admin is on Program page") public void admin_is_on_program_page() {
-	 * program.clickProgram();
-	 * 
-	 * }
-	 */
-	
 	
 	
 	 @When("^Admin clicks the (Next|Last|Previous|First) link on the data table$")
