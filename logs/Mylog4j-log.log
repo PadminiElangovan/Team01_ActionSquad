@@ -1061,4 +1061,3 @@
 [INFO ] 2025-02-21 21:53:13.867 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
 [INFO ] 2025-02-21 21:53:13.867 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
 [INFO ] 2025-02-21 21:53:15.047 [main] LoggerLoad - Browser is closed
-
