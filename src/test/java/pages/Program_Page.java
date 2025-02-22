@@ -36,18 +36,18 @@ public class Program_Page extends BasePage {
 	@FindBy(xpath = "//div[@class='ng-star-inserted']")
 	private WebElement menu;
 	@FindBy(xpath = "//span[text()='Home']")
-	public WebElement homeHeader;
+	private WebElement homeHeader;
 	@FindBy(xpath = "//span[text()='Batch']")
-	public WebElement batchHeader;
+	private WebElement batchHeader;
 	@FindBy(xpath = "//span[text()='Class']")
-	public WebElement classHeader;
+	private WebElement classHeader;
 	@FindBy(xpath = "//span[text()='Logout']")
-	public WebElement logoutHeader;
+	private WebElement logoutHeader;
 
 	@FindBy(xpath = "//div[normalize-space()='Manage Program']")
-	public WebElement manageProgramHeader;
+	private WebElement manageProgramHeader;
 	@FindBy(xpath = "//th[normalize-space()='Program Name']")
-	public WebElement programNameHeader;
+	private WebElement programNameHeader;
 	@FindBy(xpath = "//th[normalize-space()='Program Description']")
 	private WebElement programDescriptionHeader;
 	@FindBy(xpath = "//th[normalize-space()='Program Status']")
