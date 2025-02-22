@@ -17,7 +17,6 @@ import pages.Login_Page;
 
 public class LoginStepAddon extends BasePage{
 
-	//private Dashboard_Page Dashboard;
 	private Login_Page Login;
 	private WebDriver driver;
 	private TestContext context;
@@ -27,7 +26,6 @@ public class LoginStepAddon extends BasePage{
      this.context = context;
      this.driver = context.getDriver();
      this.Login = new Login_Page(driver, context);
-    // this.Dashboard = new Dashboard_Page(driver, context); 
  }
 	
 
