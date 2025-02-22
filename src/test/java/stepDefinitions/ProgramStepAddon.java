@@ -36,10 +36,6 @@ public class ProgramStepAddon extends BasePage{
      this.excelReader = context.getExcelReader();
  }
 	
-@Given("Admin is on home page after Login")
-public void admin_is_on_home_page_after_login() {
-	Login.AdminLogin();
-}
 
 @When("Admin clicks Program on the navigation bar")
 public void admin_clicks_program_on_the_navigation_bar() {
