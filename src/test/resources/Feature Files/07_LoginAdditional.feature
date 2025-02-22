@@ -1,4 +1,4 @@
-@LoginExtra @LMS 
+@LoginExtra @LMS @Dash
 Feature: Additional Login Functionality
 
   @AllEmpty
