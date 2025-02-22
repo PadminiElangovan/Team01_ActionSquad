@@ -2,7 +2,7 @@
 Feature: Additional Program Functionality
 
  Background: Admin is on the Dashboard page after login
-   Given Admin is on home page after Login
+   Given Admin is on home page after Logs in
 
   @MngPrgmTitle
   Scenario: Verify Manage Program page title
@@ -45,35 +45,40 @@ Feature: Additional Program Functionality
     Given The Admin is in Add New program pop window
     When Admin enters invalid "<field>" and clicks save
     Then Admin receives "<field>" invalid error message
-
    Examples:
-      | field       |
-      | Name        |
-      | Description |
+      | field              |
+      | NameSpcChar        |
+      | NameStarts-SpcChar |
+      | NameStarts-No      |
+      | NamelessChar       |
+      | DescStarts-No      |
+      | DesclessChar       |
 
-  @EditMandatoryMsg
+    @EditMandatoryMsg
   Scenario Outline: Verify field mandatory message
     Given The Admin is in Edit program pop window
-    When Admin leaves "<field>" empty and clicks save
-    Then Admin receives "<field>" mandatory error message
+    When Admin clears "<field>" and clicks save
+    Then Admin receives "<field>" edit mandatory error message
 
    Examples:
       | field       |
       | Name        |
       | Description |
-      | Status      |
 
-  @EditInvalidMsg
+ @EditInvalidMsg
   Scenario Outline: Verify field invalid message
     Given The Admin is in Edit program pop window
     When Admin enters invalid "<field>" and clicks save
     Then Admin receives "<field>" invalid error message
-
    Examples:
  
-      | field       |
-      | Name        |
-      | Description |
+      | field              |
+      | NameSpcChar        |
+      | NameStarts-SpcChar |
+      | NameStarts-No      |
+      | NamelessChar       |
+      | DescStarts-No      |
+      | DesclessChar       |
 
   @WarningSign
   Scenario Outline: Verify warning sign 
