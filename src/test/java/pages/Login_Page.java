@@ -50,7 +50,6 @@ public class Login_Page {
 		 AdminRole.click();
 		 LoginBtn.click(); 
 	 }
-
 	 public void UsrPswd() {
 		 Username.sendKeys(Login.get(0).get("username"));
 		 Password.sendKeys(Login.get(0).get("password"));
@@ -79,6 +78,5 @@ public class Login_Page {
 		 LoginBtn.click(); 
 	 }
 	
-
 
 }
