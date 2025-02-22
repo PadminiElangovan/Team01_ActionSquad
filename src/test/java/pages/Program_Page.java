@@ -247,8 +247,8 @@ public class Program_Page extends BasePage {
 	}
 
 	private void doubleClick(WebElement element) {
-		// Create an Actions instance
-		actions.moveToElement(element).doubleClick().perform(); // Move to the element and double-click
+
+		actions.moveToElement(element).doubleClick().perform();
 	}
 
 	public void navigateToProgram() {
