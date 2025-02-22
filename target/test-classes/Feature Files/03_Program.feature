@@ -41,7 +41,15 @@ Feature: Manage Page Validation
       | Description|
       | Status |
       
+    Scenario Outline: Check if program is created 
+    Given clicks add new class under the class menu bar
+    When Admin enters mandatory fields "<Name>" "<Description>" "<Status>" "<SuccessMsg>" in the form and clicks on save button
+    Then Admin gets message Class added Successfully
 
+    Examples: 
+      | Name |  | Description    |  | Status |  | SuccessMsg  |        
+      | vtrd |  | okkkkjh        |  | Active |  | Successful  |          
+      
 #----------------------------------- Pagination -----------------------------------------------------------
 
   Scenario Outline: Validate pagination links

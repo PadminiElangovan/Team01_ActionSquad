@@ -54,7 +54,7 @@ public class Program_Page extends BasePage {
 	private WebElement programStatus;
 	@FindBy(xpath = "//th[text()=' Edit / Delete ']")
 	private WebElement editDeleteHeader;
-	@FindBy(className="p-checkbox")
+	@FindBy(className = "p-checkbox")
 	private WebElement checkboxProgramName;
 	@FindBy(css = ".p-paginator-current.ng-star-inserted")
 	private WebElement showingEnteries;
@@ -66,18 +66,30 @@ public class Program_Page extends BasePage {
 	private WebElement footer;
 	@FindBy(xpath = "p-paginator-element")
 	private List<WebElement> pagination;
-	@FindBy(xpath="//div[@class='signin-content']")
+	@FindBy(xpath = "//div[@class='signin-content']")
 	private WebElement backdrop;
-	
-	//Add new
-	@FindBy(xpath="//label[@for='programName']")
-	private WebElement addProgramName;
-	@FindBy(xpath="//label[@for='programDescription']")
-	private WebElement addProgramDesc;
-	@FindBy(xpath="//lable[@for='online']")
-	private WebElement addProgramStatus;
 
-	// Pagination 
+	// Add new
+	@FindBy(xpath = "//label[@for='programName']")
+	private WebElement addProgramName;
+	@FindBy(xpath = "//label[@for='programDescription']")
+	private WebElement addProgramDesc;
+	@FindBy(xpath = "//lable[@for='online']")
+	private WebElement addProgramStatus;
+	@FindBy(xpath = "//input[@id='programName']")
+	private WebElement programNameText;
+	@FindBy(xpath = "//input[@id='programDescription']")
+	private WebElement programDescText;
+	@FindBy(xpath = "//div[contains(text(),'Active')]//div[2]")
+	private WebElement statusActive;
+	@FindBy(xpath = "//div[contains(text(),'Inactive')]//div[2]")
+	private WebElement statusInActive;
+	@FindBy(xpath = "//div[text()='Successful']")
+	private WebElement programCreated;
+	@FindBy(xpath = "//button[@id='saveProgram']")
+	private WebElement saveProgram;
+
+	// Pagination
 	@FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
 	private WebElement pagination1;
 	@FindBy(xpath = "//span[contains(@class, 'p-paginator-current')]")
@@ -95,8 +107,6 @@ public class Program_Page extends BasePage {
 	@FindBy(xpath = "//button[contains(@class, 'p-paginator-page')]")
 	private List<WebElement> pageButtons;
 
-
-
 	public Program_Page(WebDriver driver, TestContext context) {
 
 		this.driver = context.getDriver();
@@ -104,17 +114,16 @@ public class Program_Page extends BasePage {
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		PageFactory.initElements(driver, this);
 		this.actions = new Actions(driver);
-		this.js =(JavascriptExecutor)driver;
+		this.js = (JavascriptExecutor) driver;
 	}
 
-	//clicking program button
+	// clicking program button
 	public void clickProgram() {
-		//programBtn.click();
+		// programBtn.click();
 		elementClick(programBtn);
 	}
-	
-	public void clickProgramAddNew()
-	{
+
+	public void clickProgramAddNew() {
 		elementClick(programBtn);
 		elementClick(addNewPgm);
 	}
@@ -136,8 +145,7 @@ public class Program_Page extends BasePage {
 		headers.add(editDeleteHeader.getText().trim());
 
 		return headers;
-	} 
-
+	}
 
 	public boolean validateShowingEnteries() {
 		return showingEnteries.isDisplayed();
@@ -164,27 +172,42 @@ public class Program_Page extends BasePage {
 		return deleteBtnMC.isDisplayed();
 	}
 
-	
 	public boolean validateFooter() {
 
 		return footer.isDisplayed();
 
 	}
-	
+
 	public boolean programNameDisplayed() {
 
 		return isElementDisplayed(addProgramName);
 
 	}
+
 	public boolean programDescDisplayed() {
 
 		return isElementDisplayed(addProgramDesc);
 
 	}
+
 	public boolean programStatus() {
 
 		return isElementDisplayed(addProgramStatus);
 
+	}
+
+	public String addingMandatoryFields(String Name, String Description, String Status) throws InterruptedException {
+		elementSendkeys(programNameText, Name);
+		elementClick(programDescText);
+		elementSendkeys(programDescText, Description);
+		if (Status.equals("Active")) {
+			statusActive.click();
+		} else {
+			statusInActive.click();
+		}
+		saveProgram.click();
+
+		return programCreated.getText();
 	}
 
 	public boolean validatePagination() {
@@ -201,7 +224,7 @@ public class Program_Page extends BasePage {
 		actions.moveToElement(element).doubleClick().perform(); // Move to the element and double-click
 	}
 
-	public void  navigateToProgram() {
+	public void navigateToProgram() {
 		doubleClick(programBtn);
 
 	}
@@ -233,9 +256,9 @@ public class Program_Page extends BasePage {
 		} else {
 			throw new NoSuchElementException("Previous button not found on the page.");
 		}
-			}
-	
-	public void clickFirstPage() {		    	
+	}
+
+	public void clickFirstPage() {
 		if (firstButton != null && firstButton.isDisplayed()) {
 			js.executeScript("arguments[0].scrollIntoView(true);", firstButton);
 			nextButton.click();
@@ -243,11 +266,11 @@ public class Program_Page extends BasePage {
 		} else {
 			throw new NoSuchElementException("First button not found on the page.");
 		}
-		 
+
 	}
 
 	public boolean isNextButtonEnabled() {
-		return	nextButton.isEnabled();			
+		return nextButton.isEnabled();
 
 	}
 
@@ -259,6 +282,5 @@ public class Program_Page extends BasePage {
 		return lastButton.isEnabled();
 
 	}
-
 
 }
