@@ -26,10 +26,10 @@ Feature: Additional Login Functionality
     Then Admin should not be navigated to LMS portal
   
   @Admin2StudentRole
-  Scenario: Verify admin selects staff role
+  Scenario: Verify admin selects student role
     Given Admin is on login Page
     When Admin enter valid credentials with student role selection and clicks login
-    Then Admin should not be navigated to LMS portal  
+    Then Admin should see error message  
     
  	@LoginPgTitle
   Scenario: Verify LMS Login page title
@@ -40,3 +40,4 @@ Feature: Additional Login Functionality
   Scenario: Verify Forgot Password Link
     When Admin gives the correct LMS portal URL
     Then Admin should see Forgot Password Link
+    

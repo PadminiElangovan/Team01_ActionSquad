@@ -40,7 +40,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -50,7 +49,11 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
+<<<<<<< HEAD
+			<span class='label blue darken-3 suite-start-time'>Feb 23, 2025 04:27:29 PM</span>
+=======
 			<span class='label blue darken-3 suite-start-time'>Feb 21, 2025 09:49:27 PM</span>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 			</a>
 		</ul>
 	</div>
@@ -66,7 +69,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -78,6 +80,12 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+<<<<<<< HEAD
+					<li><a href='#'>@Admin2StudentRole</a></li>
+					<li><a href='#'>@LMS</a></li>
+					<li><a href='#'>@Dash</a></li>
+					<li><a href='#'>@LoginExtra</a></li>
+=======
 					<li><a href='#'>@PrgmCount</a></li>
 					<li><a href='#'>@TitleSpell</a></li>
 					<li><a href='#'>@AllEmpty</a></li>
@@ -114,6 +122,7 @@
 					<li><a href='#'>@Dash</a></li>
 					<li><a href='#'>@ColumnHeader</a></li>
 					<li><a href='#'>@UsrCount</a></li>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -155,12 +164,21 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
+<<<<<<< HEAD
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>1</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
+=======
                     <span class='tooltipped' data-position='top' data-tooltip='$33%'>
                     <span class='strong'>1</span> features passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='66%'>
                     2</span> features failed, 
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -173,12 +191,21 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
+<<<<<<< HEAD
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>1</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
+=======
                     <span class='tooltipped' data-position='top' data-tooltip='87%'>
                     <span class='strong'>43</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='12%'>
                     6</span> scenarios failed, 
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -193,12 +220,21 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
+<<<<<<< HEAD
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>3</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> steps failed, 
+=======
                     <span class='tooltipped' data-position='top' data-tooltip='96%'>
                     <span class='strong'>145</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='3%'>
                     6</span> steps failed, 
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -223,8 +259,13 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
+<<<<<<< HEAD
+						<span class='test-name'>Additional Login Functionality</span>
+						<span class='test-time'>Feb 23, 2025 04:27:31 PM</span>
+=======
 						<span class='test-name'>Dashboard Functionality</span>
 						<span class='test-time'>Feb 21, 2025 09:49:29 PM</span>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -237,6 +278,11 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
+<<<<<<< HEAD
+	<span class='duration right label'>00 00 04.850</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify admin selects student role</div>
+=======
 	<span class='duration right label'>00 00 06.329</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify LMS title</div>
@@ -1085,6 +1131,7 @@
 	<span class='duration right label'>00 00 03.433</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify admin selects staff role</div>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 	</div>
 	
 	
@@ -1096,16 +1143,28 @@
 		</div>
 	
 	<ul class='steps'>
+<<<<<<< HEAD
+		<li test-id='5' class='node given Pass' status='Pass'>
+=======
 		<li test-id='184' class='node given Pass' status='Pass'>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 			<div class="step-name" title="(stepDefinitions.DashboardStep.admin_is_on_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on login Page</div>
 
 
 		</li>
+<<<<<<< HEAD
+		<li test-id='6' class='node when Pass' status='Pass'>
+=======
 		<li test-id='185' class='node when Pass' status='Pass'>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 			<div class="step-name" title="(stepDefinitions.LoginStepAddon.admin_enter_valid_credentials_with_student_role_selection_and_clicks_login())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enter valid credentials with student role selection and clicks login</div>
 
 
 		</li>
+<<<<<<< HEAD
+		<li test-id='7' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginStepAddon.admin_should_see_error_message())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see error message</div>
+=======
 		<li test-id='186' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.LoginStepAddon.admin_should_not_be_navigated_to_lms_portal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should not be navigated to LMS portal</div>
 
@@ -1870,6 +1929,7 @@
 		</li>
 		<li test-id='349' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_user())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see exact total count of active and inactive user</div>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 
 
 		</li>
@@ -1919,7 +1979,11 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
+<<<<<<< HEAD
+						<span class='category-name'>@Admin2StudentRole</span>
+=======
 						<span class='category-name'>@PrgmCount</span>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -1941,6 +2005,12 @@
 								</thead>
 								<tbody>
 									<tr>
+<<<<<<< HEAD
+										<td>Feb 23, 2025 04:27:31 PM</td>
+										<td class='linked' test-id='2'>Verify admin selects student role</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+=======
 										<td>Feb 21, 2025 09:53:07 PM</td>
 										<td class='linked' test-id='337'>Validate program count</td>
 										<td><span class='test-status Pass'>Pass</span></td>
@@ -2144,6 +2214,7 @@
 										<td class='linked' test-id='145'>verify page icon disable</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 								</tbody>
 							</table>
 						</div>
@@ -2151,7 +2222,11 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
+<<<<<<< HEAD
+						<span class='category-name'>@LMS</span>
+=======
 						<span class='category-name'>@TableHeader</span>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -2173,6 +2248,10 @@
 								</thead>
 								<tbody>
 									<tr>
+<<<<<<< HEAD
+										<td>Feb 23, 2025 04:27:31 PM</td>
+										<td class='linked' test-id='2'>Verify admin selects student role</td>
+=======
 										<td>Feb 21, 2025 09:52:23 PM</td>
 										<td class='linked' test-id='258'>Verify Staff data table header</td>
 										<td><span class='test-status Pass'>Pass</span></td>
@@ -3548,6 +3627,7 @@
 									<tr>
 										<td>Feb 21, 2025 09:51:34 PM</td>
 										<td class='linked' test-id='181'>Verify admin selects staff role</td>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -3559,12 +3639,19 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Dash</span>
 						<span class='category-status right'>
+<<<<<<< HEAD
+						<span class='label pass'>1</span>
+=======
 						<span class='label pass'>43</span>
 						<span class='label fail'>6</span>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+<<<<<<< HEAD
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+=======
 							<span status="pass" class='label green accent-4 white-text'>Passed: 43</span>
 							<span status="fail" class='label red lighten-1 white-text'>Failed: 6</span>
 							
@@ -3839,6 +3926,7 @@
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
 							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 							
 							
 						</div>
@@ -3853,6 +3941,10 @@
 								</thead>
 								<tbody>
 									<tr>
+<<<<<<< HEAD
+										<td>Feb 23, 2025 04:27:31 PM</td>
+										<td class='linked' test-id='2'>Verify admin selects student role</td>
+=======
 										<td>Feb 21, 2025 09:52:27 PM</td>
 										<td class='linked' test-id='266'>Verify Staff data table column</td>
 										<td><span class='test-status Pass'>Pass</span></td>
@@ -3870,6 +3962,7 @@
 									<tr>
 										<td>Feb 21, 2025 09:52:38 PM</td>
 										<td class='linked' test-id='287'>Verify Staff data table column</td>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -3879,7 +3972,11 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
+<<<<<<< HEAD
+						<span class='category-name'>@LoginExtra</span>
+=======
 						<span class='category-name'>@UsrCount</span>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -3901,8 +3998,13 @@
 								</thead>
 								<tbody>
 									<tr>
+<<<<<<< HEAD
+										<td>Feb 23, 2025 04:27:31 PM</td>
+										<td class='linked' test-id='2'>Verify admin selects student role</td>
+=======
 										<td>Feb 21, 2025 09:53:11 PM</td>
 										<td class='linked' test-id='344'>Validate user count</td>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -3919,6 +4021,9 @@
 		</div>
 	</div>
 </div>
+<<<<<<< HEAD
+<!-- category view --><div id='dashboard-view' class='view hide'>
+=======
 <!-- category view --><div id='exception-view' class='view hide'>
 	<section id='controls'>
 		<div class='controls grey lighten-4'>
@@ -4052,6 +4157,7 @@
 	</div>
 </div>
 <!-- exception view --><div id='dashboard-view' class='view hide'>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -4059,37 +4165,61 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
+<<<<<<< HEAD
+					<div class='panel-lead'>1</div>
+=======
 					<div class='panel-lead'>3</div>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
+<<<<<<< HEAD
+					<div class='panel-lead'>1</div>
+=======
 					<div class='panel-lead'>49</div>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
+<<<<<<< HEAD
+					<div class='panel-lead'>3</div>
+=======
 					<div class='panel-lead'>151</div>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
+<<<<<<< HEAD
+					<div class='panel-lead'>Feb 23, 2025 04:27:29 PM</div>
+=======
 					<div class='panel-lead'>Feb 21, 2025 09:49:27 PM</div>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
+<<<<<<< HEAD
+			 		<div class='panel-lead'>Feb 23, 2025 04:27:36 PM</div>
+=======
 			 		<div class='panel-lead'>Feb 21, 2025 09:53:15 PM</div>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
+<<<<<<< HEAD
+					<div class='panel-lead'>00 00 06.664</div>
+=======
 					<div class='panel-lead'>00 03 48.465</div>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 				</div>
 			</div>
 			<div class='col s4'>
@@ -4133,6 +4263,9 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
+<<<<<<< HEAD
+							<td>@Admin2StudentRole</td>
+=======
 							<td>@PrgmCount</td>
 							<td>1</td>
 							<td>0</td>
@@ -4170,6 +4303,7 @@
 						</tr>
 						<tr>
 							<td>@TableHeader</td>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -4178,7 +4312,11 @@
 							</td>
 						</tr>
 						<tr>
+<<<<<<< HEAD
+							<td>@LMS</td>
+=======
 							<td>@Admin2StaffRole</td>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -4187,6 +4325,9 @@
 							</td>
 						</tr>
 						<tr>
+<<<<<<< HEAD
+							<td>@Dash</td>
+=======
 							<td>@MenuOrder</td>
 							<td>5</td>
 							<td>0</td>
@@ -4197,6 +4338,7 @@
 						</tr>
 						<tr>
 							<td>@LoginPgTitle</td>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -4205,6 +4347,9 @@
 							</td>
 						</tr>
 						<tr>
+<<<<<<< HEAD
+							<td>@LoginExtra</td>
+=======
 							<td>@TextIcon</td>
 							<td>4</td>
 							<td>0</td>
@@ -4449,6 +4594,7 @@
 						</tr>
 						<tr>
 							<td>@UsrCount</td>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -4467,24 +4613,42 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
+<<<<<<< HEAD
+                parentCount: 1,
+				passParent: 1,
+				failParent: 0,
+=======
                 parentCount: 3,
 				passParent: 1,
 				failParent: 2,
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
+<<<<<<< HEAD
+				childCount: 1,
+				passChild: 1,
+				failChild: 0,
+=======
 				childCount: 49,
 				passChild: 43,
 				failChild: 6,
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
+<<<<<<< HEAD
+				grandChildCount: 3,
+				passGrandChild: 3,
+				failGrandChild: 0,
+=======
 				grandChildCount: 151,
 				passGrandChild: 145,
 				failGrandChild: 6,
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
@@ -4495,7 +4659,11 @@
 		
 		<script>
 			var timeline = {
+<<<<<<< HEAD
+			        "Additional Login Functionality":4.854
+=======
 			        "Dashboard Functionality":88.684,"Additional Login Functionality":56.188,"Additional Dashboard Functionality":80.801
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 			};
 		</script>
 		

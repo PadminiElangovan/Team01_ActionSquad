@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-23T16:27:29 CST" name="Default suite" finished-at="2025-02-23T16:27:36 CST" duration-ms="7002">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@5cdec700]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-02-23T16:27:29 CST" name="Default test" finished-at="2025-02-23T16:27:36 CST" duration-ms="7002">
+      <class name="testRunner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-23T16:27:29 CST" name="setUpClass" finished-at="2025-02-23T16:27:31 CST" duration-ms="1417" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@46748b04]]>
+=======
 <testng-results ignored="0" total="49" passed="43" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -15,12 +33,20 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@5af2bc6]]>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-23T16:27:31 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-23T16:27:36 CST" duration-ms="5063" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify admin selects student role"]]>
+=======
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@31e5415e]" started-at="2025-02-21T21:49:29 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-21T21:49:35 CST" duration-ms="6680" status="PASS">
           <params>
             <param index="0">
@@ -424,6 +450,7 @@ at ✽.Admin should see Please select your Role error message(file:///C:/Users/m
             <param index="0">
               <value>
                 <![CDATA["Verify Password masking"]]>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
               </value>
             </param>
             <param index="1">
@@ -432,6 +459,12 @@ at ✽.Admin should see Please select your Role error message(file:///C:/Users/m
               </value>
             </param>
           </params>
+<<<<<<< HEAD
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestRunner@5cdec700]" started-at="2025-02-23T16:27:36 CST" name="tearDownClass" finished-at="2025-02-23T16:27:36 CST" duration-ms="477" status="PASS">
+=======
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Feb@2025] but found []]]>
@@ -902,6 +935,7 @@ at ✽.Admin should see exact total count of active and inactive batch(file:///C
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestRunner@31e5415e]" started-at="2025-02-21T21:53:15 CST" name="tearDownClass" finished-at="2025-02-21T21:53:16 CST" duration-ms="1238" status="PASS">
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
