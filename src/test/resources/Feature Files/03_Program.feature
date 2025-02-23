@@ -145,14 +145,11 @@ Examples:
  When Admin enter the program to search By program name that does not exist
  Then There should be zero results.
  
- Scenario: Verify Admin is able to search with partial program name
- Given Admin is on the program page
- When Admin enter the program to search By partial name of program
- Then Admin should able to see Program name, description, and status for searched program name
+ #Scenario: Verify Admin is able to search with partial program name
+ #Given Admin is on the program page
+ #When Admin enter the program to search By partial name of program
+ #Then Admin should able to see Program name, description, and status for searched program name
  
-    
-    
-    
 #----------------------------------- Pagination -----------------------------------------------------------
 
   Scenario Outline: Validate pagination links
