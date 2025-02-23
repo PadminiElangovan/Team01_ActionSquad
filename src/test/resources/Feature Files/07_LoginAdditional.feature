@@ -40,3 +40,4 @@ Feature: Additional Login Functionality
   Scenario: Verify Forgot Password Link
     When Admin gives the correct LMS portal URL
     Then Admin should see Forgot Password Link
+    
