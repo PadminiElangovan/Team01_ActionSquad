@@ -55,11 +55,19 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
+<<<<<<< HEAD
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
 <td>Started on:</td><td>Sun Feb 23 16:27:29 CST 2025</td>
 </tr>
 <tr><td>Total time:</td><td>7 seconds (7002 ms)</td>
+=======
+<td>Tests passed/Failed/Skipped:</td><td>43/6/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Feb 21 21:49:26 CST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>229 seconds (229508 ms)</td>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,10 +84,368 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin selects student role", "Additional Login Functionality"</td>
 <td></td>
 <td>5</td>
 <td>testRunner.TestRunner@5cdec700</td></tr>
+=======
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin role mandatory error", "Additional Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_should_see_please_select_your_role_error_message(LoginStepAddon.java:51)
+	at ✽.Admin should see Please select your Role error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace89882381", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace89882381'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_should_see_please_select_your_role_error_message(LoginStepAddon.java:51)
+	at ✽.Admin should see Please select your Role error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:14)
+</pre></div></td>
+<td>14</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:153)
+	at ✽.Admin should be in &quot;Staff&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2050409232", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2050409232'><pre>java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:153)
+	at ✽.Admin should be in &quot;Staff&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div></td>
+<td>5</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Password masking", "Additional Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Feb@2025] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.LoginStepAddon.admin_should_see_masked_password(LoginStepAddon.java:65)
+	at ✽.Admin should see masked password(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:20)
+</pre></div><a href='#' onClick='toggleBox("stack-trace592965632", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace592965632'><pre>java.lang.AssertionError: expected [Feb@2025] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.LoginStepAddon.admin_should_see_masked_password(LoginStepAddon.java:65)
+	at ✽.Admin should see masked password(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:20)
+</pre></div></td>
+<td>4</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify all field empty error message", "Additional Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_receives_mandatory_fields_error_message(LoginStepAddon.java:40)
+	at ✽.Admin receives mandatory fields error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1644425487", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1644425487'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_receives_mandatory_fields_error_message(LoginStepAddon.java:40)
+	at ✽.Admin receives mandatory fields error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:8)
+</pre></div></td>
+<td>13</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate batch count", "Additional Dashboard Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [0] but found [103]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_batch(DashboardStepAddon.java:171)
+	at ✽.Admin should see exact total count of active and inactive batch(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:83)
+</pre></div><a href='#' onClick='toggleBox("stack-trace547681914", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace547681914'><pre>java.lang.AssertionError: expected [0] but found [103]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_batch(DashboardStepAddon.java:171)
+	at ✽.Admin should see exact total count of active and inactive batch(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:83)
+</pre></div></td>
+<td>4</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Forgot Password Link", "Additional Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_should_see_forgot_password_link(LoginStepAddon.java:96)
+	at ✽.Admin should see Forgot Password Link(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:42)
+</pre></div><a href='#' onClick='toggleBox("stack-trace206889531", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace206889531'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_should_see_forgot_password_link(LoginStepAddon.java:96)
+	at ✽.Admin should see Forgot Password Link(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:42)
+</pre></div></td>
+<td>13</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar order", "Dashboard Functionality"</td>
+<td></td>
+<td>10</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Staff data table header", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar order", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar order", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user details", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section text and icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Staff data table column", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar order", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify page icon disable", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin selects staff role", "Additional Login Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify User profile icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin selects staff role", "Additional Login Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Staff data table column", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section count", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify bar chart", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section text and icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate user count", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section text and icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar order", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify staff data page split", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate LMS title has correct spelling and space", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify LMS Dashboard page title", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Dashboard Section", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate alignment for navigation bar", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify page icon disable", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar text", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section count", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section count", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section text and icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify pie-chart presence", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Staff data table column", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Home Link", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Welcome Text", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate program count", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify LMS title alignment", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section count", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Staff data table column", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify LMS title", "Dashboard Functionality"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify LMS Login page title", "Additional Login Functionality"</td>
+<td></td>
+<td>2</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify staff table pagination", "Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@31e5415e</td></tr>
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 </table><p>
 </body>
 </html>

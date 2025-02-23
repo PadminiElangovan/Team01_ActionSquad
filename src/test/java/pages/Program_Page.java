@@ -68,12 +68,8 @@ public class Program_Page extends BasePage {
 	private List<WebElement> pagination;
 	@FindBy(xpath = "//div[@class='signin-content']")
 	private WebElement backdrop;
-	@FindBy(xpath = "//div[normalize-space()='Manage Program']")
-	private WebElement managePage;
 
 	// Add new
-	@FindBy(xpath="//span[text()='Program Details']")
-	private WebElement popUpTitle;
 	@FindBy(xpath = "//label[@for='programName']")
 	private WebElement addProgramName;
 	@FindBy(xpath = "//label[@for='programDescription']")
@@ -92,48 +88,7 @@ public class Program_Page extends BasePage {
 	private WebElement programCreated;
 	@FindBy(xpath = "//button[@id='saveProgram']")
 	private WebElement saveProgram;
-	@FindBy(css="td:nth-child(2)")
-	private WebElement programNameSearch;
-	@FindBy(xpath = "//small[normalize-space()='Program name is required.']")
-	private WebElement programNameReq;
-	@FindBy(xpath = "//small[normalize-space()='Description is required.']")
-	private WebElement programDescReq;
-	@FindBy(xpath = "//small[normalize-space()='Status is required.']")
-	private WebElement programStatusReq;
-	@FindBy(xpath = "//button[@label='Cancel']")
-	private WebElement cancelBtn;
-	@FindBy(xpath = "//button[@icon='pi pi-pencil']")
-	private WebElement editBtn;
-	@FindBy(xpath = "//div[@class='p-dialog-header ng-tns-c168-7 ng-star-inserted']")
-	private WebElement editPopup;
-	@FindBy(xpath="//div[@class='p-dialog-header-icons ng-tns-c81-21']")
-	private WebElement XBtn;
 
-	// Delete
-	@FindBy(xpath="(//button[@icon='pi pi-trash'])[2]")
-	private WebElement deleteBtnTbl;
-	@FindBy(xpath = "//tbody/tr[1]/td[1]")
-	private WebElement firstCheckbox;
-	@FindBy(xpath = "//button[@class='p-button-danger p-button p-component p-button-icon-only']")
-	private WebElement DeleteIconHeader;
-	@FindBy(xpath = "//body//app-root//th[1]")
-	private WebElement checkbox1;
-	@FindBy(xpath = "//tbody/tr[1]/td[1]")
-	private WebElement checkbox2;
-	@FindBy(xpath = "//tbody/tr[2]/td[1]/p-tablecheckbox[1]/div[1]/div[2]")
-	private WebElement checkbox3;
-	@FindBy(xpath = ".//div[@role='checkbox']")
-	private List<WebElement> checkboxes;
-	@FindBy(xpath = "//span[normalize-space()='Yes']")
-	private WebElement yesButton;
-	@FindBy(xpath = "//span[normalize-space()='No']")
-	private WebElement noButton;
-	@FindBy(xpath = "//tbody/tr[1]/td[7]/div[1]/span[2]/button[1]")
-	private WebElement Deletepopup;
-	@FindBy(xpath = "//div[@role='alert']")
-	private WebElement alertMsg;
-
-	
 	// Pagination
 	@FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
 	private WebElement pagination1;
@@ -164,6 +119,7 @@ public class Program_Page extends BasePage {
 
 	// clicking program button
 	public void clickProgram() {
+		// programBtn.click();
 		elementClick(programBtn);
 	}
 
@@ -171,7 +127,7 @@ public class Program_Page extends BasePage {
 		elementClick(programBtn);
 		elementClick(addNewPgm);
 	}
-	
+
 	public List<String> getTableHeaders() {
 		List<String> headers = new ArrayList<>();
 
@@ -217,60 +173,28 @@ public class Program_Page extends BasePage {
 	}
 
 	public boolean validateFooter() {
+
 		return footer.isDisplayed();
-	}
-	
-	// Add new Program
-	public boolean programPopUpTitle() {
-		return isElementDisplayed(popUpTitle);
-	}
-	public String programPopUpTitleText() {
-		return elementGetText(popUpTitle);
-	}
-	
-	public boolean programNameDisplayed() {
-		return isElementDisplayed(addProgramName);
-	}
-	public String programNameText() {
-		System.out.println(addProgramName);
-		return elementGetText(addProgramName);
-	}
-	public String programDescText() {
-		System.out.println(addProgramDesc);
-		return elementGetText(addProgramDesc);
-	}
-	public boolean programDescDisplayed() {
-		return isElementDisplayed(addProgramDesc);
-	}
-	public boolean programStatus() {
-		return isElementDisplayed(addProgramStatus);
-	}
-	public String programStatusText() {
-		System.out.println(addProgramStatus);
-		return elementGetText(addProgramStatus);
-	}
-	public void clickOnSave() {
-		elementClick(saveProgram);
-	}
-	public void enterProgramNameInSearch()  {
-		js.executeScript("arguments[0].click();", searchbtn);
-		//elementClick(searchbtn);
-		 elementSendkeys(searchbtn, "CSharp");
-	}
-	public String verifyProgramName() {
-	return	elementGetText(programNameSearch);
-	
-	}
-	public boolean cancelDisp() {
-		return cancelBtn.isDisplayed();
-	}
-	public void clickXDisp() {
-		elementClick(XBtn);
-	}
-	public boolean onManagePage() {
-		return managePage.isDisplayed();
+
 	}
 
+	public boolean programNameDisplayed() {
+
+		return isElementDisplayed(addProgramName);
+
+	}
+
+	public boolean programDescDisplayed() {
+
+		return isElementDisplayed(addProgramDesc);
+
+	}
+
+	public boolean programStatus() {
+
+		return isElementDisplayed(addProgramStatus);
+
+	}
 
 	public String addingMandatoryFields(String Name, String Description, String Status) throws InterruptedException {
 		elementSendkeys(programNameText, Name);
@@ -285,24 +209,8 @@ public class Program_Page extends BasePage {
 
 		return programCreated.getText();
 	}
-	
-//*****************************Edit*****************************************************	
-	
-	public void clickOnEdit() {
-				actions.doubleClick(editBtn).perform();
-	}
-	
-	public void editProgramDetails(String editDesc) {
-		programDescText.clear();
-		programDescText.sendKeys(editDesc);
-	}
-	
-	public String saveEditProgram() {
-		saveProgram.click();
-		return programCreated.getText();
-	}
-	
-		public boolean validatePagination() {
+
+	public boolean validatePagination() {
 		for (WebElement element : pagination) {
 			if (!element.isDisplayed()) {
 				return false;
@@ -312,61 +220,15 @@ public class Program_Page extends BasePage {
 	}
 
 	private void doubleClick(WebElement element) {
-		actions.moveToElement(element).doubleClick().perform();
+		// Create an Actions instance
+		actions.moveToElement(element).doubleClick().perform(); // Move to the element and double-click
 	}
 
 	public void navigateToProgram() {
 		doubleClick(programBtn);
 
 	}
-	
-// **********************************Delete	*******************************************************
-	
-	public void clickDeleteIconForSpecificProgram() {
-		actions.doubleClick(deleteBtnMC).perform();
-				}
 
-	public boolean IsDeleteButtonEnabled() {
-	return	isElementEnabled(deleteBtnMC);
-			}
-	
-	public void clickOnDeleteButtonInTable() {
-		actions.doubleClick(deleteBtnTbl).perform();
-	}
-	
-	//multiple delete
-		public void multipleDeleteAction() {
-			actions.moveToElement(checkbox2).click().perform();
-			for (WebElement checkbox : checkboxes) {
-				if (checkbox3.isEnabled() && checkbox3.isDisplayed()) {
-
-					actions.moveToElement(checkbox3).click().perform();
-				}
-			}
-		}
-		
-		public void clickOnHeaderDeleteIcon() {
-		elementClick(DeleteIconHeader);
-		}
-		
-		public void confirmDeletion() {
-			if (yesButton.isDisplayed() && yesButton.isEnabled()) {
-				System.out.println("Yes button is displayed and enabled.");
-			} else {
-				System.out.println("Yes button is not interactable.");
-				return; 
-			}
-			actions.moveToElement(yesButton).click().perform();
-			wait.until(ExpectedConditions.visibilityOf(alertMsg));
-
-			String successText = alertMsg.getText();
-			System.out.println(successText);
-		}
-
-		public String getSuccessMessageText() {
-			return alertMsg.getText();
-		}
-		
 	public void clickNextPage() {
 		if (nextButton != null && nextButton.isDisplayed()) {
 			js.executeScript("arguments[0].scrollIntoView(true);", nextButton);
@@ -419,18 +281,6 @@ public class Program_Page extends BasePage {
 	public boolean isLastButtonEnabled() {
 		return lastButton.isEnabled();
 
-	}
-
-	public String getProgramNameReqText() {
-		return elementGetText(programNameReq);
-	}
-
-	public String getDescriptionReqText() {
-	return	elementGetText(programDescReq);
-	}
-
-	public String getStatusReqText() {
-		return	elementGetText(programStatusReq);
 	}
 
 }

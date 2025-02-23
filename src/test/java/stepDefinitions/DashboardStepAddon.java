@@ -118,7 +118,11 @@ public void admin_clicks_home_menu() {
 
 @Then("Admin should remain in the home page")
 public void admin_should_remain_in_the_home_page() {
+<<<<<<< HEAD
 		Assert.assertTrue(isElementDisplayed(Dashboard.DashboardSection));
+=======
+	Assert.assertTrue(isElementDisplayed(Dashboard.DashboardSection));
+>>>>>>> da2e60473881b1b917fb5df2226639889a32cc0d
 }
 
 @When("Admin clicks {string} icon")
