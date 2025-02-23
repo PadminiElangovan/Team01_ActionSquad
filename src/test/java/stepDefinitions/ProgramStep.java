@@ -209,43 +209,63 @@ public class ProgramStep {
 		
 //******************************************Delete ***************************************************
 	
-	@When("Admin should see the popup with yes or no by clicking the delete icon by from a specific program")
-	public void admin_should_see_the_popup_with_yes_or_no_by_clicking_the_delete_icon_by_from_a_specific_program() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@Then("The respective row in the table should be deleted")
-	public void the_respective_row_in_the_table_should_be_deleted() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@When("Admin clicks on the delete icon on program page")
-	public void admin_clicks_on_the_delete_icon_on_program_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@Then("Admin should not be able to delete the program by clicking No to to go back the program page")
-	public void admin_should_not_be_able_to_delete_the_program_by_clicking_no_to_to_go_back_the_program_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@When("Admin clicks the delete icon under the Manage program header by selecting the checkboxes for multiple program")
-	public void admin_clicks_the_delete_icon_under_the_manage_program_header_by_selecting_the_checkboxes_for_multiple_program() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@Then("The respective rows in the table should be deleted")
-	public void the_respective_rows_in_the_table_should_be_deleted() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
 	
+	@Given("Admin is on the program page")
+	public void admin_is_on_the_program_page() {
+		program.clickProgram();
+	}
+
+	@When("Admin clicks on the delete icon under the Manage program header")
+	public void admin_clicks_on_the_delete_icon_under_the_manage_program_header() {
+	    program.clickDeleteIconForSpecificProgram();
+	}
+	
+	@Then("Admin should see the box is disabled")
+	public void admin_should_see_the_box_disabled() {
+	Assert.assertFalse(program. IsDeleteButtonEnabled());
+	}
+	
+	@When("Admin Should click the Enabled Delete icon on the datatable")
+	public void admin_should_click_the_enabled_delete_icon_on_the_datatable() {
+		program.clickOnDeleteButtonInTable();
+		
+	}
+
+	@Then("Admin should see the Delete confirmation popup box in program page")
+	public void admin_should_see_the_delete_confirmation_popup_box_program() {
+		;
+		LoggerLoad.info("Display Delete pop up window");
+		         
+	}
+	
+	@When("Admin clicks on the yes button on popup")
+	public void admin_clicks_on_the_yes_button_popup() {
+		program.clickOnDeleteButtonInTable();
+		program.confirmDeletion();		
+	}
+	
+	@Then("The respective row in the table should be deleted on program page")
+	public void the_respective_row_in_the_table_should_be_deleted() {		
+		String expectedMessage = "Successful" + System.lineSeparator() + "Program Deleted";
+		String actualMessage = program.getSuccessMessageText().trim().replaceAll("\\s+", " "); 
+		Assert.assertEquals(expectedMessage.replaceAll("\\s+", " "), actualMessage);
+       	}
+	
+	@When("Admin clicks on the delete icon under the Manage program header multiple delete")
+	public void admin_clicks_on_the_delete_icon_under_the_manage_program_header_multiple_delete() {
+		program.multipleDeleteAction();
+		program.clickOnHeaderDeleteIcon();
+		
+	}
+
+	@Then("The respective row in the table should be deleted in program module")
+	public void the_respective_row_in_the_table_should_be_deleted_in_program_module() {
+		String expectedMessage = "Success[fully program deleted]";  
+        String actualMessage = program.getSuccessMessageText();
+        System.out.println("Actual Message: " + actualMessage);
+       Assert.assertEquals("Successful" + System.lineSeparator() + "Programs Deleted", actualMessage);
+	}
+
 	
 	
 // **************************************Pagination****************************************

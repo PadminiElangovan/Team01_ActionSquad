@@ -109,6 +109,31 @@ public class Program_Page extends BasePage {
 	@FindBy(xpath="//div[@class='p-dialog-header-icons ng-tns-c81-21']")
 	private WebElement XBtn;
 
+	// Delete
+	@FindBy(xpath="(//button[@icon='pi pi-trash'])[2]")
+	private WebElement deleteBtnTbl;
+	@FindBy(xpath = "//tbody/tr[1]/td[1]")
+	private WebElement firstCheckbox;
+	@FindBy(xpath = "//button[@class='p-button-danger p-button p-component p-button-icon-only']")
+	private WebElement DeleteIconHeader;
+	@FindBy(xpath = "//body//app-root//th[1]")
+	private WebElement checkbox1;
+	@FindBy(xpath = "//tbody/tr[1]/td[1]")
+	private WebElement checkbox2;
+	@FindBy(xpath = "//tbody/tr[2]/td[1]/p-tablecheckbox[1]/div[1]/div[2]")
+	private WebElement checkbox3;
+	@FindBy(xpath = ".//div[@role='checkbox']")
+	private List<WebElement> checkboxes;
+	@FindBy(xpath = "//span[normalize-space()='Yes']")
+	private WebElement yesButton;
+	@FindBy(xpath = "//span[normalize-space()='No']")
+	private WebElement noButton;
+	@FindBy(xpath = "//tbody/tr[1]/td[7]/div[1]/span[2]/button[1]")
+	private WebElement Deletepopup;
+	@FindBy(xpath = "//div[@role='alert']")
+	private WebElement alertMsg;
+
+	
 	// Pagination
 	@FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
 	private WebElement pagination1;
@@ -230,7 +255,7 @@ public class Program_Page extends BasePage {
 	public void enterProgramNameInSearch()  {
 		js.executeScript("arguments[0].click();", searchbtn);
 		//elementClick(searchbtn);
-		 elementSendkeys(searchbtn, "TestLNGL");
+		 elementSendkeys(searchbtn, "CSharp");
 	}
 	public String verifyProgramName() {
 	return	elementGetText(programNameSearch);
@@ -287,7 +312,6 @@ public class Program_Page extends BasePage {
 	}
 
 	private void doubleClick(WebElement element) {
-
 		actions.moveToElement(element).doubleClick().perform();
 	}
 
@@ -295,7 +319,54 @@ public class Program_Page extends BasePage {
 		doubleClick(programBtn);
 
 	}
+	
+// **********************************Delete	*******************************************************
+	
+	public void clickDeleteIconForSpecificProgram() {
+		actions.doubleClick(deleteBtnMC).perform();
+				}
 
+	public boolean IsDeleteButtonEnabled() {
+	return	isElementEnabled(deleteBtnMC);
+			}
+	
+	public void clickOnDeleteButtonInTable() {
+		actions.doubleClick(deleteBtnTbl).perform();
+	}
+	
+	//multiple delete
+		public void multipleDeleteAction() {
+			actions.moveToElement(checkbox2).click().perform();
+			for (WebElement checkbox : checkboxes) {
+				if (checkbox3.isEnabled() && checkbox3.isDisplayed()) {
+
+					actions.moveToElement(checkbox3).click().perform();
+				}
+			}
+		}
+		
+		public void clickOnHeaderDeleteIcon() {
+		elementClick(DeleteIconHeader);
+		}
+		
+		public void confirmDeletion() {
+			if (yesButton.isDisplayed() && yesButton.isEnabled()) {
+				System.out.println("Yes button is displayed and enabled.");
+			} else {
+				System.out.println("Yes button is not interactable.");
+				return; 
+			}
+			actions.moveToElement(yesButton).click().perform();
+			wait.until(ExpectedConditions.visibilityOf(alertMsg));
+
+			String successText = alertMsg.getText();
+			System.out.println(successText);
+		}
+
+		public String getSuccessMessageText() {
+			return alertMsg.getText();
+		}
+		
 	public void clickNextPage() {
 		if (nextButton != null && nextButton.isDisplayed()) {
 			js.executeScript("arguments[0].scrollIntoView(true);", nextButton);
