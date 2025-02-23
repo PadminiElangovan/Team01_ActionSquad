@@ -27,7 +27,7 @@ Feature: Manage Page Validation
   Scenario: Validate the total no of programs in manage program page
   When Admin clicks on Program 
   Then Admin should see Total no of programs in below of the data table
-  
+  #
  #------------------------------------------Add New Program-----------------------------------------------
  
   Scenario Outline:  Validate Program Details Popup window
@@ -55,19 +55,19 @@ Feature: Manage Page Validation
 
     Examples: 
       | Name    || Description    || Status || SuccessMsg  |        
-      |TestLNGL || okkkkjh        || Active || Successful  |     
+      |CSharp || okkkkjh        || Active || Successful  |     
       
      Scenario Outline: Verify added Program is created 
     When Admin searches with newly created "<Program Name>" 
     Then Records of the newly created "<Program name>" is displayed and match the data entered
     Examples:
     |Program Name|
-    |TestLNGL|
+    |CSha|
     
     Scenario: Validate Cancel/Close(X) icon on program Details form
     When Admin clicks Cancel Icon on program Details form
     Then Program Details popup window should be closed
-    
+    #
  #------------------------------------Edit Program -----------------------------------------------
  
  Scenario Outline:  Validate Edit Program Details Popup window
@@ -105,22 +105,25 @@ Feature: Manage Page Validation
     
  #--------------------------------------------Delete-------------------------------------------------  
 
-  Scenario: Validate single row delete 
-    When Admin should see the popup with yes or no by clicking the delete icon by from a specific program 
-    Then The respective row in the table should be deleted
+  Scenario: Validate single row delete with checkbox
+    Given Admin is on the program page
+    When Admin clicks on the delete icon under the Manage program header
+    Then Admin should see the box is disabled
     
+ Scenario: Validate single row delete with checkbox
+    Given Admin is on the program page
+    When Admin Should click the Enabled Delete icon on the datatable
+    Then Admin should see the Delete confirmation popup box in program page
     
-     Scenario: Validation of No in Delete
-    When Admin clicks on the delete icon on program page
-    Then Admin should not be able to delete the program by clicking No to to go back the program page
-
-  Scenario: Validate multiple row delete with checkboxes
-    When Admin clicks the delete icon under the Manage program header by selecting the checkboxes for multiple program
-       Then The respective rows in the table should be deleted   
-     
-    
-    
-    
+ Scenario: Validate single row delete with checkbox
+    Given Admin is on the program page
+    When Admin clicks on the yes button on popup
+    Then The respective row in the table should be deleted on program page
+#
+  #Scenario: Validate multiple row delete with checkbox
+    #Given Admin is on the program page
+    #When Admin clicks on the delete icon under the Manage program header multiple delete
+    #Then The respective row in the table should be deleted in program module
     
     
 #----------------------------------- Pagination -----------------------------------------------------------
