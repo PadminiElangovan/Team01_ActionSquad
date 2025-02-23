@@ -23,6 +23,7 @@ public class ProgramStep {
 	private Program_Page program;
 	private ExcelReader excelReader;
 	boolean status;
+	boolean status1;
 
 	public ProgramStep(TestContext context) {
 		this.context = context;
@@ -274,22 +275,26 @@ public class ProgramStep {
 	
 	@When("Admin enter the {string} {string} in search textbox")
 	public void admin_enter_the_in_search_textbox(String field, String value) throws InterruptedException {
-	    program.enterSearchValue(field, value);//.searchBoxValidation(field, value);
+		status = program.searchBoxValidation(field, value);
 	}
 
 	@Then("Admin should see Program details are searched by given fields")
 	public void admin_should_see_class_details_are_searched_by() {
-		
+		 Assert.assertTrue(status);
+		 LoggerLoad.info("Record found");
 		}
 	
 
 	@When("Admin enter the program to search By program name that does not exist")
 	public void admin_enter_the_program_to_search_by_program_name_that_does_not_exist() {
+		 status1=program.InValidValueInSearchBox();
 	    
 	}
 
 	@Then("There should be zero results.")
 	public void there_should_be_zero_results() {
+		Assert.assertTrue(status1);
+		LoggerLoad.info("No entries found");
 	    
 	}
 
