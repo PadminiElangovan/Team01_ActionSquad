@@ -99,8 +99,4 @@ public class Dashboard_Page {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@routerlink='/user']")));
 		return Usr.getText();
 	}
-
-	public void elementclickJs(WebElement element) {
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-	}
 }

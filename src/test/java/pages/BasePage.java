@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.Point;
@@ -22,6 +21,7 @@ public class BasePage {
 	 WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 	
    	public static String getPageTitle(WebDriver driver) {
+
 		return driver.getTitle();
    		}
    	
@@ -34,10 +34,6 @@ public class BasePage {
 		element.click();
 	 }
    	
-   	public void waitUntilButtonIsClickable(WebElement button) {
-        wait.until(ExpectedConditions.elementToBeClickable(button));
-    }
-
    	public static void elementSendkeys(WebElement element, String data) {
 		element.sendKeys(data);
 	 }
