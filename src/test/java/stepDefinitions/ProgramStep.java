@@ -255,15 +255,47 @@ public class ProgramStep {
 	public void admin_clicks_on_the_delete_icon_under_the_manage_program_header_multiple_delete() {
 		program.multipleDeleteAction();
 		program.clickOnHeaderDeleteIcon();
+		program.confirmDeletion();
 		
 	}
 
 	@Then("The respective row in the table should be deleted in program module")
 	public void the_respective_row_in_the_table_should_be_deleted_in_program_module() {
-		String expectedMessage = "Success[fully program deleted]";  
-        String actualMessage = program.getSuccessMessageText();
-        System.out.println("Actual Message: " + actualMessage);
-       Assert.assertEquals("Successful" + System.lineSeparator() + "Programs Deleted", actualMessage);
+		String expectedMessage = "Successful" + System.lineSeparator() + "Programs Deleted";
+		String actualMessage = program.getSuccessMessageText().trim().replaceAll("\\s+", " "); 
+		Assert.assertEquals(expectedMessage.replaceAll("\\s+", " "), actualMessage);
+       // System.out.println("Actual Message: " + actualMessage);
+      // Assert.assertEquals("Successful" + System.lineSeparator() + "Programs Deleted", actualMessage);
+	}
+
+	
+//***********************************************Search****************************************************
+	
+	
+	@When("Admin enter the {string} {string} in search textbox")
+	public void admin_enter_the_in_search_textbox(String field, String value) throws InterruptedException {
+	    program.enterSearchValue(field, value);//.searchBoxValidation(field, value);
+	}
+
+	@Then("Admin should see Program details are searched by given fields")
+	public void admin_should_see_class_details_are_searched_by() {
+		
+		}
+	
+
+	@When("Admin enter the program to search By program name that does not exist")
+	public void admin_enter_the_program_to_search_by_program_name_that_does_not_exist() {
+	    
+	}
+
+	@Then("There should be zero results.")
+	public void there_should_be_zero_results() {
+	    
+	}
+
+	@When("Admin enter the program to search By partial name of program")
+	public void admin_enter_the_program_to_search_by_partial_name_of_program() {
+	    
 	}
 
 	

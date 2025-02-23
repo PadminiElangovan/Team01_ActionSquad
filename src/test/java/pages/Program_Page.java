@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -132,6 +132,17 @@ public class Program_Page extends BasePage {
 	private WebElement Deletepopup;
 	@FindBy(xpath = "//div[@role='alert']")
 	private WebElement alertMsg;
+	
+	//Search
+	private String lastSearchedField, lastSearchedValue;
+	@FindBy(xpath = "//tbody//td[2]")
+	private List<WebElement> listOfProgramNames;
+	@FindBy(xpath = "//tbody//td[3]")
+	private List<WebElement> listOfProgramDescription;
+	@FindBy(xpath="(//tbody//td[2])[1]")
+	private WebElement searchedProgramName;
+	@FindBy(xpath="(//tbody//td[2])[1])")
+	private WebElement searchedProgramDesc;
 
 	
 	// Pagination
@@ -337,16 +348,15 @@ public class Program_Page extends BasePage {
 	//multiple delete
 		public void multipleDeleteAction() {
 			actions.moveToElement(checkbox2).click().perform();
-			for (WebElement checkbox : checkboxes) {
-				if (checkbox3.isEnabled() && checkbox3.isDisplayed()) {
-
+			if (checkbox3.isEnabled() && checkbox3.isDisplayed()) {
 					actions.moveToElement(checkbox3).click().perform();
 				}
 			}
-		}
+				
 		
 		public void clickOnHeaderDeleteIcon() {
-		elementClick(DeleteIconHeader);
+			actions.doubleClick(DeleteIconHeader).perform();
+		//elementClick(DeleteIconHeader);
 		}
 		
 		public void confirmDeletion() {
@@ -366,6 +376,45 @@ public class Program_Page extends BasePage {
 		public String getSuccessMessageText() {
 			return alertMsg.getText();
 		}
+		
+//Search
+		
+		
+		public void enterSearchValue(String field, String value) {
+			
+		    searchbtn.clear(); 
+		    searchbtn.sendKeys(value); 
+		    searchbtn.sendKeys(Keys.ENTER); 
+		    
+		    // Store field and value for later validation
+		    lastSearchedField = field;
+		    lastSearchedValue = value;
+
+		    System.out.println("Entered search value: " + value);
+		}
+
+
+		public void searhBoxValidation(String field, String value) throws InterruptedException {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", searchbtn);
+			boolean found = false;
+			switch (field) {
+			case "Name":
+				searchbtn.sendKeys(value);
+				logicForValidatingSearch(listOfProgramNames, value);
+					break;
+			case "Description":
+				searchbtn.sendKeys(value);
+				logicForValidatingSearch(listOfProgramDescription, value);
+				break;
+			
+			}
+		
+		}
+		 
+			
+		
+		
 		
 	public void clickNextPage() {
 		if (nextButton != null && nextButton.isDisplayed()) {
