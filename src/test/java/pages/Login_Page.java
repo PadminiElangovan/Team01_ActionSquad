@@ -63,7 +63,7 @@ public class Login_Page {
 		 boolean status = ErrMsg.isEmpty();
 		 return status;
 	}
-	public void AdminRoleStaff() {		 		 
+	public void AdminRoleStaff() throws InterruptedException {		 		 
 		 Username.sendKeys(Login.get(0).get("username"));
 		 Password.sendKeys(Login.get(0).get("password"));
 		 roleDropdwn.click();
