@@ -1,4 +1,4 @@
-@ProgramExtra @LMS 
+@ProgramExtra @LMS @Dash
 Feature: Additional Program Functionality
 
  Background: Admin is on the Dashboard page after login
