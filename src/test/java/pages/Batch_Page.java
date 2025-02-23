@@ -9,8 +9,10 @@ import java.util.NoSuchElementException;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -29,7 +31,7 @@ public class Batch_Page {
 	private WebDriverWait wait;
 	WebDriver driver;
 	private JavascriptExecutor js;
-		
+
 	@FindBy(xpath = "//input[@id='username']")
 	private WebElement usernameField;
 
@@ -188,6 +190,9 @@ public class Batch_Page {
 	@FindBy(xpath = "//*[@id=\"programName\"]/div/div[2]")
 	private WebElement Programdropdowntrigger;
 
+	@FindBy(xpath = "//*[@id=\"programName\"]/div/input")
+	private WebElement Programnamefiled;
+
 	@FindBy(css = "ul.p-dropdown-items")
 	private WebElement dropdownOptions;
 
@@ -278,23 +283,33 @@ public class Batch_Page {
 
 	@FindBy(xpath = "//li[contains(@class, 'p-dropdown-item')]")
 	private List<WebElement> programOptions;
-	
-	//Searchbar elements
+
+	// Searchbar elements
 	@FindBy(xpath = "(//input[@id='filterGlobal'])[1]")
 	private WebElement searchTextBox;
-	
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr[1]/td[2]")
+
+	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr/td[2]")
+
 	private WebElement BatchNameFirstRecord;
-	
+
 	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr[1]/td[3]")
 	private WebElement BatchDescFirstRecord;
-	
+
 	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr[1]/td[4]")
 	private WebElement BatchStatusFirstRecord;
-	
+
 	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/span[1]")
 	private WebElement paginationTextwithZeroRecord;
-	
+
+	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]")
+	private WebElement searchresultbatch;
+
+	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/span[1]")
+	private WebElement searchresultinvaliddatabatch;
+
+	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/span[1]")
+	private WebElement searchresultpartialdatadatabatch;
+
 	public Batch_Page(WebDriver driver, TestContext context) {
 		this.driver = context.getDriver();
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -302,7 +317,6 @@ public class Batch_Page {
 		PageFactory.initElements(driver, this);
 		this.actions = context.getActions();
 		this.js = (JavascriptExecutor) this.driver;
-		
 
 	}
 
@@ -437,6 +451,14 @@ public class Batch_Page {
 		return Footer.getText().trim();
 	}
 
+	public String ProgramnametextText() {
+		return Programnamefiled.getText();
+	}
+
+	public String ProgramnamePrefixText() {
+		return programnameinput.getText();
+	}
+
 	public boolean isFooterTextCorrect(String expectedText) {
 		return Footer.getText().trim().equals(expectedText);
 	}
@@ -502,7 +524,7 @@ public class Batch_Page {
 	// selected program is present in the prefix
 	public boolean isSelectedProgramReflected() {
 		wait.until(ExpectedConditions.visibilityOf(batchprefixfield));
-		
+
 		return batchprefixfield.getDomAttribute("text").equalsIgnoreCase(dropdownItems.get(0).getText());
 	}
 
@@ -539,14 +561,11 @@ public class Batch_Page {
 		// Return the value of the batch prefix field
 		return batchprefixfield.getText();
 	}
-	
-	
-	
+
 	public void Clickprefixbatchname() {
 		batchprefixfield.click();
 	}
-	
-	
+
 	public String getErrorMessage() {
 		try {
 			// Wait until the error message element is visible
@@ -698,7 +717,7 @@ public class Batch_Page {
 	}
 
 	public String getSuccessMessageText() {
-		// alert message
+
 		return alertMsg.getText();
 	}
 
@@ -841,12 +860,55 @@ public class Batch_Page {
 
 	// searchbox
 
-	public void searchInBatchPage(String batchname) {
+	public void searchInBatchPage(String SearchData) {
 
-		actions.doubleClick(Searchbox).perform(); // Double-click to activate search
+		actions.doubleClick(searchTextBox).perform(); // Double-click to activate search
 		Searchbox.clear(); // Clear any existing text in the search box
-		Searchbox.sendKeys(batchname); // Type in the batch name
-		Searchbox.sendKeys(Keys.RETURN); // Hit Enter to initiate search
+		Searchbox.sendKeys(SearchData); // Type in the batch name
+		Searchbox.click(); // Hit Enter to initiate search
+	}
+
+	public String FirstbatchnameText() {
+		return BatchNameFirstRecord.getText();
+	}
+
+	public String FirstbatchdescText() {
+		return BatchDescFirstRecord.getText();
+	}
+
+	public String FirstbatchstatusText() {
+
+		return BatchStatusFirstRecord.getText();
+	}
+
+	public String Invalidsearchdataresult() {
+
+		return searchresultinvaliddatabatch.getText();
+	}
+
+	public String PartialbatchNamesearchdataresult() {
+
+		return searchresultpartialdatadatabatch.getText();
+	}
+
+	public void Searchbatchframe() {
+		searchresultbatch.click();
+	}
+
+	public void verifyZeroRecordText() {
+		wait.until(ExpectedConditions.textToBePresentInElement(paginationTextwithZeroRecord,
+				"Showing 0 to 0 of 0 entries"));
+
+		String actualText = paginationTextwithZeroRecord.getText().trim();
+		Assert.assertTrue(actualText.contains("Showing 0 to 0 of 0 entries"));
+	}
+
+	public void verifyMultipleRecordText() {
+		wait.until(ExpectedConditions.textToBePresentInElement(searchresultpartialdatadatabatch,
+				"Showing 1 to 10 of 12 entries"));
+
+		String actualText = searchresultpartialdatadatabatch.getText().trim();
+		Assert.assertTrue(actualText.contains("Showing 1 to 10 of 12 entries"));
 	}
 
 	// Method to get all displayed rows in the table
@@ -932,15 +994,9 @@ public class Batch_Page {
 		String Readtext = element.getText();
 		return Readtext;
 	}
-	
-	public String batchFirstName() {
-		// alert message
+
+	public String batchFirstName() {		
 		return BatchNameFirstRecord.getText();
 	}
-
-	
-/////// Batch Search/////////////////////////////////////////////////////////////////
-
-
 
 }
