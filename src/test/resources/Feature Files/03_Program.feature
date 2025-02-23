@@ -27,7 +27,7 @@ Feature: Manage Page Validation
   Scenario: Validate the total no of programs in manage program page
   When Admin clicks on Program 
   Then Admin should see Total no of programs in below of the data table
-  #
+  
  #------------------------------------------Add New Program-----------------------------------------------
  
   Scenario Outline:  Validate Program Details Popup window
@@ -67,7 +67,7 @@ Feature: Manage Page Validation
     Scenario: Validate Cancel/Close(X) icon on program Details form
     When Admin clicks Cancel Icon on program Details form
     Then Program Details popup window should be closed
-    #
+    
  #------------------------------------Edit Program -----------------------------------------------
  
  Scenario Outline:  Validate Edit Program Details Popup window
@@ -103,7 +103,7 @@ Feature: Manage Page Validation
   
     
     
- #--------------------------------------------Delete-------------------------------------------------  
+# --------------------------------------------Delete-------------------------------------------------  
 
   Scenario: Validate single row delete with checkbox
     Given Admin is on the program page
@@ -119,11 +119,38 @@ Feature: Manage Page Validation
     Given Admin is on the program page
     When Admin clicks on the yes button on popup
     Then The respective row in the table should be deleted on program page
-#
-  #Scenario: Validate multiple row delete with checkbox
-    #Given Admin is on the program page
-    #When Admin clicks on the delete icon under the Manage program header multiple delete
-    #Then The respective row in the table should be deleted in program module
+
+  Scenario: Validate multiple row delete with checkbox
+    Given Admin is on the program page
+    When Admin clicks on the delete icon under the Manage program header multiple delete
+    Then The respective row in the table should be deleted in program module
+    
+    
+    
+ #-----------------------------------------------------Search-----------------------------------------------
+ 
+ 
+ Scenario Outline: Search Program by Program Name
+ Given Admin is on the program page
+When Admin enter the "<field>" "<value>" in search textbox
+Then Admin should see Program details are searched by given fields
+Examples: 
+|field||value|
+|Name||usa|
+|Description||india|
+
+ 
+ Scenario: Verify Admin is able to search results not found
+ Given Admin is on the program page
+ When Admin enter the program to search By program name that does not exist
+ Then There should be zero results.
+ 
+ Scenario: Verify Admin is able to search with partial program name
+ Given Admin is on the program page
+ When Admin enter the program to search By partial name of program
+ Then Admin should able to see Program name, description, and status for searched program name
+ 
+    
     
     
 #----------------------------------- Pagination -----------------------------------------------------------
@@ -145,9 +172,5 @@ Feature: Manage Page Validation
 
     
     
-    
-    
-    
-    
-    
+   
   
