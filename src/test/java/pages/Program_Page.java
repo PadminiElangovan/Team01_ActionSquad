@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,6 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import appHook.TestContext;
 
@@ -132,7 +132,7 @@ public class Program_Page extends BasePage {
 	private WebElement Deletepopup;
 	@FindBy(xpath = "//div[@role='alert']")
 	private WebElement alertMsg;
-	
+
 	//Search
 	private String lastSearchedField, lastSearchedValue;
 	@FindBy(xpath = "//tbody//td[2]")
@@ -141,10 +141,12 @@ public class Program_Page extends BasePage {
 	private List<WebElement> listOfProgramDescription;
 	@FindBy(xpath="(//tbody//td[2])[1]")
 	private WebElement searchedProgramName;
-	@FindBy(xpath="(//tbody//td[2])[1])")
+	@FindBy(xpath="(//tbody//td[3])[1]")
 	private WebElement searchedProgramDesc;
+	@FindBy(xpath="//span[text()='Showing 0 to 0 of 0 entries']")
+	private WebElement zeroEntries;
 
-	
+
 	// Pagination
 	@FindBy(xpath = "//div[contains(@class, 'p-paginator')]")
 	private WebElement pagination1;
@@ -182,7 +184,7 @@ public class Program_Page extends BasePage {
 		elementClick(programBtn);
 		elementClick(addNewPgm);
 	}
-	
+
 	public List<String> getTableHeaders() {
 		List<String> headers = new ArrayList<>();
 
@@ -230,7 +232,7 @@ public class Program_Page extends BasePage {
 	public boolean validateFooter() {
 		return footer.isDisplayed();
 	}
-	
+
 	// Add new Program
 	public boolean programPopUpTitle() {
 		return isElementDisplayed(popUpTitle);
@@ -238,7 +240,7 @@ public class Program_Page extends BasePage {
 	public String programPopUpTitleText() {
 		return elementGetText(popUpTitle);
 	}
-	
+
 	public boolean programNameDisplayed() {
 		return isElementDisplayed(addProgramName);
 	}
@@ -266,11 +268,11 @@ public class Program_Page extends BasePage {
 	public void enterProgramNameInSearch()  {
 		js.executeScript("arguments[0].click();", searchbtn);
 		//elementClick(searchbtn);
-		 elementSendkeys(searchbtn, "CSharp");
+		elementSendkeys(searchbtn, "CSharp");
 	}
 	public String verifyProgramName() {
-	return	elementGetText(programNameSearch);
-	
+		return	elementGetText(programNameSearch);
+
 	}
 	public boolean cancelDisp() {
 		return cancelBtn.isDisplayed();
@@ -296,24 +298,24 @@ public class Program_Page extends BasePage {
 
 		return programCreated.getText();
 	}
-	
-//*****************************Edit*****************************************************	
-	
+
+	//*****************************Edit*****************************************************	
+
 	public void clickOnEdit() {
-				actions.doubleClick(editBtn).perform();
+		actions.doubleClick(editBtn).perform();
 	}
-	
+
 	public void editProgramDetails(String editDesc) {
 		programDescText.clear();
 		programDescText.sendKeys(editDesc);
 	}
-	
+
 	public String saveEditProgram() {
 		saveProgram.click();
 		return programCreated.getText();
 	}
-	
-		public boolean validatePagination() {
+
+	public boolean validatePagination() {
 		for (WebElement element : pagination) {
 			if (!element.isDisplayed()) {
 				return false;
@@ -330,92 +332,98 @@ public class Program_Page extends BasePage {
 		doubleClick(programBtn);
 
 	}
-	
-// **********************************Delete	*******************************************************
-	
+
+	// **********************************Delete	*******************************************************
+
 	public void clickDeleteIconForSpecificProgram() {
 		actions.doubleClick(deleteBtnMC).perform();
-				}
+	}
 
 	public boolean IsDeleteButtonEnabled() {
-	return	isElementEnabled(deleteBtnMC);
-			}
-	
+		return	isElementEnabled(deleteBtnMC);
+	}
+
 	public void clickOnDeleteButtonInTable() {
 		actions.doubleClick(deleteBtnTbl).perform();
 	}
-	
+
 	//multiple delete
-		public void multipleDeleteAction() {
-			actions.moveToElement(checkbox2).click().perform();
-			if (checkbox3.isEnabled() && checkbox3.isDisplayed()) {
-					actions.moveToElement(checkbox3).click().perform();
-				}
-			}
-				
-		
-		public void clickOnHeaderDeleteIcon() {
-			actions.doubleClick(DeleteIconHeader).perform();
+	public void multipleDeleteAction() {
+		actions.moveToElement(checkbox2).click().perform();
+		if (checkbox3.isEnabled() && checkbox3.isDisplayed()) {
+			actions.moveToElement(checkbox3).click().perform();
+		}
+	}
+
+
+	public void clickOnHeaderDeleteIcon() {
+		actions.doubleClick(DeleteIconHeader).perform();
 		//elementClick(DeleteIconHeader);
-		}
-		
-		public void confirmDeletion() {
-			if (yesButton.isDisplayed() && yesButton.isEnabled()) {
-				System.out.println("Yes button is displayed and enabled.");
-			} else {
-				System.out.println("Yes button is not interactable.");
-				return; 
-			}
-			actions.moveToElement(yesButton).click().perform();
-			wait.until(ExpectedConditions.visibilityOf(alertMsg));
+	}
 
-			String successText = alertMsg.getText();
-			System.out.println(successText);
+	public void confirmDeletion() {
+		if (yesButton.isDisplayed() && yesButton.isEnabled()) {
+			System.out.println("Yes button is displayed and enabled.");
+		} else {
+			System.out.println("Yes button is not interactable.");
+			return; 
 		}
+		actions.moveToElement(yesButton).click().perform();
+		wait.until(ExpectedConditions.visibilityOf(alertMsg));
 
-		public String getSuccessMessageText() {
-			return alertMsg.getText();
-		}
-		
-//Search
-		
-		
-		public void enterSearchValue(String field, String value) {
-			
-		    searchbtn.clear(); 
-		    searchbtn.sendKeys(value); 
-		    searchbtn.sendKeys(Keys.ENTER); 
-		    
-		    // Store field and value for later validation
-		    lastSearchedField = field;
-		    lastSearchedValue = value;
+		String successText = alertMsg.getText();
+		System.out.println(successText);
+	}
 
-		    System.out.println("Entered search value: " + value);
-		}
+	public String getSuccessMessageText() {
+		return alertMsg.getText();
+	}
+
+	//Search
 
 
-		public void searhBoxValidation(String field, String value) throws InterruptedException {
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", searchbtn);
-			boolean found = false;
-			switch (field) {
-			case "Name":
-				searchbtn.sendKeys(value);
-				logicForValidatingSearch(listOfProgramNames, value);
-					break;
-			case "Description":
-				searchbtn.sendKeys(value);
-				logicForValidatingSearch(listOfProgramDescription, value);
-				break;
-			
-			}
-		
+	public boolean searchBoxValidation(String field, String value) throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", searchbtn);
+		searchbtn.sendKeys(value);		    
+		boolean found = false;
+
+		switch (field) {
+		case "Name":
+			wait.until(ExpectedConditions.visibilityOf(searchedProgramName)); 
+			String actualName = searchedProgramName.getText().trim();
+			System.out.println("Expected: " + value + ", Found: " + actualName);
+			found = actualName.equalsIgnoreCase(value.trim());
+			break;
+
+		case "Description":
+			wait.until(ExpectedConditions.visibilityOf(searchedProgramDesc));
+			String actualDesc = searchedProgramDesc.getText().trim();
+			System.out.println("Expected: " + value + ", Found: " + actualDesc);
+			found = actualDesc.equalsIgnoreCase(value.trim());
+			break;
+
+		default:
+			System.out.println("Invalid search field: " + field);
+			found = false;
 		}
-		 
-			
-		
-		
-		
+		return found; 
+	}	
+
+	public boolean InValidValueInSearchBox() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", searchbtn);
+		searchbtn.sendKeys("9999");
+		if(zeroEntries.getText().equalsIgnoreCase("Showing 0 to 0 of 0 entries")) {
+			System.out.println("No record found");
+			return true;
+		}
+		return false;	
+
+
+	}
+
+
 	public void clickNextPage() {
 		if (nextButton != null && nextButton.isDisplayed()) {
 			js.executeScript("arguments[0].scrollIntoView(true);", nextButton);
@@ -475,7 +483,7 @@ public class Program_Page extends BasePage {
 	}
 
 	public String getDescriptionReqText() {
-	return	elementGetText(programDescReq);
+		return	elementGetText(programDescReq);
 	}
 
 	public String getStatusReqText() {
