@@ -474,7 +474,7 @@ public class BatchStep {
 		String expectedMessage = "Success[fully batch deleted]";
 		String actualMessage = Batch.getSuccessMessageText();
 		System.out.println("Actual Message: " + actualMessage);
-		Assert.assertEquals("Successful" + System.lineSeparator() + "Batches Deleted", actualMessage);		
+		Assert.assertEquals("Successful" + System.lineSeparator() + "Batches Deleted", actualMessage);
 	}
 
 //	@Batch_24_Scenario: Validate multiple row delete with checkbox
