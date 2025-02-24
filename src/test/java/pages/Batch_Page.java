@@ -277,10 +277,10 @@ public class Batch_Page {
 	@FindBy(xpath = "//mat-card-content/p-table/div/div[1]")
 	private WebElement searchresultbatch;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/span[1]")
+	@FindBy(xpath = "//p-paginator/div/span[1]")
 	private WebElement searchresultinvaliddatabatch;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/span[1]")
+	@FindBy(xpath = "//p-paginator/div/span[1]")
 	private WebElement searchresultpartialdatadatabatch;
 
 	public Batch_Page(WebDriver driver, TestContext context) {
