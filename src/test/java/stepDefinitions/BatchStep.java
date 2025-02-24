@@ -48,7 +48,7 @@ public class BatchStep {
 		Login.AdminLogin();
 	}
 
-//	@Batch_01_Scenario: Verify Admin Navigate to Batch page successfully
+//	@BatchNavigate: Verify Admin Navigate to Batch page successfully
 
 	@Given("Admin is on LMS Homepage")
 	public void admin_is_on_lms_homepage() {
@@ -68,7 +68,7 @@ public class BatchStep {
 		assertEquals(Title, "LMS");
 
 	}
-//	@Batch_02 _Scenario Outline: Batch Page Elements Validation
+//	@BatchElementValidation : Batch Page Elements Validation
 
 	@Given("Admin is on the home page")
 	public void admin_is_on_the_home_page() {
@@ -136,7 +136,7 @@ public class BatchStep {
 		}
 
 	}
-//	@Batch_03_Scenario Outline: Verify sub menu displayed in batch menu bar
+//	@SubMenuVerify: Verify sub menu displayed in batch menu bar
 
 	@Given("Admin is on batch page")
 	public void admin_is_on_batch_page() {
@@ -155,9 +155,10 @@ public class BatchStep {
 	public void admin_should_see_the_batch_details_pop_up_window(String field) {
 		LoggerLoad.debug("pop label.");
 		Assert.assertTrue(Batch.isFieldDisplayed(field));
-//		Assert.assertEquals(field, Batch.isFieldDisplayed(field));
+		
 	}
-//	@Batch_04_Scenario: Validate batchname prefix selected program name
+	
+//	@BatchNameprefix: Validate batchname prefix selected program name
 
 	@Given("Admin is on the Batch Details Pop Up Window")
 	public void admin_is_on_the_batch_details_pop_up_window() {
@@ -180,8 +181,7 @@ public class BatchStep {
 		Assert.assertEquals(actualmessage, expectedmessage);
 	}
 
-	// @Batch_05_Scenario Outline: Validate batch name suffix box should accept only
-	// numbers
+	// @BatchNameSuffix: Validate batch name suffix box should accept only numbers
 
 	@When("Admin enters alphabets and alphanumeric and special character in {string} suffix box")
 	public void admin_enters_alphabets_and_alphanumeric_and_special_character_in_suffix_box(String BatchName) {
@@ -200,7 +200,7 @@ public class BatchStep {
 
 	}
 
-//	@Batch_06_Scenario: Validate batch name prefix box is not editable
+//	@PrefixNonedit: Validate batch name prefix box is not editable
 
 	@When("Admin enters alphabets in batch name prefix box")
 	public void admin_enters_alphabets_in_batch_name_prefix_box() {
@@ -214,7 +214,7 @@ public class BatchStep {
 		Assert.assertTrue(Batch.validateBatchTextBoxNonEditable());
 	}
 
-//	@Batch_07_Scenario: Validate input data only for mandatory fields
+//	@Mandatoryfield: Validate input data only for mandatory fields
 
 	@When("Admin enters the data only to the mandatory fields and clicks save button")
 	public void admin_enters_the_data_only_to_the_mandatory_fields_and_clicks_save_button() {
@@ -230,7 +230,7 @@ public class BatchStep {
 
 	}
 
-//	@Batch_08_Scenario: validate input data missing for mandatory fields
+//	@MissingField: validate input data missing for mandatory fields
 
 	@When("Admin leaves blank one of the mandatory fields")
 	public void admin_leaves_blank_one_of_the_mandatory_fields() {
@@ -245,7 +245,7 @@ public class BatchStep {
 		Assert.assertTrue(Batch.isNumberOfClassesErrorDisplayed());
 	}
 
-//	@Batch_09_Scenario: validate cancel button in Batch details pop up
+//	@CancelButton: validate cancel button in Batch details pop up
 
 	@When("Admin enters the valid data to all the mandatory fields and click cancel button")
 	public void admin_enters_the_valid_data_to_all_the_mandatory_fields_and_click_cancel_button() {
@@ -262,7 +262,7 @@ public class BatchStep {
 
 	}
 
-//	@Batch_10_Scenario: validate close icon on the batch details pop up
+//	@CloseButton: validate close icon on the batch details pop up
 
 	@When("Admin clicks on the close icon")
 	public void admin_clicks_on_the_close_icon() {
@@ -278,7 +278,7 @@ public class BatchStep {
 		Batch.toolbarVisible();
 	}
 
-//	@Batch_11_Scenario: Validate Edit icon feature in any row
+//	@EditIcon: Validate Edit icon feature in any row
 
 	@Given("Admin is on the Batchs page")
 	public void admin_is_on_the_batchs_page() {
@@ -299,7 +299,7 @@ public class BatchStep {
 		Assert.assertTrue(Batch.isBatcheditpopupdisplayed());
 	}
 
-//	@Batch_12 _Scenario: Validate program name value is disabled to edit
+//	@BatchName_edit: Validate program name value is disabled to edit
 
 	@Then("Admin should see Program name and Batch name value field is disabled for editing")
 	public void admin_should_see_program_name_and_batch_name_value_field_is_disabled_for_editing() {
@@ -307,7 +307,7 @@ public class BatchStep {
 		Assert.assertTrue(Batch.isEditBatchNameFieldDisabled());
 	}
 
-//	@Batch_13_Scenario: Validate editing description and No. of classes fields with invalid data in the pop up
+//	@Batch_Description: Validate editing description and No. of classes fields with invalid data in the pop up
 
 	@When("Admin Updates any fields with invalid data and click save button")
 	public void admin_updates_any_fields_with_invalid_data_and_click_save_button() {
@@ -324,7 +324,7 @@ public class BatchStep {
 		Assert.assertTrue(Batch.isEditBatchDescriptionErrorDisplayed());
 	}
 
-//	@Batch_14_Scenario: validate save button in Batch details pop up 
+//	@SaveButton: validate save button in Batch details pop up 
 
 	@When("Admin enters the valid data to all the mandatory fields and click save button")
 	public void admin_enters_the_valid_data_to_all_the_mandatory_fields_and_click_save_button() {
@@ -341,7 +341,7 @@ public class BatchStep {
 		Assert.assertTrue(Batch.isSuccessMessageDisplayed());
 	}
 
-//	@Batch_15_Scenario: validate cancel button in Batch details pop up  
+//	@EditCancel: validate cancel button in Batch details pop up  
 
 	@When("Admin enters the valid data in edit btach to all the mandatory fields and click cancel button")
 	public void admin_enters_the_valid_data_in_edit_btach_to_all_the_mandatory_fields_and_click_cancel_button() {
@@ -357,7 +357,7 @@ public class BatchStep {
 		Batch.toolbarVisible();
 	}
 
-//	@Batch_16_Scenario:validate close button in Batch details pop up    
+//	@EditClose:validate close button in Batch details pop up    
 
 	@When("Admin enters the valid data to all the mandatory fields and click close button")
 	public void admin_enters_the_valid_data_to_all_the_mandatory_fields_and_click_close_button() {
@@ -368,7 +368,7 @@ public class BatchStep {
 		Batch.clickCloseButton();
 	}
 
-//	@Batch_17_Scenario: validate delete Icon on any row
+//	@EditDelete: validate delete Icon on any row
 
 	@When("Admin clicks the delete Icon on any row")
 	public void admin_clicks_the_delete_icon_on_any_row() {
@@ -383,7 +383,7 @@ public class BatchStep {
 		Assert.assertTrue(Batch.isDeletePopUpDisplayed());
 	}
 
-//	@Batch_18_Scenario: Validate yes button on the confirm alert box
+//	@DeleteYes: Validate yes button on the confirm alert box
 
 	@Given("Admin is on the batch confirm popup page")
 	public void admin_is_on_the_batch_confirm_popup_page() {
@@ -403,7 +403,7 @@ public class BatchStep {
 		Batch.getSuccessMessageText();
 	}
 
-//	@Batch_19_Scenario: validate no button on the confirm alert box
+//	@DeleteNo: validate no button on the confirm alert box
 
 	@When("Admin clicks on the delete icon and click no button")
 	public void admin_clicks_on_the_delete_icon_and_click_no_button() {
@@ -415,7 +415,7 @@ public class BatchStep {
 		Batch.toolbarVisible();
 	}
 
-//	@Batch_20_Scenario: validate close Icon on the alert box
+//	@DeleteClose: validate close Icon on the alert box
 
 	@When("Admin clicks on the close icon on deletewindow")
 	public void admin_clicks_on_the_close_icon_on_deletewindow() {
@@ -428,7 +428,7 @@ public class BatchStep {
 		Batch.toolbarVisible();
 	}
 
-//	@Batch_21_Scenario: Validate single row delete with checkbox
+//	@SingleDelete: Validate single row delete with checkbox
 
 	@Given("Admin is on the batch page")
 	public void admin_is_on_the_batch_page() {
@@ -448,7 +448,7 @@ public class BatchStep {
 
 	}
 
-//	@Batch_22_Scenario: Validate single row delete with checkbox
+//	@MSingle_Checkbox: Validate single row delete with checkbox
 
 	@When("Admin Should click the Enabled Delete icon on the header")
 	public void admin_should_click_the_enabled_delete_icon_on_the_header() {
@@ -461,7 +461,7 @@ public class BatchStep {
 		Assert.assertTrue(Batch.isDeletePopUpDisplayed());
 	}
 
-//	@Batch_23_Scenario: Validate single row delete with checkbox
+//	@SingleRow: Validate single row delete with checkbox
 
 	@When("Admin clicks on the yes button")
 	public void admin_clicks_on_the_yes_button() {
@@ -478,7 +478,7 @@ public class BatchStep {
 		Assert.assertEquals("Successful" + System.lineSeparator() + "Batches Deleted", actualMessage);
 	}
 
-//	@Batch_24_Scenario: Validate multiple row delete with checkbox
+//	@MultipleRow: Validate multiple row delete with checkbox
 
 	@When("Admin clicks on the delete icon under the Manage batch header multiple delete")
 	public void admin_clicks_on_the_delete_icon_under_the_manage_batch_header_multiple_delete() {
@@ -497,7 +497,7 @@ public class BatchStep {
 		Assert.assertEquals("Successful" + System.lineSeparator() + "Batches Deleted", actualMessage);
 	}
 
-//	@Batch_25_Scenario Outline: Validate pagination links
+//	@Pagination: Validate pagination links
 
 	@When("Admin clicks the {string} link on the data table Batch module")
 	public void admin_clicks_the_link_on_the_data_table_batch_module(String pageLink)
@@ -542,7 +542,7 @@ public class BatchStep {
 		}
 	}
 
-//	@Batch_26_Scenario Outline: validate search box functionality
+//	@searche: validate search box functionality
 
 	@When("Admin enters the {string} in the search text box in the batch module")
 	public void admin_enters_the_in_the_search_text_box_in_the_batch_module(String SearchData) {
@@ -565,7 +565,7 @@ public class BatchStep {
 		System.out.println("Batch verification passed!");
 	}
 
-//	@Batch_27_Scenario Outline: invalidate search box functionality
+//	@InvalidateSearch: invalidate search box functionality
 
 	@When("Admin enters invalid {string} in the search text box in the batch module")
 	public void admin_enters_invalid_in_the_search_text_box_in_the_batch_module(String SearchData) {
@@ -581,7 +581,7 @@ public class BatchStep {
 
 	}
 
-//	@Batch_28_Scenario Outline: Partial Batchname search box functionality
+//	@PartialSearch: Partial Batchname search box functionality
 
 	@When("Admin enters PartialBatch name {string} in the search text box in the batch module")
 	public void admin_enters_partial_batch_name_in_the_search_text_box_in_the_batch_module(String SearchData) {
@@ -596,7 +596,7 @@ public class BatchStep {
 		System.out.println(actualmessage + "All Batch with the name Batch Found");
 	}
 
-//	@Batch_29_Scenario: Validate logout option in the header is visible and enabled from the batch page
+//	@Logout: Validate logout option in the header is visible and enabled from the batch page
 
 	@When("Admin clicks on the logout button")
 	public void admin_clicks_on_the_logout_button() {
