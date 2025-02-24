@@ -1,98 +1,106 @@
 @Loginpage @LMS
 Feature: Login page validation
 
-  Background:
-    Given Admin launch the browser and Admin is in login Page
-
-  @Logincredentials
-  Scenario Outline: Validate login with valid and invalid credentials
-    When Admin enter valid "<credentials>"  and selects "Admin" from the dropdown  
-  And clicks the login button  
-    Then Admin should see the "<result>"
-    Examples:
-    | credentials              | result                  |
-    | valid credentials        | Admin should land on dashboard page             |
-    |invalid credentials        | Invalid username and password Please try again |
-    | onlypassword                 | Please enter your user name |
-    | onlyusername                 | Please enter your password  |
+Background: 
+Given The browser is open
+@loginpage
+  Scenario: Verify Admin is able to land on login page
+    When Admin gives the correct LMS portal URL
+    Then Admin should land on the login page
+@invalidurl
+  Scenario: Verify Admin is able to land on home page with invalid URL
+    When Admin gives the invalid LMS portal URL
+    Then Admin should receive application error
+@brokennlink
+  Scenario: Verify for broken link
+    When Admin gives the correct LMS portal URL
+    Then If HTTP response less than or equals 400 then the link is broken
     
-    @keyboardLogin
- Scenario: verify login button action through keyboard
-   When Admin enter valid credentials  and clicks login button through keyboard
-   Then Admin should land on dashboard page
-
-  @mouseLogin
- Scenario: verify login button action through mouse
-   When Admin enter valid credentials  and clicks login button through mouse
-   Then Admin should land on dashboard page
-
-    @spellcheck
+@textspelling
   Scenario: Verify the text spelling in the page
+    When Admin gives the correct LMS portal URL
     Then Admin should see correct spellings in all fields
-
-@LogoValidate
-  Scenario: Verify the company logo
-    Then Admin should see logo on the left  side
-
-  @AppNameValidate
-  Scenario:Verify application name
-    Then Admin should see  LMS - Learning Management System
-
-  @CompanyNameValidate
+@applicationname
+  Scenario: Verify application name
+    When Admin gives the correct LMS portal URL
+    Then Admin should see LMS - Learning Management System
+@companyname
   Scenario: Verify company name
+    When Admin gives the correct LMS portal URL
     Then Admin should see company name below the app name
-
-  @LoginLMSContent
-  Scenario: Validate sign in content
-    Then Admin should see "Please login to LMS application"
-
-  @CountTextField
+@companylogo
+  Scenario: Validate sign-in content
+    When Admin gives the correct LMS portal URL
+    Then Admin should see Please login to LMS application
+@textfield
   Scenario: Verify text field is present
-    Then Admin should see two text field
+    When Admin gives the correct LMS portal URL
+    Then Admin should see two text fields
+@firstfield
+  Scenario: Verify text on the first field
+    When Admin gives the correct LMS portal URL
+    Then Admin should see User in the first text field
 
-    @UserFirst
-  Scenario: Verify text on the first text field
-    Then Admin should "User" in the first text field
+  @dropdown
+  Scenario: Verify dropdown is present
+    When Admin gives the correct LMS portal URL
+    Then Admin should see one dropdown
+@asteriskusr
+  Scenario: Verify asterisk next to USER text
+    When Admin gives the correct LMS portal URL
+    Then Admin should see asterisk mark symbol next to text for mandatory fields
+@secondfieldtext
+  Scenario: Verify text on the second field
+    When Admin gives the correct LMS portal URL
+    Then Admin should see Password in the second text field
+@astrikmarkpswrd
+  Scenario: Verify asterisk mark symbol next to password text
+    When Admin gives the correct LMS portal URL
+    Then Admin should see asterisk mark symbol next to password text
+@placeholder
+  Scenario: Verify placeholder in dropdown to select role
+    When Admin gives the correct LMS portal URL
+    Then Admin should see Select the role placeholder in dropdown
 
-    @asteriskUser
-  Scenario: Verify asterisk next to Admin text
-    Then Admin should see field mandatory asterisk symbol next to Admin text
-
-  @PasswordSecond
-  Scenario: Verify text on the second text field
-    Then Admin should "Password" in the second text field
-    
-    @Dropdown
-    Scenario: Verify dropdown is present
-  Then Admin should see one dropdown
-  
-    Scenario: Verify placeholder in dropdown to select role
-    
-    Then Admin should see "select the role" placeholder in the dropdown
-
+  @dropdownoption
   Scenario: Verify dropdown option to select role
-    
-    Then Admin should see "Admin, Staff, Student" options in the dropdown
-
-  
-    @asteriskPassword
-  Scenario: Verify asterisk next to password text
-    Then Admin should see * symbol next to password text
-
-  Scenario: Verify the alignment input field for the login
-    Then Admin should see input field on the centre of the page
-
-    @loginButtonAvailable
-  Scenario: verify Login button is present
+    When Admin gives the correct LMS portal URL
+    Then Admin should see Admin Staff Student options in dropdown
+@alignmentofinput
+  Scenario: Verify the alignment of input field for the login
+    When Admin gives the correct LMS portal URL
+    Then Admin should see input field in the center of the page
+@loginbutton
+  Scenario: Verify Login button is present
+    When Admin gives the correct LMS portal URL
     Then Admin should see login button
+@usercolor
+  Scenario: Verify input descriptive text in user field
+    When Admin gives the correct LMS portal URL
+    Then Admin should see User in gray color
+@paswrdcolor
+  Scenario: Verify input descriptive text in password field
+    When Admin gives the correct LMS portal URL
+    Then Admin should see Password in gray color
+@loginfunctionality
+  Scenario Outline: Validate login functionality
+    Given Admin is on login page
+    When Admin enters  "<credentials>" and clicks login button
+    Then Admin should "<expected_result>"
 
-  Scenario: Verify the alignment of the login button
-    Then Admin should see login button on the centre of the page
-
-    @userColor
-  Scenario:Verify input descriptive test in Admin field
-    Then Admin should see Admin in gray color
-
-  @passwordColor
-  Scenario: Verify input descriptive test in password field
-    Then Admin should see password in gray color
+    Examples:
+      | credentials  | expected_result                         |
+      | valid       | land on home page                       |
+      | invalid     | Invalid test case input |
+      | invalidpassword  | Invalid test case input |
+      | invalidusername    | Invalid test case input |
+@loginbtnkeybord
+  Scenario: Verify login button action through keyboard
+    Given Admin is on login page
+    When Admin enters valid credentials and presses Enter key
+    Then Admin should land on home page
+@loginbtnmouse
+  Scenario: Verify login button action through mouse
+    Given Admin is on login page
+    When Admin enters valid credentials and clicks login button through mouse
+    Then Admin should land on home page login action through mouse

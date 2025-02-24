@@ -1,6 +1,5 @@
 package pages;
 
-
 import java.time.Duration;
 import java.util.List;
 
@@ -29,6 +28,7 @@ public class LMSAddonPage {
 		}
 
 	@FindBy(xpath = "//span[text()='Home']") public WebElement homeHeader;
+	@FindBy(xpath = "//span[text()='Program']") public WebElement programHeader;
 	@FindBy(xpath = "//span[text()='Batch']") public WebElement batchHeader;
 	@FindBy(xpath = "//span[text()='Class']") public WebElement classHeader;
 	@FindBy(xpath = "//span[text()='Logout']") public WebElement logoutHeader;
@@ -36,22 +36,25 @@ public class LMSAddonPage {
 	
 	@FindBy(xpath = "//input[@id='filterGlobal']") public WebElement Search;
 	@FindBy(xpath = "//tbody/tr") public List<WebElement> Table;
+	@FindBy(xpath = "//div[@class='p-datatable-footer ng-star-inserted']") public WebElement footer;
 	
 	@FindBy(xpath = "//p-tableheadercheckbox//div[@role='checkbox']") public WebElement AllChkBox;
 	@FindBy(xpath = "//div[@role='checkbox']")List<WebElement> multicheckbox;
 	@FindBy(xpath = "//mat-card-title//button") public WebElement DeleteAllIcon;
-	@FindBy(xpath = "//tbody/tr[1]//button[@id='deleteProgram']") public WebElement DeleteR1Icon;
+	@FindBy(xpath = "//tbody/tr[1]//button[@icon='pi pi-trash']") public WebElement DeleteR1Icon;
+	
 	@FindBy(xpath = "//tbody/tr[1]/td[2]") public WebElement DeleteR1Data;
 	@FindBy(xpath = "//div/i") public WebElement WarningIcon;
-	@FindBy(xpath = "//span[@class='p-confirm-dialog-message ng-tns-c118-10']") public WebElement PrgDeleteMsg;
+	@FindBy(xpath = "//p-confirmdialog/div/div/div[2]/span") public WebElement PrgDeleteMsg;
 	
-	@FindBy(xpath = "//button[@id='saveProgram']") public WebElement saveProgram;
+	@FindBy(xpath = "//span[contains(text(),'Save')]") public WebElement saveProgram;
 	@FindBy(xpath = "//input[@id='programName']") public WebElement programNameText;
 	@FindBy(xpath = "//input[@id='programDescription']") public WebElement programDescText;
+	@FindBy(xpath = "//input[@id='batchDescription']") public WebElement batchDescText;
 	@FindBy(xpath = "//div[contains(text(),'Active')]//div[2]") public WebElement statusActive;
 	@FindBy(xpath = "//small") public WebElement Errormessage;
 	@FindBy(xpath = "//small") public List<WebElement> Errors;
-	@FindBy(xpath = "//tbody/tr[1]//button[@id='editProgram']") public WebElement EditIcon;  
+	@FindBy(xpath = "//tbody/tr[1]/td/div/span[1]/button[1]") public WebElement EditIcon;  
 	
 	String Text = "JaVA";
 	

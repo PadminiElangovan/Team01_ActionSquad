@@ -79,6 +79,11 @@ public void admin_should_not_be_navigated_to_lms_portal() {
 	Assert.assertFalse(isElementPresent(Dashboard.DashboardSection));	
 }
 
+@Then("Admin should see error message")
+public void admin_should_see_error_message() {
+	Assert.assertFalse(Login.errmsg());
+}
+
 @When("Admin enter valid credentials with student role selection and clicks login")
 public void admin_enter_valid_credentials_with_student_role_selection_and_clicks_login() {
 	Login.AdminRoleStudent();

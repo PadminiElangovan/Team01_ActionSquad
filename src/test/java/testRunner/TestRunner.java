@@ -18,12 +18,12 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.chaintest.plugins.ChainTestCucumberListener:", //ChainTest Report
 				"rerun:target/rerun.txt"}, //Rerun failed Scenario
 		monochrome=false,  //console output color
-		tags="@Dash", //tags from feature file
+		tags="@LMS", //tags from feature file
 		features = {"src/test/resources/Feature files"}, //location of feature files
 		glue= {"stepDefinitions","appHook"}) //location of step definition files
 
 	public class TestRunner extends AbstractTestNGCucumberTests{
-		
+/*		
 	@BeforeTest
 	@Parameters({"browser"})
 	public void defineBrowser(String browser) throws Throwable {
@@ -36,5 +36,5 @@ import io.cucumber.testng.CucumberOptions;
     public Object[][] scenarios() {
 				
 		return super.scenarios();
-    } 
+    } */
 }

@@ -31,7 +31,4 @@ package common;
 		{
 		logger.debug(message);
 		}
-
-
-
 }
