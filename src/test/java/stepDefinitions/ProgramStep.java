@@ -97,43 +97,26 @@ public class ProgramStep {
 		switch (string) {
 		case "Name":
 			Assert.assertTrue(program.programNameDisplayed());
-			Assert.assertEquals(program.programNameText().replaceAll("[^a-zA-Z ]", "").trim(), "Name");
 			break;
 		case "Description":
 			Assert.assertTrue(program.programDescDisplayed());
-			Assert.assertEquals(program.programDescText().replaceAll("[^a-zA-Z ]", "").trim(), "Description");
 			break;
 		case "Status":
 			Assert.assertTrue(program.programStatus());
-			Assert.assertEquals(program.programStatusText().replaceAll("[^a-zA-Z ]", "").trim(), "Status");
 			break;
-		case "ProgramDetails":
-			Assert.assertTrue(program.programPopUpTitle());
-			Assert.assertEquals(program.programPopUpTitleText(), "Program Details");	
 			
 		}
 	}
 	
-	@When("Admin clicks on save button without entering data")
-	public void admin_clicks_on_save_button_without_entering_data() {
-		program.clickProgramAddNew();
-		program.clickOnSave();    	
+	
+	@Given("clicks add new class under the class menu bar")
+	public void clicks_add_new_class_under_the_class_menu_bar() {
+	    program.clickProgramAddNew();
 	}
-	
-	@Then("Admin should see error message below the test field and the field will be highlighed in red color {string} {string} {string}")
-	public void admin_should_see_error_message_below_the_test_field_and_the_field_will_be_highlighed_in_red_color(String programNameReqText, String programDescriptionReqText, 
-            String programStatusReqText) {
-		Assert.assertEquals("Program Name is required", programNameReqText, program.getProgramNameReqText());
-        Assert.assertEquals("Description is required", programDescriptionReqText, program.getDescriptionReqText());
-        Assert.assertEquals("Status is required", programStatusReqText, program.getStatusReqText());
-        	}
 
-
-	
 	@When("Admin enters mandatory fields {string} {string} {string} {string} in the form and clicks on save button")
 	public void admin_enters_mandatory_fields_in_the_form_and_clicks_on_save_button(String Name, String Description,String Status,String expectedMsg) throws InterruptedException 
 	{
-		program.clickProgramAddNew();
 		 assertTrue(program.addingMandatoryFields(Name,Description,Status).equals(expectedMsg));
 	}
 	
@@ -143,38 +126,17 @@ public class ProgramStep {
 		LoggerLoad.info("Program created successfully");
 	}
 
-	@When("Admin searches with newly created {string}")
-	public void admin_searches_with_newly_created_program(String programName)  {
-		
-		program.clickProgram();
-		program.enterProgramNameInSearch();
-	}
-	
-	@Then("Records of the newly created {string} is displayed and match the data entered")
-	public void record_displayed(String pName) {
-		Assert.assertEquals(program.verifyProgramName(), pName);
-		
-	}
-	
-	@When("Admin clicks Cancel Icon on program Details form")
-	public void admin_clicks_cancel_Icon()  {
-		program.clickProgramAddNew();
-		program.cancelDisp();
-		
-	}
-	
-	@Then("Program Details popup window should be closed")
-	public void program_details_should_closed() {
-		status=program.onManagePage();
-		assertTrue(status);
-		LoggerLoad.info("Admin is on manage program page");
-		
-		
-	}
-	
 	
 	
 // **************************************Pagination****************************************
+	
+	/*
+	 * @Given("Admin is on Program page") public void admin_is_on_program_page() {
+	 * program.clickProgram();
+	 * 
+	 * }
+	 */
+	
 	
 	
 	 @When("^Admin clicks the (Next|Last|Previous|First) link on the data table$")

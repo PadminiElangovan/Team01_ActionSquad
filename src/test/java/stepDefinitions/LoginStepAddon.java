@@ -18,6 +18,7 @@ import pages.Login_Page;
 public class LoginStepAddon extends BasePage{
 
 	private Login_Page Login;
+	private Dashboard_Page Dashboard;
 	private WebDriver driver;
 	private TestContext context;
 	List<Map<String, String>> Loginxl = Hooks.Login;
@@ -26,6 +27,7 @@ public class LoginStepAddon extends BasePage{
      this.context = context;
      this.driver = context.getDriver();
      this.Login = new Login_Page(driver, context);
+     this.Dashboard = new Dashboard_Page(driver, context);
  }
 	
 
@@ -61,19 +63,25 @@ public void admin_enters_password_in_password_field() {
 @Then("Admin should see masked password")
 public void admin_should_see_masked_password() {
 	String actual = elementGetText(Login.Password);
-	String Expected = Loginxl.get(0).get("password");
-	Assert.assertEquals(actual, Expected);
+	Assert.assertTrue(actual.isEmpty());
+	//String Expected = Loginxl.get(0).get("password");
+	//Assert.assertEquals(actual, Expected);
 	
 }
 
 @When("Admin enter valid credentials with staff role selection and clicks login")
-public void admin_enter_valid_credentials_with_staff_role_selection_and_clicks_login() {
+public void admin_enter_valid_credentials_with_staff_role_selection_and_clicks_login() throws InterruptedException {
 	Login.AdminRoleStaff();
 }
 
 @Then("Admin should not be navigated to LMS portal")
 public void admin_should_not_be_navigated_to_lms_portal() {
-	Assert.assertTrue(driver.getCurrentUrl().contains("/login"));	
+	Assert.assertFalse(isElementPresent(Dashboard.DashboardSection));	
+}
+
+@Then("Admin should see error message")
+public void admin_should_see_error_message() {
+	Assert.assertFalse(Login.errmsg());
 }
 
 @When("Admin enter valid credentials with student role selection and clicks login")

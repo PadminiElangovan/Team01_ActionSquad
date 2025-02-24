@@ -14,7 +14,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		plugin = {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm", //Allure Report
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", //Extent Report
-				"json:target/CucumberReports/DSAlgoJson.json","html:target/CucumberReports/LMS.html", //Cucumber Report
+				"json:target/CucumberReports/LMSJson.json","html:target/CucumberReports/LMS.html", //Cucumber Report
 				"com.aventstack.chaintest.plugins.ChainTestCucumberListener:", //ChainTest Report
 				"rerun:target/rerun.txt"}, //Rerun failed Scenario
 		monochrome=false,  //console output color
