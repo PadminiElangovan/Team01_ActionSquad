@@ -96,7 +96,7 @@ public class Program_Page extends BasePage {
 	private WebElement programCreated;
 	@FindBy(xpath = "//button[@id='saveProgram']")
 	private WebElement saveProgram;
-	@FindBy(css="td:nth-child(2)")
+	@FindBy(xpath="(//tbody/tr[1]/td[2]")
 	private WebElement programNameSearch;
 	@FindBy(xpath = "//small[normalize-space()='Program name is required.']")
 	private WebElement programNameReq;
@@ -295,7 +295,7 @@ public class Program_Page extends BasePage {
 	public void enterProgramNameInSearch()  {
 		js.executeScript("arguments[0].click();", searchbtn);
 		//elementClick(searchbtn);
-		elementSendkeys(searchbtn, "CSharpsg");
+		elementSendkeys(searchbtn, "Beta");
 	}
 	public String verifyProgramName() {
 		return	elementGetText(programNameSearch);
@@ -535,23 +535,33 @@ public List<String> getSortedList(List<String> originalList){
     return sortedList;
 }
 	
-	public boolean isNextButtonEnabled() {
-		return prevButton.getAttribute("class").contains("p-disabled");
-	}
+    public boolean isNextButtonEnabled() {
+    if (nextButton == null || !nextButton.isDisplayed()) {
+        return false; 
+    }
 
-		public boolean isFinalButtonEnabled() {
-			return !lastButton.getAttribute("class").contains("p-disabled");
-		}
+    String classAttribute = nextButton.getDomAttribute("class");
+    return classAttribute != null && !classAttribute.contains("p-disabled");
+     }
 
-		// Check if 'Previous' button is enabled
-		public boolean isPrevButtonEnabled() {
-			return !prevButton.getAttribute("class").contains("p-disabled");
+	public boolean isPrevButtonEnabled() {
+		    if (prevButton == null) {
+		        return false;   }
+		    
+		    String classAttribute = prevButton.getDomAttribute("class");
+		    return classAttribute != null && !classAttribute.contains("p-disabled");
 		}
 
 		// Check if 'First' button is enabled
 		public boolean isFirstButtonEnabled() {
-			return !firstButton.getAttribute("class").contains("p-disabled");
+		    if (firstButton == null) {
+		        return false;
+		    }
+		    
+		    String classAttribute = firstButton.getDomAttribute("class");
+		    return classAttribute != null && !classAttribute.contains("p-disabled");
 		}
+
 
 		public boolean hasNextPageResults() {
 			// Return true if there are results; false otherwise
@@ -605,6 +615,11 @@ public List<String> getSortedList(List<String> originalList){
 
 	public String getStatusReqText() {
 		return	elementGetText(programStatusReq);
+	}
+
+	public void clickLogout() {
+		actions.doubleClick(logoutHeader).perform();
+		
 	}
 
 }
