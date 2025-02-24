@@ -46,10 +46,10 @@ public class Login_Page {
     @FindBy(xpath ="//label[@for='password']/span[1]")public WebElement passwordLabel;
     @FindBy(xpath ="//div[@class='message']") public WebElement applicationerror;
     @FindBy(css =("img[class='images']")) public WebElement logo;
-    @FindBy(xpath=("//*[text()='Please login to LMS application']")) public WebElement LMStext ;
+    @FindBy(xpath=("//mat-card//p")) public WebElement LMStext ;
     @FindBy(xpath = "//input[@id='password' or @id='username']")public List<WebElement> InputFields;
-    @FindBy(xpath=("//*[@id='mat-form-field-label-3']/span[2]"))public WebElement passwrdask;
-    @FindBy(xpath=("//*[@id='mat-form-field-label-1']/span[2]")) public WebElement userask;
+    @FindBy(xpath=("//mat-form-field[2]//label/span[2]"))public WebElement passwrdask;
+    @FindBy(xpath=("//mat-form-field[1]//label/span[2]")) public WebElement userask;
     @FindBy(xpath=("//mat-card-content/form")) public WebElement form;
 	
     @FindBy(xpath = "//mat-select") public WebElement dropdown;
@@ -70,15 +70,18 @@ public class Login_Page {
 		 AdminRole.click();
 		 LoginBtn.click(); 
 	 }
+	 
 	 public void UsrPswd() {
 		 Username.sendKeys(Login.get(0).get("username"));
 		 Password.sendKeys(Login.get(0).get("password"));
 		 LoginBtn.click(); 
 	 }
+	 
 	 public void InputCred() {
 		 Username.sendKeys(Login.get(0).get("username"));
 		 Password.sendKeys(Login.get(0).get("password"));
 	 }
+	 
 	 public boolean errmsg() {	  
 		 boolean status = ErrMsg.isEmpty();
 		 return status;
@@ -99,6 +102,38 @@ public class Login_Page {
 		 LoginBtn.click(); 
 	 }
 	
+	 public void LoginMouseAction() {		 
+		 	actions.moveToElement(Username).click().sendKeys(Login.get(0).get("username")).perform();;
+			actions.moveToElement(Password).click().sendKeys(Login.get(0).get("password")).perform();;			 
+			actions.moveToElement(roleDropdwn).click().perform(); 
+		    actions.moveToElement(AdminRole).click().perform(); 
+			actions.moveToElement(LoginBtn).click().perform();
+		}
+	 
+	 public void LoginKeyAction() {
+		 	actions.moveToElement(Username).click().sendKeys(Login.get(0).get("username")).perform();
+		 	actions.sendKeys(Keys.TAB).sendKeys(Login.get(0).get("password")).perform();	
+		 	actions.sendKeys(Keys.TAB).perform();
+		 	actions.sendKeys(Keys.ARROW_DOWN).click().perform();;
+		    actions.sendKeys(Keys.ENTER).perform();		
+		}
+	 
+	 public void Inputs(String Cred) {		 
+		 if(Cred.equals("valid")) {
+			 Username.sendKeys(Login.get(0).get("username"));
+			 Password.sendKeys(Login.get(0).get("password"));}
+		 else if(Cred.equals("invalid")) {
+			 Username.sendKeys(Login.get(1).get("username"));
+			 Password.sendKeys(Login.get(1).get("password"));}
+		 else if(Cred.equals("Emptyusername")) 
+			 Password.sendKeys(Login.get(2).get("password"));
+		 else if(Cred.equals("Emptypassword")) 
+			 Username.sendKeys(Login.get(3).get("username"));
+		 roleDropdwn.click();
+		 AdminRole.click();
+		 LoginBtn.click();		 
+	}
+	 
 	 public int StatusCode() {
 			try {				
 				URL url = new URL(driver.getCurrentUrl());
@@ -111,182 +146,4 @@ public class Login_Page {
 				return 0;}
 		}	
 	 
-
-	 
-/*	  public boolean isloginBtnVisible(){
-	  try {
-	        return LoginBtn.isDisplayed(); 
-	    } catch (NoSuchElementException e) {
-	        return false; }
-	        
-	    }
- 
-  public boolean isLoginButtonCentered() {
-		String loginAlignment = LoginBtn.getCssValue("text-align");
-		String margin = LoginBtn.getCssValue("margin");
-		if (!loginAlignment.equals("center") || !margin.equals("auto")) {
-			return false;
-		}
-		return true;
-	}
-  
-  public boolean isUserTxtGray() {
-		String textColor = Username.getCssValue("color");
-		// Check if the text color is gray (hex code #808080 or RGB value 128,128,128).
-		return textColor.equals("rgb(128, 128, 128)") || textColor.equals("#808080");
-	}
-
-	public boolean isPwdTxtGray() {
-		String textColor = Password.getCssValue("color");
-		
-		return textColor.equals("rgb(128, 128, 128)") || textColor.equals("#808080");
-	}
-
-	public boolean areInputFieldsCenter() {
-		for (WebElement inputField : textFields) {
-			String textAlignment = inputField.getCssValue("text-align");
-			String margin = inputField.getCssValue("margin");
-
-			// Check if text-align is center and margin is auto.
-			if (!textAlignment.equals("center") || !margin.equals("auto")) {
-				return false;
-			}
-		}
-
-		return true;
-	}
-
-	public List<String> getDropdownOptionsVisible() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        // Wait and click the dropdown
-        wait.until(ExpectedConditions.elementToBeClickable(dropdown)).click();
-
-        // Wait for options to be visible
-        wait.until(ExpectedConditions.visibilityOfAllElements(allOptions));
-
-       
-        List<String> optionsText = new ArrayList<>();
-        for (WebElement option : allOptions) {
-            optionsText.add(option.getText().trim());
-        }
-
-        System.out.println("Actual Dropdown Options: " + optionsText); 
-        return optionsText;
-    }
-	public Map<String, String> validLogin(String credentials) {
-	    Map<String, String> result = new HashMap<>();
-	   // List<Map<String, String>> Login = reader.ReadExcelFile("Login");
-
-	    if (Login == null || Login.isEmpty()) {
-	        System.out.println("ERROR: Excel data is missing!");
-	        result.put("actualMessage", "Excel data not found");
-	        return result;
-	    }
-
-	    String user = "";
-	    String password = "";
-
-	    // **Safely extract values from Excel (prevent NullPointerException)**
-	    switch (credentials.trim()) {  
-	        case "valid":
-	            System.out.println("Entering valid credentials");
-	            user = Login.get(0).getOrDefault("username", "").trim();
-	            password = Login.get(0).getOrDefault("password", "").trim();
-	            break;
-	        case "invalid":
-	            System.out.println("Entering invalid credentials");
-	            user = Login.get(1).getOrDefault("username", "").trim();
-	            password = Login.get(1).getOrDefault("password", "").trim();
-	            break;
-	        case "invalidpassword":
-	            System.out.println("Entering only the password");
-	            password = Login.get(2).getOrDefault("password", "").trim();
-	            break;
-	        case "invalidusername":
-	            System.out.println("Entering only the username");
-	            user = Login.get(3).getOrDefault("username", "").trim();
-	            break;
-	        default:
-	            System.out.println("Invalid scenario: " + credentials);
-	            result.put("actualMessage", "Invalid test case input");
-	            return result;
-	    }
-
-	    // **Handle empty username & password cases**
-	    if (user.isEmpty() && password.isEmpty()) {
-	        System.out.println("Username and Password both are missing!");
-	        result.put("actualMessage", "Invalid test case input");
-	        return result;
-	    }
-
-	    // **Enter username if available**
-	    if (!user.isEmpty()) {
-	        wait.until(ExpectedConditions.visibilityOf(Username)).clear();
-	        Username.sendKeys(user);
-	    }
-
-	    // **Enter password if available**
-	    if (!password.isEmpty()) {
-	        wait.until(ExpectedConditions.visibilityOf(Password)).clear();
-	        Password.sendKeys(password);
-	    }
-
-	    // **Click role selection & login button**
-	    wait.until(ExpectedConditions.elementToBeClickable(roleDropdwn)).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(AdminRole)).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(LoginBtn)).click();
-
-	    // **Get the expected validation message**
-	    result.put("actualMessage", getValidationMessage(credentials));
-	    return result;
-	}
-
-	// **Fetching expected validation message from Excel**
-	public String getValidationMessage(String credentials) {
-	   // List<Map<String, String>> Login = reader.ReadExcelFile("Login");
-
-	    switch (credentials.trim()) {  
-	        case "valid":
-	            return ""; // No message expected on successful login
-	        case "invalid":
-	            return Login.get(1).getOrDefault("message", "Unknown validation message").trim();
-	        case "invalidpassword":
-	            return Login.get(2).getOrDefault("message", "Unknown validation message").trim();
-	        case "invalidusername":
-	            return Login.get(3).getOrDefault("message", "Unknown validation message").trim();
-	        default:
-	            return "Unknown validation message";
-	    }
-	}
-
-	public void clickLoginButtonMouse() {
-		actions.moveToElement(Username).sendKeys(Login.get(0).get("username"));
-		actions.moveToElement(Password).sendKeys(Login.get(0).get("password"));
-		 
-		actions.moveToElement(roleDropdwn).click().perform(); // Click dropdown
-	    actions.moveToElement(AdminRole).click().perform(); 
-		actions.moveToElement(LoginBtn).click().perform();
-		
-	}
-
-	public void pressEnterKey() {
-		Username.sendKeys(Login.get(0).get("username"));
-		 Password.sendKeys(Login.get(0).get("password"));
-		 roleDropdwn.click();
-		 AdminRole.click();
-	    LoginBtn.sendKeys(Keys.ENTER); 
-	}
-
-	public String verifyPasswordTxt() {
-		return Password.getAttribute("value");
-	}
-
-	public String verifyUserTxt() {
-		return Username.getAttribute("value");
-	}
-*/
-	
 }
-
-
