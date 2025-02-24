@@ -1,18 +1,15 @@
 package pages;
 
-import java.io.IOException;
-
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
+
 import java.util.NoSuchElementException;
-import static org.junit.Assert.assertTrue;
+
 import org.junit.Assert;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -21,9 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import appHook.Hooks;
 import appHook.TestContext;
-import common.ExcelReader;
 
 public class Batch_Page {
 
@@ -31,6 +26,9 @@ public class Batch_Page {
 	private WebDriverWait wait;
 	WebDriver driver;
 	private JavascriptExecutor js;
+
+	@FindBy(xpath = "//button[@id ='logout']")
+	public WebElement logoutButton;
 
 	@FindBy(xpath = "//mat-toolbar/span[1]")
 	private WebElement toolbar;
@@ -146,7 +144,6 @@ public class Batch_Page {
 	@FindBy(xpath = "//span[normalize-space()='No']")
 	private WebElement noButton;
 
-//	checkpannanum
 	@FindBy(xpath = "//tbody/tr[1]/td[7]/div[1]/span[2]/button[1]")
 	private WebElement Deletepopup;
 
@@ -182,7 +179,6 @@ public class Batch_Page {
 	@FindBy(xpath = "//input[@id='batchProg']")
 	private WebElement batchprefixfield;
 
-//	checkuponnow
 	@FindBy(xpath = "//p-dialog[1]/div/div/div[2]/div[2]/input[3]")
 	private WebElement batchNamefield;
 
@@ -250,17 +246,12 @@ public class Batch_Page {
 	@FindBy(xpath = "//div[text()='Successful']")
 	private WebElement successMessage;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/p-confirmdialog/div/div/div[3]")
-	private WebElement alertBox;
-
 	private Actions actions;
 
 	@FindBy(xpath = "//li[contains(@class, 'p-dropdown-item')]")
 	private List<WebElement> programOptions;
 
 	// Searchbar elements
-	@FindBy(xpath = "(//input[@id='filterGlobal'])[1]")
-	private WebElement searchTextBox;
 
 	@FindBy(xpath = "//tbody/tr[1]/td[2]")
 	private WebElement BatchNameFirstRecord;
@@ -271,17 +262,8 @@ public class Batch_Page {
 	@FindBy(xpath = "//tbody/tr[1]/td[4]")
 	private WebElement BatchStatusFirstRecord;
 
-	@FindBy(xpath = "//p-paginator/div/span[1]")
-	private WebElement paginationTextwithZeroRecord;
-
 	@FindBy(xpath = "//mat-card-content/p-table/div/div[1]")
 	private WebElement searchresultbatch;
-
-	@FindBy(xpath = "//p-paginator/div/span[1]")
-	private WebElement searchresultinvaliddatabatch;
-
-	@FindBy(xpath = "//p-paginator/div/span[1]")
-	private WebElement searchresultpartialdatadatabatch;
 
 	public Batch_Page(WebDriver driver, TestContext context) {
 		this.driver = context.getDriver();
@@ -296,7 +278,6 @@ public class Batch_Page {
 	public void navigateToBatch() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(Batch)).click();
-
 	}
 
 //Dropdown
@@ -439,6 +420,11 @@ public class Batch_Page {
 		numberOfClassesInput.sendKeys(numClasses);
 	}
 
+	public void enterValidDataInMandatoryFields() {
+		enterDescription("Valid Batch Description"); // Replace with actual valid data
+		enterNumberOfClasses("5"); // Replace with actual valid data
+	}
+
 	public void clickButton(String button) {
 		if (button.equalsIgnoreCase("save")) {
 			saveButton.click();
@@ -486,13 +472,6 @@ public class Batch_Page {
 
 	}
 
-	// selected program is present in the prefix
-	public boolean isSelectedProgramReflected() {
-		wait.until(ExpectedConditions.visibilityOf(batchprefixfield));
-
-		return batchprefixfield.getDomAttribute("text").equalsIgnoreCase(dropdownItems.get(0).getText());
-	}
-
 	public void inputPrefixValue() {
 		batchprefixfield.sendKeys("abc");
 
@@ -505,11 +484,11 @@ public class Batch_Page {
 			wait.until(ExpectedConditions.visibilityOf(batchprefixfield));
 
 			// Check for 'readonly' attribute
-			String readOnlyAttr = batchprefixfield.getAttribute("readonly");
+			String readOnlyAttr = batchprefixfield.getDomAttribute("readonly");
 			boolean isReadOnly = readOnlyAttr != null;
 
 			// Check for 'disabled' attribute
-			String disabledAttr = batchprefixfield.getAttribute("disabled");
+			String disabledAttr = batchprefixfield.getDomAttribute("disabled");
 			boolean isDisabled = disabledAttr != null;
 
 			// Return true if the input box is either readonly or disabled
@@ -521,9 +500,8 @@ public class Batch_Page {
 	}
 
 	public String getBatchPrefixValue() {
-		// Wait for the batch prefix field to be visible
+
 		wait.until(ExpectedConditions.visibilityOf(batchprefixfield)).click();
-		// Return the value of the batch prefix field
 		return batchprefixfield.getText();
 	}
 
@@ -533,36 +511,12 @@ public class Batch_Page {
 
 	public String getErrorMessage() {
 		try {
-			// Wait until the error message element is visible
+
 			wait.until(ExpectedConditions.visibilityOf(batcherror));
-			return batcherror.getText(); // Return the actual error message text
+			return batcherror.getText();
 		} catch (Exception e) {
-			return ""; // Return an empty string if the error message is not found
+			return "";
 		}
-	}
-
-//Edit validation
-	public void clickEditButton() {
-
-		// list of edit buttons is not empty
-		if (!editButtons.isEmpty()) {
-
-			waitUntilEditButtonIsClickable(editButtons.get(0));
-
-			editButtons.get(0).click();
-		} else {
-			throw new RuntimeException("No edit buttons found.");
-		}
-	}
-
-	public void clickEditBatchBtn() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		waitUntilEditButtonIsClickable(editButtons.get(0));
-	}
-
-	// Wait
-	private void waitUntilEditButtonIsClickable(WebElement button) {
-		wait.until(ExpectedConditions.elementToBeClickable(button));
 	}
 
 //  program name field is disabled method
@@ -595,6 +549,10 @@ public class Batch_Page {
 		closeButton.click();
 	}
 
+	public void Logoutbutton() {
+		logoutButton.click();
+	}
+
 	public boolean isBatchErrorDisplayed() {
 		return batcherror.isDisplayed();
 	}
@@ -619,23 +577,18 @@ public class Batch_Page {
 		return Statuserror.isDisplayed();
 	}
 
-	public void enterValidDataInMandatoryFields() {
-		enterDescription("Valid Batch Description"); // Replace with actual valid data
-		enterNumberOfClasses("5"); // Replace with actual valid data
-	}
-
 	private void ensureDropdownIsClosed() {
-		// Check if the dropdown is open and close it if necessary
-		String ariaExpanded = Programdropdowntrigger.getAttribute("aria-expanded");
-		if ("true".equals(ariaExpanded)) { // Ensure we're comparing to "true" safely
-			Programdropdowntrigger.click(); // Click to close the dropdown
+
+		String ariaExpanded = Programdropdowntrigger.getDomAttribute("aria-expanded");
+		if ("true".equals(ariaExpanded)) {
+			Programdropdowntrigger.click();
 		}
 	}
 
 	// single delete
 
 	public void clickOnDeleteIcon() {
-		// double click or use single click as per your requirement
+
 		if (context == null) {
 			throw new IllegalStateException("TestContext is not initialized");
 		}
@@ -656,8 +609,6 @@ public class Batch_Page {
 			return; // Exit the method if the button isn't clickable
 		}
 
-		// creating object for action class
-
 		Actions actions = context.getActions();
 
 		// movin gto Yes button and clicking
@@ -677,7 +628,7 @@ public class Batch_Page {
 	}
 
 	public boolean isSuccessMessageDisplayed() {
-		// Check if the success message is displayed
+
 		return alertMsg.isDisplayed();
 	}
 
@@ -691,9 +642,6 @@ public class Batch_Page {
 		CloseDeletePopup.click();
 	}
 
-	public boolean isAlertBoxDisplayed() {
-		return alertBox.isDisplayed(); // Will return true if the alert box is displayed
-	}
 	// single row delete
 
 	public void clickDeleteIconForSpecificBatch() {
@@ -798,7 +746,7 @@ public class Batch_Page {
 	public boolean isPrevButtonEnabled() {
 		return !paninatorPrevious.getDomAttribute("class").contains("p-disabled");
 	}
-		
+
 	// Check if 'First' button is enabled
 	public boolean isFirstButtonEnabled() {
 		return !paninatorFirstbutton.getDomAttribute("class").contains("p-disabled");
@@ -818,7 +766,7 @@ public class Batch_Page {
 
 	public void searchInBatchPage(String SearchData) {
 
-		actions.doubleClick(searchTextBox).perform(); // Double-click to activate search
+		actions.doubleClick(Searchbox).perform(); // Double-click to activate search
 		Searchbox.clear(); // Clear any existing text in the search box
 		Searchbox.sendKeys(SearchData); // Type in the batch name
 		Searchbox.click(); // Hit Enter to initiate search
@@ -839,12 +787,12 @@ public class Batch_Page {
 
 	public String Invalidsearchdataresult() {
 
-		return searchresultinvaliddatabatch.getText();
+		return paninatorCurrenttext.getText();
 	}
 
 	public String PartialbatchNamesearchdataresult() {
 
-		return searchresultpartialdatadatabatch.getText();
+		return paninatorCurrenttext.getText();
 	}
 
 	public void Searchbatchframe() {
@@ -852,18 +800,16 @@ public class Batch_Page {
 	}
 
 	public void verifyZeroRecordText() {
-		wait.until(ExpectedConditions.textToBePresentInElement(paginationTextwithZeroRecord,
-				"Showing 0 to 0 of 0 entries"));
+		wait.until(ExpectedConditions.textToBePresentInElement(paninatorCurrenttext, "Showing 0 to 0 of 0 entries"));
 
-		String actualText = paginationTextwithZeroRecord.getText().trim();
+		String actualText = paninatorCurrenttext.getText().trim();
 		Assert.assertTrue(actualText.contains("Showing 0 to 0 of 0 entries"));
 	}
 
 	public void verifyMultipleRecordText() {
-		wait.until(ExpectedConditions.textToBePresentInElement(searchresultpartialdatadatabatch,
-				"Showing 1 to 10 of 12 entries"));
+		wait.until(ExpectedConditions.textToBePresentInElement(paninatorCurrenttext, "Showing 1 to 10 of 12 entries"));
 
-		String actualText = searchresultpartialdatadatabatch.getText().trim();
+		String actualText = paninatorCurrenttext.getText().trim();
 		Assert.assertTrue(actualText.contains("Showing 1 to 10 of 12 entries"));
 	}
 
@@ -902,11 +848,8 @@ public class Batch_Page {
 
 	public void enterValidDataAllMandatoryFields() {
 		batchsuffixfield.sendKeys("48");
-
 		numberOfClassesInput.sendKeys("8");
-
 		Activeradiobutton.click();
-
 		batchDecriptioninput.sendKeys("Java");
 	}
 
