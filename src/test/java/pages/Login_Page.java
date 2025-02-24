@@ -1,6 +1,5 @@
 package pages;
 
-import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
@@ -10,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +18,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.asserts.SoftAssert;
+
 
 import appHook.Hooks;
 import appHook.TestContext;
@@ -28,8 +27,7 @@ public class Login_Page {
 	
 	private TestContext context;
 	private WebDriverWait wait;
-	WebDriver driver;
-	SoftAssert softAssert;
+	static WebDriver driver;
 	Actions actions;
 	List<Map<String, String>> Login = Hooks.Login;
 	
@@ -43,19 +41,18 @@ public class Login_Page {
 	@FindBy(xpath = "//button[@id='login']") public WebElement LoginBtn;
 	@FindBy(tagName = "mat-error") public List<WebElement> ErrMsg;
 	@FindBy(partialLinkText = "Forgot") public List<WebElement> ForgotPswd;
+	
 	@FindBy(xpath = "//label[@for='username']/span[1]")public WebElement usernameLabel;
-
     @FindBy(xpath ="//label[@for='password']/span[1]")public WebElement passwordLabel;
-
+    @FindBy(xpath ="//div[@class='message']") public WebElement applicationerror;
     @FindBy(css =("img[class='images']")) public WebElement logo;
     @FindBy(xpath=("//*[text()='Please login to LMS application']")) public WebElement LMStext ;
-    @FindBy(xpath = "//input[@id='password' or @id='username']")public List<WebElement> textFields;
+    @FindBy(xpath = "//input[@id='password' or @id='username']")public List<WebElement> InputFields;
     @FindBy(xpath=("//*[@id='mat-form-field-label-3']/span[2]"))public WebElement passwrdask;
     @FindBy(xpath=("//*[@id='mat-form-field-label-1']/span[2]")) public WebElement userask;
+    @FindBy(xpath=("//mat-card-content/form")) public WebElement form;
 	
     @FindBy(xpath = "//mat-select") public WebElement dropdown;
-
-    // Locate all dropdown options
     @FindBy(css = "mat-option") public List<WebElement> allOptions;
     
 	 public Login_Page(WebDriver driver,TestContext context){
@@ -85,7 +82,8 @@ public class Login_Page {
 	 public boolean errmsg() {	  
 		 boolean status = ErrMsg.isEmpty();
 		 return status;
-	}
+	}     
+		    
 	public void AdminRoleStaff() {		 		 
 		 Username.sendKeys(Login.get(0).get("username"));
 		 Password.sendKeys(Login.get(0).get("password"));
@@ -100,126 +98,29 @@ public class Login_Page {
 		 StudentRole.click();
 		 LoginBtn.click(); 
 	 }
-	/*public boolean isErrorMessageDisplayed() {
-        return errormessage.isDisplayed();
-    }*/
+	
+	 public int StatusCode() {
+			try {				
+				URL url = new URL(driver.getCurrentUrl());
+				HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+				connection.setRequestMethod("GET");
+				connection.connect();
+				int responseCode = connection.getResponseCode();
+				return responseCode;
+			} catch (Exception e) {
+				return 0;}
+		}	
+	 
 
-	/*public String getErrorMessage() {
-        return errormessage.getText();
-    }*/
-/*	
-	public String spellcheckerUSer(){
-        wait.until(ExpectedConditions.visibilityOf(Username));
-        return Username.getText();
-
-    }
-    public String spellcheckerpasswrd(){
-        wait.until(ExpectedConditions.visibilityOf(Password));
-        return  Password.getText();
-    }
-    public String spellcheckLoginbutton(){
-        wait.until(ExpectedConditions.visibilityOf(LoginBtn));
-        return LoginBtn.getText();
-    }*/
-	public String spellcheckerUser() {
-	    wait.until(ExpectedConditions.visibilityOf(usernameLabel));
-	    
-	    String text = usernameLabel.getText().trim();  // Try getting visible text
-	    if (text.isEmpty()) {
-	        text = usernameLabel.getAttribute("placeholder"); // Try placeholder
-	    }
-	    if (text.isEmpty()) {
-	        text = usernameLabel.getAttribute("value"); // Try input value
-	    }
-
-	    System.out.println("Extracted Username Label Text: '" + text + "'");
-	    return text;
-	}
-
-
-	public String spellcheckerPassword() {
-	    wait.until(ExpectedConditions.visibilityOf(passwordLabel));
-	    String text = passwordLabel.getText().trim();
-	    System.out.println("Extracted Password Label Text: '" + text + "'");
-	    return text.isEmpty() ? passwordLabel.getAttribute("innerText").trim() : text;
-	}
-
-	public String spellcheckLoginButton() {
-	    wait.until(ExpectedConditions.visibilityOf(LoginBtn));
-	    String text = LoginBtn.getText().trim();
-	    System.out.println("Extracted Login Button Label Text: '" + text + "'");
-	    return text.isEmpty() ? LoginBtn.getAttribute("innerText").trim() : text;
-	}
-
-    public boolean islogoDisplayed() {
-		return logo.isDisplayed();
-		
-	 }
-    private String LMS_MSg;
-    public String LmsContentMsg(){
-        
-    	return LMS_MSg= LMStext.getText();
-    }
-    public int CountTextFields(){
-       
-        return textFields.size();
-    }
-    
-    public String FirstTextField() {
-        if (!textFields.isEmpty()) {
-            WebElement firstTextField = textFields.get(0);
-            String placeholder = firstTextField.getAttribute("ng-reflect-placeholder");
-            System.out.println("FIRST TEXT FIELD: " + placeholder);
-            return placeholder;
-        } else {
-            System.out.println("No text fields found!");
-            return null;
-        }
-    }
-    public boolean isroleDropdwnPresent() {
-    	try {
-            return roleDropdwn.isDisplayed(); 
-        } catch (NoSuchElementException e) {
-            return false; 
-        }
-}
-    
-    	public boolean isAsteriskUserDisplayed() {
-    	    try {
-    	        return userask.isDisplayed(); // Checks if the asterisk is visible
-    	    } catch (NoSuchElementException e) {
-    	        return false; // Returns false if the element is not found
-    	        
-    	    }
-      }
-    	public boolean isAsteriskPassDisplayed(){
-    		try {
-    	        return passwrdask.isDisplayed(); // Checks if the asterisk is visible
-    	    } catch (NoSuchElementException e) {
-    	        return false; // Returns false if the element is not found
-    	        
-    	    }
-      }
-  
-  public boolean isloginBtnVisible(){
+	 
+/*	  public boolean isloginBtnVisible(){
 	  try {
-	        return LoginBtn.isDisplayed(); // Checks if the asterisk is visible
+	        return LoginBtn.isDisplayed(); 
 	    } catch (NoSuchElementException e) {
-	        return false; }// Returns false if the element is not found
+	        return false; }
 	        
 	    }
-  public void USercolor(){
-     String Ucolor= Username.getCssValue("color");
-     String expectedColor="rgba(0, 0, 0, 0.87)";
-     System.out.println("user color is :" +Ucolor);
-      
-  }
-  public void Passwordcolor(){
-     String Pcolor= Password.getCssValue("color");
-      System.out.println("pwd color is :" +Pcolor);
-      String expectedColor="rgba(0, 0, 0, 0.87)";
-      //Assert.assertTrue(Pcolor.equalsIgnoreCase(expectedColor));
-  }
+ 
   public boolean isLoginButtonCentered() {
 		String loginAlignment = LoginBtn.getCssValue("text-align");
 		String margin = LoginBtn.getCssValue("margin");
@@ -235,10 +136,9 @@ public class Login_Page {
 		return textColor.equals("rgb(128, 128, 128)") || textColor.equals("#808080");
 	}
 
-	// Verify the input text color in Password field
 	public boolean isPwdTxtGray() {
 		String textColor = Password.getCssValue("color");
-		// Check if the text color is gray (hex code #808080 or RGB value 128,128,128).
+		
 		return textColor.equals("rgb(128, 128, 128)") || textColor.equals("#808080");
 	}
 
@@ -265,13 +165,13 @@ public class Login_Page {
         // Wait for options to be visible
         wait.until(ExpectedConditions.visibilityOfAllElements(allOptions));
 
-        // Extract text from options
+       
         List<String> optionsText = new ArrayList<>();
         for (WebElement option : allOptions) {
             optionsText.add(option.getText().trim());
         }
 
-        System.out.println("Actual Dropdown Options: " + optionsText); // Debugging output
+        System.out.println("Actual Dropdown Options: " + optionsText); 
         return optionsText;
     }
 	public Map<String, String> validLogin(String credentials) {
@@ -385,20 +285,8 @@ public class Login_Page {
 	public String verifyUserTxt() {
 		return Username.getAttribute("value");
 	}
-
-	public int getHttpResponseCode(String applicationURL) {
-		//public int getHttpResponseCode(String link) {
-	        try {
-	            URL url = new URL(applicationURL);
-	            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-	            connection.setRequestMethod("GET");
-	            connection.connect();
-	            return connection.getResponseCode();
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	            return -1; // Return -1 if an exception occurs (treated as broken)
-	        }
-	    }
-	}
+*/
+	
+}
 
 
