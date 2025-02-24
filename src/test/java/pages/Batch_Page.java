@@ -32,67 +32,34 @@ public class Batch_Page {
 	WebDriver driver;
 	private JavascriptExecutor js;
 
-	@FindBy(xpath = "//input[@id='username']")
-	private WebElement usernameField;
-
-	@FindBy(xpath = "//input[@id='password']")
-	private WebElement passwordField;
-
-	@FindBy(xpath = "//div[@id='mat-select-value-1']")
-	public WebElement roleDropdwn;
-
-	@FindBy(xpath = "//*[@id=\"mat-option-0\"]/span")
-	public WebElement AdminRole;
-
-	@FindBy(xpath = "//button[@id='login']")
-	private WebElement loginButton;
-
-	@FindBy(xpath = "//span[normalize-space()='LMS - Learning Management System']")
+	@FindBy(xpath = "//mat-toolbar/span[1]")
 	private WebElement toolbar;
 
-	@FindBy(xpath = "//span[normalize-space()='Batch']")
+	@FindBy(xpath = "//mat-toolbar//button[3]")
 	private WebElement Batch;
 
-//	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-title/div[1]")
-//	private WebElement Managebatch;
-
-	@FindBy(xpath = "//button[@class='p-button-danger p-button p-component p-button-icon-only']")
+	@FindBy(xpath = "//mat-card-title//button")
 	private WebElement DeleteIconHeader;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/p-confirmdialog/div/div/div[1]/div/button")
+	@FindBy(xpath = "//p-confirmdialog/div/div/div[1]/div/button")
 	private WebElement CloseDeletePopup;
 
-	@FindBy(xpath = "//th[normalize-space()='Batch Name']")
+	@FindBy(xpath = "//table//th[2]")
 	private WebElement Batchnameicon;
 
-	@FindBy(xpath = "//th[normalize-space()='Batch Name']//i[@class='p-sortable-column-icon pi pi-fw pi-sort-alt']")
-	private WebElement Batchnamesortingicon;
-
-	@FindBy(xpath = "//th[normalize-space()='Batch Description']")
+	@FindBy(xpath = "//table//th[3]")
 	private WebElement Batchdescription;
 
-	@FindBy(xpath = "//p-sorticon[@field='batchDescription']//i[@class='p-sortable-column-icon pi pi-fw pi-sort-alt']")
-	private WebElement Batchdescriptionsorticon;
-
-	@FindBy(xpath = "//th[normalize-space()='Batch Status']")
+	@FindBy(xpath = "//table//th[4]")
 	private WebElement Batchstatus;
 
-	@FindBy(xpath = "//p-sorticon[@field='batchStatus']//i[@class='p-sortable-column-icon pi pi-fw pi-sort-alt']")
-	private WebElement Batchstatussortingicon;
-
-	@FindBy(xpath = "//th[normalize-space()='No Of Classes']")
+	@FindBy(xpath = "//table//th[5]")
 	private WebElement Noofclasses;
 
-	@FindBy(xpath = "//p-sorticon[@field='batchNoOfClasses']//i[@class='p-sortable-column-icon pi pi-fw pi-sort-alt']")
-	private WebElement Noofclassessortingicon;
-
-	@FindBy(xpath = "//th[normalize-space()='Program Name']")
+	@FindBy(xpath = "//table//th[6]")
 	private WebElement programname;
 
-	@FindBy(xpath = "//th[normalize-space()='Program Name']//i[@class='p-sortable-column-icon pi pi-fw pi-sort-alt']")
-	private WebElement programnamesortingicon;
-
-	@FindBy(xpath = "//th[normalize-space()='Edit / Delete']")
+	@FindBy(xpath = "//table//th[7]")
 	private WebElement EditDelete;
 
 	@FindBy(xpath = "//div[@class='p-checkbox-box']")
@@ -104,61 +71,73 @@ public class Batch_Page {
 	@FindBy(xpath = "//p-table//p-paginator/div")
 	private WebElement PaginationElement;
 
-	@FindBy(xpath = "//div[normalize-space()='Manage Batch']")
+	@FindBy(xpath = "//mat-card-title/div[1]")
 	private WebElement Header;
 
-	@FindBy(xpath = "//div[@class='p-d-flex p-ai-center p-jc-between ng-star-inserted']")
+	@FindBy(xpath = "//p-table/div/div[2]")
 	private WebElement Footer;
 
-	@FindBy(xpath = "//*[@id=\"filterGlobal\"]")
+	@FindBy(xpath = "//input[@id='filterGlobal']")
 	private WebElement Searchbox;
 
 	// Pagination frame locators
 
-	@FindBy(xpath = "//span[@class='p-paginator-current ng-star-inserted']")
+	@FindBy(xpath = "//p-paginator/div/span[1]")
 	private WebElement paninatorCurrenttext;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/button[1]")
+	@FindBy(xpath = "//p-paginator/div/button[1]")
 	private WebElement paninatorFirstbutton;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/button[2]")
+	@FindBy(xpath = "//p-paginator/div/button[2]")
 	private WebElement paninatorPrevious;
 
-	@FindBy(xpath = "//button[@class='p-paginator-next p-paginator-element p-link p-ripple']")
+	@FindBy(xpath = "//p-paginator/div/button[3]")
 	private WebElement paninatorNext;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/button[3]")
+	@FindBy(xpath = "//p-paginator/div/button[3]")
 	private WebElement paninatorLast;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/button[4]")
+	@FindBy(xpath = "//p-paginator/div/button[4]")
 	private WebElement paninatorFinal;
 
-	@FindBy(xpath = "//button[@class='p-paginator-last p-paginator-element p-link p-ripple ng-star-inserted']")
-	private List<WebElement> pageNumberButtons;
+	@FindBy(xpath = "//th[normalize-space()='Batch Name']//i[@class='p-sortable-column-icon pi pi-fw pi-sort-alt']")
+	private WebElement Batchnamesortingicon;
+
+	@FindBy(xpath = "//p-sorticon[@field='batchDescription']//i[@class='p-sortable-column-icon pi pi-fw pi-sort-alt']")
+	private WebElement Batchdescriptionsorticon;
+
+	@FindBy(xpath = "//p-sorticon[@field='batchStatus']//i[@class='p-sortable-column-icon pi pi-fw pi-sort-alt']")
+	private WebElement Batchstatussortingicon;
+
+	@FindBy(xpath = "//p-sorticon[@field='batchNoOfClasses']//i[@class='p-sortable-column-icon pi pi-fw pi-sort-alt']")
+	private WebElement Noofclassessortingicon;
+
+	@FindBy(xpath = "//th[normalize-space()='Program Name']//i[@class='p-sortable-column-icon pi pi-fw pi-sort-alt']")
+	private WebElement programnamesortingicon;
 
 	// Locator for the entire table
 	@FindBy(xpath = "//p-table//table/tbody/tr")
 	private List<WebElement> rows;
 
 	// Locator for the edit buttons within each row
-	@FindBy(xpath = "//body[1]/app-root[1]/app-batch[1]/div[1]/mat-card[1]/mat-card-content[1]/p-table[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/span[1]/button[1]")
+	@FindBy(xpath = "//tbody/tr[1]/td/div/span[1]/button[1]")
 	private List<WebElement> editButtons;
 
-	@FindBy(xpath = "(//span[@class='p-button-icon pi pi-pencil'])[1]")
+	@FindBy(xpath = "//tbody/tr[1]/td/div/span[1]/button[1]")
 	private WebElement BatcheditButtons;
 
 	// Locator for the delete buttons within each row
-	@FindBy(xpath = ".//button[contains(@class, 'p-button-danger')]")
+	@FindBy(xpath = "//button[contains(@class, 'p-button-danger')]")
 	private List<WebElement> deleteButtons;
 
 	// Locator for the checkboxes within each row
-	@FindBy(xpath = ".//div[@role='checkbox']")
+	@FindBy(xpath = "//div[@role='checkbox']")
 	private List<WebElement> checkboxes;
 
-	@FindBy(xpath = "//tbody/tr[1]/td[7]/div[1]/span[2]/button[1]")
+	@FindBy(xpath = "//tbody/tr[1]//button[@icon='pi pi-trash']")
 	private WebElement firstDeleteButton;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr[1]/td[1]/p-tablecheckbox")
+	@FindBy(xpath = "//tbody/tr[1]//div[@role='checkbox']")
 	private WebElement firstCheckbox;
 
 	@FindBy(xpath = "//span[normalize-space()='Yes']")
@@ -167,6 +146,7 @@ public class Batch_Page {
 	@FindBy(xpath = "//span[normalize-space()='No']")
 	private WebElement noButton;
 
+//	checkpannanum
 	@FindBy(xpath = "//tbody/tr[1]/td[7]/div[1]/span[2]/button[1]")
 	private WebElement Deletepopup;
 
@@ -175,22 +155,22 @@ public class Batch_Page {
 
 	// Add new Batch pop locators
 
-	@FindBy(xpath = "//button[normalize-space()='Add New Batch']")
+	@FindBy(xpath = "//button[@role='menuitem']")
 	private WebElement Addnewbatchbutton;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/p-dialog[1]/div/div")
+	@FindBy(xpath = "//div[@role='dialog']")
 	private WebElement PopupAddBatch;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/p-dialog[1]/div/div")
+	@FindBy(xpath = "//div[@role='dialog']")
 	private WebElement PopupEditBatch;
 
 	@FindBy(xpath = "//input[@placeholder='Select a Program name']")
 	private WebElement programnameinput;
 
-	@FindBy(xpath = "//*[@id=\"programName\"]/div/div[2]")
+	@FindBy(xpath = "//p-dropdown/div/div[2]")
 	private WebElement Programdropdowntrigger;
 
-	@FindBy(xpath = "//*[@id=\"programName\"]/div/input")
+	@FindBy(xpath = "//p-dropdown[@id='programName']/div/input")
 	private WebElement Programnamefiled;
 
 	@FindBy(css = "ul.p-dropdown-items")
@@ -202,25 +182,26 @@ public class Batch_Page {
 	@FindBy(xpath = "//input[@id='batchProg']")
 	private WebElement batchprefixfield;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/p-dialog[1]/div/div/div[2]/div[2]/input[3]")
+//	checkuponnow
+	@FindBy(xpath = "//p-dialog[1]/div/div/div[2]/div[2]/input[3]")
 	private WebElement batchNamefield;
 
-	@FindBy(xpath = "//body//app-root//input[2]")
+	@FindBy(xpath = "(//input[@id='batchName'])[1]")
 	private WebElement batchsuffixfield;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/p-dialog[1]/div/div/div[2]/div[2]/small")
+	@FindBy(xpath = "//p-dialog[1]/div/div/div[2]/div[2]/small")
 	private WebElement batcherror;
 
-	@FindBy(xpath = "//small[normalize-space()='Batch Description is required.']")
+	@FindBy(xpath = "//p-dialog[1]/div/div/div[2]/div[3]/small")
 	private WebElement DescriptionError;
 
 	@FindBy(xpath = "//small[@id='text-danger']")
 	private WebElement BatcheditDescriptionError;
 
-	@FindBy(xpath = "//div[@class='p-field ng-star-inserted']//small[@id='text-danger']")
+	@FindBy(xpath = "//small[@id='text-danger']")
 	private WebElement Noofclasseserror;
 
-	@FindBy(xpath = "//small[normalize-space()='Status is required.']")
+	@FindBy(xpath = "//small[@id='text-danger']")
 	private WebElement Statuserror;
 
 	// add batch label
@@ -251,27 +232,20 @@ public class Batch_Page {
 	@FindBy(xpath = "//span[normalize-space()='Save']")
 	private WebElement saveButton;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/p-dialog[1]/div/div/div[1]/div/button")
+	@FindBy(xpath = "//p-dialog[1]/div/div/div[1]/div/button")
 	private WebElement closeButton;
 
-	@FindBy(xpath = "//body[1]/app-root[1]/app-batch[1]/p-dialog[1]/div[1]/div[1]/div[2]/div[4]/div[2]/p-radiobutton[1]/div[1]/div[2]")
+	@FindBy(xpath = "//div[@role='dialog']//div//div[2]//p-radiobutton[1]//div[1]//div[2]")
 	private WebElement Activeradiobutton;
 
 	@FindBy(xpath = "//div[contains(text(),'INACTIVE')]//div[2]")
 	private WebElement InActiveradiobutton;
 
-	// Row locators
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/thead/tr/th[1]/p-tableheadercheckbox/div/div[2]")
-	private WebElement checkbox1;
-
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr[1]/td[1]/p-tablecheckbox/div/div[2]")
+	@FindBy(xpath = "//tbody/tr[1]//p-tablecheckbox")
 	private WebElement checkbox2;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr[2]/td[1]/p-tablecheckbox/div/div[2]")
+	@FindBy(xpath = "//tbody/tr[2]//p-tablecheckbox")
 	private WebElement checkbox3;
-
-	@FindBy(xpath = "//div[contains(@class, 'ng-tns-c168-6 p-dialog-content')]")
-	private WebElement batchDetailsPopup;
 
 	@FindBy(xpath = "//div[text()='Successful']")
 	private WebElement successMessage;
@@ -288,20 +262,19 @@ public class Batch_Page {
 	@FindBy(xpath = "(//input[@id='filterGlobal'])[1]")
 	private WebElement searchTextBox;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr/td[2]")
-
+	@FindBy(xpath = "//tbody/tr[1]/td[2]")
 	private WebElement BatchNameFirstRecord;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr[1]/td[3]")
+	@FindBy(xpath = "//tbody/tr[1]/td[3]")
 	private WebElement BatchDescFirstRecord;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr[1]/td[4]")
+	@FindBy(xpath = "//tbody/tr[1]/td[4]")
 	private WebElement BatchStatusFirstRecord;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/span[1]")
+	@FindBy(xpath = "//p-paginator/div/span[1]")
 	private WebElement paginationTextwithZeroRecord;
 
-	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/div[1]")
+	@FindBy(xpath = "//mat-card-content/p-table/div/div[1]")
 	private WebElement searchresultbatch;
 
 	@FindBy(xpath = "/html/body/app-root/app-batch/div/mat-card/mat-card-content/p-table/div/p-paginator/div/span[1]")
@@ -318,14 +291,6 @@ public class Batch_Page {
 		this.actions = context.getActions();
 		this.js = (JavascriptExecutor) this.driver;
 
-	}
-
-	public void Login(String username, String password) {
-		wait.until(ExpectedConditions.visibilityOf(usernameField)).sendKeys(username);
-		wait.until(ExpectedConditions.visibilityOf(passwordField)).sendKeys(password);
-		wait.until(ExpectedConditions.elementToBeClickable(roleDropdwn)).click();
-		wait.until(ExpectedConditions.elementToBeClickable(AdminRole)).click();
-		wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
 	}
 
 	public void navigateToBatch() {
@@ -432,13 +397,6 @@ public class Batch_Page {
 		return checkboxheader.isDisplayed();
 	}
 
-	// Method to check if sorting is enabled
-	public boolean areSortingIconsDisplayed() {
-		return Batchnamesortingicon.isDisplayed() && Batchdescriptionsorticon.isDisplayed()
-				&& Batchstatussortingicon.isDisplayed() && Noofclassessortingicon.isDisplayed()
-				&& programnamesortingicon.isDisplayed();
-	}
-
 	public boolean isHeaderTextCorrect(String expectedText) {
 		return Header.getText().trim().equals(expectedText);
 	}
@@ -487,6 +445,13 @@ public class Batch_Page {
 		} else if (button.equalsIgnoreCase("cancel")) {
 			cancelButton.click();
 		}
+	}
+
+	// Method to check if sorting is enabled
+	public boolean areSortingIconsDisplayed() {
+		return Batchnamesortingicon.isDisplayed() && Batchdescriptionsorticon.isDisplayed()
+				&& Batchstatussortingicon.isDisplayed() && Noofclassessortingicon.isDisplayed()
+				&& programnamesortingicon.isDisplayed();
 	}
 
 	// Verify all field
@@ -822,21 +787,21 @@ public class Batch_Page {
 
 	// Check if 'Next' button is enabled
 	public boolean isNextButtonEnabled() {
-		return !paninatorNext.getAttribute("class").contains("p-disabled");
+		return !paninatorNext.getDomAttribute("class").contains("p-disabled");
 	}
 
 	public boolean isFinalButtonEnabled() {
-		return !paninatorFinal.getAttribute("class").contains("p-disabled");
+		return !paninatorFinal.getDomAttribute("class").contains("p-disabled");
 	}
 
 	// Check if 'Previous' button is enabled
 	public boolean isPrevButtonEnabled() {
-		return !paninatorPrevious.getAttribute("class").contains("p-disabled");
+		return !paninatorPrevious.getDomAttribute("class").contains("p-disabled");
 	}
-
+		
 	// Check if 'First' button is enabled
 	public boolean isFirstButtonEnabled() {
-		return !paninatorFirstbutton.getAttribute("class").contains("p-disabled");
+		return !paninatorFirstbutton.getDomAttribute("class").contains("p-disabled");
 	}
 
 	// Method to get current pagination text
@@ -847,15 +812,6 @@ public class Batch_Page {
 	public boolean hasNextPageResults() {
 		// Return true if there are results; false otherwise
 		return !rows.isEmpty();
-	}
-
-	private void doubleClick(WebElement element) {
-		Actions actions = new Actions(driver); // Create an Actions instance
-		actions.moveToElement(element).doubleClick().perform(); // Move to the element and double-click
-	}
-
-	private void waitForResultsToLoad() {
-		wait.until(ExpectedConditions.visibilityOfAllElements(rows));
 	}
 
 	// searchbox
@@ -990,12 +946,7 @@ public class Batch_Page {
 		return title;
 	}
 
-	public String elementGetText(WebElement element) {
-		String Readtext = element.getText();
-		return Readtext;
-	}
-
-	public String batchFirstName() {		
+	public String batchFirstName() {
 		return BatchNameFirstRecord.getText();
 	}
 
