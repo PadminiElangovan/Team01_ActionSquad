@@ -98,6 +98,10 @@ public class TestContext {
 		return program;
 	}
  
+	public Batch_Page getBatch() {
+		return Batch;
+
+	}
 
 	public ExcelReader getExcelReader() {
 	    return excelReader;
