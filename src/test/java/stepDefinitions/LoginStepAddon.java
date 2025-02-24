@@ -89,8 +89,8 @@ public void admin_enter_valid_credentials_with_student_role_selection_and_clicks
 	Login.AdminRoleStudent();
 }
 
-@When("Admin gives the correct LMS portal URL")
-public void admin_gives_the_correct_lms_portal_url() {
+@When("Admin gives the correct portal URL")
+public void admin_gives_the_correct_portal_url() {
 	context.getApplicationURL();
 }
 

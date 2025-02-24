@@ -91,7 +91,7 @@ Given The browser is open
     Examples:
       | credentials  | expected_result                         |
       | valid       | land on home page                       |
-      | invalid     | Invalid username and password.Please try again |
+      | invalid     | Invalid test case input |
       | invalidpassword  | Invalid test case input |
       | invalidusername    | Invalid test case input |
 @loginbtnkeybord
