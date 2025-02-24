@@ -89,11 +89,11 @@ Given The browser is open
     Then Admin should "<expected_result>"
 
     Examples:
-      | credentials  | expected_result                         |
-      | valid       | land on home page                       |
-      | invalid     | Invalid test case input |
-      | invalidpassword  | Invalid test case input |
-      | invalidusername    | Invalid test case input |
+      | credentials    | expected_result                               |
+      | valid          | land on home page                             |
+      | invalid        | Invalid username and password Please try again|
+      | invalidusername| Please enter your user name                   |
+      | invalidpassword| Please enter your password                    |
 @loginbtnkeybord
   Scenario: Verify login button action through keyboard
     Given Admin is on login page
