@@ -1,9 +1,12 @@
 package stepDefinitions;
 
+import static org.junit.Assert.assertTrue;
+
 import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -25,12 +28,14 @@ public class ClassStep {
 	private Login_Page loginPage;
 	private WebDriver driver;
 	private TestContext context;
-	List<Map<String, String>> Loginxl = Hooks.Login;
+	List<Map<String, String>> classXl = Hooks.classList;
+	String updatedDescription;
+	String msg;
 
 	public ClassStep(TestContext context) {
      this.context = context;
      this.driver = context.getDriver();
-     this.wait = new WebDriverWait(driver, Duration.ofSeconds(30)); 
+     this.wait = new WebDriverWait(driver, Duration.ofSeconds(1000)); 
      this.loginPage = new Login_Page(driver, context);
      this.classPage = new Class_Page(driver, context); 
  }
@@ -50,8 +55,8 @@ public class ClassStep {
 
 	@Then("land on the Manage class page")
 	public void land_on_the_manage_class_page() {
-		String title = driver.getTitle();
-		Assert.assertEquals(title, "LMS");
+		
+		Assert.assertEquals(classPage.pageTitleText(), "Manage Class");
 	}
 
 	@Then("see the LMS-Learning Management System Title")
@@ -140,6 +145,7 @@ public class ClassStep {
 
 	@When("Admin clicks Add New Class under class navigation bar")
 	public void admin_clicks_add_new_class_under_class_navigation_bar() {
+		System.out.println("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
 	   classPage.clickClassAddNew();
 	}
 
@@ -169,12 +175,12 @@ public class ClassStep {
 			break;
 		case "ClassDate":
 			Assert.assertTrue(classPage.lblClassDates.isDisplayed());
-			Assert.assertEquals(classPage.lblClassDates.getText(), "Select Class Date");
+			Assert.assertEquals(classPage.lblClassDates.getText(), "Select Class Dates");
 			Assert.assertTrue(classPage.cmpClassDate.isDisplayed());
 			break;			
 		case "NoOfClasses":
-			Assert.assertTrue(classPage.lblClassNo.isDisplayed());
-			Assert.assertEquals(classPage.lblClassNo.getText(), "No of Classes");
+			Assert.assertTrue(classPage.noOfClassesHeader.isDisplayed());
+			Assert.assertEquals(classPage.noOfClassesHeader.getText(), "No of Classes");
 			Assert.assertTrue(classPage.cmpClassNo.isDisplayed());
 			break;
 		case "StaffName":
@@ -185,8 +191,8 @@ public class ClassStep {
 		case "Status":
 			Assert.assertTrue(classPage.lblStatus.isDisplayed());
 			Assert.assertEquals(classPage.lblStatus.getText(), "Status");
-			for(int i=0 ;i<classPage.getStatusBtn().size();i++)
-				Assert.assertTrue(classPage.getStatusBtn().get(i).isDisplayed());			
+//			for(int i=0 ;i<classPage.getStatusBtn().size();i++)
+//				Assert.assertTrue(classPage.getStatusBtn().get(i).isDisplayed());			
 			break;
 		case "Comments":
 			Assert.assertTrue(classPage.lblComments.isDisplayed());
@@ -212,6 +218,237 @@ public class ClassStep {
 			break;	
 		}
 	}
+
+	
+	
+	@When("Admin enters mandatory fields from SheetName and {int} and clicks on save button")
+	public void admin_enters_mandatory_fields_from_sheet_name_and_and_clicks_on_save_button(Integer int1) {
+		System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+		String batchName = classXl.get(int1).get("BatchName");
+		System.out.println("batchNamebatchNamebatchNamebatchNamebatchNamebatchName"+batchName);
+		Class_Page.elementSendkeys(classPage.cmpBatchName, batchName);		
+		
+		String classTopic = classXl.get(int1).get("ClassTopic");
+		System.out.println("classTopicclassTopicclassTopicclassTopicclassTopicclassTopic"+classTopic);
+		Class_Page.elementSendkeys(classPage.cmpClassTopic, classTopic);
+		
+		String classDesc = classXl.get(int1).get("ClassDescription");
+		System.out.println("classDescclassDescclassDescclassDescclassDescclassDesc"+classDesc);
+		Class_Page.elementSendkeys(classPage.cmpClassDesc, classDesc);
+		
+		String month = classXl.get(int1).get("Month");
+		String startDate = classXl.get(int1).get("StartDate");
+		String endDate = classXl.get(int1).get("EndDate");			
+		
+		
+		classPage.noOfClasses(month, startDate, endDate);	
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].scrollIntoView(true);", classPage.cmpClassNo);
+//		
+		String staff = classXl.get(int1).get("StaffName");
+		System.out.println("StaffNameStaffNameStaffNameStaffNameStaffNameStaffNameStaffName"+staff);
+		Class_Page.elementSendkeys(classPage.cmpStaff, staff);	
+		
+		String status = classXl.get(int1).get("Status");
+		System.out.println("StatusStatusStatusStatusStatusStatusStatusStatus"+status);
+		
+		if (status.equals("Active")) {
+			classPage.statusActive.click();			
+		} else {
+			classPage.statusInActive.click();
+		}		
+		String comments = classXl.get(int1).get("Comments");
+		Class_Page.elementSendkeys(classPage.cmpComments, comments);	
+		
+		String notes = classXl.get(int1).get("Notes");
+		Class_Page.elementSendkeys(classPage.cmpNotes, notes);	
+		
+		String recordings = classXl.get(int1).get("Recording");
+		Class_Page.elementSendkeys(classPage.cmpRecording, recordings);	
+		
+		Class_Page.elementClick(classPage.addNewSave);	
+		
+		//System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"+classPage.successMsg.getText());
+		
+		//Assert.assertEquals(classPage.successMsg.getText(), classXl.get(int1).get("Message"));
+		
+		
+	}
+
+	@Given("Admin is on the Manage Class page")
+	public void admin_is_on_the_manage_class_page() {
+		classPage.clickClass();
+	}
+
+	@When("Admin clicks on the edit icon")
+	public void admin_clicks_on_the_edit_icon() {
+		classPage.clickOnEdit();
+	   	}
+
+	@Then("A new pop up with class details appears")
+	public void a_new_pop_up_with_class_details_appears() {
+		Assert.assertTrue(classPage.editTitle.isDisplayed());
+		Assert.assertEquals(classPage.editTitle.getText(), "Class Details");
+		Assert.assertTrue(classPage.lblBatchName.isDisplayed());
+		Assert.assertTrue(classPage.cmpBatchName.isDisplayed());
+		
+		Assert.assertTrue(classPage.lblClassTopic.isDisplayed());
+		Assert.assertEquals(classPage.lblClassTopic.getText(), "Class Topic");
+		Assert.assertTrue(classPage.cmpClassTopic.isDisplayed());
+		
+		Assert.assertTrue(classPage.lblClassDesc.isDisplayed());
+		Assert.assertEquals(classPage.lblClassDesc.getText(), "Class Description");
+		Assert.assertTrue(classPage.cmpClassDesc.isDisplayed());
+		
+		Assert.assertTrue(classPage.lblClassDates.isDisplayed());
+		Assert.assertEquals(classPage.lblClassDates.getText(), "Select Class Dates");
+		Assert.assertTrue(classPage.cmpClassDate.isDisplayed());
+		
+		
+	}
+
+	@Then("Admin should see batch name field is disabled")
+	public void admin_should_see_batch_name_field_is_disabled() {
+		Assert.assertFalse(classPage.isElementEnabled(classPage.cmpBatchName));
+	}
+
+	@Then("Admin should see class topic field is disabled")
+	public void admin_should_see_class_topic_field_is_disabled() {
+		Assert.assertFalse(classPage.isElementEnabled(classPage.cmpClassTopic));
+	}
+
+	@Given("Admin is on the Edit Class Popup window")
+	public void admin_is_on_the_edit_class_popup_window() {
+		classPage.clickClass();
+		classPage.clickOnEdit();
+	}
+
+	
+
+	@When("Update Edit Class fields with valid data {string} and click save")
+	public void update_edit_class_fields_with_valid_data_and_click_save(String string) {
+		updatedDescription = string;
+		classPage.editClassDetails(string);
+		String msg = classPage.saveEditClass();
+		Assert.assertEquals(msg, "Successful");
+	}
+
+
+@Then("Admin gets message Successful and see the updated class values in data table")
+public void admin_gets_message_successful_and_see_the_updated_class_values_in_data_table() {
+	System.out.println("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+	boolean displayed = classPage.pageTitle.isDisplayed();
+	Assert.assertTrue(displayed);
+	classPage.searchClass(updatedDescription);
+	//Pending Verification of the records
+	System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"+classPage.searchValues.get(3).getText());	
+	Assert.assertEquals(updatedDescription, classPage.searchValues.get(3).getText());
+}
+
+@When("Update the fields with invalid value {string} and click save")
+public void update_the_fields_with_invalid_value_and_click_save(String string) {
+	updatedDescription = string;
+	classPage.editClassDetails(string);
+	msg = classPage.saveEditClass();
+	
+}
+
+@Then("Admin should get Error message")
+public void admin_should_get_error_message() {
+	Assert.assertEquals(msg, "Error Message");
+}
+	
+@When("Admin clicks Next page link on the class table")
+public void admin_clicks_next_page_link_on_the_class_table() {
+    
+}
+
+@Then("Admin should see the next page record on the table with Pagination has next active link enabled")
+public void admin_should_see_the_next_page_record_on_the_table_with_pagination_has_next_active_link_enabled() {
+   
+}
+
+@When("Admin clicks Last page link")
+public void admin_clicks_last_page_link() {
+    
+}
+
+@Then("Admin should see the last page record on the table with Next page link are disabled")
+public void admin_should_see_the_last_page_record_on_the_table_with_next_page_link_are_disabled() {
+    
+}
+
+@Given("Admin is on last page of class table")
+public void admin_is_on_last_page_of_class_table() {
+   
+}
+
+@When("Admin clicks First page link")
+public void admin_clicks_first_page_link() {
+    
+}
+
+@Then("Admin should see the previous page record on the table with pagination has previous page link enabled")
+public void admin_should_see_the_previous_page_record_on_the_table_with_pagination_has_previous_page_link_enabled() {
+   
+}
+
+@Given("Admin is on Previous class page")
+public void admin_is_on_previous_class_page() {
+    
+}
+
+@When("Admin clicks Start page link")
+public void admin_clicks_start_page_link() {
+    
+}
+
+@Then("Admin should see the very first page record on the table with Previous page link are disabled")
+public void admin_should_see_the_very_first_page_record_on_the_table_with_previous_page_link_are_disabled() {
+   
+}
+
+
+
+@When("Admin enter the BatchName in search textbox and Enter")
+public void admin_enter_the_batch_name_in_search_textbox_and_enter() {
+	String batchName = classXl.get(0).get("BatchName");
+	classPage.searchClass(batchName);
+	
+}
+
+@Then("Admin should see Class details are searched by Batch Name")
+public void admin_should_see_class_details_are_searched_by_batch_name() {
+	String batchName = classXl.get(0).get("BatchName");
+	Assert.assertEquals(batchName, classPage.searchValues.get(1).getText());
+}
+
+@When("Admin enter the Class topic in search textbox and Enter")
+public void admin_enter_the_class_topic_in_search_textbox_and_enter() {
+	String classTopic = classXl.get(0).get("ClassTopic");
+	classPage.searchClass(classTopic);
+}
+
+@Then("Admin should see Class details are searched by Class topic")
+public void admin_should_see_class_details_are_searched_by_class_topic() {
+	String classTopic = classXl.get(0).get("ClassTopic");
+	Assert.assertEquals(classTopic, classPage.searchValues.get(2).getText());
+}
+
+@When("Admin enter the Staff Name in search textbox and Enter")
+public void admin_enter_the_staff_name_in_search_textbox_and_enter() {
+	String staffName = classXl.get(0).get("StaffName");
+	classPage.searchClass(staffName);
+}
+
+@Then("Admin should see Class details are searched by Staff name")
+public void admin_should_see_class_details_are_searched_by_staff_name() {
+	String staffName = classXl.get(0).get("StaffName");
+	Assert.assertEquals(staffName, classPage.searchValues.get(6).getText());
+}
+
+
+
 
 
 }

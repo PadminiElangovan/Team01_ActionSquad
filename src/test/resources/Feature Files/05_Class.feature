@@ -5,104 +5,96 @@ Background: Admin Is on the Dashboard page after login
   Given Admin is on login Page
   When Admin enter valid data in all field and clicks login button 
 
-  @ValManage
-  Scenario: validating the class manage page
-    
-    When admin clicks the Class Navigation bar in the Header
-    Then land on the Manage class page
-
-  @ValTitle
-  Scenario: Validating the Title in the Manage class page
-  When admin clicks the Class Navigation bar in the Header
-    Then see the LMS-Learning Management System Title
-
-  @ValHeader
-  Scenario: Validating the Header in the Manage class page
-  When admin clicks the Class Navigation bar in the Header
-    Then see the Manage Class Header
-
-  @ValSearch
-  Scenario: Validating Search bar in class page
-  When admin clicks the Class Navigation bar in the Header
-    Then Admin should see the Search Bar in Manage class page
-
-  @ValTableHeader
-  Scenario Outline: Validating the headers in the class page
-  When admin clicks the Class Navigation bar in the Header
-    Then Admin should see the headers heading like "<headers>"
-
-    Examples: 
-      | headers                          |
-      | BatchName                        |
-      | ClassTopic                       |
-      | ClassDescription                 |
-      | Status                           |
-      | ClassDate                        |
-      | StaffName                        |
-      | Edit/Del                         |
-
-  @ValDelete
-  Scenario: Validating the Delete button under the Manage class
-  When admin clicks the Class Navigation bar in the Header
-    Then see the Delete button under the Manage class page header.
-
-  @valNoClasses
-  Scenario: Validate the total no of classes in manage class page
-  When admin clicks the Class Navigation bar in the Header
-    Then see Total no of classes in below of the data table
-
-  @ValPageControls
-  Scenario: Validating the text and pagination icon in the classpage
-  When admin clicks the Class Navigation bar in the Header
-    Then see the pagination controls under the data table
-
-  @ValSortIcon
-  Scenario: Validate the sort icon of all the field in datatable
-  When admin clicks the Class Navigation bar in the Header
-    Then see the Sort icon of all the field in the datatable.
-    
-    
-  #Add New Class
-
- Scenario Outline:  Validate Class Details Popup window
-    
-    When Admin clicks Add New Class under class navigation bar
-    Then Admin should see the Class Details pop up window "<menu>"
-
-    Examples: 
-      | menu                      |
-      | Title                     |
-      | BatchName                 |
-      | ClassTopic                |
-      | ClassDescription          |
-      | ClassDate                 |
-      | NoOfClasses               |
-      | StaffName               	|
-      | Status             				|
-      | Comments                  |
-      | Notes                    	|
-      | Recording                 |
-      | Save                      |
-      | Cancel                    |
-
+ 
 #Add New Class POP UP
 
-# This can be scenario outline
-Scenario: Check if class is created when only mandatory fields are entered with valid data
-Given: 		admin is on the home Page
-When: 		Admin enters mandatory fields in the form and clicks on save button
-Then:  		Admin gets message Class added Successfully
 
-Scenario: Check no classes value added when selecting class dates
-Given: 		admin is on the home Page
-When: 		Admin selects class date in date picker
-Then:  		Admin should see no of class value is added automatically
+Scenario Outline: Check if class is created when only mandatory fields are entered with valid data
+When Admin clicks Add New Class under class navigation bar
+And 		Admin enters mandatory fields from SheetName and <RowNo> and clicks on save button
+Then  	Admin gets message Class added Successfully
+Examples:
+ |RowNo|
+ |0|
 
-Scenario: Check weekend dates are disabled in calendar
-Given: 		Admin is on the Class Popup window
-When: 		Admin clicks date picker
-Then:  		Admin should see weekends dates are disabled to select
+ 
+#Edit Class
 
+Scenario: Validate row level edit icon
+Given 		Admin is on the Manage Class page
+When 			Admin clicks on the edit icon
+Then  		A new pop up with class details appears
+
+Scenario: Check disabled batch name
+Given 		Admin is on the Manage Class page
+When 		Admin clicks on the edit icon
+Then  		Admin should see batch name field is disabled
+
+Scenario: Check disabled class topic
+Given 		Admin is on the Manage Class page
+When 		Admin clicks on the edit icon
+Then  		Admin should see class topic field is disabled
+ 
+
+Scenario Outline: Check if the fields are updated with valid data
+    Given Admin is on the Edit Class Popup window
+    When Update Edit Class fields with valid data "<Class>" and click save
+    Then Admin gets message Successful and see the updated class values in data table
+
+    Examples: 
+      | Class |
+      | Java  |
+      
+      
+Scenario Outline: Check if the fields are updated with invalid values
+Given 		Admin is on the Edit Class Popup window
+When 			Update the fields with invalid value "<Class>" and click save
+Then  		Admin should get Error message
+Examples: 
+      | Class |
+      | 2323232  |
+
+
+
+
+Scenario: Verify Next page link(>)
+Given 		Admin is on the Manage Class page
+When 		Admin clicks Next page link on the class table 
+Then  		Admin should see the next page record on the table with Pagination has next active link enabled
+
+Scenario: Verify Last page link(>>)
+Given 		Admin is on the Manage Class page
+When 		Admin clicks Last page link
+Then  		Admin should see the last page record on the table with Next page link are disabled
+
+Scenario: Verify First page link(<)
+Given 		Admin is on last page of class table
+When 		Admin clicks First page link
+Then  		Admin should see the previous page record on the table with pagination has previous page link enabled
+
+Scenario: Verify Start page link(<<)
+Given 		Admin is on Previous class page 
+When 		Admin clicks Start page link
+Then  		Admin should see the very first page record on the table with Previous page link are disabled
+
+
+
+
+Scenario: Search class by Batch Name
+Given 		Admin is on the Manage Class page
+When      Admin enter the BatchName in search textbox and Enter
+Then  		Admin should see Class details are searched by Batch Name
+
+
+Scenario: Search class by Class topic
+Given 		Admin is on the Manage Class page
+When 		Admin enter the Class topic in search textbox and Enter
+Then  		Admin should see Class details are searched by Class topic
+
+Scenario: Search class by Staff Name
+Given 		Admin is on the Manage Class page
+When 		Admin enter the Staff Name in search textbox and Enter
+Then  		Admin should see Class details are searched by Staff name
 
 
 

@@ -1,9 +1,11 @@
 package pages;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.Point;
@@ -32,6 +34,10 @@ public class BasePage {
 		element.click();
 	 }
    	
+   	public void waitUntilButtonIsClickable(WebElement button) {
+        wait.until(ExpectedConditions.elementToBeClickable(button));
+    }
+
    	public static void elementSendkeys(WebElement element, String data) {
 		element.sendKeys(data);
 	 }
@@ -60,6 +66,22 @@ public class BasePage {
 			return false;
 		}
 	}
+	
+	public boolean isSortingbuttonDisplayed(List<WebElement> elements) {
+		boolean flag = true;
+		if (elements.size() > 1) {
+			for (int i = 1; i < elements.size(); i++) {
+				WebElement element = elements.get(i);
+				if (!element.isDisplayed()) {
+					flag = false;
+					break; }
+			}
+		} else {
+			flag = false;
+		}
+		return flag;
+	}
+	
 	
 	public  boolean IsAlertPresent() {
     	try {
@@ -94,5 +116,6 @@ public class BasePage {
          System.out.println("An unexpected exception occurred: " + e.getMessage());
      }
  }
+
 
 }
