@@ -1,5 +1,6 @@
 package pages;
 
+
 import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -112,6 +113,6 @@ public class BasePage {
          System.out.println("An unexpected exception occurred: " + e.getMessage());
      }
  }
-
+   
 
 }
