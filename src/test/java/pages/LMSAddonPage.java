@@ -44,6 +44,7 @@ public class LMSAddonPage {
 	@FindBy(xpath = "//tbody/tr[1]//button[@icon='pi pi-trash']") public WebElement DeleteR1Icon;
 	
 	@FindBy(xpath = "//tbody/tr[1]/td[2]") public WebElement DeleteR1Data;
+	@FindBy(xpath = "//tbody/tr[1]/td[3]") public WebElement DeleteClassData;
 	@FindBy(xpath = "//div/i") public WebElement WarningIcon;
 	@FindBy(xpath = "//p-confirmdialog/div/div/div[2]/span") public WebElement PrgDeleteMsg;
 	

@@ -33,10 +33,11 @@ Feature: Additional Login Functionality
     
  	@LoginPgTitle
   Scenario: Verify LMS Login page title
-    When Admin gives the correct LMS portal URL
+    When Admin gives the correct portal URL
     Then Admin should see LMS Login page title 
     
   @ForgotPswdLink
   Scenario: Verify Forgot Password Link
-    When Admin gives the correct LMS portal URL
+    When Admin gives the correct portal URL
     Then Admin should see Forgot Password Link
+    
