@@ -4,13 +4,13 @@ Feature: Batch Page Navigation
   Given Admin is on login Page
   When  Admin enter valid data in all field and clicks login button
     
-  @Batch_01
+  @BatchNavigate
   Scenario: Verify Admin Navigate to Batch page successfully
     Given Admin is on LMS Homepage
     When Admin Clicks on the Batch menu from the header
     Then Admin should be in the Manage Batch Page
 
-  @Batch_02
+  @BatchElementValidation
   Scenario Outline: Batch Page Elements Validation
     Given Admin is on the home page
     When Admin Clicks on the Batch menu from the header
@@ -29,7 +29,7 @@ Feature: Batch Page Navigation
       | checkbox in the datatable header row                                                                     |
       | sort icon next to all datatable headers                                                                  |
 
-  @Batch_03
+  @SubMenuVerify
   Scenario Outline: Verify sub menu displayed in batch menu bar
     Given Admin is on batch page
     When Admin clicks "Add New Batch" under batch menu bar
@@ -46,13 +46,13 @@ Feature: Batch Page Navigation
       | Cancel Button             |
       | close                     |
 
-  @Batch_04
+  @BatchNameprefix
   Scenario: Validate batchname prefix selected program name
     Given Admin is on the Batch Details Pop Up Window
     When Admin selects program name present in the dropdown
     Then Admin should see selected program name in the batch name prefix box
 
-  @Batch_05
+  @BatchNameSuffix
   Scenario Outline: Validate batch name suffix box should accept only numbers
     Given Admin is on the Batch Details Pop Up Window
     When Admin enters alphabets and alphanumeric and special character in "<BatchName>" suffix box
@@ -64,121 +64,121 @@ Feature: Batch Page Navigation
       | BG5       | This field accept only numbers and max 5 count. |
       | $$        | This field accept only numbers and max 5 count. |
 
-  @Batch_06
+  @PrefixNonedit
   Scenario: Validate batch name prefix box is not editable
     Given Admin is on the Batch Details Pop Up Window
     When Admin enters alphabets in batch name prefix box
     Then Admin should see empty text box
 
-  @Batch_07
+  @Mandatoryfield
   Scenario: Validate input data only for mandatory fields
     Given Admin is on the Batch Details Pop Up Window
     When Admin enters the data only to the mandatory fields and clicks save button
     Then Admin should get a successful message "Batch created successfully"
 
-  @Batch_08
+  @MissingField
   Scenario: validate input data missing for mandatory fields
     Given Admin is on the Batch Details Pop Up Window
     When Admin leaves blank one of the mandatory fields
     Then Admin should get a error message on the respective mandatory field
 
-  @Batch_09
+  @CancelButton
   Scenario: validate cancel button in Batch details pop up
     Given Admin is on the Batch Details Pop Up Window
     When Admin enters the valid data to all the mandatory fields and click cancel button
     Then Admin can see the batch details popup closes without creating any batch
 
-  @Batch_10
+  @CloseButton
   Scenario: validate close icon on the batch details pop up
     Given Admin is on the Batch Details Pop Up Window
     When Admin clicks on the close icon
     Then Admin can see batch details pop up closes
 
-  @Batch_11
+  @EditIcon
   Scenario: Validate Edit icon feature in any row
     Given Admin is on the Batchs page
     When Admin clicks the edit icon
     Then Admin should see the Batch details pop up window
    
-   @Batch_12 
+   @BatchName_edit 
     Scenario: Validate program name value is disabled to edit
     Given Admin is on the Batchs page
     When Admin clicks the edit icon
     Then Admin should see Program name and Batch name value field is disabled for editing
     
-  @Batch_13
+  @Batch_Description
    Scenario: Validate editing description and No. of classes fields with invalid data in the pop up
     Given Admin is on the Batchs page
     When Admin Updates any fields with invalid data and click save button
     Then Admin should get a error message under the respective field
     
-   @Batch_14
+   @SaveButton
    Scenario: validate save button in Batch details pop up 
     Given Admin is on the Batchs page
     When Admin enters the valid data to all the mandatory fields and click save button
     Then Admin should get a successful message for editing the batch
     
-  @Batch_15
+  @EditCancel
   Scenario: validate cancel button in Batch details pop up  
     Given Admin is on the Batchs page
     When Admin enters the valid data in edit btach to all the mandatory fields and click cancel button
     Then Admin can see the batch details popup closes without editing the batch
     
- @Batch_16
+ @EditClose
  Scenario:validate close button in Batch details pop up    
     Given Admin is on the Batchs page
     When Admin enters the valid data to all the mandatory fields and click close button
     Then Admin can see the batch details popup closes without editing the batch
 
-  @Batch_17
+  @EditDelete
   Scenario: validate delete Icon on any row
     Given Admin is on the Batchs page
     When Admin clicks the delete Icon on any row
     Then Admin should see the confirm alert box with yes and no button
 
-  @Batch_18
+  @DeleteYes
   Scenario: Validate yes button on the confirm alert box
     Given Admin is on the batch confirm popup page
     When Admin clicks on the delete icon and click yes button
     Then Admin should see the successful message and the batch should be deleted
 
-  @Batch_19
+  @DeleteNo
   Scenario: validate no button on the confirm alert box
     Given Admin is on the batch confirm popup page
     When Admin clicks on the delete icon and click no button
     Then Admin should see the alert box closed and the batch is not deleted
 
-  @Batch_20
+  @DeleteClose
   Scenario: validate close Icon on the alert box
     Given Admin is on the batch confirm popup page
     When Admin clicks on the close icon on deletewindow
     Then Admin should see the alert box closed
 
-  @Batch_21
+  @SingleDelete
   Scenario: Validate single row delete with checkbox
     Given Admin is on the batch page
     When Admin clicks on the delete icon under the Manage batch header
     Then Admin should see the box get highlighted
 
-  @Batch_22
+  @MSingle_Checkbox
   Scenario: Validate single row delete with checkbox
     Given Admin is on the batch page
     When Admin Should click the Enabled Delete icon on the header
     Then Admin should see the Delete confirmation popup box
 
-  @Batch_23
+  @SingleRow
   Scenario: Validate single row delete with checkbox
     Given Admin is on the batch page
     When Admin clicks on the yes button
     Then The respective row in the table should be deleted
 
-  @Batch_24
+  @MultipleRow
   Scenario: Validate multiple row delete with checkbox
     Given Admin is on the batch page
     When Admin clicks on the delete icon under the Manage batch header multiple delete
     Then The respective row in the table should be deleted in batch module
 
-  @Batch_25
+  @Pagination
   Scenario Outline: Validate pagination links
     Given Admin is on the batch page
     When Admin clicks the "<pageLink>" link on the data table Batch module
@@ -191,7 +191,7 @@ Feature: Batch Page Navigation
       | Previous | previous results                  |
       | First    | first results                     |
 
-  @Batch_26
+  @search
   Scenario Outline: validate search box functionality
     Given Admin is on the batch page
     When Admin enters the "<SearchData>" in the search text box in the batch module
@@ -201,7 +201,7 @@ Feature: Batch Page Navigation
       | SearchData | BatchName | BatchDesc  | status |
       | Rose6      | Rose6     | Roseflower | Active |
 
-  @Batch_27
+  @InvalidateSearch
   Scenario Outline: invalidate search box functionality
     Given Admin is on the batch page
     When Admin enters invalid "<SearchData>" in the search text box in the batch module
@@ -211,7 +211,7 @@ Feature: Batch Page Navigation
       | SearchData |
       | Ro789      |
 
-  @Batch_28
+  @PartialSearch
   Scenario Outline: Partial Batchname search box functionality
     Given Admin is on the batch page
     When Admin enters PartialBatch name "<SearchData>" in the search text box in the batch module
@@ -221,7 +221,7 @@ Feature: Batch Page Navigation
       | SearchData |
       | rose       |
 
-  @Batch_29
+  @Logout
   Scenario: Validate logout option in the header is visible and enabled from the batch page
     Given Admin is on the batch page
     When Admin clicks on the logout button
