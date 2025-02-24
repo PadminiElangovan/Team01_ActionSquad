@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,7 +46,7 @@ public class Login_Page {
 	@FindBy(xpath = "//label[@for='username']/span[1]")public WebElement usernameLabel;
 
     @FindBy(xpath ="//label[@for='password']/span[1]")public WebElement passwordLabel;
-
+    @FindBy(xpath ="//*[@id='main-frame-error']") public WebElement applicationerror;
     @FindBy(css =("img[class='images']")) public WebElement logo;
     @FindBy(xpath=("//*[text()='Please login to LMS application']")) public WebElement LMStext ;
     @FindBy(xpath = "//input[@id='password' or @id='username']")public List<WebElement> textFields;
@@ -86,6 +86,17 @@ public class Login_Page {
 		 boolean status = ErrMsg.isEmpty();
 		 return status;
 	}
+	 public String applicationerrmsg() {
+		    
+		     
+		        wait.until(ExpectedConditions.visibilityOf(applicationerror));
+
+		        
+		        return applicationerror.getText().trim();}
+		    
+		       
+		    
+	 
 	public void AdminRoleStaff() {		 		 
 		 Username.sendKeys(Login.get(0).get("username"));
 		 Password.sendKeys(Login.get(0).get("password"));
@@ -100,27 +111,9 @@ public class Login_Page {
 		 StudentRole.click();
 		 LoginBtn.click(); 
 	 }
-	/*public boolean isErrorMessageDisplayed() {
-        return errormessage.isDisplayed();
-    }*/
+	
 
-	/*public String getErrorMessage() {
-        return errormessage.getText();
-    }*/
-/*	
-	public String spellcheckerUSer(){
-        wait.until(ExpectedConditions.visibilityOf(Username));
-        return Username.getText();
-
-    }
-    public String spellcheckerpasswrd(){
-        wait.until(ExpectedConditions.visibilityOf(Password));
-        return  Password.getText();
-    }
-    public String spellcheckLoginbutton(){
-        wait.until(ExpectedConditions.visibilityOf(LoginBtn));
-        return LoginBtn.getText();
-    }*/
+	
 	public String spellcheckerUser() {
 	    wait.until(ExpectedConditions.visibilityOf(usernameLabel));
 	    
@@ -186,15 +179,15 @@ public class Login_Page {
     
     	public boolean isAsteriskUserDisplayed() {
     	    try {
-    	        return userask.isDisplayed(); // Checks if the asterisk is visible
+    	        return userask.isDisplayed(); 
     	    } catch (NoSuchElementException e) {
-    	        return false; // Returns false if the element is not found
+    	        return false; 
     	        
     	    }
       }
     	public boolean isAsteriskPassDisplayed(){
     		try {
-    	        return passwrdask.isDisplayed(); // Checks if the asterisk is visible
+    	        return passwrdask.isDisplayed(); 
     	    } catch (NoSuchElementException e) {
     	        return false; // Returns false if the element is not found
     	        
@@ -203,23 +196,12 @@ public class Login_Page {
   
   public boolean isloginBtnVisible(){
 	  try {
-	        return LoginBtn.isDisplayed(); // Checks if the asterisk is visible
+	        return LoginBtn.isDisplayed(); 
 	    } catch (NoSuchElementException e) {
-	        return false; }// Returns false if the element is not found
+	        return false; }
 	        
 	    }
-  public void USercolor(){
-     String Ucolor= Username.getCssValue("color");
-     String expectedColor="rgba(0, 0, 0, 0.87)";
-     System.out.println("user color is :" +Ucolor);
-      
-  }
-  public void Passwordcolor(){
-     String Pcolor= Password.getCssValue("color");
-      System.out.println("pwd color is :" +Pcolor);
-      String expectedColor="rgba(0, 0, 0, 0.87)";
-      //Assert.assertTrue(Pcolor.equalsIgnoreCase(expectedColor));
-  }
+ 
   public boolean isLoginButtonCentered() {
 		String loginAlignment = LoginBtn.getCssValue("text-align");
 		String margin = LoginBtn.getCssValue("margin");
@@ -235,10 +217,9 @@ public class Login_Page {
 		return textColor.equals("rgb(128, 128, 128)") || textColor.equals("#808080");
 	}
 
-	// Verify the input text color in Password field
 	public boolean isPwdTxtGray() {
 		String textColor = Password.getCssValue("color");
-		// Check if the text color is gray (hex code #808080 or RGB value 128,128,128).
+		
 		return textColor.equals("rgb(128, 128, 128)") || textColor.equals("#808080");
 	}
 
@@ -265,13 +246,13 @@ public class Login_Page {
         // Wait for options to be visible
         wait.until(ExpectedConditions.visibilityOfAllElements(allOptions));
 
-        // Extract text from options
+       
         List<String> optionsText = new ArrayList<>();
         for (WebElement option : allOptions) {
             optionsText.add(option.getText().trim());
         }
 
-        System.out.println("Actual Dropdown Options: " + optionsText); // Debugging output
+        System.out.println("Actual Dropdown Options: " + optionsText); 
         return optionsText;
     }
 	public Map<String, String> validLogin(String credentials) {
@@ -396,7 +377,7 @@ public class Login_Page {
 	            return connection.getResponseCode();
 	        } catch (IOException e) {
 	            e.printStackTrace();
-	            return -1; // Return -1 if an exception occurs (treated as broken)
+	            return -1; 
 	        }
 	    }
 	}

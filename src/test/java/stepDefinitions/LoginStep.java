@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
@@ -47,18 +48,19 @@ public class LoginStep extends BasePage{
 
 	@Then("Admin should land on the login page")
 	public void admin_should_land_on_the_login_page() {
-		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Admin is not redirected to the login page!");
+		Assert.assertTrue(driver.getCurrentUrl().contains("login"));
 	}
 
 	@When("Admin gives the invalid LMS portal URL")
 	public void admin_gives_the_invalid_lms_portal_url() {
-		
+		String applicationInvalidURL = context.getApplicationInvalidURL();
+        driver.get(applicationInvalidURL);
 	}
 
 	@Then("Admin should receive application error")
 	public void admin_should_receive_application_error() {
-		//Assert.assertEquals("Application error not displayed!", Login.isErrorMessageDisplayed());
-       
+		String errorMessage = Login.applicationerrmsg();
+	    Assert.assertEquals(errorMessage, "Expected error message here");
 	}
 
 	@Then("If HTTP response less than or equals {int} then the link is broken")
@@ -71,24 +73,19 @@ public class LoginStep extends BasePage{
 	@Then("Admin should see correct spellings in all fields")
 	public void admin_should_see_correct_spellings_in_all_fields() {
 		
-		/*String userLabel=Login.spellcheckerUSer();
-		Assert.assertEquals("User",userLabel);
-          String pwdLabel=Login.spellcheckerpasswrd();
-        Assert.assertEquals("Password",pwdLabel);
-        String LoginLabel=Login.spellcheckLoginbutton();
-        Assert.assertEquals("Login",LoginLabel);*/
+		
 		
 		String userLabel = Login.spellcheckerUser();
-		System.out.println("Expected: 'User', Found: '" + userLabel + "'");
-		Assert.assertEquals(userLabel, "User", "Mismatch in Username label!");
+		
+		Assert.assertEquals(userLabel, "User");
 
 		String pwdLabel = Login.spellcheckerPassword();
-		System.out.println("Expected: 'Password', Found: '" + pwdLabel + "'");
-		Assert.assertEquals(pwdLabel, "Password", "Mismatch in Password label!");
+		
+		Assert.assertEquals(pwdLabel, "Password");
 
 		String loginLabel = Login.spellcheckLoginButton();
-		System.out.println("Expected: 'Login', Found: '" + loginLabel + "'");
-		Assert.assertEquals(loginLabel, "Login", "Mismatch in Login Button label!");
+		
+		Assert.assertEquals(loginLabel, "Login");
 
 	}
 
@@ -99,14 +96,14 @@ public class LoginStep extends BasePage{
 
 	@Then("Admin should see company name below the app name")
 	public void admin_should_see_company_name_below_the_app_name() {
-		 Assert.assertTrue(Login.islogoDisplayed(), "Company logo is not displayed!");
+		 Assert.assertTrue(Login.islogoDisplayed());
         //return logo.getLocation().getX();
 	}
 
 	@Then("Admin should see Please login to LMS application")
 	public void admin_should_see_please_login_to_lms_application() {
 		 
-		 Assert.assertEquals(Login.LmsContentMsg(), "Please login to LMS application", "Login message is incorrect!");
+		 Assert.assertEquals(Login.LmsContentMsg(), "Please login to LMS application");
     }
 	
 
@@ -119,12 +116,8 @@ public class LoginStep extends BasePage{
 	@Then("Admin should see User in the first text field")
 	public void admin_should_see_user_in_the_first_text_field() {
 		String actualText = Login.verifyUserTxt();
-		LoggerLoad.info("Actual Text in the Username field: " + actualText);
-		try {
-			Assert.assertEquals(actualText, "User", "Text in the first text field is not correct/empty");
-		} catch (AssertionError e) {
-			LoggerLoad.error("Assertion failed: " + e.getMessage());
-		}
+		
+			Assert.assertEquals(actualText, "User");
 	}
 
 	
@@ -148,13 +141,9 @@ public class LoginStep extends BasePage{
 	@Then("Admin should see Password in the second text field")
 	public void admin_should_see_password_in_the_second_text_field() {
 		String actualText = Login.verifyPasswordTxt();
-		LoggerLoad.info("Actual Text in the Passsword field: " + actualText);
-		try {
-			Assert.assertEquals(actualText,"Password", "Text in the second text field is not correct/empty");
-		} catch (AssertionError e) {
-			LoggerLoad.error("Assertion failed: " + e.getMessage());
-		}
-	}
+		
+			Assert.assertEquals(actualText,"Password");}
+		
 
 	@Then("Admin should see asterisk mark symbol next to password text")
 	public void admin_should_see_asterisk_mark_symbol_next_to_password_text() {
@@ -163,7 +152,7 @@ public class LoginStep extends BasePage{
 
 	@Then("Admin should see Select the role placeholder in dropdown")
 	public void admin_should_see_select_the_role_placeholder_in_dropdown() {
-		Assert.assertTrue(Login.isroleDropdwnPresent(), "Role dropdown was expected but not found!");
+		Assert.assertTrue(Login.isroleDropdwnPresent());
 	}
 	
 
@@ -172,12 +161,8 @@ public class LoginStep extends BasePage{
 		List<String> expectedOptions = List.of("Admin", "Staff", "Student");
 	    List<String> actualOptions = Login.getDropdownOptionsVisible(); 
 
-	   
-	    System.out.println("Actual Dropdown Options: " + actualOptions);
-
-	    // Validate expected vs actual options
-	    Assert.assertTrue(actualOptions.containsAll(expectedOptions),
-	                      "Dropdown options do not match! Expected: " + expectedOptions + ", but found: " + actualOptions);
+	     Assert.assertTrue(actualOptions.containsAll(expectedOptions));
+	                     
 		
 	}
 	
@@ -185,11 +170,11 @@ public class LoginStep extends BasePage{
 	@Then("Admin should see input field in the center of the page")
 	public void admin_should_see_input_field_in_the_center_of_the_page() {
 		boolean areinputFieldsCenter = Login.areInputFieldsCenter();
-		try {
+		
 			Assert.assertEquals("Input Fields are not Centered", areinputFieldsCenter);
-		} catch (AssertionError e) {
+		
 			
-		}
+		
 	
 	}
 
@@ -200,22 +185,16 @@ public class LoginStep extends BasePage{
 
 	@Then("Admin should see User in gray color")
 	public void admin_should_see_user_in_gray_color() {
-		boolean isUserTxtGray = Login.isUserTxtGray();
-		try {
-			Assert.assertEquals("User text is not in Gray Color", isUserTxtGray);
-		} catch (AssertionError e) {
-			
-		}
+		Assert.assertTrue(Login.isUserTxtGray());
+		
 	}
 
 	@Then("Admin should see Password in gray color")
 	public void admin_should_see_password_in_gray_color() {
-		boolean isPwdTxtGray = Login.isPwdTxtGray();
-		try {
-			Assert.assertEquals("Password text is not in Gray Color", isPwdTxtGray);
-		} catch (AssertionError e) {
-			
-	}
+		
+		
+			Assert.assertTrue(Login.isPwdTxtGray());
+		
 	}
 
 	@Given("Admin is on login page")
@@ -229,7 +208,7 @@ public void admin_enters_and_clicks_login_button(String credentials) {
 	}
 
 	@Then("Admin should {string}")
-	public void admin_should(String expected_message) {
+public void admin_should(String expected_message) {
 		
 		if (expected_message.equals("land on home page")) {
 	       
@@ -238,12 +217,11 @@ public void admin_enters_and_clicks_login_button(String credentials) {
 	        
 	        String actualMessage = result.get("actualMessage");
 
-	        System.out.println("Expected Message: " + expected_message);
-	        System.out.println("Actual Message: " + actualMessage);
+	       
 
 	        
-	        Assert.assertEquals(actualMessage, expected_message, 
-	            "Validation message mismatch! Expected: [" + expected_message + "] but found: [" + actualMessage + "]");
+	        Assert.assertEquals(actualMessage, expected_message
+	           );
 	    }
     }
 	
