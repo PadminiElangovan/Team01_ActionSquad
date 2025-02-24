@@ -2,7 +2,7 @@ Feature: Batch Page Navigation
 
   Background: Veryfy Admin is able to login Succesfully
     Given Admin is logged into the LMS portal and on the dashboard page
-
+    
   @Batch_01
   Scenario: Verify Admin Navigate to Batch page successfully
     Given Admin is on LMS Homepage
@@ -193,16 +193,35 @@ Feature: Batch Page Navigation
   @Batch_26
   Scenario Outline: validate search box functionality
     Given Admin is on the batch page
-    When Admin enters the "<Search Data>" in the search text box in the batch module
-    Then Admin should see the "<Batch Name>","<Batch Desc>","<status>"filtered batches in the data table in Batch
- 
- Examples:
- |SearchData  |Batch Name |Batch Desc |status|
- |Rose6       |Rose6      |Rose Flower|Active|
- #|Rose Flower |Rose6      |Rose Flower|Active|
- #|Ros         |Rose6      |Rose Flower|Active|
-#
-  #Scenario: Validate logout option in the header is visible and enabled from the batch page
-    #Given Admin is on the batch page
-    #When Admin clicks on the logout button
-    #Then Admin should see the Login screen Page
+    When Admin enters the "<SearchData>" in the search text box in the batch module
+    Then Admin should see the "<BatchName>","<BatchDesc>","<status>" filtered batches in the data table in Batch
+
+    Examples: 
+      | SearchData | BatchName | BatchDesc  | status |
+      | Rose6      | Rose6     | Roseflower | Active |
+
+  @Batch_27
+  Scenario Outline: invalidate search box functionality
+    Given Admin is on the batch page
+    When Admin enters invalid "<SearchData>" in the search text box in the batch module
+    Then Admin should see the no records found in the data table in Batch
+
+    Examples: 
+      | SearchData |
+      | Ro789      |
+
+  @Batch_28
+  Scenario Outline: Partial Batchname search box functionality
+    Given Admin is on the batch page
+    When Admin enters PartialBatch name "<SearchData>" in the search text box in the batch module
+    Then Admin should see the all batch with the same name in the data table in Batch
+
+    Examples: 
+      | SearchData |
+      | rose       |
+
+  @Batch_29
+  Scenario: Validate logout option in the header is visible and enabled from the batch page
+    Given Admin is on the batch page
+    When Admin clicks on the logout button
+    Then Admin should see the Login screen Page
