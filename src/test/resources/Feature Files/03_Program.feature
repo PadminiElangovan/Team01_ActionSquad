@@ -64,7 +64,7 @@ Feature: Manage Page Validation
 
     Examples: 
       | Name    || Description    || Status || SuccessMsg  |        
-      |Beta || Alpha       || Active || Successful  |     
+      |Beta || Alpha     || Active || Successful  |     
       
      Scenario Outline: Verify added Program is created 
     When Admin searches with newly created "<Program Name>" 
@@ -76,7 +76,7 @@ Feature: Manage Page Validation
     Scenario: Validate Cancel/Close(X) icon on program Details form
     When Admin clicks Cancel Icon on program Details form
     Then Program Details popup window should be closed
-    #
+    
  #------------------------------------Edit Program -----------------------------------------------
  
  Scenario Outline:  Validate Edit Program Details Popup window
@@ -145,8 +145,8 @@ When Admin enter the "<field>" "<value>" in search textbox
 Then Admin should see Program details are searched by given fields
 Examples: 
 |field||value|
-|Name||Beta|
-|Description||Alpha|
+|Name||Omega|
+|Description||Gamma|
 
  
  Scenario: Verify Admin is able to search results not found
@@ -192,7 +192,7 @@ Examples:
     Given  Admin is on the program page
     When Admin clicks on Arrow next to program status of Program module page for sor descend
      Then Admin See the Program status is sorted Descending order in Program module page 
- 
+ #
   
 #----------------------------------- Pagination -----------------------------------------------------------
 
@@ -210,7 +210,7 @@ Examples:
     
     Scenario: Validate logout option in the header is visible and enabled from the program page
     Given Admin is on the program page
-    When Admin clicks on the logout button
+    When Admin clicks on the logout button on the Manage Program
     Then Admin should see the Login screen Page 
 
     
