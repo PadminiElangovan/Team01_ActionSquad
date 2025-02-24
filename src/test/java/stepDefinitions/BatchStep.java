@@ -56,14 +56,13 @@ public class BatchStep {
 	public void admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page() {
 		Login.AdminLogin();
 	}
+	
 //	@Batch_01_Scenario: Verify Admin Navigate to Batch page successfully
 	
 	@Given("Admin is on LMS Homepage")
-	public void admin_is_on_lms_homepage() {
-		LoggerLoad.info("Admin is on LMS Homepage");
-		String Title = Batch.getPageTitle();
-		LoggerLoad.info("Title of the Page : \" " + Title + "\" ");
-		assertEquals(Title, "LMS", "Title do not match");
+	public void admin_is_on_lms_homepage() {		
+		String Title = Batch.getPageTitle();		
+		assertEquals(Title, "LMS");
 
 	}
 
@@ -73,22 +72,18 @@ public class BatchStep {
 	}
 
 	@Then("Admin should be in the Manage Batch Page")
-	public void admin_should_be_in_the_manage_batch_page() {
-		LoggerLoad.info("Admin should be in the Manage Batch Page");
-		String Title = Batch.getPageTitle();
-		LoggerLoad.info("Title of the Page : \" " + Title + "\" ");
-		assertEquals(Title, "LMS", "Title do not match");
+	public void admin_should_be_in_the_manage_batch_page() {		
+		String Title = Batch.getPageTitle();		
+		assertEquals(Title, "LMS");
 
 	}
 //	@Batch_02 _Scenario Outline: Batch Page Elements Validation
 	
 	@Given("Admin is on the home page")
 	public void admin_is_on_the_home_page() {
-
-		LoggerLoad.info("Admin is on the home page");
-		String Title = Batch.getPageTitle();
-		LoggerLoad.info("Title of the Page : \" " + Title + "\" ");
-		assertEquals(Title, "LMS", "Title do not match");
+		
+		String Title = Batch.getPageTitle();	
+		assertEquals(Title, "LMS");
 
 	}
 
@@ -99,12 +94,11 @@ public class BatchStep {
 
 		switch (expectedText) {
 		case "LMS - Learning Management System":
-			Assert.assertTrue("Toolbar text is incorrect.",
-					Batch.isToolbarTextCorrect("LMS - Learning Management System"));
+			Assert.assertTrue(Batch.isToolbarTextCorrect("LMS - Learning Management System"));
 			break;
 
 		case "Manage Batch":
-			Assert.assertTrue("Header text is incorrect.", Batch.isHeaderTextCorrect("Manage Batch"));
+			Assert.assertTrue(Batch.isHeaderTextCorrect("Manage Batch"));
 			break;
 
 		case "datatable headers: Batch name, Batch Description, Batch Status, No Of classes, Program Name, Edit/Delete":
@@ -113,37 +107,37 @@ public class BatchStep {
 			break;
 
 		case "disabled Delete Icon under the header":
-			Assert.assertTrue("Multiple Delete icon should be disabled.", Batch.isMultipleDeleteIconDisabled());
+			Assert.assertTrue(Batch.isMultipleDeleteIconDisabled());
 			break;
 
 		case "enabled pagination controls under the data table":
 
-			Assert.assertTrue("Pagination controls are not enabled.", Batch.arePaginationControlsEnabled());
+			Assert.assertTrue(Batch.arePaginationControlsEnabled());
 			break;
 
 		case "edit icon in each data row":
 
-			Assert.assertTrue("Edit icons are not displayed in each data row.", Batch.areEditButtonsDisplayed());
+			Assert.assertTrue(Batch.areEditButtonsDisplayed());
 			break;
 
 		case "delete icon in each data row":
 
-			Assert.assertTrue("Delete icons are not displayed in each data row.", Batch.areDeleteButtonsDisplayed());
+			Assert.assertTrue(Batch.areDeleteButtonsDisplayed());
 			break;
 
 		case "checkbox in each data row":
 
-			Assert.assertTrue("Checkboxes are not displayed in each data row.", Batch.areCheckboxesDisplayed());
+			Assert.assertTrue(Batch.areCheckboxesDisplayed());
 			break;
 
 		case "checkbox in the datatable header row":
-			Assert.assertTrue("Checkbox in the header row is not displayed.", Batch.isCheckboxHeaderDisplayed());
+			Assert.assertTrue(Batch.isCheckboxHeaderDisplayed());
 			break;
 		case "sort icon next to all datatable headers":
-			Assert.assertTrue("Sorting icons are not displayed for all columns.", Batch.areSortingIconsDisplayed());
+			Assert.assertTrue(Batch.areSortingIconsDisplayed());
 			break;
 		case "Footer":
-			Assert.assertTrue("Footer is missing.", Batch.isFooterTextCorrect("Manage Batch"));
+			Assert.assertTrue(Batch.isFooterTextCorrect("Manage Batch"));
 			break;
 
 		default:
@@ -155,17 +149,13 @@ public class BatchStep {
 	
 	@Given("Admin is on batch page")
 	public void admin_is_on_batch_page() {
-
-		LoggerLoad.info("Admin is on batch page");
-		String Title = Batch.getPageTitle();
-		LoggerLoad.info("Title of the Page : \" " + Title + "\" ");
-		assertEquals(Title, "LMS", "Title do not match");
-
+		
+		String Title = Batch.getPageTitle();		
+		assertEquals(Title, "LMS");
 	}
 
 	@When("Admin clicks {string} under batch menu bar")
-	public void admin_clicks_under_batch_menu_bar(String button) {
-		LoggerLoad.debug("label validation.");
+	public void admin_clicks_under_batch_menu_bar(String button) {		
 		Batch.navigateToBatch();
 		Batch.clickAddNewBatchButton();
 	}
@@ -173,7 +163,7 @@ public class BatchStep {
 	@Then("Admin should see the Batch Details pop up window {string}")
 	public void admin_should_see_the_batch_details_pop_up_window(String field) {
 		LoggerLoad.debug("pop label.");
-		Assert.assertTrue("Field not found in popup: " + field, Batch.isFieldDisplayed(field));
+		Assert.assertTrue(field, Batch.isFieldDisplayed(field));
 	}
 //	@Batch_04_Scenario: Validate batchname prefix selected program name
 	
@@ -191,8 +181,7 @@ public class BatchStep {
 	}
 
 	@Then("Admin should see selected program name in the batch name prefix box")
-	public void admin_should_see_selected_program_name_in_the_batch_name_prefix_box() {
-		LoggerLoad.error("prefix validation.");
+	public void admin_should_see_selected_program_name_in_the_batch_name_prefix_box() {		
 		String expectedmessage = Batch.ProgramnametextText();
 		String actualmessage = Batch.ProgramnamePrefixText();
 		Batch.Clickprefixbatchname();
@@ -210,9 +199,8 @@ public class BatchStep {
 	}
 
 	@Then("Admin should get {string} below the text box of respective field")
-	public void admin_should_get_below_the_text_box_of_respective_field(String expected_message) {
-		LoggerLoad.debug("Validating expected text in the AddnewBatch popup Page: " + expected_message);
-		String actualMessage = Batch.getErrorMessage().trim(); // Ensure to trim whitespace
+	public void admin_should_get_below_the_text_box_of_respective_field(String expected_message) {LoggerLoad.debug("Validating expected text in the AddnewBatch popup Page: " + expected_message);
+		String actualMessage = Batch.getErrorMessage().trim(); 
 		System.out.println("Actual Message: " + actualMessage);
 		Assert.assertEquals(actualMessage, expected_message);
 
@@ -229,7 +217,7 @@ public class BatchStep {
 
 	@Then("Admin should see empty text box")
 	public void admin_should_see_empty_text_box() {
-		Assert.assertTrue("Admin should see empty text box", Batch.validateBatchTextBoxNonEditable());
+		Assert.assertTrue(Batch.validateBatchTextBoxNonEditable());
 	}
 
 //	@Batch_07_Scenario: Validate input data only for mandatory fields
@@ -243,9 +231,8 @@ public class BatchStep {
 	}
 
 	@Then("Admin should get a successful message {string}")
-	public void admin_should_get_a_successful_message(String string) {
-		LoggerLoad.info("Success message batch creation assertion");
-		Assert.assertTrue("SuccessMessage:batch created successfully", Batch.isSuccessMessageDisplayed());
+	public void admin_should_get_a_successful_message(String string) {		
+		Assert.assertTrue(Batch.isSuccessMessageDisplayed());
 
 	}
 
@@ -259,11 +246,9 @@ public class BatchStep {
 
 	@Then("Admin should get a error message on the respective mandatory field")
 	public void admin_should_get_a_error_message_on_the_respective_mandatory_field() {
-		LoggerLoad.error("Errormessage");
-		Assert.assertTrue("Error message should be displayed under the description field",
-				Batch.isDescriptionErrorDisplayed());
-		Assert.assertTrue("Error message should be displayed under the number of classes field",
-				Batch.isNumberOfClassesErrorDisplayed());
+		
+		Assert.assertTrue(Batch.isDescriptionErrorDisplayed());
+		Assert.assertTrue(Batch.isNumberOfClassesErrorDisplayed());
 	}
 
 //	@Batch_09_Scenario: validate cancel button in Batch details pop up
@@ -278,8 +263,7 @@ public class BatchStep {
 	}
 
 	@Then("Admin can see the batch details popup closes without creating any batch")
-	public void admin_can_see_the_batch_details_popup_closes_without_creating_any_batch() {
-		LoggerLoad.info("The Admin sees the popup closes withoit creating any batch");
+	public void admin_can_see_the_batch_details_popup_closes_without_creating_any_batch() {		
 		Batch.toolbarVisible();
 
 	}
@@ -296,8 +280,7 @@ public class BatchStep {
 	}
 
 	@Then("Admin can see batch details pop up closes")
-	public void admin_can_see_batch_details_pop_up_closes() {
-		LoggerLoad.info("The Admin sees the popup closes withoit creating any batch");
+	public void admin_can_see_batch_details_pop_up_closes() {		
 		Batch.toolbarVisible();
 	}
 	
@@ -318,17 +301,16 @@ public class BatchStep {
 
 	@Then("Admin should see the Batch details pop up window")
 	public void admin_should_see_the_batch_details_pop_up_window() {
-
-		LoggerLoad.info("Display Edit pop up window");
-		Assert.assertTrue("Batch Edit pop up window should be displayed", Batch.isBatcheditpopupdisplayed());
+		
+		Assert.assertTrue(Batch.isBatcheditpopupdisplayed());
 	}
 
 //	@Batch_12 _Scenario: Validate program name value is disabled to edit
 	
 	@Then("Admin should see Program name and Batch name value field is disabled for editing")
 	public void admin_should_see_program_name_and_batch_name_value_field_is_disabled_for_editing() {
-		Assert.assertTrue("Program name field should be disabled", Batch.isProgramNameFieldDisabled());
-		Assert.assertTrue("Batch name field should be disabled", Batch.isEditBatchNameFieldDisabled());
+		Assert.assertTrue(Batch.isProgramNameFieldDisabled());
+		Assert.assertTrue(Batch.isEditBatchNameFieldDisabled());
 	}
 	
 //	@Batch_13_Scenario: Validate editing description and No. of classes fields with invalid data in the pop up
@@ -345,9 +327,8 @@ public class BatchStep {
 	@Then("Admin should get a error message under the respective field")
 	public void admin_should_get_a_error_message_under_the_respective_field() {
 
-		LoggerLoad.error("Errormessage");
-		Assert.assertTrue("Error message should be displayed under the description field",
-				Batch.isEditBatchDescriptionErrorDisplayed());
+		
+		Assert.assertTrue(Batch.isEditBatchDescriptionErrorDisplayed());
 	}
 
 //	@Batch_14_Scenario: validate save button in Batch details pop up 
@@ -363,8 +344,8 @@ public class BatchStep {
 
 	@Then("Admin should get a successful message for editing the batch")
 	public void admin_should_get_a_successful_message_for_editing_the_batch() {
-		LoggerLoad.info("Success message batch updated successfully");
-		Assert.assertTrue("SuccessMessage:batch created successfully", Batch.isSuccessMessageDisplayed());
+		
+		Assert.assertTrue(Batch.isSuccessMessageDisplayed());
 	}
 
 //	@Batch_15_Scenario: validate cancel button in Batch details pop up  
@@ -379,11 +360,8 @@ public class BatchStep {
 	}
 
 	@Then("Admin can see the batch details popup closes without editing the batch")
-	public void admin_can_see_the_batch_details_popup_closes_without_editing_the_batch() {
-
-		LoggerLoad.info("The Admin sees the popup closes withoit updating any batch");
+	public void admin_can_see_the_batch_details_popup_closes_without_editing_the_batch() {		
 		Batch.toolbarVisible();
-
 	}
 
 //	@Batch_16_Scenario:validate close button in Batch details pop up    
@@ -408,8 +386,8 @@ public class BatchStep {
 
 	@Then("Admin should see the confirm alert box with yes and no button")
 	public void admin_should_see_the_confirm_alert_box_with_yes_and_no_button() {
-		LoggerLoad.info("Display Delete pop up window");
-		Assert.assertTrue("Batch Delete pop up window should be displayed", Batch.isDeletePopUpDisplayed());
+		
+		Assert.assertTrue(Batch.isDeletePopUpDisplayed());
 	}
 
 //	@Batch_18_Scenario: Validate yes button on the confirm alert box
@@ -440,8 +418,7 @@ public class BatchStep {
 	}
 
 	@Then("Admin should see the alert box closed and the batch is not deleted")
-	public void admin_should_see_the_alert_box_closed_and_the_batch_is_not_deleted() {
-		LoggerLoad.info("The Admin sees the popup closes without deleting any batch");
+	public void admin_should_see_the_alert_box_closed_and_the_batch_is_not_deleted() {		
 		Batch.toolbarVisible();
 	}
 
@@ -454,7 +431,7 @@ public class BatchStep {
 
 	@Then("Admin should see the alert box closed")
 	public void admin_should_see_the_alert_box_closed() {
-		LoggerLoad.info("The Admin sees the alert closes without deleting any batch");
+		
 		Batch.toolbarVisible();
 	}
 
@@ -488,8 +465,7 @@ public class BatchStep {
 	}
 
 	@Then("Admin should see the Delete confirmation popup box")
-	public void admin_should_see_the_delete_confirmation_popup_box() {
-		LoggerLoad.info("Display Delete pop up window");
+	public void admin_should_see_the_delete_confirmation_popup_box() {		
 		Assert.assertTrue("Batch Delete pop up window should be displayed", Batch.isDeletePopUpDisplayed());
 	}
 
@@ -559,16 +535,16 @@ public class BatchStep {
 
 		switch (expectedresult.toLowerCase()) {
 		case "next enabled link":
-			Assert.assertTrue("Expected 'Next' button to be enabled.", Batch.isNextButtonEnabled());
+			Assert.assertTrue(Batch.isNextButtonEnabled());
 			break;
 		case "last page link with Next disabled":
-			Assert.assertTrue("Expected 'Last' button to be disabled.", Batch.isNextButtonEnabled());
+			Assert.assertTrue(Batch.isNextButtonEnabled());
 			break;
 		case "previous results":
-			Assert.assertTrue("Expected to see results on the previous page.", Batch.hasNextPageResults());
+			Assert.assertTrue(Batch.hasNextPageResults());
 			break;
 		case "first results":
-			Assert.assertTrue("Expected to see results on the first page.", Batch.hasNextPageResults());
+			Assert.assertTrue(Batch.hasNextPageResults());
 			break;
 		default:
 			Assert.fail("Unexpected result description: " + expectedresult);
@@ -591,9 +567,9 @@ public class BatchStep {
 		String actualBatchName = Batch.FirstbatchnameText();
 		String actualBatchDesc = Batch.FirstbatchdescText();
 		String actualStatus = Batch.FirstbatchstatusText();		
-		Assert.assertEquals("Batch Name does not match", BatchName, actualBatchName);
-		Assert.assertEquals("Batch Description does not match", BatchDesc, actualBatchDesc);
-		Assert.assertEquals("Batch Status does not match", status, actualStatus);
+		Assert.assertEquals(BatchName, actualBatchName);
+		Assert.assertEquals(BatchDesc, actualBatchDesc);
+		Assert.assertEquals(status, actualStatus);
 
 		System.out.println("Batch verification passed!");
 	}

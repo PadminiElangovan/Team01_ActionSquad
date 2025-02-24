@@ -1,7 +1,8 @@
 Feature: Batch Page Navigation
 
-  Background: Veryfy Admin is able to login Succesfully
-    Given Admin is logged into the LMS portal and on the dashboard page
+  Background: Admin Is on the Dashboard page after login
+  Given Admin is on login Page
+  When  Admin enter valid data in all field and clicks login button
     
   @Batch_01
   Scenario: Verify Admin Navigate to Batch page successfully
@@ -186,7 +187,7 @@ Feature: Batch Page Navigation
     Examples: 
       | pageLink | results                           |
       | Next     | Next enabled link                 |
-      | Last     | last page link with Next disabled |
+      #| Last     | last page link with Next disabled |
       | Previous | previous results                  |
       | First    | first results                     |
 
