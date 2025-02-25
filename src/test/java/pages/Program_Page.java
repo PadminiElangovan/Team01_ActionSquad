@@ -96,7 +96,7 @@ public class Program_Page extends BasePage {
 	private WebElement programCreated;
 	@FindBy(xpath = "//button[@id='saveProgram']")
 	private WebElement saveProgram;
-	@FindBy(css="td:nth-child(2)")
+	@FindBy(xpath="(//tbody//td[2]")
 	private WebElement programNameSearch;
 	@FindBy(xpath = "//small[normalize-space()='Program name is required.']")
 	private WebElement programNameReq;
@@ -138,14 +138,14 @@ public class Program_Page extends BasePage {
 	private WebElement alertMsg;
 
 	//Search
-	private String lastSearchedField, lastSearchedValue;
+	//private String lastSearchedField, lastSearchedValue;
 	@FindBy(xpath = "//tbody//td[2]")
 	private List<WebElement> listOfProgramNames;
 	@FindBy(xpath = "//tbody//td[3]")
 	private List<WebElement> listOfProgramDescription;
 	@FindBy(xpath="(//tbody//td[2])[1]")
 	private WebElement searchedProgramName;
-	@FindBy(xpath="(//tbody//td[3])[1]")
+	@FindBy(xpath="//tbody/tr[1]/td[3]")
 	private WebElement searchedProgramDesc;
 	@FindBy(xpath="//span[text()='Showing 0 to 0 of 0 entries']")
 	private WebElement zeroEntries;
@@ -172,11 +172,11 @@ public class Program_Page extends BasePage {
 	@FindBy(xpath = "//button[contains(@class, 'p-paginator-prev')]")
 	private WebElement prevButton;
 	@FindBy(xpath = "//button[contains(@class, 'p-paginator-next')]")
-	private WebElement nextButton;
+	public WebElement nextButton;
 	@FindBy(xpath = "//button[@class='p-paginator-next p-paginator-element p-link p-ripple']")
 	private WebElement paninatorNext;
 	@FindBy(xpath = "//button[contains(@class, 'p-paginator-last')]")
-	private WebElement lastButton;
+	public WebElement lastButton;
 	@FindBy(xpath = "//button[contains(@class, 'p-paginator-page')]")
 	private List<WebElement> pageButtons;
 
@@ -295,7 +295,7 @@ public class Program_Page extends BasePage {
 	public void enterProgramNameInSearch()  {
 		js.executeScript("arguments[0].click();", searchbtn);
 		//elementClick(searchbtn);
-		elementSendkeys(searchbtn, "CSharpsg");
+		elementSendkeys(searchbtn, "Beta");
 	}
 	public String verifyProgramName() {
 		return	elementGetText(programNameSearch);
@@ -425,9 +425,10 @@ public class Program_Page extends BasePage {
 
 		case "Description":
 			wait.until(ExpectedConditions.visibilityOf(searchedProgramDesc));
-			String actualDesc = searchedProgramDesc.getText().trim();
-			System.out.println("Expected: " + value + ", Found: " + actualDesc);
-			found = actualDesc.equalsIgnoreCase(value.trim());
+			//String actualDesc = searchedProgramDesc.getText().trim();
+			//System.out.println("Expected: " + value + ", Found: " + actualDesc);
+			found = searchedProgramDesc.getText().equals(value);
+			System.out.println(found +"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 			break;
 
 		default:
@@ -447,7 +448,7 @@ public class Program_Page extends BasePage {
 		}
 		return false;	
 	}
-	
+// Sorting	
 
 	public void clickProgramNameSort(){	
 		WebElement proGNameSort=driver.findElement(progNameSort);
@@ -535,23 +536,33 @@ public List<String> getSortedList(List<String> originalList){
     return sortedList;
 }
 	
-	public boolean isNextButtonEnabled() {
-		return prevButton.getAttribute("class").contains("p-disabled");
-	}
+    public boolean isNextButtonEnabled() {
+    if (nextButton == null || !nextButton.isDisplayed()) {
+        return false; 
+    }
 
-		public boolean isFinalButtonEnabled() {
-			return !lastButton.getAttribute("class").contains("p-disabled");
-		}
+    String classAttribute = nextButton.getDomAttribute("class");
+    return (classAttribute != null && !classAttribute.contains("p-disabled"));
+     }
 
-		// Check if 'Previous' button is enabled
-		public boolean isPrevButtonEnabled() {
-			return !prevButton.getAttribute("class").contains("p-disabled");
+	public boolean isPrevButtonEnabled() {
+		    if (prevButton == null) {
+		        return false;   }
+		    
+		    String classAttribute = prevButton.getDomAttribute("class");
+		    return classAttribute != null && !classAttribute.contains("p-disabled");
 		}
 
 		// Check if 'First' button is enabled
 		public boolean isFirstButtonEnabled() {
-			return !firstButton.getAttribute("class").contains("p-disabled");
+		    if (firstButton == null) {
+		        return false;
+		    }
+		    
+		    String classAttribute = firstButton.getDomAttribute("class");
+		    return classAttribute != null && !classAttribute.contains("p-disabled");
 		}
+
 
 		public boolean hasNextPageResults() {
 			// Return true if there are results; false otherwise
@@ -605,6 +616,11 @@ public List<String> getSortedList(List<String> originalList){
 
 	public String getStatusReqText() {
 		return	elementGetText(programStatusReq);
+	}
+
+	public void clickLogout() {
+		actions.doubleClick(logoutHeader).perform();
+		
 	}
 
 }

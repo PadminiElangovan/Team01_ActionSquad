@@ -145,92 +145,55 @@ public class LoginStep extends BasePage{
 		Assert.assertTrue(align.equals("center"));
 	}
 	
-	
-/*
-	
-	
-
-	@Then("Admin should see input field in the center of the page")
-	public void admin_should_see_input_field_in_the_center_of_the_page() {
-		boolean areinputFieldsCenter = Login.areInputFieldsCenter();
-		
-			Assert.assertEquals("Input Fields are not Centered", areinputFieldsCenter);
-		
-			
-		
-	
-	}
-
 	@Then("Admin should see login button")
 	public void admin_should_see_login_button() {
-		 Assert.assertTrue(Login.isloginBtnVisible());
+		 Assert.assertTrue(isElementPresent(Login.LoginBtn));
 	}
-
+	
 	@Then("Admin should see User in gray color")
 	public void admin_should_see_user_in_gray_color() {
-		Assert.assertTrue(Login.isUserTxtGray());
-		
+		String FontColor = Login.Username.getCssValue("color");
+		Assert.assertEquals(FontColor, "rgba(0, 0, 0, 0.87)");
 	}
 
 	@Then("Admin should see Password in gray color")
-	public void admin_should_see_password_in_gray_color() {
-		
-		
-			Assert.assertTrue(Login.isPwdTxtGray());
-		
+	public void admin_should_see_password_in_gray_color() {		
+		String FontColor = Login.Password.getCssValue("color");
+		Assert.assertEquals(FontColor, "rgba(0, 0, 0, 0.87)");
 	}
-
-	@Given("Admin is on login page")
-public void admin_is_on_login_page() {
-		context.getApplicationURL();
-	}
-
-	@When("Admin enters  {string} and clicks login button")
-public void admin_enters_and_clicks_login_button(String credentials) {
-		result = Login.validLogin(credentials);
-	}
-
-	@Then("Admin should {string}")
-public void admin_should(String expected_message) {
-		
-		if (expected_message.equals("land on home page")) {
-	       
-	        Assert.assertTrue(isElementDisplayed(Dashboard.HomeTitle));
-	    } else {
-	        
-	        String actualMessage = result.get("actualMessage");
-
-	       
-
-	        
-	        Assert.assertEquals(actualMessage, expected_message
-	           );
-	    }
-    }
 	
-
+	@When("Admin enters valid credentials and clicks login button through mouse")
+	public void admin_enters_valid_credentials_and_clicks_login_button_through_mouse() {
+		Login.LoginMouseAction();
+	}
+	
 	@When("Admin enters valid credentials and presses Enter key")
 	public void admin_enters_valid_credentials_and_presses_enter_key() {
-		Login.pressEnterKey();
+		Login.LoginKeyAction();
 	}
 
 	@Then("Admin should land on home page")
 	public void admin_should_land_on_home_page() {
-		String Expected = Loginxl.get(1).get("title");
-		Assert.assertEquals(getPageTitle(driver),Expected);
+		Assert.assertTrue(isElementDisplayed(Dashboard.HomeTitle));
+	}
+	
+	@When("Admin enters  {string} and clicks login button")
+	public void admin_enters_and_clicks_login_button(String credentials) {
+		Login.Inputs(credentials);
 	}
 
-	@When("Admin enters valid credentials and clicks login button through mouse")
-	public void admin_enters_valid_credentials_and_clicks_login_button_through_mouse() {
-		Login.clickLoginButtonMouse();
+	@Then("Admin should {string}")
+	public void admin_should(String Credentials) {
+		switch (Credentials) {  
+        case "valid": Assert.assertTrue(isElementDisplayed(Dashboard.HomeTitle));
+            break;
+        case "invalid": Assert.assertFalse(Login.errmsg());
+            break;
+        case "Emptypassword": Assert.assertFalse(Login.errmsg());
+            break;
+        case "Emptyusername": Assert.assertFalse(Login.errmsg());
+            break;
+          }
 	}
-   @Then("Admin should land on home page login action through mouse")
-  public void admin_should_land_on_home_page_login_action_through_mouse() {
-	String Expected = Loginxl.get(1).get("title");
-	Assert.assertEquals(getPageTitle(driver),Expected);
-     
-
-
-   }
-   */
 }
+

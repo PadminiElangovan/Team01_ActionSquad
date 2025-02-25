@@ -66,7 +66,7 @@ Feature: Additional Batch Functionality
     When Admin clears Description and clicks save
     Then Admin should description mandatory error message
 
-  @AddInvalidMsg
+  @AddInvalidMsgBatch
   Scenario Outline: Verify field invalid message
     Given The Admin is in Add New batch pop window
     When Admin enters invalid "<field>" data and clicks save

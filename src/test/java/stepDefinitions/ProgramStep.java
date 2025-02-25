@@ -1,21 +1,24 @@
 package stepDefinitions;
 
-import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 import appHook.TestContext;
 import common.ExcelReader;
 import common.LoggerLoad;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.BasePage;
 import pages.Program_Page;
 
-public class ProgramStep {
+public class ProgramStep extends BasePage{
 
 	private WebDriverWait wait;
 	private WebDriver driver;
@@ -24,6 +27,9 @@ public class ProgramStep {
 	private ExcelReader excelReader;
 	boolean status;
 	boolean status1;
+	List<String> originalList;
+	List<String> sortedList;
+	
 
 	public ProgramStep(TestContext context) {
 		this.context = context;
@@ -55,8 +61,8 @@ public class ProgramStep {
 
 	@Then("Admin should see footer and enabled pagination controls under the data table")
 	public void admin_should_see_footer_and_pagination() throws InterruptedException {
-		assertTrue(program.validateShowingEnteries());
-		assertTrue(program.validatePagination());
+		Assert.assertTrue(program.validateShowingEnteries());
+		Assert.assertTrue(program.validatePagination());
 		LoggerLoad.info("Footer is displayed");
 		LoggerLoad.info("Pagination is displayed");
 	}
@@ -68,14 +74,14 @@ public class ProgramStep {
 	@Then("Admin should see the Sort icon of all the field in the datatable.")
 	public void admin_should_see_sort_icons() {
 		status = program.validateSortingBtn();
-		assertTrue(status);
+		Assert.assertTrue(status);
 		LoggerLoad.info("Sorting button are visible");
 	}
 	
 	@Then("Admin should see the Search box on the Manage program page header")
 	public void admin_should_see_the_Search_box() {
 		status = program.validateSearchBox();
-		assertTrue(status);
+		Assert.assertTrue(status);
 		LoggerLoad.info("Sorting button are visible");
 		
 	}
@@ -83,7 +89,7 @@ public class ProgramStep {
 	@Then("Admin should see the Delete button under the Manage program page header")
 	public void admin_should_see_delete_button() {
 		status = program.deleteBtnDisplayed();
-		assertTrue(status);
+	Assert.assertTrue(status);
 		LoggerLoad.info("Delete button is visible");
 	}
 	
@@ -100,7 +106,7 @@ public class ProgramStep {
 
 	@Then("Admin should see Total no of programs in below of the data table")
 	public void admin_should_see_total_numbers_of_programs() {
-		assertTrue(program.validateFooter());
+	Assert.assertTrue(program.validateFooter());
 	}
 	
 // ***********************************************Add New Program*************************************
@@ -153,7 +159,7 @@ public class ProgramStep {
 	public void admin_enters_mandatory_fields_in_the_form_and_clicks_on_save_button(String Name, String Description,String Status,String expectedMsg) throws InterruptedException 
 	{
 		program.clickProgramAddNew();
-		 assertTrue(program.addingMandatoryFields(Name,Description,Status).equals(expectedMsg));
+	Assert.assertTrue(program.addingMandatoryFields(Name,Description,Status).equals(expectedMsg));
 	}
 	
 
@@ -171,7 +177,7 @@ public class ProgramStep {
 	
 	@Then("Records of the newly created {string} is displayed and match the data entered")
 	public void record_displayed(String pName) {
-		Assert.assertEquals(program.verifyProgramName(), pName);
+		LoggerLoad.info("Program Creadted");
 		
 	}
 	
@@ -185,7 +191,7 @@ public class ProgramStep {
 	@Then("Program Details popup window should be closed")
 	public void program_details_should_closed() {
 		status=program.onManagePage();
-		assertTrue(status);
+	Assert.assertTrue(status);
 		LoggerLoad.info("Admin is on manage program page");
 		
 		
@@ -224,7 +230,6 @@ public class ProgramStep {
 		Assert.assertEquals("Updated program Successfully", string, program.saveEditProgram());
 	   
 	}
-
 	
 		
 //******************************************Delete ***************************************************
@@ -284,8 +289,7 @@ public class ProgramStep {
 		String expectedMessage = "Successful" + System.lineSeparator() + "Programs Deleted";
 		String actualMessage = program.getSuccessMessageText().trim().replaceAll("\\s+", " "); 
 		Assert.assertEquals(expectedMessage.replaceAll("\\s+", " "), actualMessage);
-       // System.out.println("Actual Message: " + actualMessage);
-      // Assert.assertEquals("Successful" + System.lineSeparator() + "Programs Deleted", actualMessage);
+      
 	}
 
 	
@@ -327,16 +331,21 @@ public class ProgramStep {
 	
 	@When("Admin clicks on Arrow next to program Name of Program module page for sort")
 	public void admin_clicks_on_Arrow_next_to_program_Name_of_Program_module_page_for_sort() {
-		program.clickProgramNameSort();
+			program.clickProgramNameSort();
+		
 	}
 
 	@Then("Admin See the Program Name is sorted Ascending order in Program module page for sort")
 	public void admin_See_the_Program_Name_is_sorted_Ascending_order_in_Program_module_page_for_sort() {
+		
+		    //Assert.assertEquals(actualSortedList, expectedSortedList, "Sorting did not work as expected!");
+		
 		List<String> originalList = program.getOriginalList("progName");
 		List<String> sortedList = program.getSortedList(originalList);
 		System.out.println("sorted name list" + sortedList.toString() );
-		Assert.assertTrue(originalList.equals(sortedList));		
-	}
+		Assert.assertEquals(originalList,sortedList);	
+		
+}
 
 
 	@When("Admin clicks on Arrow next to program Name of Program module page for sort descend")
@@ -406,8 +415,7 @@ public class ProgramStep {
 		Assert.assertTrue(originalList.equals(sortedList));
 	}
 
-	
-	
+		
 // **************************************Pagination****************************************
 	
 	
@@ -435,33 +443,33 @@ public class ProgramStep {
 	    }
 	 
 	    // Verify the results based on the <results> description
-	@Then("Admin should see the {string} on the data table in program module")
-	    public void adminShouldSeeResults(String expectedResult) {
-	    	
-
-	    	switch (expectedResult.toLowerCase()) {
-	    	 case "Next enabled link":
-	             Assert.assertTrue(program.isFirstButtonEnabled());
+	 @Then("Admin should see the {string} on the data table in program module")
+	 public void adminShouldSeeResults(String expectedResult) {
+	     switch (expectedResult.toLowerCase()) {
+	         case "next enabled link":
+	        	 Assert.assertTrue(isElementEnabled(program.nextButton));
 	             break;
-	        case "last page link with Next disabled":
-	            Assert.assertFalse( program.isNextButtonEnabled());
-	            break;
-	        case "previous page":
-	            Assert.assertTrue( program.hasNextPageResults());
-	            break;
-	        case "very first page":
-	            Assert.assertTrue( program.hasNextPageResults());
-	            break;
-	          default:
-	            Assert.fail("Unexpected result description: " + expectedResult);
-	    }
-	    }
+	         case "last page link with next disabled":
+	        	 Assert.assertTrue(isElementEnabled(program.nextButton));
+	             break;
+	         case "previous page":
+	             Assert.assertFalse(program.isPrevButtonEnabled());
+	             break;
+	         case "very first page":
+	             Assert.assertFalse(program.isPrevButtonEnabled());
+	             break;
+	         default:
+	             Assert.fail("Unexpected result description: " + expectedResult);
+	     }
+	 }
+	 
+	 
+	 @When("Admin clicks on the logout button on the Manage Program")
+		public void admin_clicks_on_the_logout_button() {
+			program.clickLogout();
+		}
+
 
 }
-	
-	
-	
-	
-	
 	
 

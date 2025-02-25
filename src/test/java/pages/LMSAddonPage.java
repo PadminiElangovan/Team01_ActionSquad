@@ -8,6 +8,7 @@ import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,10 +20,12 @@ public class LMSAddonPage {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	TestContext context;
+
 	
 	public LMSAddonPage(WebDriver driver, TestContext context) {
 		this.driver = context.getDriver();
 		this.context = context;
+	
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		PageFactory.initElements(driver, this);
 		}
@@ -103,5 +106,11 @@ public class LMSAddonPage {
 	
 	public boolean errormsg() {
 		return Errors.isEmpty();
+	}
+	
+	public void sendText(String data) {
+		batchDescText.click();
+		 Actions actions = new Actions(driver);
+	        actions.sendKeys(data).perform();
 	}
 }

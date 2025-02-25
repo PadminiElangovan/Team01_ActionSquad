@@ -133,11 +133,11 @@ public void admin_should_see_error_messages() {
 @When("Admin enters invalid {string} data and clicks save")
 public void admin_enters_invalid_data_and_clicks_save(String field) {
 	switch (field) {
-	case "DescStartsSpcChar": elementSendkeys(common.batchDescText,msg.get(4).get("Input") );
+	case "DescSpcChar": common.sendText(msg.get(9).get("Input"));
 		break;
-	case "DescStarts-No": elementSendkeys(common.batchDescText,msg.get(7).get("Input") );
+	case "DescStarts-No": common.sendText(msg.get(7).get("Input"));
 		break;
-	case "DesclessChar": elementSendkeys(common.batchDescText,msg.get(8).get("Input") );
+	case "DesclessChar": common.sendText(msg.get(8).get("Input"));
 		break;
 	}
 }

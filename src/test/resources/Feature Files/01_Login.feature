@@ -1,8 +1,7 @@
 @Loginpage @LMS
 
  Feature: Login page validation
- 
- 
+  
   @Loginpage
   Scenario: Verify Admin is able to land on login page
     When Admin gives the correct LMS portal URL
@@ -83,3 +82,44 @@
   Scenario: Verify the alignment of input field for the login
     When Admin gives the correct LMS portal URL
     Then Admin should see input field in the center of the page
+
+  @LoginButton
+  Scenario: Verify Login button is present
+    When Admin gives the correct LMS portal URL
+    Then Admin should see login button
+
+  @UserFont
+  Scenario: Verify input descriptive text in user field
+    When Admin gives the correct LMS portal URL
+    Then Admin should see User in gray color
+
+  @PswdFont
+  Scenario: Verify input descriptive text in password field
+    When Admin gives the correct LMS portal URL
+    Then Admin should see Password in gray color
+
+	@LoginScn
+  Scenario Outline: Validate login functionality
+    Given Admin is on login page
+    When Admin enters  "<Credentials>" and clicks login button
+    Then Admin should "<Credentials>"
+
+    Examples:
+      | Credentials    | Expected_result                       |
+      | valid          | land on home page                     |
+      | invalid        | Invalid username and password    		 |
+      | Emptyusername  | Please enter your user name           |
+      | Emptypassword  | Please enter your password            |
+
+  @LoginKeys
+  Scenario: Verify login button action through keyboard
+    Given Admin is on login page
+    When Admin enters valid credentials and presses Enter key
+    Then Admin should land on home page
+    
+  @LoginAction
+  Scenario: Verify login button action through mouse
+    Given Admin is on login page
+    When Admin enters valid credentials and clicks login button through mouse
+    Then Admin should land on home page
+
