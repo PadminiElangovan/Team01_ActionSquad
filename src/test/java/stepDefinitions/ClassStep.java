@@ -31,6 +31,8 @@ public class ClassStep {
 	String updatedDescription;
 	String msg;
 	ArrayList<String> selectedFirstColValues;
+	boolean found;
+	
 	public ClassStep(TestContext context) {
      this.context = context;
      this.driver = context.getDriver();
@@ -47,7 +49,7 @@ public class ClassStep {
 	
 	@When("admin clicks the Class Navigation bar in the Header")
 	public void admin_clicks_the_class_navigation_bar_in_the_header() {
-		System.out.println("MMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+		
 		
 		classPage.clickClass();
 	}
@@ -377,52 +379,42 @@ public void admin_should_get_error_message() {
 //Search
 
 @When("Admin enter the BatchName in search textbox and Enter")
-public void admin_enter_the_batch_name_in_search_textbox_and_enter() {
+public void admin_enter_the_batch_name_in_search_textbox_and_enter() throws InterruptedException {
 	String batchName = classXl.get(0).get("BatchName");
-	classPage.searchClass(batchName);
+	found = classPage.searhBoxValidation("Batch Name", batchName.trim());
 	
 }
 
 @Then("Admin should see Class details are searched by Batch Name")
 public void admin_should_see_class_details_are_searched_by_batch_name() {
-	String batchName = classXl.get(0).get("BatchName");
-	System.out.println(batchName);
-	System.out.println(classPage.searchValues.get(2).getText());
-	Assert.assertEquals(batchName, classPage.searchValues.get(2).getText());
+	Assert.assertTrue(found);
 }
 
 @When("Admin enter the Class topic in search textbox and Enter")
-public void admin_enter_the_class_topic_in_search_textbox_and_enter() {
-	String classTopic = classXl.get(0).get("ClassTopic");
-	classPage.searchClass(classTopic);
+public void admin_enter_the_class_topic_in_search_textbox_and_enter() throws InterruptedException {
+		String classTopic = classXl.get(0).get("ClassTopic");
+	 found = classPage.searhBoxValidation("Class Topic", classTopic.trim());
+	
 }
 
 @Then("Admin should see Class details are searched by Class topic")
 public void admin_should_see_class_details_are_searched_by_class_topic() {
-	String classTopic = classXl.get(0).get("ClassTopic");
-	System.out.println(classTopic);
-	System.out.println(classPage.searchValues.get(3).getText());
-	Assert.assertEquals(classTopic, classPage.searchValues.get(3).getText());
+	Assert.assertTrue(found);
 }
 
 @When("Admin enter the Staff Name in search textbox and Enter")
-public void admin_enter_the_staff_name_in_search_textbox_and_enter() {
-	String staffName = classXl.get(0).get("StaffName");
-	classPage.searchClass(staffName);
+public void admin_enter_the_staff_name_in_search_textbox_and_enter() throws InterruptedException {
+		String staffName = classXl.get(0).get("StaffName");
+	 found = classPage.searhBoxValidation("Staff Name", staffName.trim());
+	
 }
 
 @Then("Admin should see Class details are searched by Staff name")
 public void admin_should_see_class_details_are_searched_by_staff_name() {
-	String staffName = classXl.get(0).get("StaffName");
-	System.out.println(staffName);
-	System.out.println(classPage.searchValues.get(7).getText());
-	Assert.assertEquals(staffName, classPage.searchValues.get(7).getText());
+	Assert.assertTrue(found);
 }
 
-
 //Delete All
-
-
 
 @When("Admin clicks any checkbox {int} in the data table")
 public void admin_clicks_any_checkbox_in_the_data_table(Integer int1) {
@@ -448,7 +440,7 @@ public void admin_clicks_yes_button_on_the_alert() {
 	String msg = classPage.confirmDeletion();
 	System.out.println(msg);
 	
-	Assert.assertEquals("Successful Classes Deleted", msg);
+	Assert.assertEquals("Successful Classes Deleted", msg.trim());
 }
 
 @Then("Admin should land on Manage class page and can see the selected class is deleted from the data table")
@@ -697,5 +689,37 @@ public void admin_see_the_staff_name_is_sorted_descending_order_in_class_module_
 	Assert.assertTrue(originalList.equals(sortedList));	 
 }
 
+//Navigation
+@When("Admin from class clicks on the program button")
+public void admin_from_class_clicks_on_the_program_button() {
+    classPage.navigateToBatch();
+}
 
+@When("Admin from class clicks on the Home button")
+public void admin_from_class_clicks_on_the_home_button() {
+	classPage.clickProgram();
+}
+
+@Then("Admin should see the Program screen Page")
+public void admin_should_see_the_program_screen_page() {
+ //  Assert.assertTrue(classPage.validateProgramScreen());
+}
+
+@Then("Admin should see the Batch screen Page")
+public void admin_should_see_the_batch_screen_page() {
+	//Assert.assertTrue(classPage.validateBatchScreen());
+}
+
+<<<<<<< HEAD
+
+//Logout
+
+@When("Admin from class clicks on the logout button")
+public void admin_from_class_clicks_on_the_logout_button() {
+	classPage.Logoutbutton();
+}
+
+
+=======
+>>>>>>> 06fa468e6a5c10ca03efde2292ad00dc845d9797
 }

@@ -123,7 +123,17 @@
 			
 			@FindBy(xpath = "//div[@class='p-dialog-header ng-tns-c168-7 ng-star-inserted']")public WebElement editPopup;
 			
+			//Search
 			@FindBy(xpath = "//table[@role='grid']//tbody//tr//td") public List<WebElement> searchValues;
+			
+			@FindBy(xpath = "//input[@id='filterGlobal']")	public WebElement searchBox;
+			@FindBy(xpath = "(//div[@class='action'])")		public List<WebElement> noOfRows;
+			@FindBy(xpath = "//input[@placeholder]")		public WebElement searchBx;
+			@FindBy(xpath = "//input[@placeholder]")		public WebElement searchox;
+			
+			@FindBy(xpath = "//tbody//td[2]")			List<WebElement> listOfBatchNames;
+			@FindBy(xpath = "//tbody//td[3]")			List<WebElement> listOfClassTopic;
+			@FindBy(xpath = "//tbody//td[7]")			List<WebElement> listOfStaffNames;
 			
 			//Delete
 			@FindBy(xpath = "//tbody[@class='p-datatable-tbody']//tr//td[1]")	public List<WebElement> checkBoxList;
@@ -167,8 +177,14 @@
 				private WebElement lastButton;
 				@FindBy(xpath = "//button[contains(@class, 'p-paginator-page')]")
 				private List<WebElement> pageButtons;
-		
-			
+			//Navigation to Other modules
+				@FindBy(xpath = "//mat-toolbar//button[3]")	private WebElement batchlink;
+				@FindBy(xpath = "//*[@id='program']")	private WebElement programBtn;
+				@FindBy(xpath = "//div[normalize-space()=' Manage Program']") public WebElement pageProgramTitle;
+				
+				@FindBy(xpath = "//div[normalize-space()=' Manage Batch']")private WebElement manageBatchHeader;
+			//Logout
+				@FindBy(xpath = "//button[@id ='logout']")	public WebElement logoutButton;
 			
 			
 			public Class_Page(WebDriver driver, TestContext context){
@@ -249,16 +265,44 @@
 				return successMsg.getText();
 			}
 			
-		//	public ArrayList<WebElement> getStatusBtn()
-		//	{
-		//		ArrayList<WebElement> compList = new ArrayList<WebElement>();
-		//		for (int i = 1; i < cmpStatusRadios.size(); i++) {
-		//			WebElement element = cmpStatusRadios.get(i);
-		//			compList.add(element);
-		//		}
-		//				
-		//		return compList;
-		//	}
+		
+			
+			public boolean searhBoxValidation(String field, String value) throws InterruptedException {
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", searchBox);
+				boolean found = false;
+				switch (field) {
+				case "Batch Name":
+					searchBox.sendKeys(value);
+					found = logicForValidatingSearch(listOfBatchNames, value);
+					break;
+				case "Class Topic":
+					searchBox.sendKeys(value);
+					found = logicForValidatingSearch(listOfClassTopic, value);
+					break;
+				case "Staff Name":
+					searchBox.sendKeys(value);
+					found = logicForValidatingSearch(listOfStaffNames, value);
+					break;
+				}
+				return found;
+			}
+			
+			public boolean logicForValidatingSearch(List<WebElement> searchedValues, String value) {
+				boolean found = false;
+				for (WebElement v : searchedValues) {
+					if (v.getText().equalsIgnoreCase(value)) {
+						System.out.println("Search is success for value: " + value);
+						found = true;
+						break;
+					}
+				}
+
+				if (!found) {
+					System.out.println("Search is not success for value: " + value);
+				}
+				return found;
+			}
 			
 			public void searchClass(String value)
 			{
@@ -508,6 +552,32 @@
 				System.out.println("Sorted List After sorting is"+ sortedList);
 			    return sortedList;
 			}
-		
+			
+			//navigation
+			public void navigateToBatch() {
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+				wait.until(ExpectedConditions.elementToBeClickable(batchlink)).click();
+			}
+			// clicking program button
+			public void clickProgram() {
+				elementClick(programBtn);
+			}
+			
+			public boolean validateProgramScreen()
+			{
+				return isElementPresent(pageProgramTitle);
+				
+			}
+			
+			public boolean validateBatchScreen()
+			{
+				
+				return isElementPresent(manageBatchHeader);
+			}
+			
+			public void Logoutbutton() {
+				logoutButton.click();
+			}
+
 				
 		}
