@@ -96,7 +96,7 @@ public class Program_Page extends BasePage {
 	private WebElement programCreated;
 	@FindBy(xpath = "//button[@id='saveProgram']")
 	private WebElement saveProgram;
-	@FindBy(xpath="(//tbody/tr[1]/td[2]")
+	@FindBy(xpath="(//tbody//td[2]")
 	private WebElement programNameSearch;
 	@FindBy(xpath = "//small[normalize-space()='Program name is required.']")
 	private WebElement programNameReq;
@@ -138,7 +138,7 @@ public class Program_Page extends BasePage {
 	private WebElement alertMsg;
 
 	//Search
-	private String lastSearchedField, lastSearchedValue;
+	//private String lastSearchedField, lastSearchedValue;
 	@FindBy(xpath = "//tbody//td[2]")
 	private List<WebElement> listOfProgramNames;
 	@FindBy(xpath = "//tbody//td[3]")
@@ -447,7 +447,7 @@ public class Program_Page extends BasePage {
 		}
 		return false;	
 	}
-	
+// Sorting	
 
 	public void clickProgramNameSort(){	
 		WebElement proGNameSort=driver.findElement(progNameSort);
@@ -541,7 +541,7 @@ public List<String> getSortedList(List<String> originalList){
     }
 
     String classAttribute = nextButton.getDomAttribute("class");
-    return classAttribute != null && !classAttribute.contains("p-disabled");
+    return (classAttribute != null && !classAttribute.contains("p-disabled"));
      }
 
 	public boolean isPrevButtonEnabled() {
