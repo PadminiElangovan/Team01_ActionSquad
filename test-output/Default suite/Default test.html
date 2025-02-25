@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 24 20:57:14 CST 2025</td>
+<td>Started on:</td><td>Mon Feb 24 21:28:47 CST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>42 seconds (42109 ms)</td>
+<tr><td>Total time:</td><td>8 seconds (8320 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,38 +76,23 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links for program page", "Manage Page Validation"</td>
-<td></td>
-<td>5</td>
-<td>testRunner.TestRunner@31e5415e</td></tr>
-<tr>
-<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links for program page", "Manage Page Validation"</td>
-<td></td>
-<td>7</td>
-<td>testRunner.TestRunner@31e5415e</td></tr>
-<tr>
-<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links", "Batch Page Navigation"</td>
-<td></td>
-<td>4</td>
-<td>testRunner.TestRunner@31e5415e</td></tr>
-<tr>
-<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links for program page", "Manage Page Validation"</td>
-<td></td>
-<td>5</td>
-<td>testRunner.TestRunner@31e5415e</td></tr>
-<tr>
-<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links for program page", "Manage Page Validation"</td>
-<td></td>
-<td>4</td>
-<td>testRunner.TestRunner@31e5415e</td></tr>
-<tr>
-<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links", "Batch Page Navigation"</td>
-<td></td>
-<td>4</td>
-<td>testRunner.TestRunner@31e5415e</td></tr>
-<tr>
-<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links", "Batch Page Navigation"</td>
-<td></td>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Status button is selected", "Additional Batch Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.BatchStepAddon.admin_should_see_status_is_selected(BatchStepAddon.java:156)
+	at ✽.Admin should see status is selected(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:67)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1340362810", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1340362810'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.BatchStepAddon.admin_should_see_status_is_selected(BatchStepAddon.java:156)
+	at ✽.Admin should see status is selected(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:67)
+</pre></div></td>
 <td>5</td>
 <td>testRunner.TestRunner@31e5415e</td></tr>
 </table><p>

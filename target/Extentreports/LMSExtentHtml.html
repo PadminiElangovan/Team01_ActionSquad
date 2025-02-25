@@ -40,6 +40,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Feb 24, 2025 08:57:14 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Feb 24, 2025 09:28:47 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -64,7 +65,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,9 +77,10 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@Programpage</a></li>
-					<li><a href='#'>@Pagination</a></li>
 					<li><a href='#'>@LMS</a></li>
+					<li><a href='#'>@Dash</a></li>
+					<li><a href='#'>@StatusEdit</a></li>
+					<li><a href='#'>@BatchExtra</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -120,12 +122,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>2</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -138,12 +140,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>7</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
+                    <span class='strong'>0</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -158,12 +160,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>31</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='80%'>
+                    <span class='strong'>4</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='20%'>
+                    1</span> steps failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -186,11 +188,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Manage Page Validation</span>
-						<span class='test-time'>Feb 24, 2025 08:57:19 PM</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-name'>Additional Batch Functionality</span>
+						<span class='test-time'>Feb 24, 2025 09:28:49 PM</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -200,247 +202,58 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario outline node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 22.044</span>
+	<span class='duration right label'>00 00 05.713</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validate pagination links for program page</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verify Status button is selected</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>pageLink</td><td>results</td></tr><tr><td>Next</td><td>Next enabled link</td></tr><tr><td>Last</td><td>last page link with Next disabled</td></tr><tr><td>Previous</td><td>previous page</td></tr><tr><td>First</td><td>very first page</td></tr></table></div>
 	
-	
-	<ul class='steps'>
-		<li test-id='3' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validate pagination links for program page</div>
-
-				<div class='category-list'>
-						<span class='category label'>@Pagination</span>
-						<span class='category label'>@LMS</span>
-						<span class='category label'>@Programpage</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='6' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on login Page</h6>
-
-				</li>
-				<li test-id='7' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_enter_valid_data_in_all_field_and_clicks_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enter valid data in all field and clicks login button</h6>
-
-				</li>
-				<li test-id='8' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.ProgramStep.adminClicksPageLink(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the "Next" link on the data table in program page</h6>
-
-				</li>
-				<li test-id='9' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.ProgramStep.adminShouldSeeResults(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see the "Next enabled link" on the data table in program module</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='11' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validate pagination links for program page</div>
-
-				<div class='category-list'>
-						<span class='category label'>@Pagination</span>
-						<span class='category label'>@LMS</span>
-						<span class='category label'>@Programpage</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='14' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on login Page</h6>
-
-				</li>
-				<li test-id='15' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_enter_valid_data_in_all_field_and_clicks_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enter valid data in all field and clicks login button</h6>
-
-				</li>
-				<li test-id='16' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.ProgramStep.adminClicksPageLink(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the "Last" link on the data table in program page</h6>
-
-				</li>
-				<li test-id='17' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.ProgramStep.adminShouldSeeResults(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see the "last page link with Next disabled" on the data table in program module</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='19' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validate pagination links for program page</div>
-
-				<div class='category-list'>
-						<span class='category label'>@Pagination</span>
-						<span class='category label'>@LMS</span>
-						<span class='category label'>@Programpage</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='22' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on login Page</h6>
-
-				</li>
-				<li test-id='23' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_enter_valid_data_in_all_field_and_clicks_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enter valid data in all field and clicks login button</h6>
-
-				</li>
-				<li test-id='24' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.ProgramStep.adminClicksPageLink(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the "Previous" link on the data table in program page</h6>
-
-				</li>
-				<li test-id='25' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.ProgramStep.adminShouldSeeResults(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see the "previous page" on the data table in program module</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='27' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validate pagination links for program page</div>
-
-				<div class='category-list'>
-						<span class='category label'>@Pagination</span>
-						<span class='category label'>@LMS</span>
-						<span class='category label'>@Programpage</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='30' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on login Page</h6>
-
-				</li>
-				<li test-id='31' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_enter_valid_data_in_all_field_and_clicks_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enter valid data in all field and clicks login button</h6>
-
-				</li>
-				<li test-id='32' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.ProgramStep.adminClicksPageLink(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the "First" link on the data table in program page</h6>
-
-				</li>
-				<li test-id='33' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.ProgramStep.adminShouldSeeResults(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see the "very first page" on the data table in program module</h6>
-
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='35'>
-					<div class='test-heading'>
-						<span class='test-name'>Batch Page Navigation</span>
-						<span class='test-time'>Feb 24, 2025 08:57:41 PM</span>
-						<span class='test-status right pass'>Pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class="sr-filters bdd-filters">
-	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
-	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
-	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
-	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
-</div>
-
-<div class='scenario outline node' test-id='36' status='pass'>
-
-	<span class='duration right label'>00 00 14.297</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validate pagination links</div>
-	</div>
-	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>pageLink</td><td>results</td></tr><tr><td>Next</td><td>Next enabled link</td></tr><tr><td>Previous</td><td>previous results</td></tr><tr><td>First</td><td>first results</td></tr></table></div>
-	
+		<div class='category-list'>
+				<span class='category label'>@LMS</span>
+				<span class='category label'>@BatchExtra</span>
+				<span class='category label'>@StatusEdit</span>
+				<span class='category label'>@Dash</span>
+		</div>
 	
 	<ul class='steps'>
-		<li test-id='37' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validate pagination links</div>
+		<li test-id='5' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.ProgramStepAddon.admin_is_on_home_page_after_logs_in())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on home page after Logs in</div>
 
-				<div class='category-list'>
-						<span class='category label'>@Pagination</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='40' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on login Page</h6>
-
-				</li>
-				<li test-id='41' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_enter_valid_data_in_all_field_and_clicks_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enter valid data in all field and clicks login button</h6>
-
-				</li>
-				<li test-id='42' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BatchStep.admin_is_on_the_batch_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on the batch page</h6>
-
-				</li>
-				<li test-id='43' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BatchStep.admin_clicks_the_link_on_the_data_table_batch_module(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the "Next" link on the data table Batch module</h6>
-
-				</li>
-				<li test-id='44' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BatchStep.admin_should_see_the_results_on_the_data_table_batch_module(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see the "Next enabled link" results on the data table Batch Module</h6>
-
-				</li>
-			</ul>
 		</li>
-		<li test-id='46' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validate pagination links</div>
+		<li test-id='6' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BatchStepAddon.admin_is_on_manage_batch_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on Manage Batch page</div>
 
-				<div class='category-list'>
-						<span class='category label'>@Pagination</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='49' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on login Page</h6>
-
-				</li>
-				<li test-id='50' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_enter_valid_data_in_all_field_and_clicks_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enter valid data in all field and clicks login button</h6>
-
-				</li>
-				<li test-id='51' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BatchStep.admin_is_on_the_batch_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on the batch page</h6>
-
-				</li>
-				<li test-id='52' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BatchStep.admin_clicks_the_link_on_the_data_table_batch_module(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the "Previous" link on the data table Batch module</h6>
-
-				</li>
-				<li test-id='53' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BatchStep.admin_should_see_the_results_on_the_data_table_batch_module(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see the "previous results" results on the data table Batch Module</h6>
-
-				</li>
-			</ul>
 		</li>
-		<li test-id='55' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validate pagination links</div>
+		<li test-id='7' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BatchStepAddon.admin_clicks_edit_icon_for_entry())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks edit icon for entry</div>
 
-				<div class='category-list'>
-						<span class='category label'>@Pagination</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='58' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on login Page</h6>
+		</li>
+		<li test-id='8' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(stepDefinitions.BatchStepAddon.admin_should_see_status_is_selected())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Admin should see status is selected</div>
 
-				</li>
-				<li test-id='59' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.DashboardStep.admin_enter_valid_data_in_all_field_and_clicks_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enter valid data in all field and clicks login button</h6>
 
-				</li>
-				<li test-id='60' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BatchStep.admin_is_on_the_batch_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is on the batch page</h6>
+					<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.BatchStepAddon.admin_should_see_status_is_selected(BatchStepAddon.java:156)
+	at ✽.Admin should see status is selected(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:67)
+</textarea>
+		</li>
+		<li test-id='9' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>appHook.Hooks.tearDown(io.cucumber.java.Scenario)</div>
 
-				</li>
-				<li test-id='61' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BatchStep.admin_clicks_the_link_on_the_data_table_batch_module(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the "First" link on the data table Batch module</h6>
 
-				</li>
-				<li test-id='62' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BatchStep.admin_should_see_the_results_on_the_data_table_batch_module(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see the "first results" results on the data table Batch Module</h6>
-
-				</li>
-			</ul>
+					<div class="node-step">Verify Status button is selected</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../../Screenshots/embedded1.png' src='../../Screenshots/embedded1.png'>
+					</div>
 		</li>
 	</ul>
 </div>
@@ -488,126 +301,15 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Programpage</span>
-						<span class='category-status right'>
-						<span class='label pass'>4</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Feb 24, 2025 08:57:19 PM</td>
-										<td class='linked' test-id='3'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 24, 2025 08:57:25 PM</td>
-										<td class='linked' test-id='11'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 24, 2025 08:57:31 PM</td>
-										<td class='linked' test-id='19'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 24, 2025 08:57:36 PM</td>
-										<td class='linked' test-id='27'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@Pagination</span>
-						<span class='category-status right'>
-						<span class='label pass'>7</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 7</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Feb 24, 2025 08:57:19 PM</td>
-										<td class='linked' test-id='3'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 24, 2025 08:57:25 PM</td>
-										<td class='linked' test-id='11'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 24, 2025 08:57:31 PM</td>
-										<td class='linked' test-id='19'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 24, 2025 08:57:36 PM</td>
-										<td class='linked' test-id='27'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 24, 2025 08:57:41 PM</td>
-										<td class='linked' test-id='37'>Validate pagination links</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 24, 2025 08:57:46 PM</td>
-										<td class='linked' test-id='46'>Validate pagination links</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 24, 2025 08:57:51 PM</td>
-										<td class='linked' test-id='55'>Validate pagination links</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
 						<span class='category-name'>@LMS</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -621,24 +323,108 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 24, 2025 08:57:19 PM</td>
-										<td class='linked' test-id='3'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Feb 24, 2025 09:28:49 PM</td>
+										<td class='linked' test-id='2'>Verify Status button is selected</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Dash</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
 									<tr>
-										<td>Feb 24, 2025 08:57:25 PM</td>
-										<td class='linked' test-id='11'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
 									</tr>
+								</thead>
+								<tbody>
 									<tr>
-										<td>Feb 24, 2025 08:57:31 PM</td>
-										<td class='linked' test-id='19'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Feb 24, 2025 09:28:49 PM</td>
+										<td class='linked' test-id='2'>Verify Status button is selected</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@StatusEdit</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
 									<tr>
-										<td>Feb 24, 2025 08:57:36 PM</td>
-										<td class='linked' test-id='27'>Validate pagination links for program page</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 24, 2025 09:28:49 PM</td>
+										<td class='linked' test-id='2'>Verify Status button is selected</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@BatchExtra</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 24, 2025 09:28:49 PM</td>
+										<td class='linked' test-id='2'>Verify Status button is selected</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -654,7 +440,69 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 24, 2025 09:28:54 PM</td>
+										<td class='linked' test-id='8'>Then Admin should see status is selected</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.BatchStepAddon.admin_should_see_status_is_selected(BatchStepAddon.java:156)
+	at ✽.Admin should see status is selected(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:67)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -662,37 +510,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>7</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>31</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 24, 2025 08:57:14 PM</div>
+					<div class='panel-lead'>Feb 24, 2025 09:28:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 24, 2025 08:57:56 PM</div>
+			 		<div class='panel-lead'>Feb 24, 2025 09:28:55 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 41.321</div>
+					<div class='panel-lead'>00 00 07.805</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -736,30 +584,39 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@Programpage</td>
-							<td>4</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@Pagination</td>
-							<td>7</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
 							<td>@LMS</td>
-							<td>4</td>
 							<td>0</td>
+							<td>1</td>
 							<td>0</td>
 							<td>
-									100%
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@Dash</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@StatusEdit</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@BatchExtra</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
 							</td>
 						</tr>
 					</table>
@@ -773,24 +630,24 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 2,
-				passParent: 2,
-				failParent: 0,
+                parentCount: 1,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 7,
-				passChild: 7,
-				failChild: 0,
+				childCount: 1,
+				passChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 31,
-				passGrandChild: 31,
-				failGrandChild: 0,
+				grandChildCount: 5,
+				passGrandChild: 4,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
@@ -801,7 +658,7 @@
 		
 		<script>
 			var timeline = {
-			        "Manage Page Validation":22.074,"Batch Page Navigation":14.297
+			        "Additional Batch Functionality":5.716
 			};
 		</script>
 		
