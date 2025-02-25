@@ -30,11 +30,11 @@ import io.cucumber.testng.CucumberOptions;
 		LoggerLoad.info(browser + " is Running");
 		ConfigReader.properties.setProperty("Browser", browser);
 	} 
-/*
+
 	@Override
     @DataProvider(parallel = true)
     public Object[][] scenarios() {
 				
 		return super.scenarios();
-    } */
+    } 
 }
