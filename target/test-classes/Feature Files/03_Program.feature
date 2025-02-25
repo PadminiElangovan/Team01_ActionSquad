@@ -74,7 +74,7 @@ Feature: Manage Page Validation
 
     Examples: 
       | Name  |  | Description |  | Status |  | SuccessMsg |
-      | Doore |  | Open        |  | Active |  | Successful |
+      | Doori |  | Open        |  | Active |  | Successful |
 
   @VerifyProgramCreated
   Scenario Outline: Verify added Program is created
@@ -83,7 +83,7 @@ Feature: Manage Page Validation
 
     Examples: 
       | Program Name |
-      | Doore        |
+      | Doori        |
 
   @ValCancelBtn
   Scenario: Validate Cancel/Close(X) icon on program Details form

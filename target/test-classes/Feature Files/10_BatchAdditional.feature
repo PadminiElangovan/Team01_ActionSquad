@@ -60,6 +60,12 @@ Feature: Additional Batch Functionality
     When Admin clicks save button
     Then Admin should see error messages 
     
+   @StatusEdit
+  Scenario: Verify Status button is selected
+    Given Admin is on Manage Batch page
+    When Admin clicks edit icon for entry
+    Then Admin should see status is selected
+    
   @DescEmptyBatch
   Scenario: Verify desc mandatory error message
     Given The Admin is in Edit New batch pop window
