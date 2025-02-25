@@ -58,7 +58,8 @@ public class LMSAddonPage {
 	@FindBy(xpath = "//div[contains(text(),'Active')]//div[2]") public WebElement statusActive;
 	@FindBy(xpath = "//small") public WebElement Errormessage;
 	@FindBy(xpath = "//small") public List<WebElement> Errors;
-	@FindBy(xpath = "//tbody/tr[1]/td/div/span[1]/button[1]") public WebElement EditIcon;  
+	@FindBy(xpath = "//tbody/tr[1]/td/div/span[1]/button[1]") public WebElement EditIcon; 
+	@FindBy(xpath = "//div[@role='dialog']//div//div[2]//p-radiobutton[1]//div[1]//div[2]")public WebElement Activeradio;
 	
 	String Text = "JaVA";
 	

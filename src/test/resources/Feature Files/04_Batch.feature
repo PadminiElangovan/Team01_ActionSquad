@@ -1,3 +1,4 @@
+@Batch @LMS
 Feature: Batch Page Navigation
 
   Background: Admin Is on the Dashboard page after login

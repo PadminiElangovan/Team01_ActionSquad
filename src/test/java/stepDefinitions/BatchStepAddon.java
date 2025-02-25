@@ -147,6 +147,15 @@ public void admin_receives_invalid_error_messages(String field) {
 	Assert.assertEquals(elementGetText(common.Errormessage), msg.get(9).get("errmsg"));
 }
 
+@When("Admin clicks edit icon for entry")
+public void admin_clicks_edit_icon_for_entry() {
+	common.elementclickJs(common.EditIcon);
+}
+@Then("Admin should see status is selected")
+public void admin_should_see_status_is_selected() {
+	Assert.assertTrue(common.Activeradio.isSelected());
+}
+
 @Given("The Admin is in Edit New batch pop window")
 public void the_admin_is_in_edit_new_batch_pop_window() {
 	elementClick(Dashboard.BatchMenu);

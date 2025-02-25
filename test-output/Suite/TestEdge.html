@@ -1,0 +1,1785 @@
+<html>
+<head>
+<title>TestNG:  TestEdge</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TestEdge</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>186/30/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Feb 25 04:15:54 CST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>1749 seconds (1749507 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate multiple row delete with checkbox", "Batch Page Navigation"</td>
+<td><div><pre>java.lang.AssertionError: expected [Successful
+Batches Deleted] but found [Successful
+Batches Deleted]
+	at stepDefinitions.BatchStep.the_respective_row_in_the_table_should_be_deleted_in_batch_module(BatchStep.java:497)
+	at ✽.The respective row in the table should be deleted in batch module(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/04_Batch.feature:180)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1604313692", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1604313692'><pre>java.lang.AssertionError: expected [Successful
+Batches Deleted] but found [Successful
+Batches Deleted]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.BatchStep.the_respective_row_in_the_table_should_be_deleted_in_batch_module(BatchStep.java:497)
+	at ✽.The respective row in the table should be deleted in batch module(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/04_Batch.feature:180)
+</pre></div></td>
+<td>9</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate user count", "Additional Dashboard Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [0] but found [49]
+	at stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_user(DashboardStepAddon.java:188)
+	at ✽.Admin should see exact total count of active and inactive user(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:95)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1082454151", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1082454151'><pre>java.lang.AssertionError: expected [0] but found [49]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_user(DashboardStepAddon.java:188)
+	at ✽.Admin should see exact total count of active and inactive user(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:95)
+</pre></div></td>
+<td>9</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search Program by Program Name", "Manage Page Validation"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at stepDefinitions.ProgramStep.admin_enter_the_in_search_textbox(ProgramStep.java:302)
+	at ✽.Admin enter the &quot;Description&quot; &quot;Open&quot; in search textbox(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/03_Program.feature:154)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace22478931", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace22478931'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.ProgramStep.admin_enter_the_in_search_textbox(ProgramStep.java:302)
+	at ✽.Admin enter the &quot;Description&quot; &quot;Open&quot; in search textbox(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/03_Program.feature:154)
+</pre></div></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Batch Functionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//small&quot;}
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [75a80ab75159befb7fdb498fd3de1c41, findElement {using=xpath, value=//small}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62107}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\madhu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62107/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75a80ab75159befb7fdb498fd3de1c41
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy48.getText(Unknown Source)
+	at pages.BasePage.elementGetText(BasePage.java:30)
+	at stepDefinitions.BatchStepAddon.admin_receives_invalid_error_messages(BatchStepAddon.java:147)
+	at ✽.Admin receives &quot;DescSpcChar&quot; invalid error messages(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:79)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace448830277", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace448830277'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//small&quot;}
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [75a80ab75159befb7fdb498fd3de1c41, findElement {using=xpath, value=//small}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62107}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\madhu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62107/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75a80ab75159befb7fdb498fd3de1c41
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy48.getText(Unknown Source)
+	at pages.BasePage.elementGetText(BasePage.java:30)
+	at stepDefinitions.BatchStepAddon.admin_receives_invalid_error_messages(BatchStepAddon.java:147)
+	at ✽.Admin receives &quot;DescSpcChar&quot; invalid error messages(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:79)
+</pre></div></td>
+<td>52</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin role mandatory error", "Additional Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.LoginStepAddon.admin_should_see_please_select_your_role_error_message(LoginStepAddon.java:53)
+	at ✽.Admin should see Please select your Role error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:14)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace516194765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace516194765'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_should_see_please_select_your_role_error_message(LoginStepAddon.java:53)
+	at ✽.Admin should see Please select your Role error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:14)
+</pre></div></td>
+<td>15</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate login functionality", "Login page validation"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.LoginStep.admin_should(LoginStep.java:190)
+	at ✽.Admin should &quot;invalid&quot;(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/01_Login.feature:105)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2042020220", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2042020220'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStep.admin_should(LoginStep.java:190)
+	at ✽.Admin should &quot;invalid&quot;(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/01_Login.feature:105)
+</pre></div></td>
+<td>15</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate single row delete with checkbox", "Batch Page Navigation"</td>
+<td><div><pre>java.lang.AssertionError: expected [Successful
+Batches Deleted] but found [Successful
+Batches Deleted]
+	at stepDefinitions.BatchStep.the_respective_row_in_the_table_should_be_deleted(BatchStep.java:478)
+	at ✽.The respective row in the table should be deleted(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/04_Batch.feature:174)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace774337899", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace774337899'><pre>java.lang.AssertionError: expected [Successful
+Batches Deleted] but found [Successful
+Batches Deleted]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.BatchStep.the_respective_row_in_the_table_should_be_deleted(BatchStep.java:478)
+	at ✽.The respective row in the table should be deleted(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/04_Batch.feature:174)
+</pre></div></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field mandatory message", "Additional Program Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.ProgramStepAddon.admin_receives_edit_mandatory_error_message(ProgramStepAddon.java:204)
+	at ✽.Admin receives &quot;Name&quot; edit mandatory error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/09_ProgramAdditional.feature:61)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1259161155", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1259161155'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.ProgramStepAddon.admin_receives_edit_mandatory_error_message(ProgramStepAddon.java:204)
+	at ✽.Admin receives &quot;Name&quot; edit mandatory error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/09_ProgramAdditional.feature:61)
+</pre></div></td>
+<td>28</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify warning sign", "Additional Class Functionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div/i&quot;}
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [5af6f6bc71761b8391e166ffc8d2ab14, findElement {using=xpath, value=//div/i}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62435}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\madhu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62435/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5af6f6bc71761b8391e166ffc8d2ab14
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy48.isDisplayed(Unknown Source)
+	at pages.BasePage.isElementPresent(BasePage.java:59)
+	at stepDefinitions.ProgramStepAddon.admin_should_see_warning_sign_in_confirmation_window(ProgramStepAddon.java:216)
+	at ✽.Admin should see warning sign in confirmation window(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/11_ClassAdditional.feature:33)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace972739435", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace972739435'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div/i&quot;}
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [5af6f6bc71761b8391e166ffc8d2ab14, findElement {using=xpath, value=//div/i}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62435}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\madhu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62435/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5af6f6bc71761b8391e166ffc8d2ab14
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy48.isDisplayed(Unknown Source)
+	at pages.BasePage.isElementPresent(BasePage.java:59)
+	at stepDefinitions.ProgramStepAddon.admin_should_see_warning_sign_in_confirmation_window(ProgramStepAddon.java:216)
+	at ✽.Admin should see warning sign in confirmation window(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/11_ClassAdditional.feature:33)
+</pre></div></td>
+<td>17</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate login functionality", "Login page validation"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.LoginStep.admin_should(LoginStep.java:194)
+	at ✽.Admin should &quot;Emptyusername&quot;(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/01_Login.feature:105)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1566854960", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1566854960'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStep.admin_should(LoginStep.java:194)
+	at ✽.Admin should &quot;Emptyusername&quot;(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/01_Login.feature:105)
+</pre></div></td>
+<td>15</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field mandatory message", "Additional Program Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Status is required.] but found [Description is required.]
+	at stepDefinitions.ProgramStepAddon.admin_receives_mandatory_error_message(ProgramStepAddon.java:128)
+	at ✽.Admin receives &quot;Status&quot; mandatory error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/09_ProgramAdditional.feature:35)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace786132879", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace786132879'><pre>java.lang.AssertionError: expected [Status is required.] but found [Description is required.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.ProgramStepAddon.admin_receives_mandatory_error_message(ProgramStepAddon.java:128)
+	at ✽.Admin receives &quot;Status&quot; mandatory error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/09_ProgramAdditional.feature:35)
+</pre></div></td>
+<td>9</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify desc mandatory error message", "Additional Batch Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.BatchStepAddon.admin_should_description_mandatory_error_message(BatchStepAddon.java:173)
+	at ✽.Admin should description mandatory error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:73)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2022845255", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2022845255'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.BatchStepAddon.admin_should_description_mandatory_error_message(BatchStepAddon.java:173)
+	at ✽.Admin should description mandatory error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:73)
+</pre></div></td>
+<td>19</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:153)
+	at ✽.Admin should be in &quot;Staff&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace484091660", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace484091660'><pre>java.lang.AssertionError: expected [Manage User] but found [Dashboard]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_be_in_page(DashboardStepAddon.java:153)
+	at ✽.Admin should be in &quot;Staff&quot; page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:70)
+</pre></div></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links for program page", "Manage Page Validation"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at stepDefinitions.ProgramStep.adminShouldSeeResults(ProgramStep.java:453)
+	at ✽.Admin should see the &quot;last page link with Next disabled&quot; on the data table in program module(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/03_Program.feature:209)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1416095613", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1416095613'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.ProgramStep.adminShouldSeeResults(ProgramStep.java:453)
+	at ✽.Admin should see the &quot;last page link with Next disabled&quot; on the data table in program module(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/03_Program.feature:209)
+</pre></div></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Forgot Password Link", "Additional Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.LoginStepAddon.admin_should_see_forgot_password_link(LoginStepAddon.java:104)
+	at ✽.Admin should see Forgot Password Link(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:42)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1060849377", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1060849377'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_should_see_forgot_password_link(LoginStepAddon.java:104)
+	at ✽.Admin should see Forgot Password Link(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:42)
+</pre></div></td>
+<td>28</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field mandatory message", "Additional Program Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.ProgramStepAddon.admin_receives_edit_mandatory_error_message(ProgramStepAddon.java:204)
+	at ✽.Admin receives &quot;Description&quot; edit mandatory error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/09_ProgramAdditional.feature:61)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace758365608", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace758365608'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.ProgramStepAddon.admin_receives_edit_mandatory_error_message(ProgramStepAddon.java:204)
+	at ✽.Admin receives &quot;Description&quot; edit mandatory error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/09_ProgramAdditional.feature:61)
+</pre></div></td>
+<td>22</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin selects staff role", "Additional Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.LoginStepAddon.admin_should_not_be_navigated_to_lms_portal(LoginStepAddon.java:79)
+	at ✽.Admin should not be navigated to LMS portal(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:26)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace689846209", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace689846209'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_should_not_be_navigated_to_lms_portal(LoginStepAddon.java:79)
+	at ✽.Admin should not be navigated to LMS portal(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:26)
+</pre></div></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify application name", "Login page validation"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.LoginStep.admin_should_see_lms_learning_management_system(LoginStep.java:72)
+	at ✽.Admin should see LMS - Learning Management System(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/01_Login.feature:28)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1452104813", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1452104813'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStep.admin_should_see_lms_learning_management_system(LoginStep.java:72)
+	at ✽.Admin should see LMS - Learning Management System(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/01_Login.feature:28)
+</pre></div></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate program count", "Additional Dashboard Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [0] but found [410]
+	at stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_program(DashboardStepAddon.java:180)
+	at ✽.Admin should see exact total count of active and inactive program(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:89)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1089083853", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1089083853'><pre>java.lang.AssertionError: expected [0] but found [410]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.DashboardStepAddon.admin_should_see_exact_total_count_of_active_and_inactive_program(DashboardStepAddon.java:180)
+	at ✽.Admin should see exact total count of active and inactive program(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/08_DashboardAdditional.feature:89)
+</pre></div></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify all field empty error message", "Additional Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.LoginStepAddon.admin_receives_mandatory_fields_error_message(LoginStepAddon.java:42)
+	at ✽.Admin receives mandatory fields error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:8)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1616411248", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1616411248'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStepAddon.admin_receives_mandatory_fields_error_message(LoginStepAddon.java:42)
+	at ✽.Admin receives mandatory fields error message(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/07_LoginAdditional.feature:8)
+</pre></div></td>
+<td>15</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify company name", "Login page validation"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.LoginStep.admin_should_see_company_name_below_the_app_name(LoginStep.java:78)
+	at ✽.Admin should see company name below the app name(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/01_Login.feature:33)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace429776436", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace429776436'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStep.admin_should_see_company_name_below_the_app_name(LoginStep.java:78)
+	at ✽.Admin should see company name below the app name(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/01_Login.feature:33)
+</pre></div></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify selected batch name Delete message", "Additional Batch Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Micro service-01?] but found [Micro]
+	at stepDefinitions.BatchStepAddon.admin_should_see_batch_name_in_the_confirmation_window(BatchStepAddon.java:114)
+	at ✽.Admin should see batch name in the confirmation window(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:55)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace118145318", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace118145318'><pre>java.lang.AssertionError: expected [Micro service-01?] but found [Micro]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.BatchStepAddon.admin_should_see_batch_name_in_the_confirmation_window(BatchStepAddon.java:114)
+	at ✽.Admin should see batch name in the confirmation window(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:55)
+</pre></div></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate login functionality", "Login page validation"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at stepDefinitions.LoginStep.admin_should(LoginStep.java:192)
+	at ✽.Admin should &quot;Emptypassword&quot;(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/01_Login.feature:105)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace686671744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace686671744'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at stepDefinitions.LoginStep.admin_should(LoginStep.java:192)
+	at ✽.Admin should &quot;Emptypassword&quot;(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/01_Login.feature:105)
+</pre></div></td>
+<td>16</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Batch Functionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//small&quot;}
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [d060424bcd58b677fcc2577a8448f72a, findElement {using=xpath, value=//small}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62183}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\madhu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62183/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d060424bcd58b677fcc2577a8448f72a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy48.getText(Unknown Source)
+	at pages.BasePage.elementGetText(BasePage.java:30)
+	at stepDefinitions.BatchStepAddon.admin_receives_invalid_error_messages(BatchStepAddon.java:147)
+	at ✽.Admin receives &quot;DesclessChar&quot; invalid error messages(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:79)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1364120483", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1364120483'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//small&quot;}
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [d060424bcd58b677fcc2577a8448f72a, findElement {using=xpath, value=//small}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62183}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\madhu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62183/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d060424bcd58b677fcc2577a8448f72a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy48.getText(Unknown Source)
+	at pages.BasePage.elementGetText(BasePage.java:30)
+	at stepDefinitions.BatchStepAddon.admin_receives_invalid_error_messages(BatchStepAddon.java:147)
+	at ✽.Admin receives &quot;DesclessChar&quot; invalid error messages(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:79)
+</pre></div></td>
+<td>21</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify selected class name Delete message", "Additional Class Functionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr[1]//button[@icon=&apos;pi pi-trash&apos;]&quot;}
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [865e1f504f1258fdeb156e5af46864e5, findElement {using=xpath, value=//tbody/tr[1]//button[@icon=&apos;pi pi-trash&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62471}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\madhu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62471/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 865e1f504f1258fdeb156e5af46864e5
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy48.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
+	at pages.LMSAddonPage.elementclickJs(LMSAddonPage.java:67)
+	at stepDefinitions.ClassStepAddon.admin_clicks_on_delete_icon_for_selected_class_entry(ClassStepAddon.java:55)
+	at ✽.Admin clicks on delete icon for selected class entry(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/11_ClassAdditional.feature:43)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1051176022", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1051176022'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr[1]//button[@icon=&apos;pi pi-trash&apos;]&quot;}
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [865e1f504f1258fdeb156e5af46864e5, findElement {using=xpath, value=//tbody/tr[1]//button[@icon=&apos;pi pi-trash&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62471}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\madhu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62471/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 865e1f504f1258fdeb156e5af46864e5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy48.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
+	at pages.LMSAddonPage.elementclickJs(LMSAddonPage.java:67)
+	at stepDefinitions.ClassStepAddon.admin_clicks_on_delete_icon_for_selected_class_entry(ClassStepAddon.java:55)
+	at ✽.Admin clicks on delete icon for selected class entry(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/11_ClassAdditional.feature:43)
+</pre></div></td>
+<td>15</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sorting of Program name in Descending order", "Manage Page Validation"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at stepDefinitions.ProgramStep.admin_See_the_Program_Name_is_sorted_Descending_order_in_Program_module_page(ProgramStep.java:361)
+	at ✽.Admin See the Program Name is sorted Descending order in Program module page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/03_Program.feature:179)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1470255121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1470255121'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.ProgramStep.admin_See_the_Program_Name_is_sorted_Descending_order_in_Program_module_page(ProgramStep.java:361)
+	at ✽.Admin See the Program Name is sorted Descending order in Program module page(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/03_Program.feature:179)
+</pre></div></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate search box functionality", "Batch Page Navigation"</td>
+<td><div><pre>java.lang.AssertionError: expected [Micro service-01] but found [Rose6]
+	at stepDefinitions.BatchStep.admin_should_see_the_filtered_batches_in_the_data_table_in_batch(BatchStep.java:561)
+	at ✽.Admin should see the &quot;Rose6&quot;,&quot;Roseflower&quot;,&quot;Active&quot; filtered batches in the data table in Batch(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/04_Batch.feature:199)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1354131907", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1354131907'><pre>java.lang.AssertionError: expected [Micro service-01] but found [Rose6]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.BatchStep.admin_should_see_the_filtered_batches_in_the_data_table_in_batch(BatchStep.java:561)
+	at ✽.Admin should see the &quot;Rose6&quot;,&quot;Roseflower&quot;,&quot;Active&quot; filtered batches in the data table in Batch(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/04_Batch.feature:199)
+</pre></div></td>
+<td>8</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sorting of Program name in Ascending order", "Manage Page Validation"</td>
+<td><div><pre>java.lang.AssertionError: Lists differ at element [1]: CoreJavaProgrammingFour != Csharpt expected [CoreJavaProgrammingFour] but found [Csharpt]
+	at stepDefinitions.ProgramStep.admin_See_the_Program_Name_is_sorted_Ascending_order_in_Program_module_page_for_sort(ProgramStep.java:346)
+	at ✽.Admin See the Program Name is sorted Ascending order in Program module page for sort(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/03_Program.feature:173)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace846380105", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace846380105'><pre>java.lang.AssertionError: Lists differ at element [1]: CoreJavaProgrammingFour != Csharpt expected [CoreJavaProgrammingFour] but found [Csharpt]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:1644)
+	at org.testng.Assert.assertEquals(Assert.java:1606)
+	at stepDefinitions.ProgramStep.admin_See_the_Program_Name_is_sorted_Ascending_order_in_Program_module_page_for_sort(ProgramStep.java:346)
+	at ✽.Admin See the Program Name is sorted Ascending order in Program module page for sort(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/03_Program.feature:173)
+</pre></div></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Status button is selected", "Additional Batch Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at stepDefinitions.BatchStepAddon.admin_should_see_status_is_selected(BatchStepAddon.java:156)
+	at ✽.Admin should see status is selected(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:67)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2124691226", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2124691226'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.BatchStepAddon.admin_should_see_status_is_selected(BatchStepAddon.java:156)
+	at ✽.Admin should see status is selected(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/10_BatchAdditional.feature:67)
+</pre></div></td>
+<td>13</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify warning sign", "Additional Class Functionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr[1]//button[@icon=&apos;pi pi-trash&apos;]&quot;}
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [27448226300d5607fb8d4b9e62fb6102, findElement {using=xpath, value=//tbody/tr[1]//button[@icon=&apos;pi pi-trash&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62398}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\madhu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62398/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 27448226300d5607fb8d4b9e62fb6102
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy48.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
+	at pages.LMSAddonPage.elementclickJs(LMSAddonPage.java:67)
+	at stepDefinitions.ProgramStepAddon.admin_clicks_on_delete_icon(ProgramStepAddon.java:209)
+	at ✽.Admin clicks on &quot;Delete&quot; delete icon(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/11_ClassAdditional.feature:32)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1372078134", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1372078134'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr[1]//button[@icon=&apos;pi pi-trash&apos;]&quot;}
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [27448226300d5607fb8d4b9e62fb6102, findElement {using=xpath, value=//tbody/tr[1]//button[@icon=&apos;pi pi-trash&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62398}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\madhu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62398/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 27448226300d5607fb8d4b9e62fb6102
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy48.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
+	at pages.LMSAddonPage.elementclickJs(LMSAddonPage.java:67)
+	at stepDefinitions.ProgramStepAddon.admin_clicks_on_delete_icon(ProgramStepAddon.java:209)
+	at ✽.Admin clicks on &quot;Delete&quot; delete icon(file:///C:/Users/madhu/OneDrive/Desktop/SDET/LMS_ActionSquad/src/test/resources/Feature%20files/11_ClassAdditional.feature:32)
+</pre></div></td>
+<td>15</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "invalidate search box functionality", "Batch Page Navigation"</td>
+<td></td>
+<td>10</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify page icon disable", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify pie-chart presence", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sub menu displayed in batch menu bar", "Batch Page Navigation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify navigation from Program page", "Additional Program Functionality"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate single row delete with checkbox", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate cancel button in Batch details pop up", "Batch Page Navigation"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate close Icon on the alert box", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>12</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validating the Search box on the Manage program", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section count", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batch Page Elements Validation", "Batch Page Navigation"</td>
+<td></td>
+<td>8</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate batch name suffix box should accept only numbers", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section text and icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field mandatory message", "Additional Program Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify warning sign", "Additional Batch Functionality"</td>
+<td></td>
+<td>13</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sub menu displayed in batch menu bar", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify checkbox default state beside Program Name column header", "Manage Page Validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify menu bar is displayed", "Additional Batch Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate single row delete with checkbox", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify dropdown option to select role", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Dashboard Section", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify navigation from Program page", "Additional Program Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify navigation from batch page", "Additional Batch Functionality"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the alignment of input field for the login", "Login page validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify navigation from Program page", "Additional Program Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sorting of Program description in Ascending order", "Manage Page Validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate sign-in content", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batch Page Elements Validation", "Batch Page Navigation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section text and icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>11</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Staff data table column", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar order", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate yes button on the confirm alert box", "Batch Page Navigation"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate input data only for mandatory fields", "Batch Page Navigation"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the text spelling in the page", "Login page validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batch Page Elements Validation", "Batch Page Navigation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify selected program name Delete message", "Additional Program Functionality"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate no button on the confirm alert box", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify back button function", "Logout Page"</td>
+<td></td>
+<td>17</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify LMS Login page title", "Additional Login Functionality"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Staff data table header", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate single row delete with checkbox", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify input descriptive text in password field", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate program name value is disabled to edit", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate batch name suffix box should accept only numbers", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify LMS Dashboard page title", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify warning sign", "Additional Program Functionality"</td>
+<td></td>
+<td>35</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>12</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Edit Program Details Popup window", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify staff table pagination", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section count", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify program search text with different case", "Additional Program Functionality"</td>
+<td></td>
+<td>16</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar order", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batch Page Elements Validation", "Batch Page Navigation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify menu bar is displayed", "Additional Class Functionality"</td>
+<td></td>
+<td>37</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user details", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Edit icon feature in any row", "Batch Page Navigation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify bar chart", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify for broken link", "Login page validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links for program page", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate batch count", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>19</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>21</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section count", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin Navigate to Batch page successfully", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar order", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login button action through mouse", "Login page validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sub menu displayed in batch menu bar", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify batch search is displayed", "Additional Batch Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify navigation from batch page", "Additional Batch Functionality"</td>
+<td></td>
+<td>8</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sorting of Program status in Ascending order", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify navigation from Program page", "Additional Program Functionality"</td>
+<td></td>
+<td>11</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate single row delete with checkbox", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login button action through keyboard", "Login page validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validating the text and pagination icon in the programpage", "Manage Page Validation"</td>
+<td></td>
+<td>16</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify warning sign", "Additional Program Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>13</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program Details Popup window", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Staff data table column", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin is able to land on login page", "Login page validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate single row delete with checkbox", "Manage Page Validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Home Link", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>8</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Cancel button on Edit popup", "Manage Page Validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify batch footer is displayed", "Additional Batch Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify added Program is created", "Manage Page Validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate multiple row delete with checkbox", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate logout option in the header is visible and enabled from the program page", "Manage Page Validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify staff data page split", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify User profile icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify all field empty error message", "Additional Batch Functionality"</td>
+<td></td>
+<td>20</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify dropdown is present", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate alignment for navigation bar", "Dashboard Functionality"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify text on the second field", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sorting of Program status in Descending order", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Manage batch page title", "Additional Batch Functionality"</td>
+<td></td>
+<td>9</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Edit Program Details Popup window", "Manage Page Validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate cancel button in Batch details pop up", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section count", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Cancel/Close(X) icon on program Details form", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Staff data table column", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>3</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify placeholder in dropdown to select role", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin selects student role", "Additional Login Functionality"</td>
+<td></td>
+<td>18</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty form submission", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin is not able to land on home page with invalid URL", "Login page validation"</td>
+<td></td>
+<td>11</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the fields are updated with valid data", "Manage Page Validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify warning sign", "Additional Batch Functionality"</td>
+<td></td>
+<td>22</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify text on the first field", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batch Page Elements Validation", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sub menu displayed in batch menu bar", "Batch Page Navigation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Edit Program Details Popup window", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sorting of Program description in Descending order", "Manage Page Validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links for program page", "Manage Page Validation"</td>
+<td></td>
+<td>12</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify text field is present", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate batchname prefix selected program name", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section text and icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>30</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate editing description and No. of classes fields with invalid data in the pop up", "Batch Page Navigation"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Login button is present", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batch Page Elements Validation", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Welcome Text", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify navigation from batch page", "Additional Class Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Manage class page title", "Additional Class Functionality"</td>
+<td></td>
+<td>10</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sub menu displayed in batch menu bar", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify input descriptive text in user field", "Login page validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify logout function", "Logout Page"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify navigation from batch page", "Additional Batch Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links", "Batch Page Navigation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify section text and icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>10</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field mandatory message", "Additional Program Functionality"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify LMS title alignment", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if program is created", "Manage Page Validation"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate input data missing for mandatory fields", "Batch Page Navigation"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Partial Batchname search box functionality", "Batch Page Navigation"</td>
+<td></td>
+<td>8</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Batch Functionality"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate batch name suffix box should accept only numbers", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate headers in the program page", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify field invalid message", "Additional Program Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin is able to search results not found", "Manage Page Validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate pagination links for program page", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar order", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the sort icon of all the field in datatable", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify navigation from batch page", "Additional Class Functionality"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sub menu displayed in batch menu bar", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate logout option in the header is visible and enabled from the batch page", "Batch Page Navigation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify LMS title", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search Program by Program Name", "Manage Page Validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Edit icon feature", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar text", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Edit Program Details Popup window", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate batch name prefix box is not editable", "Batch Page Navigation"</td>
+<td></td>
+<td>8</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify asterisk next to USER text", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify page icon disable", "Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validating the Delete button under the Manage program", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the total no of programs in manage program page", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate login functionality", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batch Page Elements Validation", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate close button in Batch details pop up", "Batch Page Navigation"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program Details Popup window", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program Details Popup window", "Manage Page Validation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sub menu displayed in batch menu bar", "Batch Page Navigation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate LMS title has correct spelling and space", "Dashboard Functionality"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify checkboxes default state beside each Program names in the data table", "Manage Page Validation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batch Page Elements Validation", "Batch Page Navigation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate save button in Batch details pop up", "Batch Page Navigation"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program Details Popup window", "Manage Page Validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify navigation from batch page", "Additional Class Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify asterisk mark symbol next to Password text", "Login page validation"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate delete Icon on any row", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify page navigation with icon", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batch Page Elements Validation", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate close icon on the batch details pop up", "Batch Page Navigation"</td>
+<td></td>
+<td>7</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batch Page Elements Validation", "Batch Page Navigation"</td>
+<td></td>
+<td>6</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Password masking", "Additional Login Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Manage Program page title", "Additional Program Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sub menu displayed in batch menu bar", "Batch Page Navigation"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate navigation bar order", "Dashboard Functionality"</td>
+<td></td>
+<td>4</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Staff data table column", "Additional Dashboard Functionality"</td>
+<td></td>
+<td>5</td>
+<td>testRunner.TestRunner@47faa49c</td></tr>
+</table><p>
+</body>
+</html>

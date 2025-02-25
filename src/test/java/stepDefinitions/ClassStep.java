@@ -1,13 +1,11 @@
 package stepDefinitions;
 
-import static org.junit.Assert.assertTrue;
 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -698,11 +696,6 @@ public void admin_see_the_staff_name_is_sorted_descending_order_in_class_module_
 	System.out.println("Descending sorted name list " + sortedList.toString() );
 	Assert.assertTrue(originalList.equals(sortedList));	 
 }
-
-
-
-
-
 
 
 }
