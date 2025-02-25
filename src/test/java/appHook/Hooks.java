@@ -21,6 +21,7 @@ public class Hooks {
     public static List<Map<String, String>> Program;
     public static List<Map<String, String>> Batch;
     public static List<Map<String, String>> Msg;
+    public static List<Map<String, String>> classList;
 
     public Hooks(TestContext Context) {
     	this.testContext = Context;
@@ -44,6 +45,7 @@ public class Hooks {
             Login = excelreader.getData("Login");
             Program = excelreader.getData("Program");
             Batch = excelreader.getData("Batch");
+            classList= excelreader.getData("Class");
             Msg = excelreader.getData("msg");
           } catch (Exception e) {
            e.printStackTrace();
