@@ -12,6 +12,7 @@ import common.ConfigReader;
 import common.ExcelReader;
 import driverFactory.DriverConfig;
 import pages.Batch_Page;
+import pages.Class_Page;
 import pages.Dashboard_Page;
 import pages.LMSAddonPage;
 import pages.Login_Page;
@@ -32,6 +33,7 @@ public class TestContext {
 	private Program_Page program;
 	private LMSAddonPage common;
 	private Batch_Page Batch;
+	private Class_Page Class;
 	
 	public TestContext() {
 		this.driverConfig = new DriverConfig(); // initializing the DriverFactory
@@ -50,6 +52,7 @@ public class TestContext {
 		this.js =(JavascriptExecutor)driver;
 		this.program = new Program_Page(driver, this);
 		this.Batch =new Batch_Page(driver, this);
+		this.Class = new Class_Page(driver, this);
 		}
 
 	public DriverConfig getDriverConfig() {
@@ -100,9 +103,11 @@ public class TestContext {
  
 	public Batch_Page getBatch() {
 		return Batch;
-
 	}
-
+/*	public Class_Page getClass() {
+		return Class;
+	}
+	*/
 	public ExcelReader getExcelReader() {
 	    return excelReader;
 	}

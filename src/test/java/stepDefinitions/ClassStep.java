@@ -1,13 +1,11 @@
 package stepDefinitions;
 
-import static org.junit.Assert.assertTrue;
 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -712,6 +710,7 @@ public void admin_should_see_the_batch_screen_page() {
 	//Assert.assertTrue(classPage.validateBatchScreen());
 }
 
+<<<<<<< HEAD
 
 //Logout
 
@@ -721,4 +720,6 @@ public void admin_from_class_clicks_on_the_logout_button() {
 }
 
 
+=======
+>>>>>>> 06fa468e6a5c10ca03efde2292ad00dc845d9797
 }

@@ -1,4 +1,3 @@
-
 @ClassExtra @LMS @Dash
 Feature: Additional Class Functionality
 
