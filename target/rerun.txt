@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 file:src/test/resources/Feature%20files/10_BatchAdditional.feature:64
+=======
+file:src/test/resources/Feature%20files/03_Program.feature:214
+>>>>>>> dbc9de58035abaea691a4a6bacd028a63195c33b
