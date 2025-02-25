@@ -17677,3 +17677,1266 @@
 [INFO ] 2025-02-25 10:44:17.174 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
 [INFO ] 2025-02-25 10:44:17.174 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
 [INFO ] 2025-02-25 10:44:19.828 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:47:35.687 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:47:35.689 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:37.524 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:47:38.423 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:39.060 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:39.060 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:39.068 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:39.069 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:39.069 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:39.070 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:39.070 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:39.070 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:39.070 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:39.070 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:39.070 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:39.073 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:39.073 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:39.074 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:40.161 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:47:40.183 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:47:40.183 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:40.908 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:47:41.763 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:41.763 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:41.763 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:41.764 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:41.764 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:41.764 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:41.765 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:41.765 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:41.765 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:41.765 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:41.765 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:41.765 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:41.766 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:41.766 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:41.766 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:42.826 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:47:42.840 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:47:42.841 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:43.691 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:47:44.576 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:44.577 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:44.577 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:44.577 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:44.577 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:44.578 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:44.578 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:44.578 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:44.578 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:44.578 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:44.578 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:44.579 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:44.579 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:44.580 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:44.580 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:46.300 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:47:46.312 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:47:46.312 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:47.447 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:47:48.494 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:48.495 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:48.495 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:48.495 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:48.496 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:48.496 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:48.497 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:48.497 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:48.497 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:48.497 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:48.497 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:48.497 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:48.497 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:48.498 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:48.498 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:50.817 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:47:50.832 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:47:50.833 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:51.774 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:47:52.790 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:52.791 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:52.791 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:52.791 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:52.791 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:52.792 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:52.792 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:52.792 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:52.792 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:52.792 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:52.792 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:52.793 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:52.793 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:52.794 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:52.794 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:54.680 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:47:54.691 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:47:54.691 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:55.626 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:47:56.671 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:56.671 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:56.671 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:56.672 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:56.672 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:56.673 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:56.673 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:56.673 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:56.673 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:56.673 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:56.673 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:56.673 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:56.674 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:56.674 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:56.674 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:47:58.455 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:47:58.463 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:47:58.463 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:47:59.263 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:00.299 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:00.299 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:00.299 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:00.299 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:00.300 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:00.300 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:00.300 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:00.300 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:00.300 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:00.300 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:00.301 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:00.301 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:00.302 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:00.302 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:00.302 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:01.546 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:01.553 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:01.553 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:02.414 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:03.333 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:03.334 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:03.334 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:03.334 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:03.334 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:03.335 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:03.335 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:03.335 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:03.335 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:03.335 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:03.335 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:03.335 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:03.336 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:03.336 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:03.336 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:05.296 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:05.304 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:05.304 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:06.139 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:07.078 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:07.078 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:07.079 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:07.079 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:07.079 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:07.079 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:07.079 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:07.079 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:07.080 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:07.080 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:07.080 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:07.080 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:07.080 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:07.081 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:07.081 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:08.383 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:08.392 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:08.392 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:09.197 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:10.042 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:10.042 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:10.042 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:10.043 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:10.043 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:10.043 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:10.043 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:10.043 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:10.043 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:10.043 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:10.043 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:10.043 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:10.044 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:10.044 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:10.044 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:11.635 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:11.642 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:11.643 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:12.480 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:13.403 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:13.403 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:13.403 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:13.403 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:13.404 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:13.404 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:13.404 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:13.404 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:13.405 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:13.405 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:13.405 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:13.405 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:13.405 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:13.405 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:13.405 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:15.418 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:15.427 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:15.428 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:16.291 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:17.306 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:17.307 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:17.307 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:17.308 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:17.309 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:17.309 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:17.309 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:17.309 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:17.309 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:17.309 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:17.309 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:17.309 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:17.309 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:17.310 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:17.310 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:18.947 [main] LoggerLoad - Delete Icon is visible
+[INFO ] 2025-02-25 10:48:19.264 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:19.271 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:19.271 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:20.231 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:21.231 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:21.231 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:21.231 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:21.232 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:21.232 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:21.232 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:21.232 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:21.232 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:21.232 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:21.232 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:21.232 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:21.232 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:21.233 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:21.233 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:21.233 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:23.120 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:23.127 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:23.127 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:23.956 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:24.894 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:24.894 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:24.894 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:24.895 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:24.895 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:24.895 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:24.895 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:24.895 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:24.895 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:24.896 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:24.896 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:24.896 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:24.896 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:24.897 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:24.897 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:26.445 [main] LoggerLoad - Pagination is displayed
+[INFO ] 2025-02-25 10:48:26.725 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:26.732 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:26.732 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:27.646 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:28.572 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:28.574 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:28.574 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:28.574 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:28.574 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:28.574 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:28.575 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:28.575 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:28.575 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:28.575 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:28.575 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:28.575 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:28.575 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:28.575 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:28.575 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:30.060 [main] LoggerLoad - Sorting button are visible
+[INFO ] 2025-02-25 10:48:30.337 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:30.344 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:30.344 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:31.165 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:32.068 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:32.068 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:32.069 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:32.069 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:32.069 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:32.069 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:32.069 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:32.069 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:32.069 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:32.069 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:32.069 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:32.069 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:32.070 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:32.070 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:32.070 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:33.888 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:33.903 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:33.903 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:34.850 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:35.749 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:35.749 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:35.749 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:35.750 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:35.750 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:35.750 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:35.750 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:35.750 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:35.750 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:35.750 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:35.752 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:35.752 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:35.752 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:35.753 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:35.753 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:37.683 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:37.688 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:37.688 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:38.623 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:39.545 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:39.545 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:39.545 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:39.546 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:39.546 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:39.546 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:39.546 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:39.546 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:39.546 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:39.546 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:39.546 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:39.546 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:39.547 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:39.547 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:39.547 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:41.603 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:41.610 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:41.610 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:42.467 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:43.452 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:43.453 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:43.455 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:43.455 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:43.455 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:46.166 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:46.174 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:46.174 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:47.099 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:48.167 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:48.168 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:48.168 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:48.169 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:48.169 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:48.169 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:48.169 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:48.169 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:48.169 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:48.169 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:48.170 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:48.170 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:48.170 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:48.170 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:48.170 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:51.594 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:51.604 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:51.605 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:52.915 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:54.079 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:54.079 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:54.079 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:54.080 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:54.080 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:54.080 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:54.080 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:54.080 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:54.080 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:54.080 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:54.081 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:54.081 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:54.081 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:54.081 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:54.081 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:56.905 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:48:56.914 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:48:56.914 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:58.133 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:48:59.091 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:59.091 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:59.091 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:59.093 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:59.093 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:59.093 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:59.094 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:59.094 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:59.094 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:59.094 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:59.094 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:59.095 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:48:59.095 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:59.095 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:48:59.095 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:01.731 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:01.737 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:01.737 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:02.941 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:04.003 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:04.003 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:04.003 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:04.004 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:04.004 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:04.004 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:04.004 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:04.005 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:04.005 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:04.005 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:04.005 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:04.005 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:04.006 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:04.007 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:04.007 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:06.859 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:06.875 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:06.875 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:07.921 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:08.871 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:08.871 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:08.871 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:08.871 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:08.872 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:11.075 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:11.082 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:11.082 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:11.915 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:12.889 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:12.889 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:12.890 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:15.059 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:15.063 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:15.063 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:15.855 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:16.751 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:16.751 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:16.751 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:16.751 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:16.751 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:16.751 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:16.752 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:16.752 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:16.752 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:16.752 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:16.752 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:16.752 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:16.752 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:16.752 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:16.752 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:18.541 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:18.546 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:18.546 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:19.480 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:20.513 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:20.514 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:20.514 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:20.514 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:20.514 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:20.514 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:20.514 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:20.514 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:20.514 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:20.514 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:20.514 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:20.515 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:20.515 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:20.515 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:20.515 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:22.373 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:22.378 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:22.378 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:23.255 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:24.291 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:24.291 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:24.291 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:24.291 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:24.291 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:24.292 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:24.292 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:24.292 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:24.292 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:24.292 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:24.292 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:24.292 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:24.293 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:24.293 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:24.293 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:26.485 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:26.490 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:26.490 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.353 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:27.483 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.484 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.484 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:27.485 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.485 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.485 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:27.485 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.485 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.485 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:27.485 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.485 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.485 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:27.486 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.486 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:27.486 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:31.459 [main] LoggerLoad - Program created successfully
+[INFO ] 2025-02-25 10:49:31.667 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:31.673 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:31.674 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:32.669 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:33.639 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:33.640 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:33.641 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:33.641 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:33.641 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:36.411 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:36.418 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:36.418 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:38.107 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:39.191 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:39.192 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:39.193 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:39.193 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:39.193 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:41.234 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:41.240 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:41.240 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:42.133 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:43.119 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:43.121 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:43.121 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:43.121 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:45.423 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:45.430 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:45.430 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:46.358 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:47.341 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:47.342 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:50.332 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:50.339 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:50.339 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:51.248 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:52.172 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:52.172 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:52.172 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:52.173 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:52.173 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:52.173 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:52.174 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:52.174 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:52.174 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:52.174 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:52.174 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:52.174 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:52.174 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:52.174 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:52.175 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:54.633 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Check if the fields are updated with invalid values.png
+[INFO ] 2025-02-25 10:49:54.778 [main] LoggerLoad - Screenshot captured for failed scenario: Check if the fields are updated with invalid values
+[INFO ] 2025-02-25 10:49:55.001 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:55.005 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:55.006 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:55.869 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:49:56.832 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:56.832 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:56.832 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:49:56.833 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:49:59.147 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:49:59.153 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:49:59.153 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:00.133 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:02.778 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:02.779 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:02.779 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:04.555 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:50:04.561 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:50:04.562 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:05.689 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:50:06.655 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:06.656 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:06.657 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:06.657 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:06.657 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:09.060 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:50:09.065 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:50:09.065 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:10.168 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:50:11.318 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:11.318 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:11.318 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:11.318 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:11.318 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:11.318 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:11.318 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:11.318 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:11.318 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:11.318 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:11.319 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:11.319 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:11.319 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:11.319 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:11.319 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:13.815 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:50:13.819 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:50:13.819 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:14.680 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:15.664 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:15.665 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:15.665 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:15.665 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:17.823 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:50:17.829 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:50:17.829 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:18.882 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:50:20.142 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:20.143 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:20.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:20.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:20.144 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:32.216 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Search class by Batch Name.png
+[INFO ] 2025-02-25 10:50:32.348 [main] LoggerLoad - Screenshot captured for failed scenario: Search class by Batch Name
+[INFO ] 2025-02-25 10:50:33.435 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:50:33.439 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:50:33.439 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:34.377 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:50:35.378 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:35.379 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:35.379 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:35.379 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:35.379 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:35.379 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:35.379 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:35.379 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:35.379 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:35.379 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:35.380 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:35.380 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:35.380 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:35.380 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:35.380 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:47.423 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Search class by Class topic.png
+[INFO ] 2025-02-25 10:50:47.531 [main] LoggerLoad - Screenshot captured for failed scenario: Search class by Class topic
+[INFO ] 2025-02-25 10:50:48.179 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:50:48.184 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:50:48.184 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:49.390 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:50:50.660 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:50.660 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:50.660 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:50.660 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:50.660 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:50.660 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:50.660 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:50.660 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:50.660 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:50.661 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:50.661 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:50.661 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:50:50.661 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:50.661 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:50:50.661 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:03.275 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Search class by Staff Name.png
+[INFO ] 2025-02-25 10:51:03.436 [main] LoggerLoad - Screenshot captured for failed scenario: Search class by Staff Name
+[INFO ] 2025-02-25 10:51:04.206 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:04.211 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:04.211 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:05.341 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:06.402 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:06.402 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:06.402 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:06.402 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:06.403 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:09.417 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Validate multiple class deletion by selecting Single checkbox.png
+[INFO ] 2025-02-25 10:51:09.557 [main] LoggerLoad - Screenshot captured for failed scenario: Validate multiple class deletion by selecting Single checkbox
+[INFO ] 2025-02-25 10:51:09.767 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:09.771 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:09.771 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:10.685 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:11.719 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:11.719 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:11.719 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:11.719 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:11.720 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:14.975 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Validate multiple class deletion by selecting Single checkbox.png
+[INFO ] 2025-02-25 10:51:15.081 [main] LoggerLoad - Screenshot captured for failed scenario: Validate multiple class deletion by selecting Single checkbox
+[INFO ] 2025-02-25 10:51:15.256 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:15.260 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:15.260 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:16.131 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:17.869 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:17.869 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:17.869 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:17.869 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:17.869 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:17.869 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:17.869 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:17.870 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:17.870 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:17.870 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:17.870 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:17.870 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:17.870 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:17.870 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:17.870 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:20.438 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Validate multiple class deletion by selecting multiple check boxes.png
+[INFO ] 2025-02-25 10:51:20.556 [main] LoggerLoad - Screenshot captured for failed scenario: Validate multiple class deletion by selecting multiple check boxes
+[INFO ] 2025-02-25 10:51:20.734 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:20.738 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:20.738 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:21.702 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:22.682 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:22.683 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:22.683 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:22.683 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:22.683 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:22.683 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:22.683 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:22.683 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:22.684 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:22.684 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:22.684 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:22.684 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:22.684 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:22.684 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:22.684 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:25.404 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Validate multiple class deletion by selecting multiple check boxes.png
+[INFO ] 2025-02-25 10:51:25.504 [main] LoggerLoad - Screenshot captured for failed scenario: Validate multiple class deletion by selecting multiple check boxes
+[INFO ] 2025-02-25 10:51:25.682 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:25.686 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:25.686 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:26.581 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:27.580 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:27.580 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:27.580 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:27.580 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:27.580 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:27.582 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:27.582 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:27.582 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:27.582 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:27.582 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:27.582 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:27.582 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:27.582 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:27.582 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:27.582 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:29.910 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:29.915 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:29.915 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:30.892 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:31.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:31.846 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:31.846 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:34.275 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:34.281 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:34.281 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:35.298 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:36.327 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:36.327 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:36.327 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:36.327 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:36.328 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:38.420 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:38.426 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:38.426 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:39.321 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:40.397 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:40.397 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:40.397 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:40.398 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:42.763 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:42.769 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:42.769 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:43.629 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:44.583 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:44.584 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:44.584 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:44.584 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:46.690 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:46.694 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:46.694 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:47.490 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:48.446 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:48.446 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:48.446 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:48.446 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:48.446 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:48.446 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:48.446 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:48.447 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:48.447 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:48.447 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:48.447 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:48.447 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:48.447 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:48.447 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:48.447 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:50.931 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:50.935 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:50.935 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:51.747 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:52.637 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:52.639 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:52.639 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:52.639 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:54.941 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:54.946 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:54.946 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:55.773 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:51:56.704 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:56.704 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:56.704 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:56.704 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:56.704 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:56.704 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:56.704 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:56.704 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:56.704 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:56.704 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:56.705 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:56.705 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:56.705 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:56.705 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:56.705 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:51:58.776 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:51:58.787 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:51:58.787 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:51:59.812 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:00.734 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:00.734 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:00.734 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:00.735 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:02.644 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:52:02.649 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:52:02.649 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:03.492 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:05.090 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:05.090 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:05.090 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:05.090 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:05.091 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:05.091 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:05.091 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:05.091 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:05.091 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:05.091 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:05.091 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:05.091 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:05.091 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:05.092 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:05.092 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:07.321 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:52:07.326 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:52:07.326 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:08.232 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:09.209 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:09.209 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:09.210 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:09.210 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:09.210 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:09.210 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:09.210 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:09.210 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:09.210 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:09.210 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:09.210 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:09.210 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:09.211 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:09.211 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:09.211 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:11.631 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Verify sorting of StaffName in Descending order.png
+[INFO ] 2025-02-25 10:52:11.731 [main] LoggerLoad - Screenshot captured for failed scenario: Verify sorting of StaffName in Descending order
+[INFO ] 2025-02-25 10:52:11.896 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:52:11.900 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:52:11.900 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:12.770 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:13.844 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:13.845 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:16.274 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Verify sorting of StaffName in Ascending order.png
+[INFO ] 2025-02-25 10:52:16.398 [main] LoggerLoad - Screenshot captured for failed scenario: Verify sorting of StaffName in Ascending order
+[INFO ] 2025-02-25 10:52:16.583 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:52:16.586 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:52:16.587 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:17.479 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:18.458 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:18.458 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:18.458 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:18.458 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:18.459 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:18.459 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:18.459 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:18.459 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:18.459 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:18.459 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:18.459 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:18.459 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:18.459 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:18.459 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:18.460 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:20.901 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:52:20.906 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:52:20.906 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:21.752 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:22.728 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:22.729 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:22.729 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:22.729 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:22.729 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:24.867 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Validate pagination links for Class page.png
+[INFO ] 2025-02-25 10:52:25.014 [main] LoggerLoad - Screenshot captured for failed scenario: Validate pagination links for Class page
+[INFO ] 2025-02-25 10:52:25.219 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:52:25.232 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:52:25.232 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:26.114 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:27.276 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:27.277 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:27.277 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:27.278 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:29.524 [main] LoggerLoad - Screenshot saved to: C:\Users\golda\eclipse-workspacenew\Team01_ActionSquad\screenshots\Validate pagination links for Class page.png
+[INFO ] 2025-02-25 10:52:29.641 [main] LoggerLoad - Screenshot captured for failed scenario: Validate pagination links for Class page
+[INFO ] 2025-02-25 10:52:29.858 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:52:29.863 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:52:29.863 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:30.703 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:31.649 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:31.649 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:31.649 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:31.649 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:31.649 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:31.649 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:31.649 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:31.649 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:31.649 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:31.650 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:31.650 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:31.650 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:31.650 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:31.650 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:31.650 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:33.996 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:52:34.001 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:52:34.001 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:35.102 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:36.143 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:36.144 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:38.113 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:52:38.117 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:52:38.117 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:38.982 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:39.927 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:39.928 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:39.928 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:39.928 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:39.928 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:41.380 [main] LoggerLoad - Browser is closed
+[INFO ] 2025-02-25 10:52:41.386 [main] LoggerLoad - Initializing WebDriver
+[INFO ] 2025-02-25 10:52:41.386 [main] LoggerLoad - Browser  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:42.194 [main] LoggerLoad - chrome Browser is opened
+[INFO ] 2025-02-25 10:52:43.140 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:43.140 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:43.140 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:43.140 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:43.140 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:43.140 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:43.140 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:43.140 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:43.140 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:43.140 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:43.141 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:43.141 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:43.141 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:43.141 [main] LoggerLoad - Excelpath  Data fetched from the Config.property file
+[INFO ] 2025-02-25 10:52:43.141 [main] LoggerLoad - Excel is Initialised and Path :src/test/resources/TestData/ExcelData.xlsx
+[INFO ] 2025-02-25 10:52:45.065 [main] LoggerLoad - Browser is closed
