@@ -1,5 +1,8 @@
-<<<<<<< HEAD
-file:src/test/resources/Feature%20files/10_BatchAdditional.feature:64
-=======
-file:src/test/resources/Feature%20files/03_Program.feature:214
->>>>>>> dbc9de58035abaea691a4a6bacd028a63195c33b
+file:src/test/resources/Feature%20files/01_Login.feature:26:31:110:111:112
+file:src/test/resources/Feature%20files/03_Program.feature:77:176:182:213
+file:src/test/resources/Feature%20files/04_Batch.feature:75:117:153:171:177:190:203
+file:src/test/resources/Feature%20files/07_LoginAdditional.feature:5:11:23:40
+file:src/test/resources/Feature%20files/08_DashboardAdditional.feature:75:80:92
+file:src/test/resources/Feature%20files/09_ProgramAdditional.feature:54:65:66
+file:src/test/resources/Feature%20files/10_BatchAdditional.feature:52:64:70:82:83:84
+file:src/test/resources/Feature%20files/11_ClassAdditional.feature:37:38:41
