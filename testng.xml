@@ -8,18 +8,4 @@
 		</classes>
 </test> <!-- Test -->
 
-<test name="TestEdge">
-		<parameter name="browser" value="chrome" />
-		<classes>
-			<class name="testRunner.TestRunner"/>
-		</classes>
-</test> <!-- Test -->
-
-<test name="TestChrome" >
-		<parameter name="browser" value="chrome" />	
-		<classes>
-			<class name="testRunner.TestRunner"/>
-		</classes>
- </test> <!-- Test -->
-
 </suite> <!-- Suite -->
