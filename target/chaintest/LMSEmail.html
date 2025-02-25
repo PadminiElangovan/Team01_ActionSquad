@@ -30,8 +30,8 @@
                 <table style="padding: 20px;">
                   <tr>
                     <td>
-                      <span class="bg-passed" style="margin-right:10px;padding:0px 5px;">PASSED</span>
-                      <span style="">Feb 24, 2025, 8:57:15 PM &middot; 40s</span>
+                      <span class="bg-failed" style="margin-right:10px;padding:0px 5px;">FAILED</span>
+                      <span style="">25 Feb 2025, 12:50:49 am &middot; 42s</span>
                     </td>
                   </tr>
                 </table>
@@ -56,11 +56,11 @@
 	              </td>
                 <td width="100" style="padding:30px 40px 20px;">
 	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#79B530">Passed</p>
-	                <h1 style="font-size:34px;">2</h1>
+	                <h1 style="font-size:34px;">1</h1>
 	              </td>
                 <td width="100" style="padding:30px 40px 20px;">
 	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#e64b5d">Failed</p>
-	                <h1 style="font-size:34px;">0</h1>
+	                <h1 style="font-size:34px;">1</h1>
 	              </td>
                 <td width="100" style="padding:30px 40px 20px;">
 	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#e6e04c">Skipped</p>
@@ -97,9 +97,9 @@
                   <tr>
                     <td width="350">@Pagination</td>
                       <td width="23"></td>
-                      <td style="" width="60">7</td>
+                      <td style="" width="60">6</td>
                       <td class="padding" width="10"></td>
-                      <td style="" width="60">0</td>
+                      <td style="" width="60">1</td>
                       <td class="padding" width="10"></td>
                       <td style="" width="60">0</td>
                   </tr>
@@ -107,9 +107,9 @@
                   <tr>
                     <td width="350">@LMS</td>
                       <td width="23"></td>
-                      <td style="" width="60">4</td>
+                      <td style="" width="60">3</td>
                       <td class="padding" width="10"></td>
-                      <td style="" width="60">0</td>
+                      <td style="" width="60">1</td>
                       <td class="padding" width="10"></td>
                       <td style="" width="60">0</td>
                   </tr>
@@ -117,9 +117,9 @@
                   <tr>
                     <td width="350">@Programpage</td>
                       <td width="23"></td>
-                      <td style="" width="60">4</td>
+                      <td style="" width="60">3</td>
                       <td class="padding" width="10"></td>
-                      <td style="" width="60">0</td>
+                      <td style="" width="60">1</td>
                       <td class="padding" width="10"></td>
                       <td style="" width="60">0</td>
                   </tr>
@@ -135,6 +135,175 @@
     <table width="100%">
       <tr>
         <td align="center">
+          <table width="650">
+            <tr>
+              <td bgcolor="#FFF" style="padding:10px 20px;">
+                <table>
+                  <tr>
+                    <td width="650px" style="padding:10px;">
+                      <p class="text-failed" style="font-size:14px;font-weight:500;margin:0;margin-bottom:5px;">
+                        Feature: Manage Page Validation
+                      <p style="font-size:12px;margin:0;">
+                        <span>25 Feb 2025, 12:51:31 am / 55ms</span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 10px;">
+                      <p style="font-size:13px;margin:0;">
+                        Scenario Outline: Validate pagination links for program page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Given Admin is on login Page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin enter valid data in all field and clicks login button
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin clicks the "Next" link on the data table in program page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Then Admin should see the "Next enabled link" on the data table in program module
+                      </p>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px"></td></tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 10px;">
+                      <p style="font-size:13px;margin:0;">
+                        Scenario Outline: Validate pagination links for program page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Given Admin is on login Page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin enter valid data in all field and clicks login button
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin clicks the "Last" link on the data table in program page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Then Admin should see the "last page link with Next disabled" on the data table in program module
+<pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.ProgramStep.adminShouldSeeResults(ProgramStep.java:453)
+	at ✽.Admin should see the "last page link with Next disabled" on the data table in program module(file:///C:/Users/golda/eclipse-workspacenew/Team01_ActionSquad/src/test/resources/Feature%20files/03_Program.feature:209)
+</pre>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px"></td></tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 10px;">
+                      <p style="font-size:13px;margin:0;">
+                        Scenario Outline: Validate pagination links for program page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Given Admin is on login Page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin enter valid data in all field and clicks login button
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin clicks the "Previous" link on the data table in program page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Then Admin should see the "previous page" on the data table in program module
+                      </p>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px"></td></tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 10px;">
+                      <p style="font-size:13px;margin:0;">
+                        Scenario Outline: Validate pagination links for program page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Given Admin is on login Page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin enter valid data in all field and clicks login button
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        When Admin clicks the "First" link on the data table in program page
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        Then Admin should see the "very first page" on the data table in program module
+                      </p>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px"></td></tr>
+                </table>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </table>
