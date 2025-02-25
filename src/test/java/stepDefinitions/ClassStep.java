@@ -3,6 +3,7 @@ package stepDefinitions;
 import static org.junit.Assert.assertTrue;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -31,7 +32,7 @@ public class ClassStep {
 	List<Map<String, String>> classXl = Hooks.classList;
 	String updatedDescription;
 	String msg;
-
+	ArrayList<String> selectedFirstColValues;
 	public ClassStep(TestContext context) {
      this.context = context;
      this.driver = context.getDriver();
@@ -148,15 +149,38 @@ public class ClassStep {
 		System.out.println("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
 	   classPage.clickClassAddNew();
 	}
-
 	
+	@When("Admin clicks Cancel button on AddNew popup")
+	public void admin_clicks_cancel_button_on_add_new_popup() {
+	    classPage.clickCancel();
+	}
+
+	@Then("Admin can see the class details popup disappears and can see nothing changed for particular Class")
+	public void admin_can_see_the_class_details_popup_disappears_and_can_see_nothing_changed_for_particular_class() {
+		 boolean enabled = classPage.isElementEnabled(classPage.delIcon);
+		   Assert.assertTrue(enabled);
+	}
+
+	@When("Admin clicks Cancel button on edit popup")
+	public void admin_clicks_cancel_button_on_edit_popup() {
+	   classPage.clickCancel();
+	}
+	@When("Admin clicks cross button on AddNew popup")
+	public void admin_clicks_cross_button_on_add_new_popup() {
+		classPage.clickCross();
+	}
+
+	@When("Admin clicks cross button on edit popup")
+	public void admin_clicks_cross_button_on_edit_popup() {
+		classPage.clickCross();
+	}	
 	
 	@Then("Admin should see the Class Details pop up window {string}")
 	public void admin_should_see_the_class_details_pop_up_window(String string) {
 		switch (string) {
 		case "Title":
-			Assert.assertTrue(classPage.addNewTitle.isDisplayed());
-			Assert.assertEquals(classPage.addNewTitle.getText(), "Class Details");
+			Assert.assertTrue(classPage.editTitle.isDisplayed());
+			Assert.assertEquals(classPage.editTitle.getText(), "Class Details");
 			break;
 		case "BatchName":
 			Assert.assertTrue(classPage.lblBatchName.isDisplayed());
@@ -336,13 +360,10 @@ public class ClassStep {
 
 @Then("Admin gets message Successful and see the updated class values in data table")
 public void admin_gets_message_successful_and_see_the_updated_class_values_in_data_table() {
-	System.out.println("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+	
 	boolean displayed = classPage.pageTitle.isDisplayed();
 	Assert.assertTrue(displayed);
-	classPage.searchClass(updatedDescription);
-	//Pending Verification of the records
-	System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"+classPage.searchValues.get(3).getText());	
-	Assert.assertEquals(updatedDescription, classPage.searchValues.get(3).getText());
+	classPage.searchClass(updatedDescription);	
 }
 
 @When("Update the fields with invalid value {string} and click save")
@@ -358,57 +379,8 @@ public void admin_should_get_error_message() {
 	Assert.assertEquals(msg, "Error Message");
 }
 	
-@When("Admin clicks Next page link on the class table")
-public void admin_clicks_next_page_link_on_the_class_table() {
-    
-}
 
-@Then("Admin should see the next page record on the table with Pagination has next active link enabled")
-public void admin_should_see_the_next_page_record_on_the_table_with_pagination_has_next_active_link_enabled() {
-   
-}
-
-@When("Admin clicks Last page link")
-public void admin_clicks_last_page_link() {
-    
-}
-
-@Then("Admin should see the last page record on the table with Next page link are disabled")
-public void admin_should_see_the_last_page_record_on_the_table_with_next_page_link_are_disabled() {
-    
-}
-
-@Given("Admin is on last page of class table")
-public void admin_is_on_last_page_of_class_table() {
-   
-}
-
-@When("Admin clicks First page link")
-public void admin_clicks_first_page_link() {
-    
-}
-
-@Then("Admin should see the previous page record on the table with pagination has previous page link enabled")
-public void admin_should_see_the_previous_page_record_on_the_table_with_pagination_has_previous_page_link_enabled() {
-   
-}
-
-@Given("Admin is on Previous class page")
-public void admin_is_on_previous_class_page() {
-    
-}
-
-@When("Admin clicks Start page link")
-public void admin_clicks_start_page_link() {
-    
-}
-
-@Then("Admin should see the very first page record on the table with Previous page link are disabled")
-public void admin_should_see_the_very_first_page_record_on_the_table_with_previous_page_link_are_disabled() {
-   
-}
-
-
+//Search
 
 @When("Admin enter the BatchName in search textbox and Enter")
 public void admin_enter_the_batch_name_in_search_textbox_and_enter() {
@@ -446,6 +418,288 @@ public void admin_should_see_class_details_are_searched_by_staff_name() {
 	String staffName = classXl.get(0).get("StaffName");
 	Assert.assertEquals(staffName, classPage.searchValues.get(6).getText());
 }
+
+
+//Delete All
+
+
+
+@When("Admin clicks any checkbox {int} in the data table")
+public void admin_clicks_any_checkbox_in_the_data_table(Integer int1) {
+	//classPage.SingleCheckBoxSelection(int1);
+	classPage.multipleCheckBoxSelection();
+}
+
+
+@Then("Admin should see common delete option enabled under header Manage class")
+public void admin_should_see_common_delete_option_enabled_under_header_manage_class() {
+   boolean enabled = classPage.isElementEnabled(classPage.delIcon);
+   Assert.assertTrue(enabled);
+}
+
+@Given("Admin is on Confirm Deletion alert")
+public void admin_is_on_confirm_deletion_alert() {
+	selectedFirstColValues = classPage.multipleCheckBoxSelection();
+	classPage.multipleDeletion();	
+}
+
+@When("Admin clicks YES button on the alert")
+public void admin_clicks_yes_button_on_the_alert() {	
+	String msg = classPage.confirmDeletion();
+	System.out.println(msg);
+	
+	Assert.assertEquals("Successful Classes Deleted", msg);
+}
+
+@Then("Admin should land on Manage class page and can see the selected class is deleted from the data table")
+public void admin_should_land_on_manage_class_page_and_can_see_the_selected_class_is_deleted_from_the_data_table() {
+	Assert.assertEquals(classPage.pageTitleText(), "Manage Class");
+	for(int i=0;i<selectedFirstColValues.size();i++)
+	{
+		classPage.searchClass(selectedFirstColValues.get(i));
+		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"+classPage.searchValues.get(1).getText());	
+		Assert.assertFalse( classPage.searchValues.get(3).getText().equals(selectedFirstColValues.get(i)));
+
+	}
+	
+	
+}
+
+@When("Admin clicks No button on the alert")
+public void admin_clicks_no_button_on_the_alert() {
+   classPage.cancelDeletion();
+}
+
+@Then("Admin should land on Manage class page and can see the selected class is not deleted from the data table")
+public void admin_should_land_on_manage_class_page_and_can_see_the_selected_class_is_not_deleted_from_the_data_table() {
+	Assert.assertEquals(classPage.pageTitleText(), "Manage Class");
+	for(int i=0;i<selectedFirstColValues.size();i++)
+	{
+		classPage.searchClass(selectedFirstColValues.get(i));
+		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"+classPage.searchValues.get(1).getText());	
+		Assert.assertTrue( classPage.searchValues.get(3).getText().equals(selectedFirstColValues.get(i)));
+
+	}
+}
+
+
+
+
+//Pagination
+
+@When("Admin clicks the {string} link on the data table in class page")
+public void admin_clicks_the_link_on_the_data_table_in_class_page(String string) {
+	
+  	
+		
+	  switch (string.toLowerCase()) 
+	  { 
+	  case "next":
+		  classPage.clickNextPage();
+	  break; 
+	  case "last":
+		  classPage.clickLastPage();
+		  break; 
+		  case "previous":
+			  classPage.clickPreviousPage();
+	  break;
+	  case "first": 
+		  classPage.clickFirstPage();
+	  break; }
+
+}
+
+@Then("Admin should see the {string} on the data table in class module")
+public void admin_should_see_the_on_the_data_table_in_class_module(String string) {
+	System.out.println("classPage.clickClass();classPage.clickClass();classPage.clickClass();classPage.clickClass();"+string);
+	switch (string.toLowerCase()) {
+	 case "next enabled link":
+        Assert.assertTrue( classPage.isNextButtonEnabled());
+        break;
+   case "last page link with next disabled":
+       Assert.assertFalse( classPage.isNextButtonEnabled());
+       break;
+   case "previous page":
+       Assert.assertTrue( classPage.isPrevButtonEnabled());
+       break;
+   case "very first page":
+       Assert.assertFalse( classPage.isPrevButtonEnabled());
+       break;
+   case "last results":
+       Assert.assertTrue( classPage.hasNextPageResults());
+       break;
+   case "previous results":
+       Assert.assertTrue( classPage.hasNextPageResults());
+       break;
+   case "first results":
+       Assert.assertTrue( classPage.hasNextPageResults());
+       break;
+   default:
+       Assert.fail("Unexpected result description: " + string);
+      
+      
+}
+}
+
+//Sort
+
+@When("Admin clicks on Arrow next to Batch Name of Class module page for sort")
+public void admin_clicks_on_arrow_next_to_batch_name_of_class_module_page_for_sort() {
+	classPage.clickBatchNameSort();
+}
+
+@Then("Admin See the Batch Name is sorted Ascending order in Class module page for sort")
+public void admin_see_the_batch_name_is_sorted_ascending_order_in_class_module_page_for_sort() {
+	List<String> originalList = classPage.getOriginalList("BatchName");
+	List<String> sortedList = classPage.getSortedList(originalList);
+	System.out.println("sorted name list" + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	
+}
+
+@When("Admin clicks on Arrow next to Batch Name of Class module page for sort descend")
+public void admin_clicks_on_arrow_next_to_batch_name_of_class_module_page_for_sort_descend() {
+	classPage.clickBatchNameSortDec();
+}
+
+@Then("Admin See the Batch Name is sorted Descending order in Class module page")
+public void admin_see_the_batch_name_is_sorted_descending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("BatchName");
+	List<String> sortedList = classPage.getSortedListDescending(originalList);
+	System.out.println("Descending sorted name list " + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	    
+}
+
+@When("Admin clicks on Arrow next to Class Topic of Class module page for sort")
+public void admin_clicks_on_arrow_next_to_class_topic_of_class_module_page_for_sort() {
+	classPage.clickClassTopicSort();
+}
+
+@Then("Admin See the Class Topic is sorted Ascending order in Class module page")
+public void admin_see_the_class_topic_is_sorted_ascending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("ClassTopic");
+	List<String> sortedList = classPage.getSortedList(originalList);
+	System.out.println("sorted name list" + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	
+}
+
+@When("Admin clicks on Arrow next to Class Topic of Class module page for sort descend")
+public void admin_clicks_on_arrow_next_to_class_topic_of_class_module_page_for_sort_descend() {
+    classPage.clickClassTopicSortDesc();
+}
+
+@Then("Admin See the Class Topic is sorted Descending order in Class module page")
+public void admin_see_the_class_topic_is_sorted_descending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("ClassTopic");
+	List<String> sortedList = classPage.getSortedListDescending(originalList);
+	System.out.println("Descending sorted name list " + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	  
+}
+
+@When("Admin clicks on Arrow next to Class Description of Class module page for sort")
+public void admin_clicks_on_arrow_next_to_class_description_of_class_module_page_for_sort() {
+    classPage.clickClassDescSort();
+}
+
+@Then("Admin See the Class Description is sorted Ascending order in Class module page")
+public void admin_see_the_class_description_is_sorted_ascending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("ClassDescription");
+	List<String> sortedList = classPage.getSortedList(originalList);
+	System.out.println("sorted name list" + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	
+}
+
+@When("Admin clicks on Arrow next to Class Description of Class module page for sor descend")
+public void admin_clicks_on_arrow_next_to_class_description_of_class_module_page_for_sor_descend() {
+    classPage.clickClassDescSortDesc();
+}
+
+@Then("Admin See the Class Description is sorted Descending order in Class module page")
+public void admin_see_the_class_description_is_sorted_descending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("ClassDescription");
+	List<String> sortedList = classPage.getSortedListDescending(originalList);
+	System.out.println("Descending sorted name list " + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	  
+}
+
+@When("Admin clicks on Arrow next to Status of Class module page for sort")
+public void admin_clicks_on_arrow_next_to_status_of_class_module_page_for_sort() {
+	classPage.clickClassStausSort();
+}
+
+@Then("Admin See the Status is sorted Ascending order in Class module page")
+public void admin_see_the_status_is_sorted_ascending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("Status");
+	List<String> sortedList = classPage.getSortedList(originalList);
+	System.out.println("sorted name list" + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	
+}
+
+@When("Admin clicks on Arrow next to Status of Class module page for sor descend")
+public void admin_clicks_on_arrow_next_to_status_of_class_module_page_for_sor_descend() {
+   classPage.clickClassStausSortDesc();
+}
+
+@Then("Admin See the Status is sorted Descending order in Class module page")
+public void admin_see_the_status_is_sorted_descending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("Status");
+	List<String> sortedList = classPage.getSortedListDescending(originalList);
+	System.out.println("Descending sorted name list " + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	 
+}
+
+@When("Admin clicks on Arrow next to ClassDate of Class module page for sort")
+public void admin_clicks_on_arrow_next_to_class_date_of_class_module_page_for_sort() {
+    classPage.clickClassDateSort();
+}
+
+@Then("Admin See the ClassDate is sorted Ascending order in Class module page")
+public void admin_see_the_class_date_is_sorted_ascending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("Date");
+	List<String> sortedList = classPage.getSortedList(originalList);
+	System.out.println("sorted name list" + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	
+}
+
+@When("Admin clicks on Arrow next to ClassDate of Class module page for sor descend")
+public void admin_clicks_on_arrow_next_to_class_date_of_class_module_page_for_sor_descend() {
+	classPage.clickClassDateSortDesc();
+}
+
+@Then("Admin See the ClassDate is sorted Descending order in Class module page")
+public void admin_see_the_class_date_is_sorted_descending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("Date");
+	List<String> sortedList = classPage.getSortedListDescending(originalList);
+	System.out.println("Descending sorted name list " + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	 
+}
+
+@When("Admin clicks on Arrow next to StaffName of Class module page for sort")
+public void admin_clicks_on_arrow_next_to_staff_name_of_class_module_page_for_sort() {
+    classPage.clickClassStaffSort();
+}
+
+@Then("Admin See the StaffName is sorted Ascending order in Class module page")
+public void admin_see_the_staff_name_is_sorted_ascending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("Staff");
+	List<String> sortedList = classPage.getSortedList(originalList);
+	System.out.println("sorted name list" + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	
+}
+
+@When("Admin clicks on Arrow next to StaffName of Class module page for sor descend")
+public void admin_clicks_on_arrow_next_to_staff_name_of_class_module_page_for_sor_descend() {
+	classPage.clickClassStaffSortDesc();
+}
+
+@Then("Admin See the StaffName is sorted Descending order in Class module page")
+public void admin_see_the_staff_name_is_sorted_descending_order_in_class_module_page() {
+	List<String> originalList = classPage.getOriginalList("Staff");
+	List<String> sortedList = classPage.getSortedListDescending(originalList);
+	System.out.println("Descending sorted name list " + sortedList.toString() );
+	Assert.assertTrue(originalList.equals(sortedList));	 
+}
+
+
 
 
 

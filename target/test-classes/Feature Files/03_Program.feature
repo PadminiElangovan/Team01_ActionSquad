@@ -19,10 +19,19 @@ Feature: Manage Page Validation
   Scenario: Validate the sort icon of all the field in datatable
   When Admin clicks on Program 
   Then Admin should see the Sort icon of all the field in the datatable.
+  
+  Scenario: Validating the Search box on the Manage program
+  When Admin clicks on Program 
+  Then Admin should see the Search box on the Manage program page header
+  
 
   Scenario: Validating the Delete button under the Manage program
   When Admin clicks on Program 
   Then Admin should see the Delete button under the Manage program page header
+  
+  Scenario: Verify checkboxes default state beside each Program names in the data table
+    When  Admin clicks "Program" on the navigation bar in program module
+    Then Admin should see check box default state as unchecked on the left side in all rows against program name 
 
   Scenario: Validate the total no of programs in manage program page
   When Admin clicks on Program 
@@ -55,19 +64,19 @@ Feature: Manage Page Validation
 
     Examples: 
       | Name    || Description    || Status || SuccessMsg  |        
-      |CSharp || okkkkjh        || Active || Successful  |     
+      |Beta || Alpha       || Active || Successful  |     
       
      Scenario Outline: Verify added Program is created 
     When Admin searches with newly created "<Program Name>" 
-    Then Records of the newly created "<Program name>" is displayed and match the data entered
+    Then Records of the newly created "<Program Name>" is displayed and match the data entered
     Examples:
     |Program Name|
-    |CSha|
+    |Beta|
     
     Scenario: Validate Cancel/Close(X) icon on program Details form
     When Admin clicks Cancel Icon on program Details form
     Then Program Details popup window should be closed
-    
+    #
  #------------------------------------Edit Program -----------------------------------------------
  
  Scenario Outline:  Validate Edit Program Details Popup window
@@ -136,8 +145,8 @@ When Admin enter the "<field>" "<value>" in search textbox
 Then Admin should see Program details are searched by given fields
 Examples: 
 |field||value|
-|Name||usa|
-|Description||india|
+|Name||Beta|
+|Description||Alpha|
 
  
  Scenario: Verify Admin is able to search results not found
@@ -145,31 +154,61 @@ Examples:
  When Admin enter the program to search By program name that does not exist
  Then There should be zero results.
  
- Scenario: Verify Admin is able to search with partial program name
- Given Admin is on the program page
- When Admin enter the program to search By partial name of program
- Then Admin should able to see Program name, description, and status for searched program name
  
+#-------------------------------------------Sorting----------------------------------------------------------
+
+   
+  Scenario: Verify sorting of Program name in Ascending order
+   Given  Admin is on the program page
+    When Admin clicks on Arrow next to program Name of Program module page for sort
+    Then Admin See the Program Name is sorted Ascending order in Program module page for sort
+
+  
+  Scenario: Verify sorting of Program name in Descending order
+   Given  Admin is on the program page
+    When Admin clicks on Arrow next to program Name of Program module page for sort descend
+    Then Admin See the Program Name is sorted Descending order in Program module page 
+
+  
+  Scenario: Verify sorting of Program description in Ascending order
+   Given  Admin is on the program page
+    When Admin clicks on Arrow next to program description of Program module page for sort 
+    Then Admin See the Program description is sorted Ascending order in Program module page 
     
     
-    
+  Scenario: Verify sorting of Program description in Descending order
+    Given  Admin is on the program page
+    When Admin clicks on Arrow next to program description of Program module page for sort descend
+    Then Admin See the Program description is sorted Descending order in Program module page
+
+  
+  Scenario: Verify sorting of Program status in Ascending order
+    Given  Admin is on the program page
+    When Admin clicks on Arrow next to program status of Program module page for sort
+    Then Admin See the Program status is sorted Ascending order in Program module page
+
+  
+  Scenario: Verify sorting of Program status in Descending order
+    Given  Admin is on the program page
+    When Admin clicks on Arrow next to program status of Program module page for sor descend
+     Then Admin See the Program status is sorted Descending order in Program module page 
+ 
+  
 #----------------------------------- Pagination -----------------------------------------------------------
 
-  Scenario Outline: Validate pagination links
-   When Admin clicks the <pageLink> link on the data table
-   Then Admin should see the <pageLink> results on the data table
+    Scenario Outline: Validate pagination links for program page
+    When Admin clicks the "<pageLink>" link on the data table in program page
+    Then Admin should see the "<results>" on the data table in program module
 
   Examples:
-     | pageLink   | results         |
-     | Next       |Next enabled link|
-     | Last       |last page link with Next disabled|
-     | Previous   |previous page|
-     | First      |very first page|
-     
+      | pageLink   | results                  |
+      | Next       | Next enabled link        |
+      | Last       | last page link with Next disabled |
+      | Previous   | previous page            |
+      | First      | very first page          |
    
     
     
-
     
     
    

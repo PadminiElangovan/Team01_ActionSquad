@@ -23,6 +23,7 @@ public class ProgramStep {
 	private Program_Page program;
 	private ExcelReader excelReader;
 	boolean status;
+	boolean status1;
 
 	public ProgramStep(TestContext context) {
 		this.context = context;
@@ -70,12 +71,31 @@ public class ProgramStep {
 		assertTrue(status);
 		LoggerLoad.info("Sorting button are visible");
 	}
+	
+	@Then("Admin should see the Search box on the Manage program page header")
+	public void admin_should_see_the_Search_box() {
+		status = program.validateSearchBox();
+		assertTrue(status);
+		LoggerLoad.info("Sorting button are visible");
+		
+	}
 
 	@Then("Admin should see the Delete button under the Manage program page header")
 	public void admin_should_see_delete_button() {
 		status = program.deleteBtnDisplayed();
 		assertTrue(status);
 		LoggerLoad.info("Delete button is visible");
+	}
+	
+	@When("Admin clicks {string} on the navigation bar in program module")
+	public void admin_clicks_on_the_navigation_bar(String string) throws InterruptedException {
+		program.clickProgram();
+	}
+	
+	@Then("Admin should see check box default state as unchecked on the left side in all rows against program name")
+	public void admin_should_see_check_box_default_state_as_unchecked_on_the_left_side_in_all_rows_against_program_name() {
+		LoggerLoad.info("validating default state of  Checkbox");
+		program.testAreUnchecked();		
 	}
 
 	@Then("Admin should see Total no of programs in below of the data table")
@@ -122,9 +142,9 @@ public class ProgramStep {
 	@Then("Admin should see error message below the test field and the field will be highlighed in red color {string} {string} {string}")
 	public void admin_should_see_error_message_below_the_test_field_and_the_field_will_be_highlighed_in_red_color(String programNameReqText, String programDescriptionReqText, 
             String programStatusReqText) {
-		Assert.assertEquals("Program Name is required", programNameReqText, program.getProgramNameReqText());
-        Assert.assertEquals("Description is required", programDescriptionReqText, program.getDescriptionReqText());
-        Assert.assertEquals("Status is required", programStatusReqText, program.getStatusReqText());
+		Assert.assertEquals("Program name is required", programNameReqText, program.getProgramNameReqText());
+        Assert.assertEquals("Description is required.", programDescriptionReqText, program.getDescriptionReqText());
+        Assert.assertEquals("Status is required.", programStatusReqText, program.getStatusReqText());
         	}
 
 
@@ -253,7 +273,7 @@ public class ProgramStep {
 	
 	@When("Admin clicks on the delete icon under the Manage program header multiple delete")
 	public void admin_clicks_on_the_delete_icon_under_the_manage_program_header_multiple_delete() {
-		program.multipleDeleteAction();
+		program.multipleDeleteactions();
 		program.clickOnHeaderDeleteIcon();
 		program.confirmDeletion();
 		
@@ -274,22 +294,27 @@ public class ProgramStep {
 	
 	@When("Admin enter the {string} {string} in search textbox")
 	public void admin_enter_the_in_search_textbox(String field, String value) throws InterruptedException {
-	    program.enterSearchValue(field, value);//.searchBoxValidation(field, value);
+		status = program.searchBoxValidation(field, value);
+		 Assert.assertTrue(status);
 	}
 
 	@Then("Admin should see Program details are searched by given fields")
 	public void admin_should_see_class_details_are_searched_by() {
-		
+		// Assert.assertTrue(status);
+		 LoggerLoad.info("Record found");
 		}
 	
 
 	@When("Admin enter the program to search By program name that does not exist")
 	public void admin_enter_the_program_to_search_by_program_name_that_does_not_exist() {
+		 status1=program.InValidValueInSearchBox();
 	    
 	}
 
 	@Then("There should be zero results.")
 	public void there_should_be_zero_results() {
+		Assert.assertTrue(status1);
+		LoggerLoad.info("No entries found");
 	    
 	}
 
@@ -298,12 +323,95 @@ public class ProgramStep {
 	    
 	}
 
+//*******************************************Sorting*********************************************
+	
+	@When("Admin clicks on Arrow next to program Name of Program module page for sort")
+	public void admin_clicks_on_Arrow_next_to_program_Name_of_Program_module_page_for_sort() {
+		program.clickProgramNameSort();
+	}
+
+	@Then("Admin See the Program Name is sorted Ascending order in Program module page for sort")
+	public void admin_See_the_Program_Name_is_sorted_Ascending_order_in_Program_module_page_for_sort() {
+		List<String> originalList = program.getOriginalList("progName");
+		List<String> sortedList = program.getSortedList(originalList);
+		System.out.println("sorted name list" + sortedList.toString() );
+		Assert.assertTrue(originalList.equals(sortedList));		
+	}
+
+
+	@When("Admin clicks on Arrow next to program Name of Program module page for sort descend")
+	public void admin_clicks_on_Arrow_next_to_program_Name_of_Program_module_page_for_sort_descend() {
+		program.clickProgramNameSortDec();
+	}
+	
+	@Then("Admin See the Program Name is sorted Descending order in Program module page")
+	public void admin_See_the_Program_Name_is_sorted_Descending_order_in_Program_module_page() {
+		List<String> originalList = program.getOriginalList("progName");
+		List<String> sortedList = program.getSortedListDescending(originalList);
+		System.out.println("Descending sorted name list " + sortedList.toString() );
+		Assert.assertTrue(originalList.equals(sortedList));	    
+	}
+
+
+	@When("Admin clicks on Arrow next to program description of Program module page for sort")
+	public void admin_clicks_on_Arrow_next_to_program_description_of_Program_module_page_for_sort() {
+		program.clickProgramDescrSort();		
+	}
+
+	@Then("Admin See the Program description is sorted Ascending order in Program module page")
+	public void admin_See_the_Program_description_is_sorted_Ascending_order_in_Program_module_page() {
+		List<String> originalList = program.getOriginalList("ProgramDescription");
+		List<String> sortedList = program.getSortedList(originalList);
+		System.out.println("sorted name list" + sortedList.toString() );
+		Assert.assertTrue(originalList.equals(sortedList));
+	}
+
+
+	@When("Admin clicks on Arrow next to program description of Program module page for sort descend")
+	public void admin_clicks_on_Arrow_next_to_program_description_of_Program_module_page_for_sort_descend() {
+		program.clickProgramDescrSortDes();		
+	}
+
+	@Then("Admin See the Program description is sorted Descending order in Program module page")
+	public void admin_See_the_Program_description_is_sorted_Descending_order_in_Program_module_page() {
+		List<String> originalList = program.getOriginalList("ProgramDescription");
+		List<String> sortedList = program.getSortedListDescending(originalList);
+		System.out.println("Descending sorted name list " + sortedList.toString() );
+		Assert.assertTrue(originalList.equals(sortedList));
+	}
+
+	@When("Admin clicks on Arrow next to program status of Program module page for sort")
+	public void admin_clicks_on_Arrow_next_to_program_status_of_Program_module_page_for_sort() {
+		program.clickProgramStatusSort();
+	}
+
+	@Then("Admin See the Program status is sorted Ascending order in Program module page")
+	public void admin_See_the_Program_status_is_sorted_Ascending_order_in_Program_module_page() {
+		List<String> originalList = program.getOriginalList("status");
+		List<String> sortedList = program.getSortedList(originalList);
+		System.out.println("sorted name list" + sortedList.toString() );
+		Assert.assertTrue(originalList.equals(sortedList));
+	}
+	
+	@When("Admin clicks on Arrow next to program status of Program module page for sor descend")
+	public void admin_clicks_on_Arrow_next_to_program_status_of_Program_module_page_for_sor_descend() {
+		program.clickProgramStatusSortDes();
+	}
+
+	@Then("Admin See the Program status is sorted Descending order in Program module page")
+	public void admin_See_the_Program_status_is_sorted_Descending_order_in_Program_module_page() {
+		List<String> originalList = program.getOriginalList("status");
+		List<String> sortedList = program.getSortedListDescending(originalList);
+		System.out.println("Descending sorted name list " + sortedList.toString() );
+		Assert.assertTrue(originalList.equals(sortedList));
+	}
+
 	
 	
 // **************************************Pagination****************************************
 	
 	
-	 @When("^Admin clicks the (Next|Last|Previous|First) link on the data table$")
+	 @When("Admin clicks the {string} link on the data table in program page")
 	    public void adminClicksPageLink(String pageLink) {
 	    	
 		 program.navigateToProgram();
@@ -327,22 +435,22 @@ public class ProgramStep {
 	    }
 	 
 	    // Verify the results based on the <results> description
-	@Then("^Admin should see the (.*) on the data table$")
+	@Then("Admin should see the {string} on the data table in program module")
 	    public void adminShouldSeeResults(String expectedResult) {
 	    	
 
 	    	switch (expectedResult.toLowerCase()) {
 	    	 case "Next enabled link":
-	             Assert.assertTrue(program.isNextButtonEnabled());
+	             Assert.assertTrue(program.isFirstButtonEnabled());
 	             break;
 	        case "last page link with Next disabled":
 	            Assert.assertFalse( program.isNextButtonEnabled());
 	            break;
 	        case "previous page":
-	            Assert.assertTrue( program.isPrevButtonEnabled());
+	            Assert.assertTrue( program.hasNextPageResults());
 	            break;
 	        case "very first page":
-	            Assert.assertFalse( program.isPrevButtonEnabled());
+	            Assert.assertTrue( program.hasNextPageResults());
 	            break;
 	          default:
 	            Assert.fail("Unexpected result description: " + expectedResult);
