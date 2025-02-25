@@ -15,9 +15,10 @@ import common.LoggerLoad;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.BasePage;
 import pages.Program_Page;
 
-public class ProgramStep {
+public class ProgramStep extends BasePage{
 
 	private WebDriverWait wait;
 	private WebDriver driver;
@@ -229,7 +230,6 @@ public class ProgramStep {
 		Assert.assertEquals("Updated program Successfully", string, program.saveEditProgram());
 	   
 	}
-
 	
 		
 //******************************************Delete ***************************************************
@@ -415,8 +415,7 @@ public class ProgramStep {
 		Assert.assertTrue(originalList.equals(sortedList));
 	}
 
-	
-	
+		
 // **************************************Pagination****************************************
 	
 	
@@ -448,10 +447,10 @@ public class ProgramStep {
 	 public void adminShouldSeeResults(String expectedResult) {
 	     switch (expectedResult.toLowerCase()) {
 	         case "next enabled link":
-	             Assert.assertFalse(program.isNextButtonEnabled());
+	        	 Assert.assertTrue(isElementEnabled(program.nextButton));
 	             break;
 	         case "last page link with next disabled":
-	             Assert.assertTrue(program.isNextButtonEnabled());
+	        	 Assert.assertTrue(isElementEnabled(program.nextButton));
 	             break;
 	         case "previous page":
 	             Assert.assertFalse(program.isPrevButtonEnabled());
@@ -470,14 +469,7 @@ public class ProgramStep {
 			program.clickLogout();
 		}
 
-		
-
 
 }
-	
-	
-	
-	
-	
 	
 

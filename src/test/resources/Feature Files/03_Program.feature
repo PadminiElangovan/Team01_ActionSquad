@@ -73,8 +73,8 @@ Feature: Manage Page Validation
     Then Admin gets message Class added Successfully
 
     Examples: 
-      | Name |  | Description |  | Status |  | SuccessMsg |
-      | Door |  | Open       |  | Active |  | Successful |
+      | Name  |  | Description |  | Status |  | SuccessMsg |
+      | Doore |  | Open        |  | Active |  | Successful |
 
   @VerifyProgramCreated
   Scenario Outline: Verify added Program is created
@@ -83,7 +83,7 @@ Feature: Manage Page Validation
 
     Examples: 
       | Program Name |
-      | Door       |
+      | Doore        |
 
   @ValCancelBtn
   Scenario: Validate Cancel/Close(X) icon on program Details form
@@ -155,9 +155,9 @@ Feature: Manage Page Validation
     Then Admin should see Program details are searched by given fields
 
     Examples: 
-      | field       |  | value |
-      | Name        |  | Omega |
-      | Description |  | Gamma |
+      | field       |  | value    |
+      | Name        |  | Door     |
+      | Description |  | Open     |
 
   @SearchInvalid
   Scenario: Verify Admin is able to search results not found

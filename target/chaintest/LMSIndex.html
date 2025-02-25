@@ -19,9 +19,9 @@
         <span class="ms-3 fs-6">LMS_ActionSquad</span>
       </div>
       <div>
-        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 21s</span>
-        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Started 2025-02-24 06:30:26 PM</span>
-        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Ended 2025-02-24 06:30:48 PM</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 40s</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Started 2025-02-24 08:57:15 PM</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Ended 2025-02-24 08:57:55 PM</span>
       </div>
       <div>
           <button role="button" id="sys-info" class="btn btn-outline-primary smaller" title="View System Info">
@@ -48,7 +48,7 @@
                 </div>
               </div>
               <div class="card-footer small">
-                <span id="sp1">1</span> Passed,
+                <span id="sp1">2</span> Passed,
                 <span id="sf1">0</span> Failed,
                 <span id="ss1">0</span> Skipped
               </div>
@@ -65,7 +65,7 @@
                 </div>
               </div>
               <div class="card-footer small">
-                <span id="sp2">3</span> Passed,
+                <span id="sp2">7</span> Passed,
                 <span id="sf2">0</span> Failed,
                 <span id="ss2">0</span> Skipped
               </div>
@@ -82,7 +82,7 @@
                   </div>
                 </div>
                 <div class="card-footer small">
-                  <span id="sp3">12</span> Passed,
+                  <span id="sp3">31</span> Passed,
                   <span id="sf3">0</span> Failed,
                   <span id="ss3">0</span> Skipped
                 </div>
@@ -112,30 +112,23 @@
               </thead>
               <tbody>
                   <tr>
-                    <td><a href="#" class="secondary tag">@BatchExtra</a></td>
-                    <td>3</td>
-                    <td>3</td>
+                    <td><a href="#" class="secondary tag">@Pagination</a></td>
+                    <td>7</td>
+                    <td>7</td>
                     <td>0</td>
                     <td>3ms</td>
                   </tr>
                   <tr>
                     <td><a href="#" class="secondary tag">@LMS</a></td>
-                    <td>3</td>
-                    <td>3</td>
+                    <td>4</td>
+                    <td>4</td>
                     <td>0</td>
                     <td>3ms</td>
                   </tr>
                   <tr>
-                    <td><a href="#" class="secondary tag">@AddInvalidMsgBatch</a></td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>0</td>
-                    <td>3ms</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" class="secondary tag">@Dash</a></td>
-                    <td>3</td>
-                    <td>3</td>
+                    <td><a href="#" class="secondary tag">@Programpage</a></td>
+                    <td>4</td>
+                    <td>4</td>
                     <td>0</td>
                     <td>3ms</td>
                   </tr>
@@ -167,19 +160,18 @@
         <div class="container">
           <div class="row">
             <div class="col-4">
-              <h6 class="mb-3 testname passed">Feature: Additional Batch Functionality</h6>
+              <h6 class="mb-3 testname passed">Feature: Manage Page Validation</h6>
               <div class="small">
-                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 11ms</span>
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 23ms</span>
                 <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
-                  2025-02-24 06:30:48 PM</span>
+                  2025-02-24 08:57:55 PM</span>
                 <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
-                  2025-02-24 06:30:48 PM</span>
+                  2025-02-24 08:57:55 PM</span>
               </div>
                 <div class="my-2">
-                    <span class="badge rounded-pill text-bg-secondary">@AddInvalidMsgBatch</span>
-                    <span class="badge rounded-pill text-bg-secondary">@Dash</span>
+                    <span class="badge rounded-pill text-bg-secondary">@Pagination</span>
                     <span class="badge rounded-pill text-bg-secondary">@LMS</span>
-                    <span class="badge rounded-pill text-bg-secondary">@BatchExtra</span>
+                    <span class="badge rounded-pill text-bg-secondary">@Programpage</span>
                 </div>
               
             </div>
@@ -189,14 +181,13 @@
                     <div class="d-flex justify-content-between">
                       <div>
                           <i class="bi bi-check-circle-fill text-success"></i>
-                        <span class="ms-2">Scenario Outline: Verify field invalid message</span>
+                        <span class="ms-2">Scenario Outline: Validate pagination links for program page</span>
                       </div>
                       <div>
                           <span class="tag-list">
-                              <span class="badge rounded-pill text-bg-secondary">@AddInvalidMsgBatch</span>
-                              <span class="badge rounded-pill text-bg-secondary">@Dash</span>
+                              <span class="badge rounded-pill text-bg-secondary">@Pagination</span>
                               <span class="badge rounded-pill text-bg-secondary">@LMS</span>
-                              <span class="badge rounded-pill text-bg-secondary">@BatchExtra</span>
+                              <span class="badge rounded-pill text-bg-secondary">@Programpage</span>
                           </span>
                           <span class="mx-1">&middot;</span>
                         <span class="badge text-dark bg-light">2ms</span>
@@ -206,19 +197,19 @@
   <div class="mt-2">
         <div class="mt-1 leaf">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Given Admin is on home page after Logs in</span>
+          <span class="ms-2">Given Admin is on login Page</span>
         </div>
         <div class="mt-1 leaf">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Given The Admin is in Add New batch pop window</span>
+          <span class="ms-2">When Admin enter valid data in all field and clicks login button</span>
         </div>
         <div class="mt-1 leaf">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">When Admin enters invalid "DescSpcChar" data and clicks save</span>
+          <span class="ms-2">When Admin clicks the "Next" link on the data table in program page</span>
         </div>
         <div class="mt-1 leaf">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Then Admin receives "DescSpcChar" invalid error messages</span>
+          <span class="ms-2">Then Admin should see the "Next enabled link" on the data table in program module</span>
         </div>
   </div>
                   </div>
@@ -228,53 +219,13 @@
                     <div class="d-flex justify-content-between">
                       <div>
                           <i class="bi bi-check-circle-fill text-success"></i>
-                        <span class="ms-2">Scenario Outline: Verify field invalid message</span>
+                        <span class="ms-2">Scenario Outline: Validate pagination links for program page</span>
                       </div>
                       <div>
                           <span class="tag-list">
-                              <span class="badge rounded-pill text-bg-secondary">@AddInvalidMsgBatch</span>
-                              <span class="badge rounded-pill text-bg-secondary">@Dash</span>
+                              <span class="badge rounded-pill text-bg-secondary">@Pagination</span>
                               <span class="badge rounded-pill text-bg-secondary">@LMS</span>
-                              <span class="badge rounded-pill text-bg-secondary">@BatchExtra</span>
-                          </span>
-                          <span class="mx-1">&middot;</span>
-                        <span class="badge text-dark bg-light">1ms</span>
-                      </div>
-                    </div>
-                    
-  <div class="mt-2">
-        <div class="mt-1 leaf">
-            <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Given Admin is on home page after Logs in</span>
-        </div>
-        <div class="mt-1 leaf">
-            <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Given The Admin is in Add New batch pop window</span>
-        </div>
-        <div class="mt-1 leaf">
-            <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">When Admin enters invalid "DescStarts-No" data and clicks save</span>
-        </div>
-        <div class="mt-1 leaf">
-            <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Then Admin receives "DescStarts-No" invalid error messages</span>
-        </div>
-  </div>
-                  </div>
-                </div>
-                <div class="card mb-1 result passed">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                          <i class="bi bi-check-circle-fill text-success"></i>
-                        <span class="ms-2">Scenario Outline: Verify field invalid message</span>
-                      </div>
-                      <div>
-                          <span class="tag-list">
-                              <span class="badge rounded-pill text-bg-secondary">@AddInvalidMsgBatch</span>
-                              <span class="badge rounded-pill text-bg-secondary">@Dash</span>
-                              <span class="badge rounded-pill text-bg-secondary">@LMS</span>
-                              <span class="badge rounded-pill text-bg-secondary">@BatchExtra</span>
+                              <span class="badge rounded-pill text-bg-secondary">@Programpage</span>
                           </span>
                           <span class="mx-1">&middot;</span>
                         <span class="badge text-dark bg-light">0ms</span>
@@ -284,19 +235,238 @@
   <div class="mt-2">
         <div class="mt-1 leaf">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Given Admin is on home page after Logs in</span>
+          <span class="ms-2">Given Admin is on login Page</span>
         </div>
         <div class="mt-1 leaf">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Given The Admin is in Add New batch pop window</span>
+          <span class="ms-2">When Admin enter valid data in all field and clicks login button</span>
         </div>
         <div class="mt-1 leaf">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">When Admin enters invalid "DesclessChar" data and clicks save</span>
+          <span class="ms-2">When Admin clicks the "Last" link on the data table in program page</span>
         </div>
         <div class="mt-1 leaf">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Then Admin receives "DesclessChar" invalid error messages</span>
+          <span class="ms-2">Then Admin should see the "last page link with Next disabled" on the data table in program module</span>
+        </div>
+  </div>
+                  </div>
+                </div>
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">Scenario Outline: Validate pagination links for program page</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@Pagination</span>
+                              <span class="badge rounded-pill text-bg-secondary">@LMS</span>
+                              <span class="badge rounded-pill text-bg-secondary">@Programpage</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">1ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-2">
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on login Page</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin enter valid data in all field and clicks login button</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin clicks the "Previous" link on the data table in program page</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then Admin should see the "previous page" on the data table in program module</span>
+        </div>
+  </div>
+                  </div>
+                </div>
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">Scenario Outline: Validate pagination links for program page</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@Pagination</span>
+                              <span class="badge rounded-pill text-bg-secondary">@LMS</span>
+                              <span class="badge rounded-pill text-bg-secondary">@Programpage</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">0ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-2">
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on login Page</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin enter valid data in all field and clicks login button</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin clicks the "First" link on the data table in program page</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then Admin should see the "very first page" on the data table in program module</span>
+        </div>
+  </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+            <div class="border-bottom my-5"></div>
+      </div>
+      <div class="test-container passed">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h6 class="mb-3 testname passed">Feature: Batch Page Navigation</h6>
+              <div class="small">
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 25ms</span>
+                <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
+                  2025-02-24 08:57:55 PM</span>
+                <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
+                  2025-02-24 08:57:55 PM</span>
+              </div>
+                <div class="my-2">
+                    <span class="badge rounded-pill text-bg-secondary">@Pagination</span>
+                </div>
+              
+            </div>
+            <div class="col-8">
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">Scenario Outline: Validate pagination links</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@Pagination</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">0ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-2">
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on login Page</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin enter valid data in all field and clicks login button</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on the batch page</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin clicks the "Next" link on the data table Batch module</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then Admin should see the "Next enabled link" results on the data table Batch Module</span>
+        </div>
+  </div>
+                  </div>
+                </div>
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">Scenario Outline: Validate pagination links</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@Pagination</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">0ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-2">
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on login Page</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin enter valid data in all field and clicks login button</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on the batch page</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin clicks the "Previous" link on the data table Batch module</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then Admin should see the "previous results" results on the data table Batch Module</span>
+        </div>
+  </div>
+                  </div>
+                </div>
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">Scenario Outline: Validate pagination links</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@Pagination</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">0ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-2">
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on login Page</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin enter valid data in all field and clicks login button</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given Admin is on the batch page</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Admin clicks the "First" link on the data table Batch module</span>
+        </div>
+        <div class="mt-1 leaf">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then Admin should see the "first results" results on the data table Batch Module</span>
         </div>
   </div>
                   </div>
@@ -309,21 +479,21 @@
   </div>
 
   <script>
-    const stats1Annotation = {'total': 1, 'passed': 1};
+    const stats1Annotation = {'total': 2, 'passed': 2};
     const stats1 = [
-      { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+      { result: 'Passed', count: 2, bg: 'rgb(140, 197, 83)' },
       { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
       { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
     ];
-      const stats2Annotation = {'total': 3, 'passed': 3};
+      const stats2Annotation = {'total': 7, 'passed': 7};
       const stats2 = [
-        { result: 'Passed', count: 3, bg: 'rgb(140, 197, 83)' },
+        { result: 'Passed', count: 7, bg: 'rgb(140, 197, 83)' },
         { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
       ];
-      const stats3Annotation = {'total': 12, 'passed': 12};
+      const stats3Annotation = {'total': 31, 'passed': 31};
       const stats3 = [
-        { result: 'Passed', count: 12, bg: 'rgb(140, 197, 83)' },
+        { result: 'Passed', count: 31, bg: 'rgb(140, 197, 83)' },
         { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
       ];
@@ -397,24 +567,24 @@
           <table class="table">
             <tbody>
                 <tr>
-                  <td>esc</td>
-                  <td>Reset all filters</td>
-                </tr>
-                <tr>
-                  <td>L</td>
-                  <td>Toggle theme (light/dark)</td>
-                </tr>
-                <tr>
-                  <td>s</td>
-                  <td>Toggle skipped tests</td>
+                  <td>f</td>
+                  <td>Toggle failed tests</td>
                 </tr>
                 <tr>
                   <td>p</td>
                   <td>Toggle passed tests</td>
                 </tr>
                 <tr>
-                  <td>f</td>
-                  <td>Toggle failed tests</td>
+                  <td>s</td>
+                  <td>Toggle skipped tests</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>Toggle theme (light/dark)</td>
+                </tr>
+                <tr>
+                  <td>esc</td>
+                  <td>Reset all filters</td>
                 </tr>
             </tbody>
           </table>

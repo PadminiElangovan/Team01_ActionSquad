@@ -145,7 +145,7 @@ public class Program_Page extends BasePage {
 	private List<WebElement> listOfProgramDescription;
 	@FindBy(xpath="(//tbody//td[2])[1]")
 	private WebElement searchedProgramName;
-	@FindBy(xpath="(//tbody//td[3])[1]")
+	@FindBy(xpath="//tbody/tr[1]/td[3]")
 	private WebElement searchedProgramDesc;
 	@FindBy(xpath="//span[text()='Showing 0 to 0 of 0 entries']")
 	private WebElement zeroEntries;
@@ -172,11 +172,11 @@ public class Program_Page extends BasePage {
 	@FindBy(xpath = "//button[contains(@class, 'p-paginator-prev')]")
 	private WebElement prevButton;
 	@FindBy(xpath = "//button[contains(@class, 'p-paginator-next')]")
-	private WebElement nextButton;
+	public WebElement nextButton;
 	@FindBy(xpath = "//button[@class='p-paginator-next p-paginator-element p-link p-ripple']")
 	private WebElement paninatorNext;
 	@FindBy(xpath = "//button[contains(@class, 'p-paginator-last')]")
-	private WebElement lastButton;
+	public WebElement lastButton;
 	@FindBy(xpath = "//button[contains(@class, 'p-paginator-page')]")
 	private List<WebElement> pageButtons;
 
@@ -425,9 +425,10 @@ public class Program_Page extends BasePage {
 
 		case "Description":
 			wait.until(ExpectedConditions.visibilityOf(searchedProgramDesc));
-			String actualDesc = searchedProgramDesc.getText().trim();
-			System.out.println("Expected: " + value + ", Found: " + actualDesc);
-			found = actualDesc.equalsIgnoreCase(value.trim());
+			//String actualDesc = searchedProgramDesc.getText().trim();
+			//System.out.println("Expected: " + value + ", Found: " + actualDesc);
+			found = searchedProgramDesc.getText().equals(value);
+			System.out.println(found +"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 			break;
 
 		default:
