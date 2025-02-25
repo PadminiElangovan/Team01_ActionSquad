@@ -442,7 +442,7 @@ public void admin_clicks_yes_button_on_the_alert() {
 	String msg = classPage.confirmDeletion();
 	System.out.println(msg);
 	
-	Assert.assertEquals("Successful Classes Deleted", msg);
+	Assert.assertEquals("Successful Classes Deleted", msg.trim());
 }
 
 @Then("Admin should land on Manage class page and can see the selected class is deleted from the data table")
