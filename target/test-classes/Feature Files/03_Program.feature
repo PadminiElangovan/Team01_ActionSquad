@@ -74,7 +74,7 @@ Feature: Manage Page Validation
 
     Examples: 
       | Name  |  | Description |  | Status |  | SuccessMsg |
-      | Doori |  | Open        |  | Active |  | Successful |
+      | Dooro |  | Open        |  | Active |  | Successful |
 
   @VerifyProgramCreated
   Scenario Outline: Verify added Program is created
