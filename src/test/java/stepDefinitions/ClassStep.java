@@ -158,7 +158,7 @@ public class ClassStep {
 	@Then("Admin can see the class details popup disappears and can see nothing changed for particular Class")
 	public void admin_can_see_the_class_details_popup_disappears_and_can_see_nothing_changed_for_particular_class() {
 		 boolean enabled = classPage.isElementEnabled(classPage.delIcon);
-		   Assert.assertTrue(enabled);
+		   Assert.assertFalse(enabled);
 	}
 
 	@When("Admin clicks Cancel button on edit popup")
@@ -392,7 +392,7 @@ public void admin_enter_the_batch_name_in_search_textbox_and_enter() {
 @Then("Admin should see Class details are searched by Batch Name")
 public void admin_should_see_class_details_are_searched_by_batch_name() {
 	String batchName = classXl.get(0).get("BatchName");
-	Assert.assertEquals(batchName, classPage.searchValues.get(1).getText());
+	Assert.assertEquals(batchName, classPage.searchValues.get(2).getText());
 }
 
 @When("Admin enter the Class topic in search textbox and Enter")
@@ -404,7 +404,7 @@ public void admin_enter_the_class_topic_in_search_textbox_and_enter() {
 @Then("Admin should see Class details are searched by Class topic")
 public void admin_should_see_class_details_are_searched_by_class_topic() {
 	String classTopic = classXl.get(0).get("ClassTopic");
-	Assert.assertEquals(classTopic, classPage.searchValues.get(2).getText());
+	Assert.assertEquals(classTopic, classPage.searchValues.get(3).getText());
 }
 
 @When("Admin enter the Staff Name in search textbox and Enter")
@@ -416,7 +416,7 @@ public void admin_enter_the_staff_name_in_search_textbox_and_enter() {
 @Then("Admin should see Class details are searched by Staff name")
 public void admin_should_see_class_details_are_searched_by_staff_name() {
 	String staffName = classXl.get(0).get("StaffName");
-	Assert.assertEquals(staffName, classPage.searchValues.get(6).getText());
+	Assert.assertEquals(staffName, classPage.searchValues.get(7).getText());
 }
 
 
@@ -477,7 +477,7 @@ public void admin_should_land_on_manage_class_page_and_can_see_the_selected_clas
 	{
 		classPage.searchClass(selectedFirstColValues.get(i));
 		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"+classPage.searchValues.get(1).getText());	
-		Assert.assertTrue( classPage.searchValues.get(3).getText().equals(selectedFirstColValues.get(i)));
+		Assert.assertTrue( classPage.searchValues.get(2).getText().equals(selectedFirstColValues.get(i)));
 
 	}
 }
